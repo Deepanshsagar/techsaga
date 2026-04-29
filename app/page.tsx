@@ -693,7 +693,7 @@ export default function TechSagaHomePage() {
         <section style={{
           background: 'linear-gradient(278.7deg, rgba(126, 184, 229, 0.4) 29.46%, #E3EFF9 82.94%, rgba(248, 248, 248, 1) 91.39%)'
 
-        }} className="bg-white py-16 lg:py-20" aria-label="Industry Expertise">
+        }} className="bg-black py-16 lg:py-20" aria-label="Industry Expertise">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
               <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#fff] mb-2">
