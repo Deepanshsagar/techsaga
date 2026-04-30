@@ -250,19 +250,19 @@ const CLIENTS = [
   { name: "Tata3", logo: "/assets/img/logo/09.jpg" },
   { name: "Tata4", logo: "/assets/img/logo/10.jpg" },
   { name: "Tata5", logo: "/assets/img/logo/011.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/012.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/013.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/014.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/016.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/017.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/018.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/019.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/020.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/021.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/022.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/023.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/024.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/025.jpg" },
+  { name: "Tata6", logo: "/assets/img/logo/012.jpg" },
+  { name: "Tata7", logo: "/assets/img/logo/013.jpg" },
+  { name: "Tata8", logo: "/assets/img/logo/014.jpg" },
+  { name: "Tata9", logo: "/assets/img/logo/016.jpg" },
+  { name: "Tata10", logo: "/assets/img/logo/017.jpg" },
+  { name: "Tata11", logo: "/assets/img/logo/018.jpg" },
+  { name: "Tata12", logo: "/assets/img/logo/019.jpg" },
+  { name: "Tata13", logo: "/assets/img/logo/020.jpg" },
+  { name: "Tata14", logo: "/assets/img/logo/021.jpg" },
+  { name: "Tata15", logo: "/assets/img/logo/022.jpg" },
+  { name: "Tata16", logo: "/assets/img/logo/023.jpg" },
+  { name: "Tata17", logo: "/assets/img/logo/024.jpg" },
+  { name: "Tata18", logo: "/assets/img/logo/025.jpg" },
 ];
 
 const TEAM_IMAGES = [
@@ -319,9 +319,11 @@ export default function TechSagaHomePage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 {/* Logo */}
-                <a href="#" className="flex items-center gap-0.5 flex-shrink-0" aria-label="TechSaga Home">
-                  <span className="text-[#4291CE] font-display font-bold text-xl tracking-tight">TECH</span>
-                  <span className="font-display font-bold text-xl tracking-tight text-gray-900">SAGA</span>
+                {/* className="flex items-center gap-0.5 flex-shrink-0"  */}
+                <a href="#" className="max-w-[180px]" aria-label="TechSaga Home">
+                  {/* <span className="text-[#4291CE] font-display font-bold text-xl tracking-tight">TECH</span>
+                  <span className="font-display font-bold text-xl tracking-tight text-gray-900">SAGA</span> */}
+                  <img src="assets/img/logo.webp" className="w-full h-auto"  />
                 </a>
 
                 {/* Desktop Nav */}
@@ -523,7 +525,7 @@ export default function TechSagaHomePage() {
                         className="
       uppercase text-[10px]
       text-[#4291CE] bg-[#4291CE26] border border-[#4291CE40]
-      py-1 px-2 w-fit transition-colors duration-200
+      py-1 px-2 w-fit transition-colors duration-200 rounded-sm
     "
                       >
                         {svc.service}
@@ -565,7 +567,7 @@ export default function TechSagaHomePage() {
                 </p>
                 <a
                   href="#"
-                  className="border-2 border-white bg-[#4291CE] text-white hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200 whitespace-nowrap flex-shrink-0"
+                  className="border-2 border-white bg-[#4291CE] text-white hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200 whitespace-nowrap flex-shrink-0 rounded-4xl"
                 >
                   Talk to an Enterprise Architect →
                 </a>
@@ -653,7 +655,7 @@ export default function TechSagaHomePage() {
                       <p className="text-gray-400 text-xs leading-relaxed mb-3">{p.desc}</p>
                       <div className="flex flex-wrap gap-1 text-xs text-gray-500">
                         {p.tags.map((t, ti) => (
-                          <span className="bg-[#E6F3FB] text-[#1A4D78] text-[10px] font-medium uppercase px-2 py-1 " key={t}>{ti > 0 && ""}{t}</span>
+                          <span className="bg-[#E6F3FB] text-[#1A4D78] text-[10px] font-medium uppercase px-2 py-1 rounded-sm " key={t}>{ti > 0 && ""}{t}</span>
                         ))}
                       </div>
                     </article>
@@ -675,7 +677,7 @@ export default function TechSagaHomePage() {
                       <p className="text-gray-400 text-xs leading-relaxed mb-3">{p.desc}</p>
                       <div className="flex flex-wrap gap-1 text-xs text-gray-500">
                         {p.tags.map((t, ti) => (
-                          <span className="bg-[#E6F3FB] text-[#1A4D78] text-[10px] font-medium uppercase px-2 py-1 " key={t}>{ti > 0 && ""}{t}</span>
+                          <span className="bg-[#E6F3FB] text-[#1A4D78] text-[10px] font-medium uppercase px-2 py-1 rounded-sm" key={t}>{ti > 0 && ""}{t}</span>
                         ))}
                       </div>
                     </article>
@@ -693,13 +695,13 @@ export default function TechSagaHomePage() {
         <section style={{
           background: 'linear-gradient(278.7deg, rgba(126, 184, 229, 0.4) 29.46%, #E3EFF9 82.94%, rgba(248, 248, 248, 1) 91.39%)'
 
-        }} className="bg-black py-16 lg:py-20" aria-label="Industry Expertise">
+        }} className="bg-white py-16 lg:py-20" aria-label="Industry Expertise">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
-              <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#fff] mb-2">
+              <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#4291CE] mb-2">
                 Sectors We Serve
               </p>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-white">Industry Expertise</h2>
+              <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">Industry Expertise</h2>
             </FadeUp>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
@@ -844,7 +846,8 @@ export default function TechSagaHomePage() {
          {/* ══════════════════════════════════════════════════
             JOIN TEAM CTA
         ══════════════════════════════════════════════════ */}
-        <section style={{background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)'}} className=" max-w-7xl mx-auto py-18 relative my-19 rounded-2xl" aria-label="Join the TechSaga Team">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section style={{background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)'}} className="border-[#B7D2E8] border max-w-7xl mx-auto py-18 relative my-19 rounded-2xl" aria-label="Join the TechSaga Team">
           {/* <div className="absolute top-0"><Image src={'/assets/img/element.png'} width={200} height={300} /></div> */}
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <FadeUp>
@@ -862,6 +865,7 @@ export default function TechSagaHomePage() {
             </FadeUp>
           </div>
         </section>
+         </div>
 
         {/* ══════════════════════════════════════════════════
             BLOG
@@ -1004,7 +1008,7 @@ export default function TechSagaHomePage() {
                   {/* Content */}
                   <div className="flex flex-col gap-2">
                     <button className="text-[#4291CE] font-semibold text-sm text-left hover:underline">
-                      Request a Consultation →
+                      Request a Consultation
                     </button>
 
                     <p className="text-sm text-gray-700 leading-relaxed">
@@ -1027,7 +1031,7 @@ export default function TechSagaHomePage() {
                   {/* Content */}
                   <div className="flex flex-col gap-2">
                     <button className="text-[#4291CE] font-semibold text-sm text-left hover:underline">
-                      View Our Portfolio →
+                      View Our Portfolio
                     </button>
 
                     <p className="text-sm text-gray-700 leading-relaxed">
@@ -1050,7 +1054,7 @@ export default function TechSagaHomePage() {
                   {/* Content */}
                   <div className="flex flex-col gap-2">
                     <button className="text-[#4291CE] font-semibold text-sm text-left hover:underline">
-                      View Case Studies →
+                      View Case Studies
                     </button>
 
                     <p className="text-sm text-gray-700 leading-relaxed">
@@ -1071,7 +1075,7 @@ export default function TechSagaHomePage() {
       ══════════════════════════════════════════════════ */}
         <footer style={{
           background: 'linear-gradient(75.57deg, rgba(66, 145, 206, 0.76) 5.34%, rgba(66, 145, 206, 0.24) 43.05%, rgba(66, 145, 206, 0.21) 65.88%)'
-        }} className=" mt-5 text-gray-400 font-sans" role="contentinfo">
+        }} className=" mt-15 text-gray-400 font-sans" role="contentinfo">
 
           {/* Top marquee bar */}
           {/* <div className="bg-[#4291CE] text-white text-xs py-2 overflow-hidden whitespace-nowrap">
