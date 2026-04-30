@@ -526,7 +526,7 @@ export default function TechSagaHomePage() {
                         className="
       uppercase text-[10px]
       text-[#4291CE] bg-[#4291CE26] border border-[#4291CE40]
-      py-1 px-2 w-fit transition-colors duration-200 rounded-sm
+      py-1 px-2 w-fit transition-colors duration-200 rounded-sm tracking-widest font-bold
     "
                       >
                         {svc.service}
@@ -599,7 +599,7 @@ export default function TechSagaHomePage() {
               {/* Featured */}
               <FadeUp>
                 <article
-                  className="relative h-[430px] overflow-hidden bg-cover bg-center flex items-end"
+                  className="relative h-116.25 overflow-hidden bg-cover bg-center flex items-end"
                   style={{
                     backgroundImage:
                       "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80')",
@@ -658,12 +658,12 @@ export default function TechSagaHomePage() {
                       </div>
                       <h3 className="font-bold text-black text-sm mb-2">{p.title}</h3>
                       <p className="text-gray-400 text-xs leading-relaxed mb-3">{p.desc}</p>
-                      <ul className="flex text-[8px] mb-3 text-black/50 flex-wrap">
+                      <ul className="flex text-[10px] mb-3 text-black/50 flex-wrap">
                         {p.list.map((t, ti) => (
                           <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-1.5 h-1.5 inline-block mr-1.5" key={t} />{t}</li>
                         ))}
                       </ul>
-                      <div className="flex flex-wrap gap-1 text-xs text-gray-500">
+                      <div className="flex flex-wrap gap-2 text-xs text-gray-500">
                         {p.tags.map((t, ti) => (
                           <span className="bg-[#E6F3FB] text-[#1A4D78] text-[9px] font-medium uppercase px-2 py-1 rounded-sm " key={t}>{ti > 0 && ""}{t}</span>
                         ))}
@@ -685,12 +685,12 @@ export default function TechSagaHomePage() {
                       </div>
                       <h3 className="font-bold text-black text-sm mb-2">{p.title}</h3>
                       <p className="text-gray-400 text-xs leading-relaxed mb-3">{p.desc}</p>
-                      <ul className="flex text-[8px] mb-3 text-black/50 flex-wrap">
+                      <ul className="flex text-[10px] mb-3 text-black/50 flex-wrap">
                         {p.list.map((t, ti) => (
                           <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-1.5 h-1.5 inline-block mr-1.5" key={t} />{t}</li>
                         ))}
                       </ul>
-                      <div className="flex flex-wrap gap-1 text-xs text-gray-500">
+                      <div className="flex flex-wrap gap-2 text-xs text-gray-500">
                         {p.tags.map((t, ti) => (
                           <span className="bg-[#E6F3FB] text-[#1A4D78] text-[9px] font-medium uppercase px-2 py-1 rounded-sm" key={t}>{ti > 0 && ""}{t}</span>
                         ))}
