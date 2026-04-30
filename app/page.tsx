@@ -207,17 +207,17 @@ const SERVICES: ServiceCard[] = [
 ];
 
 const PRODUCTS: ProductCard[] = [
-  { icon: "🔍", title: "Enterprise Solutions", desc: "Develop scalable systems that support complex business operations.", list: ["ERP Solutions", "CRM Solutions", "Business Application Development", "Workflow Automation"], tags: ["ERP Systems", "CRM Solutions", "Business Applications", "Workflow Automation"] },
-  { icon: "🎧", title: "Product Development", desc: "Turn ideas into fully functional digital products.", tags: ["MVP Development", "Product Design", "Prototyping", "Product Scaling"], list: ["MVP Development", "Product Design", "Prototyping", "Product Scaling"] },
-  { icon: "🎨", title: "Web & Mobile Applications", desc: "Create responsive web and mobile experiences for modern users.", tags: ["Press Release", "Crisis Comms", "ORM"], list: ["Web Application Development", "Mobile Application Development", "Cloud Application Development"] },
-  { icon: "📈", title: "Cloud & Infrastructure", desc: "Set up and manage secure, flexible cloud environments.", tags: ["Cloud Setup", "Hybrid Cloud", "On-Premise Systems", "Cloud Optimization"], list: ["Cloud Infrastructure", "Hybrid Infrastructure", "On-Premises Infrastructure", "Cloud Migration"] },
+  { icon: "🔍", title: "Enterprise Solutions", desc: "Develop scalable systems that support complex business operations.", list: [], tags: ["ERP Solutions", "CRM Solutions", "Business Application Development", "Workflow Automation"] },
+  { icon: "🎧", title: "Product Development", desc: "Turn ideas into fully functional digital products.", tags: ["MVP Development", "Product Design", "Prototyping", "Product Scaling"], list: [] },
+  { icon: "🎨", title: "Web & Mobile Applications", desc: "Create responsive web and mobile experiences for modern users.", tags: ["Web Application Development", "Mobile Application Development", "Cloud Application Development"], list: [] },
+  { icon: "📈", title: "Cloud & Infrastructure", desc: "Set up and manage secure, flexible cloud environments.", tags: ["Cloud Infrastructure", "Hybrid Infrastructure", "On-Premises Infrastructure", "Cloud Migration"], list: [] },
 ];
 
 const PRODUCTST: ProductCard[] = [
-  { icon: "🎥", title: "System Integration", desc: "Connect platforms and tools for smooth data flow and operations", tags: ["API Integration", "Third-Party Integration", "Data Synchronization", "Middleware"], list: ["System Integration", "API Development & Integration", "Third-Party Integration"] },
-  { icon: "📣", title: "DevOps & Automation", desc: "Improve speed, efficiency, and reliability in development cycles", tags: ["CI/CD Pipelines", "Deployment Automation", "Infrastructure as Code", "Monitoring"], list: ["DevOps Services", "CI/CD Implementation", "Deployment Automation"] },
-  { icon: "📣", title: "Testing & Quality Assurance", desc: "Ensure performance, security, and seamless user experience.", tags: ["Manual Testing", "Automation Testing", "Performance Testing", "Security Testing"], list: ["Application Support", "Infrastructure Support", "Customer Support"] },
-  { icon: "📣", title: "Support & Managed Services", desc: "Maintain, monitor, and optimize systems for long-term success.", tags: ["Application Support", "Infrastructure Support", "System Monitoring", "Maintenance"], list: ["Application Support","Infrastructure Support","Customer Support"] },
+  { icon: "🎥", title: "System Integration", desc: "Connect platforms and tools for smooth data flow and operations", tags: ["System Integration", "API Development & Integration", "Third-Party Integration"], list: [] },
+  { icon: "📣", title: "DevOps & Automation", desc: "Improve speed, efficiency, and reliability in development cycles", tags: ["DevOps Services", "CI/CD Implementation", "Deployment Automation"], list: [] },
+  { icon: "📣", title: "Testing & Quality Assurance", desc: "Ensure performance, security, and seamless user experience.", tags: ["Application Support", "Infrastructure Support", "Customer Support"], list: [] },
+  { icon: "📣", title: "Support & Managed Services", desc: "Maintain, monitor, and optimize systems for long-term success.", tags: ["Application Support", "Infrastructure Support", "Customer Support"], list: [] },
 ];
 
 const TESTIMONIALS: Testimonial[] = [
@@ -599,7 +599,7 @@ export default function TechSagaHomePage() {
               {/* Featured */}
               <FadeUp>
                 <article
-                  className="relative h-116.25 overflow-hidden bg-cover bg-center flex items-end"
+                  className="relative h-111 overflow-hidden bg-cover bg-center flex items-end"
                   style={{
                     backgroundImage:
                       "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80')",
@@ -621,11 +621,11 @@ export default function TechSagaHomePage() {
                     <p className="text-sm text-white/60 mb-4 max-w-lg">
                       Build tailored applications designed around your business needs.
                     </p>
-                    <ul className="flex text-[12px] mb-3 text-white/50 flex-wrap">
+                    {/* <ul className="flex text-[12px] mb-3 text-white/50 flex-wrap">
                       <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-2 h-2 inline-block mr-1.5" />Custom Software Development</li>
                       <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-2 h-2 inline-block mr-1.5" />Enterprise Software Development</li>
                       <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-2 h-2 inline-block mr-1.5" />Product Development</li>
-                    </ul>
+                    </ul> */}
 
                     <div className="flex flex-wrap gap-2">
                       {[
@@ -719,67 +719,63 @@ export default function TechSagaHomePage() {
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">Industry Expertise</h2>
             </FadeUp>
             <div className="max-w-7xl mx-auto px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 rounded-xl overflow-hidden">
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  {
+                    img: "/assets/img/industry-1.png",
+                    icon: "/assets/img/in-icon-2.png",
+                    title: "Healthcare",
+                    desc: "We build secure, compliant healthcare systems that improve patient care and streamline operations."
+                  },
+                  {
+                    img: "/assets/img/industry-3.png",
+                    icon: "/assets/img/in-icon-4.png",
+                    title: "Education & E-learning",
+                    desc: "We enable institutions to deliver engaging and accessible learning platforms."
+                  },
+                  {
+                    img: "/assets/img/industry-2.png",
+                    icon: "/assets/img/in-icon-1.png",
+                    title: "E-commerce Solutions",
+                    desc: "We develop scalable platforms that enhance user experience and simplify selling."
+                  },
+                  {
+                    img: "/assets/img/industry-4.png",
+                    icon: "/assets/img/in-icon-3.png",
+                    title: "Banking & Finance",
+                    desc: "Secure, high-performance systems for digital banking and transactions."
+                  }
+                ].map((item, i) => (
 
-                <div className="h-64">
-                  <img src="/assets/img/industry-1.png" alt="" className="w-full h-full object-cover" />
-                </div>
+                  <div key={i} className="relative group h-72 overflow-hidden">
 
-                <div className="bg-gray-100 flex flex-col items-center justify-center text-center p-6">
-                  <div className="text-blue-500 text-4xl mb-4">
-                    <img src="/assets/img/in-icon-2.png" className="h-auto w-auto" />
+                    {/* Image */}
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                    />
+
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col items-center justify-center text-center p-6">
+
+                      <img src={item.icon} className="mb-4 w-12 h-12" />
+
+                      <h3 className="text-white text-lg font-semibold mb-2">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-gray-200 text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500 delay-100">
+                        {item.desc}
+                      </p>
+
+                    </div>
+
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Healthcare</h3>
-                  <p className="text-gray-600 text-sm">
-                    Healthcare systems integrate patient portals and mobile apps, ensuring efficient care delivery while maintaining
-                  </p>
-                </div>
-
-                <div className="h-64">
-                  <img src="/assets/img/industry-3.png" alt="" className="w-full h-full object-cover" />
-                </div>
-
-                <div className="bg-gray-100 flex flex-col items-center justify-center text-center p-6">
-                  <div className="text-blue-500 text-4xl mb-4">
-                    <img src="/assets/img/in-icon-4.png" className="h-auto w-auto" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">Education & E-learning</h3>
-                  <p className="text-gray-600 text-sm">
-                    Healthcare systems integrate patient portals and mobile apps, ensuring efficient care delivery while maintaining
-                  </p>
-                </div>
-
-                <div className="bg-gray-100 flex flex-col items-center justify-center text-center p-6">
-                  <div className="text-blue-500 text-4xl mb-4">
-                    <img src="/assets/img/in-icon-1.png" className="h-auto w-auto" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">E-commerce Solutions</h3>
-                  <p className="text-gray-600 text-sm">
-                    Healthcare systems integrate patient portals and mobile apps, ensuring efficient care delivery while maintaining
-                  </p>
-                </div>
-
-                <div className="h-64">
-                  <img src="/assets/img/industry-2.png" alt="" className="w-full h-full object-cover" />
-                </div>
-
-                <div className="bg-gray-100 flex flex-col items-center justify-center text-center p-6">
-                  <div className="text-blue-500 text-4xl mb-4">
-                    <img src="/assets/img/in-icon-3.png" className="h-auto w-auto" />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">Banking & Finance</h3>
-                  <p className="text-gray-600 text-sm">
-                    Healthcare systems integrate patient portals and mobile apps, ensuring efficient care delivery while maintaining
-                  </p>
-                </div>
-
-                <div className="h-64">
-                  <img src="/assets/img/industry-4.png" alt="" className="w-full h-full object-cover" />
-                </div>
+                ))}
 
               </div>
-
             </div>
             {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
@@ -859,8 +855,8 @@ export default function TechSagaHomePage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 ">
               {TESTIMONIALS.map((t, i) => (
                 <FadeUp key={t.name} delay={i * 80}>
-                  <blockquote className=" p-6 border mr-3 border-gray-300 duration-200 h-full flex flex-col">
-                    <div className="flex items-center gap-3 mb-4">
+                  <blockquote className=" p-6 border mr-3 border-gray-300 rounded-xl duration-200 h-full flex flex-col">
+                    <div className="flex items-center gap-3 mb-4 ">
                       <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                         <Image src={t.avatar} alt={t.name} fill className="object-cover" unoptimized />
                       </div>
@@ -892,7 +888,9 @@ export default function TechSagaHomePage() {
             <div className="grid lg:grid-cols-2 rounded-t-xl overflow-hidden">
               <FadeUp>
                 <div className="bg-[#4291CE] text-white p-8 h-full">
-                  <SectionTag>Our Mission</SectionTag>
+                  <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#ffffff] mb-2">
+                    Our Mission
+                  </p>
                   <h3 className="font-display text-2xl font-bold mb-3">To Enable Confident Transformation at Global Scale</h3>
                   <p className="text-white/60 text-sm leading-relaxed">We exist to eliminate the friction between great ideas and their execution. Whether you are a fast-growing startup or a legacy enterprise, TechSaga provides the technical depth and strategic clarity to help you transform — not incrementally, but boldly.</p>
                 </div>
@@ -1056,8 +1054,8 @@ export default function TechSagaHomePage() {
             {/* LEFT SIDE */}
             <div className="px-6 lg:px-12 py-12 flex flex-col justify-center">
               <h2 className="text-[#4291CE] text-3xl lg:text-4xl font-bold leading-tight mb-6">
-                Ready to Move from 
-Ideas to Execution?
+                Ready to Move from
+                Ideas to Execution?
               </h2>
 
               <p className="text-black/80 text-sm leading-relaxed max-w-xl">
