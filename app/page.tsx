@@ -17,6 +17,7 @@ interface ProductCard {
   title: string;
   desc: string;
   tags: string[];
+  list: string[];
 }
 interface Testimonial {
   name: string;
@@ -206,17 +207,17 @@ const SERVICES: ServiceCard[] = [
 ];
 
 const PRODUCTS: ProductCard[] = [
-  { icon: "🔍", title: "Advertising & Media", desc: "Paid media planning, digital ads, DOOH & OOH, production and design, and online reputation management.", tags: ["Paid Media", "ORM", "Production", "UI/UX"] },
-  { icon: "🎧", title: "Sales Support & CRM", desc: "Lead generation, CRO, referral & reward programs, and full marketing automation across  CRM platforms.", tags: ["Lead Gen", "CRO", "Automation", "Loyalty"] },
-  { icon: "🎨", title: "PR & Crisis Management", desc: "Strategic comms, press release management, social listening, brand reputation protection, and crisis response.", tags: ["Press Release", "Crisis Comms", "ORM"] },
-  { icon: "📈", title: "Performance Marketing", desc: "ROI-driven campaigns across Google, Meta, Bing, Taboola, Amazon and regional marketplace platforms.", tags: ["Google Ads", "Meta Ads", "Analytics"] },
+  { icon: "🔍", title: "Enterprise Solutions", desc: "Develop scalable systems that support complex business operations.", list: ["ERP Solutions", "CRM Solutions", "Business Application Development", "Workflow Automation"], tags: ["ERP Systems", "CRM Solutions", "Business Applications", "Workflow Automation"] },
+  { icon: "🎧", title: "Product Development", desc: "Turn ideas into fully functional digital products.", tags: ["MVP Development", "Product Design", "Prototyping", "Product Scaling"], list: ["MVP Development", "Product Design", "Prototyping", "Product Scaling"] },
+  { icon: "🎨", title: "Web & Mobile Applications", desc: "Create responsive web and mobile experiences for modern users.", tags: ["Press Release", "Crisis Comms", "ORM"], list: ["Web Application Development", "Mobile Application Development", "Cloud Application Development"] },
+  { icon: "📈", title: "Cloud & Infrastructure", desc: "Set up and manage secure, flexible cloud environments.", tags: ["Cloud Setup", "Hybrid Cloud", "On-Premise Systems", "Cloud Optimization"], list: ["Cloud Infrastructure", "Hybrid Infrastructure", "On-Premises Infrastructure", "Cloud Migration"] },
 ];
 
 const PRODUCTST: ProductCard[] = [
-  { icon: "🎥", title: "Training & Workshops", desc: "Expert-led programs on digital marketing, social media, influencer marketing, and brand reputation for senior executives.", tags: ["Social Media", "Influencer Mktg", "Brand Reputation"] },
-  { icon: "📣", title: "Influencer & Content Marketing", desc: "UGC, influencer campaigns, blogging, storytelling, video and graphics  creation across all major platforms and formats.", tags: ["UGC Campaigns", "Video Creation", "Copywriting"] },
-  { icon: "📣", title: "Event & Campaign Management", desc: "End-to-end execution for entertainment, government, and corporate campaigns — from strategy to trending hashtags.", tags: ["Event Promotion", "Twitter Trending", "Amplification"] },
-  { icon: "📣", title: "Analytics & Marketing Intelligence", desc: "Google Analytics, Looker Studio, HotJar, SEMRush — full analytics stacksetup, dashboards, and data-driven decision support.", tags: ["GA4 Setup", "Looker Dashboards", "SEO Audits"] },
+  { icon: "🎥", title: "System Integration", desc: "Connect platforms and tools for smooth data flow and operations", tags: ["API Integration", "Third-Party Integration", "Data Synchronization", "Middleware"], list: ["System Integration", "API Development & Integration", "Third-Party Integration"] },
+  { icon: "📣", title: "DevOps & Automation", desc: "Improve speed, efficiency, and reliability in development cycles", tags: ["CI/CD Pipelines", "Deployment Automation", "Infrastructure as Code", "Monitoring"], list: ["DevOps Services", "CI/CD Implementation", "Deployment Automation"] },
+  { icon: "📣", title: "Testing & Quality Assurance", desc: "Ensure performance, security, and seamless user experience.", tags: ["Manual Testing", "Automation Testing", "Performance Testing", "Security Testing"], list: ["Application Support", "Infrastructure Support", "Customer Support"] },
+  { icon: "📣", title: "Support & Managed Services", desc: "Maintain, monitor, and optimize systems for long-term success.", tags: ["Application Support", "Infrastructure Support", "System Monitoring", "Maintenance"], list: ["Application Support","Infrastructure Support","Customer Support"] },
 ];
 
 const TESTIMONIALS: Testimonial[] = [
@@ -323,7 +324,7 @@ export default function TechSagaHomePage() {
                 <a href="#" className="max-w-[180px]" aria-label="TechSaga Home">
                   {/* <span className="text-[#4291CE] font-display font-bold text-xl tracking-tight">TECH</span>
                   <span className="font-display font-bold text-xl tracking-tight text-gray-900">SAGA</span> */}
-                  <img src="assets/img/logo.webp" className="w-full h-auto"  />
+                  <img src="assets/img/logo.webp" className="w-full h-auto" />
                 </a>
 
                 {/* Desktop Nav */}
@@ -598,7 +599,7 @@ export default function TechSagaHomePage() {
               {/* Featured */}
               <FadeUp>
                 <article
-                  className="relative h-[353px] overflow-hidden bg-cover bg-center flex items-end"
+                  className="relative h-[430px] overflow-hidden bg-cover bg-center flex items-end"
                   style={{
                     backgroundImage:
                       "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80')",
@@ -614,13 +615,17 @@ export default function TechSagaHomePage() {
                     </p>
 
                     <h3 className="text-2xl font-semibold mb-2">
-                      Digital Marketing Management
+                      Custom Software Development
                     </h3>
 
-                    <p className="text-sm text-gray-300 mb-4 max-w-lg">
-                      Full-funnel digital marketing from SEO to paid media, social, content,
-                      and marketplace audience growth and revenue outcomes
+                    <p className="text-sm text-white/60 mb-4 max-w-lg">
+                      Build tailored applications designed around your business needs.
                     </p>
+                    <ul className="flex text-[12px] mb-3 text-white/50 flex-wrap">
+                      <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-2 h-2 inline-block mr-1.5" />Custom Software Development</li>
+                      <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-2 h-2 inline-block mr-1.5" />Enterprise Software Development</li>
+                      <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-2 h-2 inline-block mr-1.5" />Product Development</li>
+                    </ul>
 
                     <div className="flex flex-wrap gap-2">
                       {[
@@ -632,7 +637,7 @@ export default function TechSagaHomePage() {
                       ].map((t) => (
                         <span
                           key={t}
-                          className="border border-gray-400 text-xs px-2 py-1 rounded"
+                          className="border text-white/50 border-gray-400 text-xs px-2 py-1 rounded"
                         >
                           {t}
                         </span>
@@ -653,9 +658,14 @@ export default function TechSagaHomePage() {
                       </div>
                       <h3 className="font-bold text-black text-sm mb-2">{p.title}</h3>
                       <p className="text-gray-400 text-xs leading-relaxed mb-3">{p.desc}</p>
+                      <ul className="flex text-[8px] mb-3 text-black/50 flex-wrap">
+                        {p.list.map((t, ti) => (
+                          <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-1.5 h-1.5 inline-block mr-1.5" key={t} />{t}</li>
+                        ))}
+                      </ul>
                       <div className="flex flex-wrap gap-1 text-xs text-gray-500">
                         {p.tags.map((t, ti) => (
-                          <span className="bg-[#E6F3FB] text-[#1A4D78] text-[10px] font-medium uppercase px-2 py-1 rounded-sm " key={t}>{ti > 0 && ""}{t}</span>
+                          <span className="bg-[#E6F3FB] text-[#1A4D78] text-[9px] font-medium uppercase px-2 py-1 rounded-sm " key={t}>{ti > 0 && ""}{t}</span>
                         ))}
                       </div>
                     </article>
@@ -675,9 +685,14 @@ export default function TechSagaHomePage() {
                       </div>
                       <h3 className="font-bold text-black text-sm mb-2">{p.title}</h3>
                       <p className="text-gray-400 text-xs leading-relaxed mb-3">{p.desc}</p>
+                      <ul className="flex text-[8px] mb-3 text-black/50 flex-wrap">
+                        {p.list.map((t, ti) => (
+                          <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-1.5 h-1.5 inline-block mr-1.5" key={t} />{t}</li>
+                        ))}
+                      </ul>
                       <div className="flex flex-wrap gap-1 text-xs text-gray-500">
                         {p.tags.map((t, ti) => (
-                          <span className="bg-[#E6F3FB] text-[#1A4D78] text-[10px] font-medium uppercase px-2 py-1 rounded-sm" key={t}>{ti > 0 && ""}{t}</span>
+                          <span className="bg-[#E6F3FB] text-[#1A4D78] text-[9px] font-medium uppercase px-2 py-1 rounded-sm" key={t}>{ti > 0 && ""}{t}</span>
                         ))}
                       </div>
                     </article>
@@ -703,12 +718,75 @@ export default function TechSagaHomePage() {
               </p>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">Industry Expertise</h2>
             </FadeUp>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="max-w-7xl mx-auto px-4">
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+
+                <div className="h-64">
+                  <img src="/assets/img/industry-1.png" alt="" className="w-full h-full object-cover" />
+                </div>
+
+                <div className="bg-gray-100 flex flex-col items-center justify-center text-center p-6">
+                  <div className="text-blue-500 text-4xl mb-4">
+                    <img src="/assets/img/in-icon-2.png" className="h-auto w-auto" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Healthcare</h3>
+                  <p className="text-gray-600 text-sm">
+                    Healthcare systems integrate patient portals and mobile apps, ensuring efficient care delivery while maintaining
+                  </p>
+                </div>
+
+                <div className="h-64">
+                  <img src="/assets/img/industry-3.png" alt="" className="w-full h-full object-cover" />
+                </div>
+
+                <div className="bg-gray-100 flex flex-col items-center justify-center text-center p-6">
+                  <div className="text-blue-500 text-4xl mb-4">
+                    <img src="/assets/img/in-icon-4.png" className="h-auto w-auto" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Education & E-learning</h3>
+                  <p className="text-gray-600 text-sm">
+                    Healthcare systems integrate patient portals and mobile apps, ensuring efficient care delivery while maintaining
+                  </p>
+                </div>
+
+                <div className="bg-gray-100 flex flex-col items-center justify-center text-center p-6">
+                  <div className="text-blue-500 text-4xl mb-4">
+                    <img src="/assets/img/in-icon-1.png" className="h-auto w-auto" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">E-commerce Solutions</h3>
+                  <p className="text-gray-600 text-sm">
+                    Healthcare systems integrate patient portals and mobile apps, ensuring efficient care delivery while maintaining
+                  </p>
+                </div>
+
+                <div className="h-64">
+                  <img src="/assets/img/industry-2.png" alt="" className="w-full h-full object-cover" />
+                </div>
+
+                <div className="bg-gray-100 flex flex-col items-center justify-center text-center p-6">
+                  <div className="text-blue-500 text-4xl mb-4">
+                    <img src="/assets/img/in-icon-3.png" className="h-auto w-auto" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Banking & Finance</h3>
+                  <p className="text-gray-600 text-sm">
+                    Healthcare systems integrate patient portals and mobile apps, ensuring efficient care delivery while maintaining
+                  </p>
+                </div>
+
+                <div className="h-64">
+                  <img src="/assets/img/industry-4.png" alt="" className="w-full h-full object-cover" />
+                </div>
+
+              </div>
+
+            </div>
+            {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80", imgtitle: "Enterprise & Government", title: "Large-Scale Digital Revolution", tags: ["Digital Governance Programs", "Smart City Initiatives", "ERP for Public Sector"] },
-                { img: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=400&q=80", imgtitle: "Media & Entertainment", title: "Excellent Generations at Scale", tags: ["OTT Platform Campaigns", "Film & Series Promotion", "News Channel Growth"] },
-                { img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80", imgtitle: "E-commerce & Retail", title: "Revenue-Driven Digital Growth", tags: ["Marketplace Management", "Performance Campaigns", "Conversion Optimization"] },
-                { img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80", imgtitle: "Healthcare & NGOs", title: "Purpose-Led Brand Building", tags: ["Healthcare Digital Marketing", "NGO Communications", "Community Engagement"] },
+                { img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80", imgtitle: "Enterprise & Government", title: "Healthcare", tags: ["Healthcare management systems", "Patient portals and mobile apps", "Data security and compliance solutions"] },
+                { img: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=400&q=80", imgtitle: "Media & Entertainment", title: "Education & E-learning", tags: ["Learning Management Systems (LMS)", "E-learning and training platforms", "Student and course management systems"] },
+                { img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80", imgtitle: "E-commerce & Retail", title: "E-commerce Solutions", tags: ["Custom e-commerce platform development", "Payment gateway integration", "Order and inventory management systems"] },
+                { img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80", imgtitle: "Healthcare & NGOs", title: "Banking & Finance", tags: ["Digital banking applications", "Secure payment and transaction systems", "Financial data management solutions"] },
               ].map((item, i) => (
                 <FadeUp key={item.title} delay={i * 70}>
                   <article className="overflow-hidden shadow-md group cursor-pointer rounded-2xl">
@@ -733,7 +811,7 @@ export default function TechSagaHomePage() {
                   </article>
                 </FadeUp>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -811,7 +889,7 @@ export default function TechSagaHomePage() {
               <SectionTag>Who We Are</SectionTag>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Mission, Vision & Values</h2>
             </FadeUp>
-            <div className="grid lg:grid-cols-2">
+            <div className="grid lg:grid-cols-2 rounded-t-xl overflow-hidden">
               <FadeUp>
                 <div className="bg-[#4291CE] text-white p-8 h-full">
                   <SectionTag>Our Mission</SectionTag>
@@ -843,29 +921,29 @@ export default function TechSagaHomePage() {
           </div>
         </section>
 
-         {/* ══════════════════════════════════════════════════
+        {/* ══════════════════════════════════════════════════
             JOIN TEAM CTA
         ══════════════════════════════════════════════════ */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <section style={{background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)'}} className="border-[#B7D2E8] border max-w-7xl mx-auto py-18 relative my-19 rounded-2xl" aria-label="Join the TechSaga Team">
-          {/* <div className="absolute top-0"><Image src={'/assets/img/element.png'} width={200} height={300} /></div> */}
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <FadeUp>
-              {/* <p className="text-blue-300 text-xs font-bold uppercase tracking-widest mb-3">Join Our Team</p> */}
-              <h2 className="font-display text-3xl lg:text-3xl font-bold text-black mb-4 leading-snug">
-                Be part of what we are building and help us<br />
-                <span className="uppercase">think beyond the obvious.</span>
-              </h2>
-              <a
-                href="#"
-                className="inline-block bg-[#4291CE] hover:bg-[#4291CE] text-white px-8 py-3 rounded font-bold text-sm mt-4 transition-all hover:-translate-y-px"
-              >
-                Explore Career Types
-              </a>
-            </FadeUp>
-          </div>
-        </section>
-         </div>
+          <section style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} className="border-[#B7D2E8] border max-w-7xl mx-auto py-18 relative my-19 rounded-2xl" aria-label="Join the TechSaga Team">
+            {/* <div className="absolute top-0"><Image src={'/assets/img/element.png'} width={200} height={300} /></div> */}
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <FadeUp>
+                {/* <p className="text-blue-300 text-xs font-bold uppercase tracking-widest mb-3">Join Our Team</p> */}
+                <h2 className="font-display text-3xl lg:text-3xl font-bold text-black mb-4 leading-snug">
+                  Be part of what we are building and help us<br />
+                  <span className="uppercase">think beyond the obvious.</span>
+                </h2>
+                <a
+                  href="#"
+                  className="inline-block bg-[#4291CE] hover:bg-[#4291CE] text-white px-8 py-3 rounded font-bold text-sm mt-4 transition-all hover:-translate-y-px"
+                >
+                  Explore Career Types
+                </a>
+              </FadeUp>
+            </div>
+          </section>
+        </div>
 
         {/* ══════════════════════════════════════════════════
             BLOG
@@ -918,7 +996,7 @@ export default function TechSagaHomePage() {
           </div>
         </section>
 
-       
+
 
         {/* ══════════════════════════════════════════════════
             TEAM STATS
@@ -978,13 +1056,12 @@ export default function TechSagaHomePage() {
             {/* LEFT SIDE */}
             <div className="px-6 lg:px-12 py-12 flex flex-col justify-center">
               <h2 className="text-[#4291CE] text-3xl lg:text-4xl font-bold leading-tight mb-6">
-                Ready to Transform Your <br /> Organization?
+                Ready to Move from 
+Ideas to Execution?
               </h2>
 
               <p className="text-black/80 text-sm leading-relaxed max-w-xl">
-                Stop letting your potential customers find your competitors.
-                Let&apos;s build enduring partnerships and resilient digital systems — together.
-                Offices in 6 countries, delivery across 50+.
+                Build scalable digital solutions with a team that understands your business, simplifies complexity, and delivers with consistency. Trusted globally, with offices in 6 countries and delivery across 50+.
               </p>
             </div>
 
@@ -993,8 +1070,7 @@ export default function TechSagaHomePage() {
             <div className="px-6 lg:px-12 py-12 flex justify-center">
               <div className="">
 
-                <div className="flex items-center gap-4 mb-4 p-5 rounded-xl 
-      bg-white/30 backdrop-blur-lg border border-white/20 shadow-md">
+                <div className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white">
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
@@ -1015,9 +1091,14 @@ export default function TechSagaHomePage() {
                       Book a quick session to discuss your needs and get personalized guidance.
                     </p>
                   </div>
+                  <div className="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="#4291CE" className="w-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
 
                 </div>
-                <div className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 backdrop-blur-lg border border-white/20 shadow-md">
+                <div className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white">
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
@@ -1038,9 +1119,14 @@ export default function TechSagaHomePage() {
                       Explore our past work to see the quality and range of projects we’ve delivered.
                     </p>
                   </div>
+                  <div className="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="#4291CE" className="w-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
 
                 </div>
-                <div className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 backdrop-blur-lg border border-white/20 shadow-md">
+                <div className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white">
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
@@ -1060,6 +1146,11 @@ export default function TechSagaHomePage() {
                     <p className="text-sm text-gray-700 leading-relaxed">
                       Dive into real examples that show our process, approach, and results.
                     </p>
+                  </div>
+                  <div className="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="#4291CE" className="w-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
                   </div>
 
                 </div>
@@ -1093,10 +1184,10 @@ export default function TechSagaHomePage() {
               {/* Left: Brand + contact */}
               <div>
                 {/* className="flex items-center gap-0.5 flex-shrink-0"  */}
-                <a href="#"  aria-label="TechSaga Home">
+                <a href="#" aria-label="TechSaga Home">
                   {/* <span className="text-[#4291CE] font-display font-bold text-xl tracking-tight">TECH</span>
                   <span className="font-display font-bold text-xl tracking-tight text-gray-900">SAGA</span> */}
-                  <img src="assets/img/logo.webp" className="max-w-[160px] h-auto"  />
+                  <img src="assets/img/logo.webp" className="max-w-[160px] h-auto" />
                 </a>
                 <p className="text-[10px] uppercase tracking-[0.2em]  text-black/80 mb-5">Inspired for Innovation</p>
                 <p className="text-sm leading-relaxed mb-6  text-black/80 max-w-[260px]">
