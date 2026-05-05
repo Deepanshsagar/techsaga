@@ -3,6 +3,9 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
+import SplitTextReveal from "@/components/SplitTextReveal"
+import AutoSplitText from "@/components/AutoSplitText"
+import SplitContainer from "@/components/SplitContainer"
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 interface ServiceCard {
@@ -240,30 +243,54 @@ const VALUES: ValueItem[] = [
 ];
 
 const CLIENTS = [
-  { name: "KPMG", logo: "/assets/img/logo/01.jpg" },
-  { name: "Zscaler", logo: "/assets/img/logo/02.jpg" },
-  { name: "Accenture", logo: "/assets/img/logo/03.jpg" },
-  { name: "Gartner", logo: "/assets/img/logo/04.jpg" },
-  { name: "Wipro", logo: "/assets/img/logo/05.jpg" },
-  { name: "Tata", logo: "/assets/img/logo/06.jpg" },
-  { name: "Tata1", logo: "/assets/img/logo/07.jpg" },
-  { name: "Tata2", logo: "/assets/img/logo/08.jpg" },
-  { name: "Tata3", logo: "/assets/img/logo/09.jpg" },
-  { name: "Tata4", logo: "/assets/img/logo/10.jpg" },
-  { name: "Tata5", logo: "/assets/img/logo/011.jpg" },
-  { name: "Tata6", logo: "/assets/img/logo/012.jpg" },
-  { name: "Tata7", logo: "/assets/img/logo/013.jpg" },
-  { name: "Tata8", logo: "/assets/img/logo/014.jpg" },
-  { name: "Tata9", logo: "/assets/img/logo/016.jpg" },
-  { name: "Tata10", logo: "/assets/img/logo/017.jpg" },
-  { name: "Tata11", logo: "/assets/img/logo/018.jpg" },
-  { name: "Tata12", logo: "/assets/img/logo/019.jpg" },
-  { name: "Tata13", logo: "/assets/img/logo/020.jpg" },
-  { name: "Tata14", logo: "/assets/img/logo/021.jpg" },
-  { name: "Tata15", logo: "/assets/img/logo/022.jpg" },
-  { name: "Tata16", logo: "/assets/img/logo/023.jpg" },
-  { name: "Tata17", logo: "/assets/img/logo/024.jpg" },
-  { name: "Tata18", logo: "/assets/img/logo/025.jpg" },
+  { name: "aakar", logo: "/assets/img/logo/aakar.png" },
+  { name: "al-jash-trading", logo: "/assets/img/logo/al-jash-trading.png" },
+  { name: "austin-community", logo: "/assets/img/logo/austin-community.png" },
+  { name: "b-online", logo: "/assets/img/logo/b-online.png" },
+  { name: "career abroad", logo: "/assets/img/logo/career-abroad.png" },
+  { name: "cc avenue", logo: "/assets/img/logo/cc-avenue.png" },
+  { name: "docum care", logo: "/assets/img/logo/docum-care.png" },
+  { name: "dsm", logo: "/assets/img/logo/dsm.png" },
+  { name: "ecadema", logo: "/assets/img/logo/ecadema.png" },
+  { name: "forever", logo: "/assets/img/logo/forever.png" },
+  { name: "formdox", logo: "/assets/img/logo/formdox.png" },
+  { name: "fortinet", logo: "/assets/img/logo/fortinet.png" },
+  { name: "greecepropertiesgate", logo: "/assets/img/logo/greecepropertiesgate.png" },
+  { name: "iitr", logo: "/assets/img/logo/iitr.png" },
+  { name: "indian-exhibition", logo: "/assets/img/logo/indian-exhibition.png" },
+  { name: "ipsa", logo: "/assets/img/logo/ipsa.png" },
+  { name: "khanna-jewellers", logo: "/assets/img/logo/khanna-jewellers.png" },
+  { name: "kpmg", logo: "/assets/img/logo/kpmg.png" },
+  { name: "kwabey", logo: "/assets/img/logo/kwabey.png" },
+  { name: "mdra", logo: "/assets/img/logo/mdra.png" },
+  { name: "novartis", logo: "/assets/img/logo/novartis.png" },
+  { name: "peak8", logo: "/assets/img/logo/peak8.png" },
+  { name: "premier-consultancy", logo: "/assets/img/logo/premier-consultancy.png" },
+  { name: "star-behavioral", logo: "/assets/img/logo/star-behavioral.png" },
+  { name: "taj-bank", logo: "/assets/img/logo/taj-bank.png" },
+  { name: "uba", logo: "/assets/img/logo/uba.png" },
+  { name: "viseart", logo: "/assets/img/logo/viseart.png" },
+  { name: "bakeeeeery-hill-dental", logo: "/assets/img/logo/bakeeeeery-hill-dental.png" },
+  { name: "bbc", logo: "/assets/img/logo/bbc.png" },
+  { name: "bcd", logo: "/assets/img/logo/bcd.png" },
+  { name: "blue-shift", logo: "/assets/img/logo/blue-shift.png" },
+  { name: "doxrix", logo: "/assets/img/logo/doxrix.png" },
+  { name: "dss-roofing", logo: "/assets/img/logo/dss-roofing.png" },
+  { name: "edtia", logo: "/assets/img/logo/edtia.png" },
+  { name: "exordior", logo: "/assets/img/logo/exordior.png" },
+  { name: "fact", logo: "/assets/img/logo/fact.png" },
+  { name: "farm-source", logo: "/assets/img/logo/farm-source.png" },
+  { name: "intercambio", logo: "/assets/img/logo/intercambio.png" },
+  { name: "manifestvision", logo: "/assets/img/logo/manifestvision.png" },
+  { name: "meilleur-events", logo: "/assets/img/logo/meilleur-events.png" },
+  { name: "panels", logo: "/assets/img/logo/panels.png" },
+  { name: "pma-india", logo: "/assets/img/logo/pma-india.png" },
+  { name: "protiviti", logo: "/assets/img/logo/protiviti.png" },
+  { name: "rug-mart", logo: "/assets/img/logo/rug-mart.png" },
+  { name: "the-mt-kenya", logo: "/assets/img/logo/the-mt-kenya.png" },
+  { name: "tsh", logo: "/assets/img/logo/tsh.png" },
+  { name: "url", logo: "/assets/img/logo/url.png" },
+  { name: "zuhd", logo: "/assets/img/logo/zuhd.png" },
 ];
 
 const TEAM_IMAGES = [
@@ -279,27 +306,31 @@ export default function TechSagaHomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const firstRow = CLIENTS.slice(0, Math.ceil(CLIENTS.length / 2));
+  const secondRow = CLIENTS.slice(Math.ceil(CLIENTS.length / 2));
+
+  const triggerRef = useRef(null);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-  });
+  const [emblaRef1, emblaApi1] = useEmblaCarousel({ loop: true, align: "start" });
+  const [emblaRef2, emblaApi2] = useEmblaCarousel({ loop: true, align: "start" });
 
-  // Optional autoplay
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!emblaApi1 || !emblaApi2) return;
 
-    const interval = setInterval(() => {
-      emblaApi.scrollNext();
-    }, 2000);
+    const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
+    const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
 
-    return () => clearInterval(interval);
-  }, [emblaApi]);
+    return () => {
+      clearInterval(i1);
+      clearInterval(i2);
+    };
+  }, [emblaApi1, emblaApi2]);
 
   return (
     <div className="font-[Manrope,sans-serif] text-gray-800 bg-white antialiased">
@@ -469,6 +500,7 @@ export default function TechSagaHomePage() {
               </div>
             </FadeUp>
             <FadeUp delay={120}>
+
               <SectionTag>About Techsaga</SectionTag>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-snug">
                 A Trusted Partner for Enterprise-Grade Digital Transformation
@@ -493,10 +525,12 @@ export default function TechSagaHomePage() {
         <section className="bg-[#E3EFF8] py-16 lg:py-20" aria-label="Platform Implementation Services">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
-              <SectionTag>Enterprise Enablement</SectionTag>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-[#5A5757]">
-                Platform Implementation and Managed Services
-              </h2>
+              <SplitContainer className="">
+                <SectionTag>Enterprise Enablement</SectionTag>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-[#5A5757]">
+                  Platform Implementation and Managed Services
+                </h2>
+              </SplitContainer>
             </FadeUp>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0">
@@ -580,18 +614,36 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             PRODUCT ENGINEERING
         ══════════════════════════════════════════════════ */}
+
         <section
           className="py-16 lg:py-20"
+          id="my-custom-trigger"
           style={{ background: "linear-gradient(162deg, rgb(255 255 255 / 90%) 40%, rgba(227, 239, 248, 0.9) 60%)" }}
 
           aria-label="Product Engineering & Marketing"
         >
-          <div className="max-w-7xl rounded-xl overflow-hidden mx-auto px-0 sm:px-0 lg:px-0">
+          <div ref={triggerRef} className="max-w-7xl rounded-xl overflow-hidden mx-auto px-0 sm:px-0 lg:px-0">
             <FadeUp className="text-center mb-12">
-              <SectionTag>Digital Services</SectionTag>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-[#383535]">
+
+              {/* <SplitTextReveal
+                text="Product Engineering, Marketing and Technology Solutions"
+                type="words"
+                stagger={1}
+                duration={0.9}
+                className="font-display text-3xl lg:text-4xl font-bold text-[#383535]"
+              /> */}
+              <SplitContainer>
+                <SectionTag>Digital Services</SectionTag>
+              </SplitContainer>
+              <SplitContainer
+                className="font-display text-3xl lg:text-4xl font-bold text-[#383535]"
+              // triggerElement={triggerRef}
+              >
                 Product Engineering, Marketing and Technology Solutions
-              </h2>
+              </SplitContainer>
+              {/* <h2 className="font-display text-3xl lg:text-4xl font-bold text-[#383535]">
+                Product Engineering, Marketing and Technology Solutions
+              </h2> */}
               {/* <a href="#" className="text-blue-400 text-sm font-semibold mt-2 inline-block hover:underline">All Products →</a> */}
             </FadeUp>
 
@@ -713,10 +765,12 @@ export default function TechSagaHomePage() {
         }} className="bg-white py-16 lg:py-20" aria-label="Industry Expertise">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
-              <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#4291CE] mb-2">
-                Sectors We Serve
-              </p>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">Industry Expertise</h2>
+              <SplitContainer>
+                <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#4291CE] mb-2">
+                  Sectors We Serve
+                </p>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">Industry Expertise</h2>
+              </SplitContainer>
             </FadeUp>
             <div className="max-w-7xl mx-auto px-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 rounded-xl overflow-hidden">
@@ -817,22 +871,37 @@ export default function TechSagaHomePage() {
         <section className="bg-white py-14" aria-label="Our partner">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-10">
-              <SectionTag>Our  partner</SectionTag>
-              <h2 className="font-display text-3xl font-bold text-gray-900">Few Of Our Leading Clients</h2>
+              <SplitContainer>
+                <SectionTag>Our partner</SectionTag>
+                <h2 className="font-display text-3xl font-bold text-gray-900">Few Of Our Leading Clients</h2>
+              </SplitContainer>
             </FadeUp>
-            <div className="overflow-hidden" ref={emblaRef}>
+            {/* Row 1 */}
+            <div className="overflow-hidden" ref={emblaRef1}>
               <div className="flex">
-                {CLIENTS.map((c) => (
-                  <div
-                    key={c.name}
-                    className="flex-[0_0_16.6667%] px-3 relative h-60"
-                  >
+                {firstRow.map((c) => (
+                  <div key={c.name} className="flex-[0_0_16.6667%] px-3 h-32 relative">
                     <Image
                       src={c.logo}
-                      alt={`${c.name} logo`}
+                      alt={c.name}
                       fill
-                      className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                      unoptimized
+                      className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2 */}
+            <div className="overflow-hidden mt-6" ref={emblaRef2}>
+              <div className="flex">
+                {secondRow.map((c) => (
+                  <div key={c.name} className="flex-[0_0_16.6667%] px-3 h-32 relative">
+                    <Image
+                      src={c.logo}
+                      alt={c.name}
+                      fill
+                      className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition"
                     />
                   </div>
                 ))}
@@ -849,8 +918,10 @@ export default function TechSagaHomePage() {
         }} className="bg-white py-16 lg:py-20" aria-label="Partner Testimonials">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
-              <SectionTag>Testimonials</SectionTag>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">What Our Partners Say</h2>
+              <SplitContainer>
+                <SectionTag>Testimonials</SectionTag>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">What Our Partners Say</h2>
+              </SplitContainer>
             </FadeUp>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 ">
               {TESTIMONIALS.map((t, i) => (
@@ -882,8 +953,10 @@ export default function TechSagaHomePage() {
         <section className="bg-white pt-16 lg:pt-20 mb-0" aria-label="Mission Vision Values">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
-              <SectionTag>Who We Are</SectionTag>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Mission, Vision & Values</h2>
+              <SplitContainer>
+                <SectionTag>Who We Are</SectionTag>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Mission, Vision & Values</h2>
+              </SplitContainer>
             </FadeUp>
             <div className="grid lg:grid-cols-2 rounded-t-xl overflow-hidden">
               <FadeUp>
@@ -904,17 +977,17 @@ export default function TechSagaHomePage() {
               </FadeUp>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4">
-              {VALUES.map((v, i) => (
-                <FadeUp key={v.title} delay={i * 60}>
-                  <div className="bg-white p-5 py-10 border-r border-l border-gray-100">
-                    {/* <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center mb-3 text-xl"> */}
-                    {/* <Image src={`/assets/img/${v.icon}`} width={18} height={18} alt="" /> */}
-                    {/* </div> */}
-                    <h4 className="font-bold text-gray-900 text-xs tracking-widest mb-2 uppercase">{v.title}</h4>
-                    <p className="text-gray-500 text-xs leading-relaxed">{v.desc}</p>
-                  </div>
-                </FadeUp>
-              ))}
+              {VALUES.map((v, i) => {
+                const bgs = ['bg-[#4CAEFA]', 'bg-[#2F96E6] min-h-80', 'bg-[#4291CE] min-h-80', 'bg-[#1F659A]'];
+                return (
+                  <FadeUp key={v.title} delay={i * 60}>
+                    <div className={`${bgs[i]} p-6 py-10 text-white min-h-50`}>
+                      <h4 className="font-bold text-xs tracking-widest mb-2 uppercase text-white/90">{v.title}</h4>
+                      <p className="text-white/70 text-xs leading-relaxed">{v.desc}</p>
+                    </div>
+                  </FadeUp>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -923,14 +996,15 @@ export default function TechSagaHomePage() {
             JOIN TEAM CTA
         ══════════════════════════════════════════════════ */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <section style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} className="border-[#B7D2E8] border max-w-7xl mx-auto py-18 relative my-19 rounded-2xl" aria-label="Join the TechSaga Team">
+          {/* style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} */}
+          <section className="bg-[#ffffff]/20 backdrop-blur-2xl -mt-45 max-w-5xl mx-auto py-10 relative mb-19 rounded-2xl" aria-label="Join the TechSaga Team">
             {/* <div className="absolute top-0"><Image src={'/assets/img/element.png'} width={200} height={300} /></div> */}
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <FadeUp>
                 {/* <p className="text-blue-300 text-xs font-bold uppercase tracking-widest mb-3">Join Our Team</p> */}
-                <h2 className="font-display text-3xl lg:text-3xl font-bold text-black mb-4 leading-snug">
-                  Be part of what we are building and help us<br />
-                  <span className="uppercase">think beyond the obvious.</span>
+                <h2 className="font-display text-4xl font-bold lg:text-3xl line text-white mb-0 leading-snug">
+                  Great things are built together
+                  <span className="uppercase block text-sm font-light text-white/60 tracking-widest">Come build something that matters</span>
                 </h2>
                 <a
                   href="#"
@@ -955,12 +1029,14 @@ export default function TechSagaHomePage() {
   )` }} className="bg-white py-16 lg:py-20" aria-label="News Articles and Blogs" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
-              <SectionTag>Latest trends</SectionTag>
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">
-                Explore Latest News, Articles, And Blogs
-              </h2>
+              <SplitContainer>
+                <SectionTag>Latest trends</SectionTag>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">
+                  Explore Latest News, Articles, And Blogs
+                </h2>
+              </SplitContainer>
             </FadeUp>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 bg-white p-5 rounded-2xl">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5 rounded-2xl">
               {BLOGS.map((b, i) => (
                 <FadeUp key={b.title} delay={i * 80}>
                   <article className="overflow-hidden  hover:-translate-y-1 transition-all duration-200 group flex flex-col">
@@ -1002,6 +1078,7 @@ export default function TechSagaHomePage() {
         <section className="bg-white py-16 lg:py-20" aria-label="Our Global Team">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
             <FadeUp>
+
               <SectionTag>People & Culture</SectionTag>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 750+ Dedicated Thinkers Worldwide
