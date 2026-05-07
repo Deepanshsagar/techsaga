@@ -220,6 +220,21 @@ const PRODUCTST: ProductCard[] = [
   { icon: "📣", title: "Support & Managed Services", desc: "Maintain, monitor, and optimize systems for long-term success.", tags: ["Application Support", "Infrastructure Support", "Customer Support"], list: [] },
 ];
 
+const industries = [
+  { icon: "ti-heart-rate-monitor", label: "Healthcare", img: '/assets/img/icon/healthcare1.png' },
+  { icon: "ti-school", label: "Education &\nE-learning", img: '/assets/img/icon/healthcare2.png' },
+  { icon: "ti-shopping-cart", label: "E-commerce\nSolutions", img: '/assets/img/icon/healthcare3.png' },
+  { icon: "ti-building-bank", label: "Banking &\nFinance", img: '/assets/img/icon/healthcare4.png' },
+  { icon: "ti-building-estate", label: "Real Estate", img: '/assets/img/icon/healthcare5.png' },
+  { icon: "ti-shopping-bag", label: "Retail &\nConsumer Goods", img: '/assets/img/icon/healthcare6.png' },
+  { icon: "ti-gavel", label: "Legal", img: '/assets/img/icon/healthcare7.png' },
+  { icon: "ti-bulb", label: "Consulting\nServices", img: '/assets/img/icon/healthcare8.png' },
+  { icon: "ti-plane", label: "Travel &\nTourism", img: '/assets/img/icon/healthcare9.png' },
+  { icon: "ti-device-tv", label: "Media &\nEntertainment", img: '/assets/img/icon/healthcare10.png' },
+  { icon: "ti-truck-delivery", label: "Logistics &\nTransportation", img: '/assets/img/icon/healthcare11.png' },
+  { icon: "ti-speakerphone", label: "Advertising &\nPublic Relations", img: '/assets/img/icon/healthcare12.png' },
+];
+
 const TESTIMONIALS: Testimonial[] = [
   { name: "Sara Timothy", role: "VP, Digital Transformation", avatar: "https://randomuser.me/api/portraits/women/44.jpg", stars: 5, quote: "TechSaga completely transformed our Salesforce environment. Their deep expertise and commitment to outcomes was unparalleled. We saw a 40% jump in team efficiency." },
   { name: "Greg Phillips", role: "CTO, ScaleUp Technologies", avatar: "https://randomuser.me/api/portraits/men/32.jpg", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
@@ -706,63 +721,24 @@ export default function TechSagaHomePage() {
                 <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">Industry Expertise</h2>
               </SplitContainer>
             </FadeUp>
-            <div className="max-w-7xl mx-auto px-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 rounded-xl overflow-hidden">
-
-                {[
-                  {
-                    img: "/assets/img/industry-1.png",
-                    icon: "/assets/img/in-icon-2.png",
-                    title: "Healthcare",
-                    desc: "We build secure, compliant healthcare systems that improve patient care and streamline operations."
-                  },
-                  {
-                    img: "/assets/img/industry-3.png",
-                    icon: "/assets/img/in-icon-4.png",
-                    title: "Education & E-learning",
-                    desc: "We enable institutions to deliver engaging and accessible learning platforms."
-                  },
-                  {
-                    img: "/assets/img/industry-2.png",
-                    icon: "/assets/img/in-icon-1.png",
-                    title: "E-commerce Solutions",
-                    desc: "We develop scalable platforms that enhance user experience and simplify selling."
-                  },
-                  {
-                    img: "/assets/img/industry-4.png",
-                    icon: "/assets/img/in-icon-3.png",
-                    title: "Banking & Finance",
-                    desc: "Secure, high-performance systems for digital banking and transactions."
-                  }
-                ].map((item, i) => (
-
-                  <div key={i} className="relative group h-72 overflow-hidden">
-
-                    {/* Image */}
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
-                    />
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col items-center justify-center text-center p-6">
-
-                      <img src={item.icon} className="mb-4 w-12 h-12" />
-
-                      <h3 className="text-white text-lg font-semibold mb-2">
-                        {item.title}
-                      </h3>
-
-                      <p className="text-gray-200 text-sm opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition duration-500 delay-100">
-                        {item.desc}
-                      </p>
-
-                    </div>
-
+          </div>
+          <div className="mx-auto ">
+            <div className=" p-6" style={{ background: "linear-gradient(135deg, #5ba3d9 0%, #4a90c4 40%, #3a7bb0 100%)" }}>
+              <div className="grid m-auto py-14 max-w-7xl grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2.5">
+                {industries.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col items-center justify-center gap-2.5 rounded-xl px-2.5 py-4 text-center
+                       border border-white/30 bg-white/[0.18] cursor-pointer min-h-[110px]
+                       transition-all duration-250 hover:bg-white/[0.28] hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    {/* <i className={`ti ${item.icon} text-white/95 text-3xl`} aria-hidden="true" /> */}
+                    <img src={item?.img} alt="" className="" />
+                    <span className="text-[16px] font-semibold leading-snug text-white/95 whitespace-pre-line">
+                      {item.label}
+                    </span>
                   </div>
                 ))}
-
               </div>
             </div>
             {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
