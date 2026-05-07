@@ -6,6 +6,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import SplitTextReveal from "@/components/SplitTextReveal"
 import AutoSplitText from "@/components/AutoSplitText"
 import SplitContainer from "@/components/SplitContainer"
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { SectionTag } from "./utils/utils";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 interface ServiceCard {
@@ -43,13 +46,7 @@ interface ValueItem {
 
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
-function SectionTag({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#4291CE] mb-2">
-      {children}
-    </p>
-  );
-}
+
 
 function StarRating({ count }: { count: number }) {
   return (
@@ -108,7 +105,7 @@ function FadeUp({
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const NAV_LINKS = ["Services", "Industries", "Case Studies", "About", "Careers", "Blog"];
+
 
 const SERVICES: ServiceCard[] = [
   {
@@ -227,6 +224,7 @@ const TESTIMONIALS: Testimonial[] = [
   { name: "Sara Timothy", role: "VP, Digital Transformation", avatar: "https://randomuser.me/api/portraits/women/44.jpg", stars: 5, quote: "TechSaga completely transformed our Salesforce environment. Their deep expertise and commitment to outcomes was unparalleled. We saw a 40% jump in team efficiency." },
   { name: "Greg Phillips", role: "CTO, ScaleUp Technologies", avatar: "https://randomuser.me/api/portraits/men/32.jpg", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
   { name: "Laura Hoffman", role: "Director, Global Operations", avatar: "https://randomuser.me/api/portraits/women/68.jpg", stars: 5, quote: "Working with TechSaga felt like having an internal team that genuinely cared about outcomes. Their digital marketing campaigns drove a 3x increase in qualified leads." },
+  { name: "Greg Phillipss", role: "CTO, ScaleUp Technologies", avatar: "https://randomuser.me/api/portraits/men/32.jpg", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
 ];
 
 const BLOGS: BlogPost[] = [
@@ -319,18 +317,21 @@ export default function TechSagaHomePage() {
 
   const [emblaRef1, emblaApi1] = useEmblaCarousel({ loop: true, align: "start" });
   const [emblaRef2, emblaApi2] = useEmblaCarousel({ loop: true, align: "start" });
+  const [emblaRef3, emblaApi3] = useEmblaCarousel({ loop: true, align: "start" });
 
   useEffect(() => {
-    if (!emblaApi1 || !emblaApi2) return;
+    if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
 
     const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
     const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
+    const i3 = setInterval(() => emblaApi3.scrollNext(), 2000); // reverse
 
     return () => {
       clearInterval(i1);
       clearInterval(i2);
+      clearInterval(i3);
     };
-  }, [emblaApi1, emblaApi2]);
+  }, [emblaApi1, emblaApi2, emblaApi3]);
 
   return (
     <div className="font-[Manrope,sans-serif] text-gray-800 bg-white antialiased">
@@ -341,75 +342,8 @@ export default function TechSagaHomePage() {
 
         }}>
 
-          <header
-            className={`max-w-7xl mx-auto rounded-2xl fixed top-5 left-0 right-0 z-50 transition-all duration-300
-  ${scrolled
-                ? "bg-white/70 backdrop-blur-sm shadow-[0_8px_20px_rgba(0,0,0,0.1)] border border-white/20"
-                : "bg-white/90 backdrop-blur-md shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-white/10"}
-  `}
-          >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center justify-between h-16">
-                {/* Logo */}
-                {/* className="flex items-center gap-0.5 flex-shrink-0"  */}
-                <a href="#" className="max-w-[180px]" aria-label="TechSaga Home">
-                  {/* <span className="text-[#4291CE] font-display font-bold text-xl tracking-tight">TECH</span>
-                  <span className="font-display font-bold text-xl tracking-tight text-gray-900">SAGA</span> */}
-                  <img src="assets/img/logo.webp" className="w-full h-auto" />
-                </a>
 
-                {/* Desktop Nav */}
-                <nav className="hidden lg:flex items-center gap-7" aria-label="Main navigation">
-                  {NAV_LINKS.map((link) => (
-                    <a
-                      key={link}
-                      href="#"
-                      className="text-sm font-semibold text-gray-600 hover:text-[#4291CE] relative group transition-colors"
-                    >
-                      {link}
-                      <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-[#4291CE] group-hover:w-full transition-all duration-200" />
-                    </a>
-                  ))}
-                </nav>
-
-                <div className="hidden lg:flex items-center">
-                  <a
-                    href="#"
-                    className="bg-[#4291CE] hover:bg-[#4291CE] text-white text-sm font-bold px-5 py-2.5 rounded transition-all duration-200 hover:-translate-y-px"
-                  >
-                    Get Consultation
-                  </a>
-                </div>
-
-                {/* Mobile toggle */}
-                <button
-                  className="lg:hidden p-2 text-gray-600 hover:text-[#4291CE] transition-colors"
-                  onClick={() => setMenuOpen((v) => !v)}
-                  aria-label="Toggle menu"
-                  aria-expanded={menuOpen}
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    {menuOpen
-                      ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            {/* Mobile menu */}
-            {menuOpen && (
-              <div className="lg:hidden bg-white border-t px-6 py-4 flex flex-col gap-4 text-sm font-semibold text-gray-700 shadow-lg">
-                {NAV_LINKS.map((link) => (
-                  <a key={link} href="#" className="hover:text-[#4291CE] transition-colors">{link}</a>
-                ))}
-                <a href="#" className="bg-[#4291CE] text-white px-5 py-2.5 rounded text-center font-bold hover:bg-[#4291CE] transition-colors">
-                  Get Free Quote
-                </a>
-              </div>
-            )}
-          </header>
-
+          <Header />
           <div className="pt-16">
             {/* ══════════════════════════════════════════════════
             HERO
@@ -501,7 +435,7 @@ export default function TechSagaHomePage() {
             </FadeUp>
             <FadeUp delay={120}>
 
-              <SectionTag>About Techsaga</SectionTag>
+              <SectionTag className="">About Techsaga</SectionTag>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-snug">
                 A Trusted Partner for Enterprise-Grade Digital Transformation
               </h2>
@@ -511,7 +445,7 @@ export default function TechSagaHomePage() {
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Enterprise IT", "Digital Marketing", "Managed Services", "ERP & Cloud", "AI Solutions", "PR & Comms"].map((tag) => (
-                  <span key={tag} className="bg-[#E6F3FB] text-[#1A4D78] text-xs font-medium uppercase px-3 py-1 ">{tag}</span>
+                  <span key={tag} className="bg-[#E6F3FB] text-[#1A4D78] text-xs font-medium uppercase px-3 py-1 rounded">{tag}</span>
                 ))}
               </div>
               <p className="text-[#4291CE] block text-sm font-semibold mt-6 cursor-pointer">View Portfolio →</p>
@@ -602,7 +536,7 @@ export default function TechSagaHomePage() {
                 </p>
                 <a
                   href="#"
-                  className="border-2 border-white bg-[#4291CE] text-white hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200 whitespace-nowrap flex-shrink-0 rounded-4xl"
+                  className="border-2 border-white bg-[#4291CE] text-white hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200 whitespace-nowrap flex-shrink-0 rounded-md"
                 >
                   Talk to an Enterprise Architect →
                 </a>
@@ -670,7 +604,7 @@ export default function TechSagaHomePage() {
                       Custom Software Development
                     </h3>
 
-                    <p className="text-sm text-white/60 mb-4 max-w-lg">
+                    <p className="text-sm text-white/80 mb-4 max-w-lg">
                       Build tailored applications designed around your business needs.
                     </p>
                     {/* <ul className="flex text-[12px] mb-3 text-white/50 flex-wrap">
@@ -689,7 +623,7 @@ export default function TechSagaHomePage() {
                       ].map((t) => (
                         <span
                           key={t}
-                          className="border text-white/50 border-gray-400 text-xs px-2 py-1 rounded"
+                          className="border text-white/80 border-gray-400 text-xs px-2 py-1 rounded"
                         >
                           {t}
                         </span>
@@ -873,7 +807,7 @@ export default function TechSagaHomePage() {
             <FadeUp className="text-center mb-10">
               <SplitContainer>
                 <SectionTag>Our partner</SectionTag>
-                <h2 className="font-display text-3xl font-bold text-gray-900">Few Of Our Leading Clients</h2>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Few Of Our Leading Clients</h2>
               </SplitContainer>
             </FadeUp>
             {/* Row 1 */}
@@ -923,26 +857,42 @@ export default function TechSagaHomePage() {
                 <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">What Our Partners Say</h2>
               </SplitContainer>
             </FadeUp>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 ">
-              {TESTIMONIALS.map((t, i) => (
-                <FadeUp key={t.name} delay={i * 80}>
-                  <blockquote className=" p-6 border mr-3 border-gray-300 rounded-xl duration-200 h-full flex flex-col">
-                    <div className="flex items-center gap-3 mb-4 ">
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                        <Image src={t.avatar} alt={t.name} fill className="object-cover" unoptimized />
-                      </div>
-                    </div>
-                    {/* <StarRating count={t.stars} /> */}
-                    <div className="h-1 w-8 mb-4 block bg-[#4291CE]"></div>
-                    <p className="text-black/60 text-sm leading-relaxed flex-1 mb-2">&ldquo;{t.quote}&rdquo;</p>
+            <div className="overflow-hidden" ref={emblaRef3}>
+              <div className="flex">
+                {TESTIMONIALS.map((t, i) => (
+                  <div
+                    key={t.name}
+                    className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-2"
+                  >
+                    <FadeUp delay={i * 80}>
+                      <blockquote className="p-6 border border-gray-300 rounded-xl duration-200 h-full flex flex-col">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                            <Image
+                              src={t.avatar}
+                              alt={t.name}
+                              fill
+                              className="object-cover"
+                              unoptimized
+                            />
+                          </div>
+                        </div>
 
-                    <div>
-                      <div className="font-bold text-black text-sm">{t.name}</div>
-                      <div className="text-xs text-black/40">{t.role}</div>
-                    </div>
-                  </blockquote>
-                </FadeUp>
-              ))}
+                        <div className="h-1 w-8 mb-4 bg-[#4291CE]" />
+
+                        <p className="text-black/60 text-sm leading-relaxed flex-1 mb-2">
+                          &ldquo;{t.quote}&rdquo;
+                        </p>
+
+                        <div>
+                          <div className="font-bold text-black text-sm">{t.name}</div>
+                          <div className="text-xs text-black/40">{t.role}</div>
+                        </div>
+                      </blockquote>
+                    </FadeUp>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -953,17 +903,13 @@ export default function TechSagaHomePage() {
         <section className="bg-white pt-16 lg:pt-20 mb-0" aria-label="Mission Vision Values">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
-              <SplitContainer>
-                <SectionTag>Who We Are</SectionTag>
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Mission, Vision & Values</h2>
-              </SplitContainer>
+              <SectionTag>Who We Are</SectionTag>
+              <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Mission, Vision & Values</h2>
             </FadeUp>
             <div className="grid lg:grid-cols-2 rounded-t-xl overflow-hidden">
               <FadeUp>
                 <div className="bg-[#4291CE] text-white p-8 h-full">
-                  <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#ffffff] mb-2">
-                    Our Mission
-                  </p>
+                  <SectionTag>Our Mission</SectionTag>
                   <h3 className="font-display text-2xl font-bold mb-3">To Enable Confident Transformation at Global Scale</h3>
                   <p className="text-white/60 text-sm leading-relaxed">We exist to eliminate the friction between great ideas and their execution. Whether you are a fast-growing startup or a legacy enterprise, TechSaga provides the technical depth and strategic clarity to help you transform — not incrementally, but boldly.</p>
                 </div>
@@ -977,17 +923,17 @@ export default function TechSagaHomePage() {
               </FadeUp>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4">
-              {VALUES.map((v, i) => {
-                const bgs = ['bg-[#4CAEFA]', 'bg-[#2F96E6] min-h-80', 'bg-[#4291CE] min-h-80', 'bg-[#1F659A]'];
-                return (
-                  <FadeUp key={v.title} delay={i * 60}>
-                    <div className={`${bgs[i]} p-6 py-10 text-white min-h-50`}>
-                      <h4 className="font-bold text-xs tracking-widest mb-2 uppercase text-white/90">{v.title}</h4>
-                      <p className="text-white/70 text-xs leading-relaxed">{v.desc}</p>
-                    </div>
-                  </FadeUp>
-                );
-              })}
+              {VALUES.map((v, i) => (
+                <FadeUp key={v.title} delay={i * 60}>
+                  <div className="bg-white p-5 py-10 border-r border-l border-gray-100">
+                    {/* <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center mb-3 text-xl"> */}
+                    {/* <Image src={`/assets/img/${v.icon}`} width={18} height={18} alt="" /> */}
+                    {/* </div> */}
+                    <h4 className="font-bold text-gray-900 text-xs tracking-widest mb-2 uppercase">{v.title}</h4>
+                    <p className="text-gray-500 text-xs leading-relaxed">{v.desc}</p>
+                  </div>
+                </FadeUp>
+              ))}
             </div>
           </div>
         </section>
@@ -995,22 +941,22 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             JOIN TEAM CTA
         ══════════════════════════════════════════════════ */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} */}
-          <section className="bg-[#ffffff]/20 backdrop-blur-2xl -mt-45 max-w-5xl mx-auto py-10 relative mb-19 rounded-2xl" aria-label="Join the TechSaga Team">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} className="border-[#B7D2E8] border max-w-7xl mx-auto py-15 relative mb-19 rounded-2xl" aria-label="Join the TechSaga Team">
             {/* <div className="absolute top-0"><Image src={'/assets/img/element.png'} width={200} height={300} /></div> */}
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <FadeUp>
                 {/* <p className="text-blue-300 text-xs font-bold uppercase tracking-widest mb-3">Join Our Team</p> */}
-                <h2 className="font-display text-4xl font-bold lg:text-3xl line text-white mb-0 leading-snug">
-                  Great things are built together
-                  <span className="uppercase block text-sm font-light text-white/60 tracking-widest">Come build something that matters</span>
+                <h2 className="font-display text-xl lg:text-xl font-extrabold text-black mb-4 leading-snug">
+                  Be part of what we are building and help us<br />
+                  <span className="uppercase">think beyond the obvious.</span>
                 </h2>
                 <a
                   href="#"
-                  className="inline-block bg-[#4291CE] hover:bg-[#4291CE] text-white px-8 py-3 rounded font-bold text-sm mt-4 transition-all hover:-translate-y-px"
+                  // className="inline-block border-1 border-white/60 bg-transparent  rounded-md bg-white/5 shadow-[inset_-1px_-1px_2px_2px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] text-[#4291CE] px-50 py-3 font-bold text-[15px] mt-4 transition-all "
+                  className="inline-block bg-white/5 px-50 py-3 rounded-md shadow-[inset_-1px_-1px_2px_1px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] border-1 border-white/50 "
                 >
-                  Explore Career Types
+                  Explore Career Page
                 </a>
               </FadeUp>
             </div>
@@ -1039,7 +985,7 @@ export default function TechSagaHomePage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5 rounded-2xl">
               {BLOGS.map((b, i) => (
                 <FadeUp key={b.title} delay={i * 80}>
-                  <article className="overflow-hidden  hover:-translate-y-1 transition-all duration-200 group flex flex-col">
+                  <article className="overflow-hidden rounded hover:-translate-y-1 transition-all duration-200 group flex flex-col">
                     <div className="relative h-44 overflow-hidden">
                       <Image
                         src={b.img}
@@ -1239,224 +1185,7 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
           FOOTER
       ══════════════════════════════════════════════════ */}
-        <footer style={{
-          background: 'linear-gradient(75.57deg, rgba(66, 145, 206, 0.76) 5.34%, rgba(66, 145, 206, 0.24) 43.05%, rgba(66, 145, 206, 0.21) 65.88%)'
-        }} className=" mt-15 text-gray-400 font-sans" role="contentinfo">
-
-          {/* Top marquee bar */}
-          {/* <div className="bg-[#4291CE] text-white text-xs py-2 overflow-hidden whitespace-nowrap">
-            <span className="inline-block animate-marquee">
-              Building Trust &nbsp;·&nbsp; Enabling Transformation &nbsp;·&nbsp; Leading Globally &nbsp;&nbsp;&nbsp;&nbsp;
-              Building Trust &nbsp;·&nbsp; Enabling Transformation &nbsp;·&nbsp; Leading Globally &nbsp;&nbsp;&nbsp;&nbsp;
-              Building Trust &nbsp;·&nbsp; Enabling Transformation &nbsp;·&nbsp; Leading Globally &nbsp;&nbsp;&nbsp;&nbsp;
-            </span>
-          </div> */}
-
-          {/* Main footer body */}
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
-            <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12">
-
-              {/* Left: Brand + contact */}
-              <div>
-                {/* className="flex items-center gap-0.5 flex-shrink-0"  */}
-                <a href="#" aria-label="TechSaga Home">
-                  {/* <span className="text-[#4291CE] font-display font-bold text-xl tracking-tight">TECH</span>
-                  <span className="font-display font-bold text-xl tracking-tight text-gray-900">SAGA</span> */}
-                  <img src="assets/img/logo.webp" className="max-w-[160px] h-auto" />
-                </a>
-                <p className="text-[10px] uppercase tracking-[0.2em]  text-black/80 mb-5">Inspired for Innovation</p>
-                <p className="text-sm leading-relaxed mb-6  text-black/80 max-w-[260px]">
-                  Global digital transformation and enterprise enablement partner delivering outcome-driven technology, marketing, and managed services since 2012. Serving enterprises, governments, and institutions across 50+ countries.
-                </p>
-
-                {/* Contact */}
-                <ul className="space-y-2 text-sm mb-6">
-                  <li className="flex items-center gap-2">
-                    <svg className="w-3.5 h-3.5  text-black/80 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <a href="tel:+919718688880" className="hover:text-black/60 text-black/80 transition-colors">+91 971 868 8880</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <svg className="w-3.5 h-3.5 text-black/80 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <a href="mailto:info@techsaga.co.in" className="hover:text-black/60 text-black/80 transition-colors">info@techsaga.co.in</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <svg className="w-3.5 h-3.5 text-black/80 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                    <a href="https://www.techsaga.co.in" className="hover:text-black/60 text-black/80 transition-colors">www.techsaga.co.in</a>
-                  </li>
-                </ul>
-
-                {/* Social icons */}
-                <div className="flex gap-2">
-                  {[
-                    { label: "LinkedIn", path: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M4 6a2 2 0 100-4 2 2 0 000 4z" },
-                    { label: "Facebook", path: "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" },
-                    { label: "Instagram", path: "M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01M6.5 6.5h11a1 1 0 011 1v9a1 1 0 01-1 1h-11a1 1 0 01-1-1v-9a1 1 0 011-1z" },
-                    { label: "YouTube", path: "M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" },
-                  ].map((s) => (
-                    <a
-                      key={s.label}
-                      href="#"
-                      aria-label={s.label}
-                      className="w-8 h-8 border border-black/10 rounded flex items-center justify-center hover:border-[#4291CE] hover:text-[#4291CE] text-black transition-colors"
-                    >
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={s.path} />
-                      </svg>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Right: 4-column nav grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-
-                {/* Enterprise Services */}
-                <div>
-                  <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Enterprise Services</h4>
-                  <ul className="space-y-1.5 text-[13px]">
-                    {[
-                      "Workday Implementation", "HCM & Core HR", "Financial Management",
-                      "Workday Integrations", "Post Go-Live Support", "",
-                      "Salesforce Services", "Sales & Service Cloud", "Marketing Cloud",
-                      "Custom Development", "",
-                      "AWS Cloud Solutions", "Cloud Migration", "DevOps & CI/CD", "",
-                      "SAP Implementation", "SAP S/4HANA", "SAP SuccessFactors", "",
-                      "ERPNext / Frappe", "", "AI & ML Solutions", "", "Data Warehousing", "", "Multi-Cloud Strategy"
-                    ].map((item, i) =>
-                      item === "" ? <li key={i} className="h-2" /> : (
-                        <li key={i}><a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">{item}</a></li>
-                      )
-                    )}
-                  </ul>
-                </div>
-
-                {/* Digital Services */}
-                <div>
-                  <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Digital Services</h4>
-                  <ul className="space-y-1.5 text-[13px]">
-                    {[
-                      "Digital Marketing", "SEO & SEM", "Social Media Marketing",
-                      "Content Marketing", "Email / WhatsApp", "",
-                      "Advertising Services", "Paid Media Planning", "Production & Design",
-                      "Online Reputation Mgmt", "",
-                      "Performance Marketing", "",
-                      "Sales Support & CRM", "Lead Generation", "CRO", "Marketing Automation", "",
-                      "PR & Crisis Management", "",
-                      "Influencer Marketing", "",
-                      "Event Management", "",
-                      "Training & Workshops"
-                    ].map((item, i) =>
-                      item === "" ? <li key={i} className="h-2" /> : (
-                        <li key={i}><a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">{item}</a></li>
-                      )
-                    )}
-                  </ul>
-                </div>
-
-                {/* Company */}
-                <div>
-                  <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Company</h4>
-                  <ul className="space-y-1.5 text-[13px]">
-                    {[
-                      "About Techsaga", "Mission & Vision", "Leadership Team",
-                      "Our Values", "Global Presence", "Technology Partners",
-                      "Agency Partners", "Certifications", "Awards & Recognition",
-                      "CSR Initiatives", "Media & Press", "Brand Guidelines",
-                      "Investor Relations"
-                    ].map((item) => (
-                      <li key={item}><a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">{item}</a></li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Resources */}
-                <div>
-                  <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Resources</h4>
-                  <ul className="space-y-1.5 text-[13px]">
-                    {[
-                      "Case Studies", "Blog & Insights", "Whitepapers",
-                      "Webinars & Events", "Agency Profile (PDF)", "Workday Deck",
-                      "FAQs", "Client Portal Login", "Request a Proposal",
-                      "Schedule a Demo", "Newsletter Signup", "Careers",
-                      "Life at Techsaga"
-                    ].map((item) => (
-                      <li key={item}><a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">{item}</a></li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Office locations bar */}
-          <div className="border-t border-white/10">
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-5">
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-[12px]">
-                {[
-                  { city: "Noida, India (HQ)", addr: "B-132, Sector 2, Noida UP 201301" },
-                  { city: "Dubai, UAE", addr: "Bay Square, Business Bay, Bldg 7" },
-                  { city: "Abu Dhabi, UAE", addr: "Office 115, Level 1, Incubator Bldg" },
-                  { city: "London, UK", addr: "82 Uxbridge Road, Hanwell W7 3SU" },
-                  { city: "Leander, Texas USA", addr: "2728 Steece Way, TX 78641" },
-                  { city: "Victoria, Australia", addr: "106 Anniversary Ave, Wyndham Vale" },
-                ].map((o) => (
-                  <div key={o.city}>
-                    <p className=" text-black/80 font-semibold mb-0.5">{o.city}</p>
-                    <p className="text-black/60  text-[11px] leading-snug">{o.addr}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Partner network bar */}
-          <div className="border-t border-white/10">
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4">
-              <div className="flex flex-wrap gap-x-6 gap-y-1.5 text-[10px] uppercase tracking-widest text-gray-500">
-                {[
-                  "Google Advertising Partner", "SEMrush Agency Network",
-                  "Klaviyo Agency Partner", "Salesforce Partner",
-                  "Zoho CRM Partner", "AWS Partner Network",
-                  "DAN Digital Agency Network", "DesignRush Agency Network",
-                  "InviteReferrals Partner",
-                ].map((p) => (
-                  <span key={p} className="flex items-center gap-1">
-                    <span className="text-[#4291CE]">•</span> {p}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Copyright bar */}
-          <div className="border-t border-white/10">
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-gray-600">
-              <p>© 2012–2025 Techsaga Corporation. All rights reserved.</p>
-              <div className="flex gap-5">
-                {["Privacy Policy", "Terms of Use"].map((item) => (
-                  <a key={item} href="#" className="hover:text-[#4291CE] transition-colors">{item}</a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          display: inline-block;
-          animation: marquee 20s linear infinite;
-        }
-      `}</style>
-        </footer>
+        <Footer />
       </main >
     </div >
   );
