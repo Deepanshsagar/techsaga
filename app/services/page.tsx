@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { SectionTag } from "../utils/utils";
 import { useState } from "react";
+import SplitContainer from "@/components/SplitContainer";
 
 const faqs = [
     {
@@ -47,23 +48,23 @@ const ServicePage = () => {
         <>
             <Header />
 
-            <section className="pb-20 lg:pb-30 pt-30 min-h-[520px] hero-gradient " >
+            <section className="pb-20 lg:pb-30 pt-30 min-h-[550px] hero-gradient " >
                 <div className="max-w-[1140px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
                     <div className="lg:w-1/2 relative">
                         <h1 className="font-heading text-4xl  font-bold text-dark leading-tight mb-6">
-                            <span className="text-primary block ">Your Trusted Partner </span>
+                            <span className="text-[#4291CE] block ">Your Trusted Partner </span>
                             for Custom Software<br />
-                            <span className="text-primary">Development</span>
+                            <span className="text-[#4291CE] ">Development</span>
                         </h1>
 
                         <div className="flex flex-wrap gap-4">
-                            <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Get Started <i className="fa-solid fa-arrow-right"></i></a>
+                            <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Get in Touch <i className="fa-solid fa-arrow-right"></i></a>
 
                         </div>
                     </div>
                     <div className="lg:w-1/2 flex justify-center">
                         <div className="relative">
-                            <div className=" bg-white rounded-2xl shadow-2xl flex items-center justify-center">
+                            <div className="bg-white rounded-2xl flex items-center justify-center">
                                 <img width="100%" src="assets/img/serviceimg.png" className="rounded-sm" alt="" />
                             </div>
                         </div>
@@ -74,8 +75,14 @@ const ServicePage = () => {
 
             <div className="section-decription">
                 <div className="header-sec text-center mt-12 mb-6">
-                    <SectionTag>Crafting Digital Advancement</SectionTag>
-                    <p className="text-3xl font-bold mt-2">Custom Software Delivering Exceptional</p>
+                    <SplitContainer className="">
+                        <SectionTag>Crafting Digital Advancement</SectionTag>
+                        <h2 className="font-display text-3xl lg:text-4xl font-bold text-[#5A5757]">
+                            Custom Software Delivering Exceptional
+                        </h2>
+                    </SplitContainer>
+                    {/* <SectionTag>Crafting Digital Advancement</SectionTag>
+                    <p className="text-3xl font-bold mt-2">Custom Software Delivering Exceptional</p> */}
                 </div>
 
                 <div className=" shadow-[0px_0px_5px_1px_#00000040] mt-8 bg-white b rounded-xl  max-w-[1140px]  mx-auto mb-5 p-8 flex flex-col md:flex-row items-center gap-8">
@@ -222,19 +229,66 @@ const ServicePage = () => {
                 </div>
             </div>
 
-            <section className="py-14 px-4 max-w-5xl mx-auto">
+            <div className="bg-white rounded-xl mt-8 shadow-[0px_0px_5px_1px_#00000040] max-w-[1140px] mx-auto mb-5 p-8 flex flex-col md:flex-row items-center gap-16">
 
-                <SectionTag className="text-center">Post Your Requirement &nbsp;›&nbsp; Software Solutions</SectionTag>
+                <div className="flex-shrink-0 w-full md:w-5/12">
+                    <img
+                        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80"
+                        alt="Development"
+                        className="w-full h-60 md:h-full object-cover rounded-xl"
+                    />
+                </div>
+
+                <div className="flex-1 w-full  md:w-7/12">
+                    <h2 className="text-xl font-bold text-gray-900 leading-snug mb-3">
+                        Our Custom Development<br />Journey Blueprint
+                    </h2>
+                    <p className="text-sm text-gray-500 leading-relaxed mb-5">
+                        We pride ourselves on delivering projects within the designated timeframe and adhering to strict deadlines. With our expert Android developers and proficient iOS development, we can create high-quality applications for both platforms.
+                    </p>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                            <img src="/assets/img/checkedicon.png" className="w-4 " alt="" />
+                            Expert Android developers
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                            <img src="/assets/img/checkedicon.png" className="w-4 " alt="" />
+                            Delivering projects at a time
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                            <img src="/assets/img/checkedicon.png" className="w-4 " alt="" />
+                            Competent ios development
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                            <img src="/assets/img/checkedicon.png" className="w-4 " alt="" />
+                            Expert Android developers
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-gray-700">
+                            <img src="/assets/img/checkedicon.png" className="w-4" alt="" />
+                            User-friendly UI/UX design
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section className="py-14 px-4 max-w-5xl mx-auto">
+                <SplitContainer className="">
+                    <SectionTag className="text-center">Post Your Requirement &nbsp;›&nbsp; Software Solutions</SectionTag>
+                    <h2 className="font-display text-center text-3xl lg:text-3xl font-bold mb-10 text-[#5A5757]">
+                        Skyrocket Your Business Growth With Our Custom Software Development Services
+                    </h2>
+                </SplitContainer>
+                {/* <SectionTag className="text-center">Post Your Requirement &nbsp;›&nbsp; Software Solutions</SectionTag>
 
                 <h1 className="text-center text-2xl md:text-3xl font-bold text-gray-900 leading-snug mb-10">
                     Skyrocket Your Business Growth With Our Custom Software<br />Development Services
-                </h1>
+                </h1> */}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
                     <div className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
                         <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-3">
-                            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-[#4291CE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
@@ -244,7 +298,7 @@ const ServicePage = () => {
 
                     <div className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
                         <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-3">
-                            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-[#4291CE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
                         </div>
@@ -254,7 +308,7 @@ const ServicePage = () => {
 
                     <div className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
                         <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-3">
-                            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-[#4291CE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>
                         </div>
@@ -264,7 +318,7 @@ const ServicePage = () => {
 
                     <div className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
                         <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-3">
-                            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-[#4291CE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                             </svg>
                         </div>
@@ -274,7 +328,7 @@ const ServicePage = () => {
 
                     <div className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
                         <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-3">
-                            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-[#4291CE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
@@ -284,7 +338,7 @@ const ServicePage = () => {
 
                     <div className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition">
                         <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-3">
-                            <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-[#4291CE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                             </svg>
                         </div>
@@ -420,7 +474,7 @@ const ServicePage = () => {
 
                                         <svg
                                             className={`w-4 h-4 flex-shrink-0 transition-transform duration-300 ${activeIndex === index
-                                                ? "rotate-180 text-blue-500"
+                                                ? "rotate-180 text-[#4291CE]"
                                                 : "text-gray-400"
                                                 }`}
                                             fill="none"
@@ -457,50 +511,14 @@ const ServicePage = () => {
                 </div>
             </section>
 
-            <section className=" py-14 px-4">
-                <div className="max-w-4xl mx-auto text-center">
+            <section className="  px-4">
+                <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
 
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Let's Get Started: Collaborating On Your Project</h2>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Next Great Project Starts With One Conversation </h2>
                     <p className="text-xs text-gray-500 mb-10 max-w-xl mx-auto">
-                        Flexible Budget, Customised Approach. Choose What Works For You. With Collaboration Seamlessly To Meet<br />Your Preferences And Ensures A Successful Partnership.
+                        Thousands of businesses. 50+ countries 13+ years . we know how to deliver
                     </p>
-
-                    <div className="flex flex-col md:flex-row items-start justify-center gap-0 md:gap-0 relative">
-
-                        <div className="flex flex-col items-center flex-1 px-4">
-                            <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                                <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                                </svg>
-                            </div>
-                            <h4 className="text-sm font-bold text-gray-900 mb-2">TRANSPARENT AND FIXED PRICING</h4>
-                            <p className="text-xs text-gray-500 leading-relaxed text-center">With transparent and fixed pricing, we outline your deliverables, set clear project milestones, and agree on a shared timeline. We keep you updated, meet your needs and always stay on budget.</p>
-                        </div>
-
-
-                        <div className="flex flex-col items-center flex-1 px-4">
-                            <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                                <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                                </svg>
-                            </div>
-                            <h4 className="text-sm font-bold text-gray-900 mb-2">ADAPTIVE HOURLY ENGAGEMENT</h4>
-                            <p className="text-xs text-gray-500 leading-relaxed text-center">Our Adaptive Hourly Engagement offers flexible collaboration based on project needs, optimising resources and maximising productivity with agile methodologies.</p>
-                        </div>
-
-
-
-                        <div className="flex flex-col items-center flex-1 px-4">
-                            <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                                <svg className="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                </svg>
-                            </div>
-                            <h4 className="text-sm font-bold text-gray-900 mb-2">DIRECT RECRUITMENT</h4>
-                            <p className="text-xs text-gray-500 leading-relaxed text-center">Our Direct Recruitment offers by providing the tools, resources and expertise needed to efficiently and accurately recruit talent without intermediaries.</p>
-                        </div>
-
-                    </div>
+                    <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Start a conversation</a>
                 </div>
             </section>
             <Footer />

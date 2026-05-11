@@ -364,7 +364,7 @@ export default function TechSagaHomePage() {
             HERO
         ══════════════════════════════════════════════════ */}
             <section
-              className="relative overflow-hidden min-h-[500px] flex items-center"
+              className="relative overflow-hidden min-h-[550px] flex items-center"
 
               aria-labelledby="hero-heading"
             >
@@ -425,7 +425,7 @@ export default function TechSagaHomePage() {
                   src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=700&q=80"
                   alt="Enterprise digital transformation team"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-sm"
                   unoptimized
                 />
 
@@ -494,16 +494,14 @@ export default function TechSagaHomePage() {
                   <FadeUp key={svc.title} delay={i * 50}>
                     <article
                       className={`
-          p-6 h-full flex flex-col transition-all duration-200 group
+    p-6 h-full flex flex-col transition-all duration-200 group
 
-          ${!isLastColumn ? "border-r border-[#B3D3EC]" : ""}
-          
-          ${!isFirstRow ? "border-t border-[#B3D3EC]" : ""}
+    ${!isLastColumn ? "border-r border-[#B3D3EC]" : ""}
+    ${!isFirstRow ? "border-t border-[#B3D3EC]" : ""}
 
-          hover:bg-[#fff]
-        `}
+    hover:bg-[#fff]
+  `}
                     >
-
                       {/* Service Badge */}
                       <div
                         className="
@@ -525,7 +523,18 @@ export default function TechSagaHomePage() {
                         {svc.desc}
                       </p>
 
-                      <ul className="space-y-1">
+                      {/* Hidden initially */}
+                      <ul
+                        className="
+      space-y-1
+      opacity-0
+      max-h-0
+      overflow-hidden
+      transition-all duration-300
+      group-hover:opacity-100
+      group-hover:max-h-40
+    "
+                      >
                         {svc.points.map((point, idx) => (
                           <li
                             key={idx}
@@ -536,7 +545,6 @@ export default function TechSagaHomePage() {
                           </li>
                         ))}
                       </ul>
-
                     </article>
                   </FadeUp>
                 )
@@ -708,28 +716,24 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             INDUSTRY EXPERTISE
         ══════════════════════════════════════════════════ */}
-        <section style={{
-          background: 'linear-gradient(278.7deg, rgba(126, 184, 229, 0.4) 29.46%, #E3EFF9 82.94%, rgba(248, 248, 248, 1) 91.39%)'
-
-        }} className="bg-white py-16 lg:py-20" aria-label="Industry Expertise">
+        <section style={{ background: "linear-gradient(102.8deg, #4291CE 17.82%, #8DCCFD 91.13%)" }} className="bg-white py-16 lg:py-20" aria-label="Industry Expertise">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
               <SplitContainer>
-                <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#4291CE] mb-2">
+                <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#fff] mb-2">
                   Sectors We Serve
                 </p>
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-black">Industry Expertise</h2>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-white">Industry Expertise</h2>
               </SplitContainer>
             </FadeUp>
           </div>
           <div className="mx-auto ">
-            <div className=" p-6" style={{ background: "linear-gradient(135deg, #5ba3d9 0%, #4a90c4 40%, #3a7bb0 100%)" }}>
-              <div className="grid m-auto py-14 max-w-7xl grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2.5">
+            <div className=" p-6" style={{ background: "linear-gradient(102.8deg, #4291CE 17.82%, #8DCCFD 91.13%)" }}>
+              <div className="grid m-auto pb-14 max-w-7xl grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
                 {industries.map((item, i) => (
                   <div
                     key={i}
-                    className="flex flex-col items-center justify-center gap-2.5 rounded-xl px-2.5 py-4 text-center
-                       border border-white/30 bg-white/[0.18] cursor-pointer min-h-[110px]
+                    className="flex flex-col items-center justify-center gap-2.5 rounded-xl px-2.5 py-3 text-center aspect-square bg-white/[0.18] cursor-pointer min-h-[110px]
                        transition-all duration-250 hover:bg-white/[0.28] hover:-translate-y-1 hover:shadow-lg"
                   >
                     {/* <i className={`ti ${item.icon} text-white/95 text-3xl`} aria-hidden="true" /> */}
@@ -930,7 +934,7 @@ export default function TechSagaHomePage() {
                 <a
                   href="#"
                   // className="inline-block border-1 border-white/60 bg-transparent  rounded-md bg-white/5 shadow-[inset_-1px_-1px_2px_2px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] text-[#4291CE] px-50 py-3 font-bold text-[15px] mt-4 transition-all "
-                  className="inline-block bg-white/5 px-50 py-3 rounded-md shadow-[inset_-1px_-1px_2px_1px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] border-1 border-white/50 "
+                  className="inline-block bg-white/5 px-40 py-3 rounded-md shadow-[inset_-1px_-1px_2px_1px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] border-1 border-white/50 "
                 >
                   Explore Career Page
                 </a>
@@ -1054,7 +1058,7 @@ export default function TechSagaHomePage() {
             <div className="px-6 lg:px-12 py-12 flex flex-col justify-center">
               <h2 className="text-[#4291CE] text-3xl lg:text-4xl font-bold leading-tight mb-6">
                 Ready to Move from
-                Ideas to Execution?
+                <span className="uppercase block">Ideas to Execution?</span>
               </h2>
 
               <p className="text-black/80 text-sm leading-relaxed max-w-xl">

@@ -5,7 +5,7 @@ const NAV_LINKS = [
   { label: "Solutions", url: "/solutions" },
   { label: "Industries", url: "/industries" },
   { label: "Case Studies", url: "/case-studies" },
-  { label: "About", url: "/about" },
+  { label: "About", url: "/about-us" },
   { label: "Careers", url: "/careers" },
   { label: "Blog", url: "/blog" },
 ];

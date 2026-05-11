@@ -72,7 +72,7 @@ const Industries = () => {
                                 </div>
 
                                 <div>
-                                    <textarea rows={3} placeholder="Tell us about your project..." className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50 resize-none"></textarea>
+                                    <textarea rows={3} placeholder="Your project needs" className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50 resize-none"></textarea>
                                 </div>
                                 <div className="border border-gray-200 rounded-lg px-4 py-3 flex items-center gap-3 bg-gray-50">
                                     <input type="checkbox" className="w-4 h-4 accent-blue-600" />
@@ -83,7 +83,7 @@ const Industries = () => {
                                     </div>
                                 </div>
                                 <button type="submit" className="btn-primary w-full text-white font-semibold py-3 rounded-lg text-sm shadow-md">
-                                    Submit Now →
+                                    Tell Us What You Need. →
                                 </button>
                             </form>
                         </div>
