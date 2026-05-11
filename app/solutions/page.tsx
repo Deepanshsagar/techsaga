@@ -101,7 +101,7 @@ export default function SolutionsPage() {
         <main className="font-sans text-gray-800 overflow-x-hidden">
             <Header />
             {/* ── HERO ── */}
-            <section className="relative min-h-[520px] flex items-center bg-white overflow-hidden">
+            <section className="relative min-h-[550px] flex items-center bg-white overflow-hidden">
                 <div className="absolute inset-0">
                     <img
                         src="/assets/img/solutionbg.png"
@@ -134,7 +134,7 @@ export default function SolutionsPage() {
                         </div>
                     </div>
                     <div className="">
-                        <img src="/assets/img/mainimg.png" alt="" className="" />
+                        <img src="/assets/img/solution-banner.png" alt="" className="" />
                     </div>
                 </div>
             </section>
