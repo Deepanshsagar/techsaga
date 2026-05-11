@@ -7,17 +7,17 @@ const timelineData = [
     {
         year: "2012",
         title: "Conception, Planning, And Launch",
-        desc: "The business idea originates in PSIT Kanpur (UP), leading to market evaluation, competitor analysis, and the development of a comprehensive business plan. The launch involved a team of 5 young IT graduates, registering the business, securing funding, developing the core offering, and promoting it through marketing channels.",
+        desc: "The business idea originates in PSIT Kanpur (UP), leading to market evaluation, competitor analysis, and the development of a comprehensive business plan. The launch involves a team of 5 young IT graduates, registering the business, securing funding, developing the core offering, and promoting it through marketing channels. This includes obtaining necessary permits, setting up infrastructure, covering startup costs, and ensuring alignment with market demands and customer needs. The goal is to create brand awareness and generate interest in the product or service.",
     },
     {
         year: "2014",
-        title: "Growth And Expansion",
-        desc: "The company expanded its operations, onboarded new clients, strengthened development capabilities, and introduced scalable digital solutions across multiple industries.",
+        title: "Breakthrough",
+        desc: "In the due course of time, our team experienced significant growth, and our revolutionary idea transformed into a fully-fledged existence. Throughout this journey, we achieved numerous milestones, from the initial incubation phase to establishing ourselves as a reputable entity. These milestones included establishing a new office in Noida, collaborating with City Bank USA, hosting the visit of City Bank's President to our office, and engaging in deals and negotiations with UAE Government projects.",
     },
     {
         year: "2016",
-        title: "Technology Advancement",
-        desc: "Focused on innovation, cloud adoption, UI/UX improvements, and enterprise-grade software development while growing the technical workforce significantly.",
+        title: "Certifications & Achievements",
+        desc: "We take great pride in our certifications from internationally recognized institutions, which are a testament to our commitment to quality-driven development processes. These certifications include ICAB, IAS-Accredited, ISO:9001:2015, and EGAG accreditation. By achieving these esteemed certifications, we demonstrate our dedication to maintaining high standards and ensuring excellence in our work. These certifications validate our expertise and our ability to consistently deliver exceptional results to our clients.",
     },
     {
         year: "2018",
@@ -82,12 +82,11 @@ export default function AboutUs() {
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <p className="text-[10px] font-semibold tracking-[0.12em] uppercase text-[#1a73c5] mb-3">
-                            Delivering Technology Solutions
+                            Through Passion and Well-being
                         </p>
 
                         <h1 className="font-playfair text-3xl md:text-4xl lg:text-4xl font-bold leading-tight !leading-[54px] text-gray-800 max-w-7xl mx-auto">
-                            With Years of Experience and Excellence and <br />
-                            Still Counting
+                            We Pave Your Path to Success.
                         </h1>
                     </div>
 
@@ -294,7 +293,7 @@ export default function AboutUs() {
 
                         <div className="max-w-xl">
 
-                            <h2 className="text-[42px] leading-[48px] font-extrabold text-black mb-8">
+                            <h2 className="text-[36px] leading-[48px] font-bold text-black mb-8">
                                 Empowering Your Business with Our Tech Wizards: Meet the Genius Minds
                             </h2>
 
@@ -312,11 +311,11 @@ export default function AboutUs() {
                                 <div>
 
                                     <h3 className="text-5xl font-extrabold text-black mb-3">
-                                        85+
+                                        10+
                                     </h3>
 
                                     <p className="text-gray-600 text-lg">
-                                        Seamless Workflow
+                                        Years Expertise
                                     </p>
 
                                 </div>
