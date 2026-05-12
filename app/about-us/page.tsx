@@ -40,7 +40,7 @@ export default function AboutUs() {
     return (
         <>
             <Header />
-            <section className="relative min-h-[520px] flex items-center bg-white overflow-hidden">
+            <section className="relative pt-16  min-h-[620px] flex items-center bg-white overflow-hidden">
                 <div className="absolute inset-0">
                     <img
                         src="/assets/img/Indesterisbg.png"

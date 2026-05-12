@@ -7,7 +7,7 @@ const CareerPage = () => {
     return (
         <>
             <Header />
-            <section className="relative min-h-[520px] flex items-center bg-white overflow-hidden">
+            <section className="relative pt-16 min-h-[620px] flex items-center bg-white overflow-hidden">
                 <div className="absolute inset-0">
                     <img
                         src="/assets/img/Indesterisbg.png"
@@ -17,7 +17,7 @@ const CareerPage = () => {
                     {/* <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/20" /> */}
                 </div>
 
-                <div className="relative flex justify-end items-center z-10 max-w-7xl mx-auto px-6 lg:px-6 py-24 pt-30 w-full">
+                <div className="relative flex justify-end items-center z-10 max-w-7xl mx-auto px-6 lg:px-6 py-16 pt-20 w-full">
                     <div className="w-1/2">
                         <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                             Techsaga<br />
@@ -42,7 +42,7 @@ const CareerPage = () => {
                         </div>
                     </div>
                     <div className="">
-                        <img src="/assets/img/diverse-business.png" alt="" className="" />
+                        <img src="/assets/img/career.png" alt="" className="" />
                     </div>
                 </div>
             </section>

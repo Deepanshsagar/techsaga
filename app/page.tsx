@@ -320,7 +320,7 @@ const TEAM_MEMBERS = [
     name: "Rahul Mishra",
     role: "Founder & CEO",
   },
-   {
+  {
     src: "/assets/img/VIKAS_PANDEY.jpg",
     name: "Vikas Pandey",
     role: "COO",
@@ -335,7 +335,7 @@ const TEAM_MEMBERS = [
     name: "Shivesh Sinha",
     role: "Head of Ops (UAE)",
   },
- 
+
 ];
 
 // ─── Main Component ──────────────────────────────────────────────────────────
@@ -389,7 +389,7 @@ export default function TechSagaHomePage() {
             HERO
         ══════════════════════════════════════════════════ */}
             <section
-              className="relative overflow-hidden min-h-[550px] flex items-center"
+              className="relative overflow-hidden min-h-[620px] flex items-center"
 
               aria-labelledby="hero-heading"
             >
@@ -428,7 +428,7 @@ export default function TechSagaHomePage() {
                   </div>
                   <div className="h-full">
                     <img
-                      src="/assets/img/building-trust.jpg"
+                      src="/assets/img/trusted-partner.jpg"
                       alt="Team collaborating in a modern office"
                       className="object-cover rounded-sm w-full left-auto h-full"
                     />
@@ -447,7 +447,7 @@ export default function TechSagaHomePage() {
 
                 {/* Main Image */}
                 <Image
-                  src="/assets/img/trusted-partner.jpg"
+                  src="/assets/img/building-trust.jpg"
                   alt="Enterprise digital transformation team"
                   fill
                   className="object-cover rounded-sm"
@@ -462,13 +462,15 @@ export default function TechSagaHomePage() {
 
                 {/* Bottom-right small image */}
                 <div className="absolute -bottom-5 -right-5 w-44 h-30 overflow-hidden border-3 border-white shadow-md">
-                  <Image
-                    src="/assets/img/product-engineering.jpg"
-                    alt="Team working"
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
+                  <video
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source src="/assets/img/typing-master.mp4" type="video/mp4" />
+                  </video>
                 </div>
 
               </div>
@@ -812,7 +814,7 @@ export default function TechSagaHomePage() {
             <FadeUp className="text-center mb-10">
               <SplitContainer>
                 <SectionTag>Our partner</SectionTag>
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Few Of Our Leading Clients</h2>
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Partnering with Businesses Across Industries</h2>
               </SplitContainer>
             </FadeUp>
             {/* Row 1 */}
@@ -824,7 +826,7 @@ export default function TechSagaHomePage() {
                       src={c.logo}
                       alt={c.name}
                       fill
-                      className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition"
+                      className="object-contain grayscale-0 opacity-10 hover:grayscale hover:opacity-50 transition"
                     />
                   </div>
                 ))}

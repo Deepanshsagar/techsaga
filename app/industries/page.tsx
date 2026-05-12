@@ -6,10 +6,10 @@ const Industries = () => {
     return (
         <>
         <Header />
-            <section style={{ backgroundImage: "url('/assets/img/Indesterisbg.png')" }} className="hero-bg bg-repeat bg-cover relative overflow-hidden py-20 md:py-28">
+            <section style={{ backgroundImage: "url('/assets/img/Indesterisbg.png')" }} className="hero-bg bg-repeat  bg-cover relative overflow-hidden py-16 md:py-16">
 
 
-                <div className="max-w-[1140px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+                <div className="max-w-[1140px] min-h-[620px]  mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
                     <div className="lg:w-1/2 relative">
 
                         <h1 className="text-4xl sm:text-4xl lg:text-4xl font-extrabold  mb-6 text-white !leading-[50px]">

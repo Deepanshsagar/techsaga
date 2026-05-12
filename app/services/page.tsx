@@ -48,7 +48,7 @@ const ServicePage = () => {
         <>
             <Header />
 
-            <section className="pb-20 lg:pb-30 pt-30 min-h-[550px] hero-gradient " >
+            <section className="pb-20 lg:pb-30 pt-30 min-h-[620px] hero-gradient " >
                 <div className="max-w-[1140px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
                     <div className="lg:w-1/2 relative">
                         <h1 className="font-heading text-4xl  font-bold text-dark leading-tight mb-6">
