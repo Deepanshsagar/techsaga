@@ -109,115 +109,116 @@ function FadeUp({
 
 const SERVICES: ServiceCard[] = [
   {
-    icon: "🤝",
-    service: "Workday",
+    icon: "/assets/img/homes1.png",
+    service: "Zoho",
     title: "Contract Consulting & Resource Solutions",
-    desc: "Access skilled tech professionals on demand to support projects, fill gaps, and scale teams without long-term hiring commitments.",
+    desc: "Access flexible consulting and dedicated technology resource support for business operations.",
     points: [
-      "IT contract staffing solutions",
-      "Dedicated tech resource hiring",
-      "Project-based consulting services",
-      "Offshore and remote teams"
+      "Zoho CRM setup and support",
+      "Resource augmentation services",
+      "Workflow optimization support",
+      "Platform administration services"
     ]
   },
   {
-    icon: "☁️",
-    service: "AWS",
-    title: "Cloud Platform Implementation (AWS)",
-    desc: "Set up, migrate, and manage secure cloud environments on AWS to improve performance, flexibility, and cost efficiency.",
-    points: [
-      "AWS cloud setup and configuration",
-      "Cloud migration and deployment",
-      "Cloud architecture design",
-      "Multi-cloud and hybrid setup"
-    ]
-  },
-  {
-    icon: "⚙️",
-    service: "ERPNext & SAP",
-    title: "ERP & Business Systems (SAP & ERPNext)",
-    desc: "Implement and optimize ERP systems to streamline operations, automate processes, and improve business visibility.",
-    points: [
-      "SAP implementation and customization",
-      "ERPNext implementation and module setup",
-      "Business process automation",
-      "Data migration and system upgrades"
-    ]
-  },
-  {
-    icon: "👥",
-    service: "AI & Data",
-    title: "CRM & Customer Platforms (Salesforce)",
-    desc: "Deploy and customize CRM solutions to manage customer data, improve sales processes, and drive better engagement.",
-    points: [
-      "Salesforce CRM implementation",
-      "Sales and marketing automation",
-      "Customer data management systems",
-      "CRM customization and workflows"
-    ]
-  },
-  {
-    icon: "🔀",
+    icon: "/assets/img/homes2.png",
     service: "SAP",
-    title: "HR & Workforce Platforms (Workday)",
-    desc: "Simplify HR operations with Workday solutions that handle payroll, employee data, and workforce management in one place.",
+    title: "ERP & Business Solutions",
+    desc: "Streamline enterprise operations with integrated ERP implementation and support services.",
     points: [
-      "Workday implementation and setup",
-      "HR and payroll system automation",
-      "Payment gateway integration",
-      "Employee lifecycle management"
+      "SAP implementation services",
+      "Business workflow automation",
+      "ERP customization support",
+      "Data migration management"
     ]
   },
   {
-    icon: "📊",
-    service: "ERPNext",
-    title: "System Integration & API Solutions",
-    desc: "Connect different systems and tools to ensure smooth data flow, better automation, and seamless business operations.",
+    icon: "/assets/img/homes3.png",
+    service: "Salesforce",
+    title: "CRM & Customer Management Solutions",
+    desc: "Improve customer engagement with scalable CRM implementation and operational support.",
     points: [
-      "API development and integration",
-      "Third-party software integration",
-      "Payment gateway integration",
-      "Data synchronization across systems"
+      "Sales pipeline management",
+      "Workflow automation setup",
+      "Business process automation",
+      "Dashboard configuration services",
+      "Third-party system integration"
     ]
   },
   {
-    icon: "🤖",
-    service: "Cloud",
-    title: "Data & Analytics Solutions",
-    desc: "Turn raw data into useful insights with structured pipelines, dashboards, and analytics tools that support smarter decisions.",
+    icon: "/assets/img/homes4.png",
+    service: "Workday",
+    title: "Workforce Management Solutions",
+    desc: "Simplify workforce operations with centralized HR and employee management systems.",
     points: [
-      "Data engineering and pipeline setup",
-      "Data warehousing solutions",
-      "Business intelligence dashboards",
-      "Predictive analytics solutions"
+      "Payroll configuration support",
+      "HR process automation",
+      "Employee lifecycle management",
+      "Platform integration services"
     ]
   },
   {
-    icon: "💻",
-    service: "Data Solutions",
-    title: "DevOps, Custom Development & Managed Services",
-    desc: "Build, deploy, and maintain scalable applications with ongoing support, automation, and performance optimization.",
+    icon: "/assets/img/homes5.png",
+    service: "Microsoft",
+    title: "Business Intelligence & Analytics Solutions",
+    desc: "Transform operational data into meaningful insights through modern analytics solutions.",
     points: [
-      "Custom web and SaaS application development",
-      "Frontend and backend development",
-      "CI/CD pipeline setup and automation",
-      "Infrastructure and performance management"
+      "Dashboard and reporting setup",
+      "Data visualization services",
+      "Automated reporting workflows",
+      "Secure access management"
     ]
-  }
+  },
+  {
+    icon: "/assets/img/homes6.png",
+    service: "ServiceNow",
+    title: "IT Service Management Solutions",
+    desc: "Enhance IT operations with structured service management and workflow automation.",
+    points: [
+      "Incident management setup",
+      "SLA workflow automation",
+      "Service portal configuration",
+      "System integration support"
+    ]
+  },
+  {
+    icon: "/assets/img/homes7.png",
+    service: "GEAR",
+    title: "Managed Support & Platform Operations",
+    desc: "Maintain stable platform performance through continuous monitoring and operational support.",
+    points: [
+      "Platform monitoring services",
+      "Technical support management",
+      "System upgrade support",
+      "Performance optimization services",
+    ]
+  },
+  {
+    icon: "/assets/img/homes8.png",
+    service: "AWS",
+    title: "Cloud Infrastructure Services",
+    desc: "Secure and scalable AWS cloud solutions for modern business operations.",
+    points: [
+      "AWS deployment",
+      "Cloud migration",
+      "Infrastructure management",
+      "Security optimization"
+    ]
+  },
 ];
 
 const PRODUCTS: ProductCard[] = [
-  { icon: "🔍", title: "Enterprise Solutions", desc: "Develop scalable systems that support complex business operations.", list: [], tags: ["ERP Solutions", "CRM Solutions", "Business Application Development", "Workflow Automation"] },
-  { icon: "🎧", title: "Product Development", desc: "Turn ideas into fully functional digital products.", tags: ["MVP Development", "Product Design", "Prototyping", "Product Scaling"], list: [] },
-  { icon: "🎨", title: "Web & Mobile Applications", desc: "Create responsive web and mobile experiences for modern users.", tags: ["Web Application Development", "Mobile Application Development", "Cloud Application Development"], list: [] },
-  { icon: "📈", title: "Cloud & Infrastructure", desc: "Set up and manage secure, flexible cloud environments.", tags: ["Cloud Infrastructure", "Hybrid Infrastructure", "On-Premises Infrastructure", "Cloud Migration"], list: [] },
+  { icon: "🔍", title: "Business Process Solutions", desc: "Simplify everyday operations through smart digital workflow management solutions.", list: [], tags: ["Task management setup", "Process digitization", "Business workflow support", "Productivity tools integration"] },
+  { icon: "🎧", title: "Application Design & Development", desc: "Create responsive applications for seamless experiences across web and mobile platforms.", tags: ["MVP Development", "Android applications", "iOS applications", "Responsive UI development", "Progressive web apps"], list: [] },
+  { icon: "🎨", title: "Hosting & Server Management", desc: "Maintain secure hosting environments for stable and reliable business performance.", tags: ["Shared hosting setup", "VPS configuration", "Domain management", "Website backup support"], list: [] },
+  { icon: "📈", title: "Platform Connectivity Solutions", desc: "Enable smooth communication between platforms, tools, and business applications.", tags: ["Payment gateway setup", "Social platform integration", "Email service integration", "Data synchronization"], list: [] },
 ];
 
 const PRODUCTST: ProductCard[] = [
-  { icon: "🎥", title: "System Integration", desc: "Connect platforms and tools for smooth data flow and operations", tags: ["System Integration", "API Development & Integration", "Third-Party Integration"], list: [] },
-  { icon: "📣", title: "DevOps & Automation", desc: "Improve speed, efficiency, and reliability in development cycles", tags: ["DevOps Services", "CI/CD Implementation", "Deployment Automation"], list: [] },
-  { icon: "📣", title: "Testing & Quality Assurance", desc: "Ensure performance, security, and seamless user experience.", tags: ["Application Support", "Infrastructure Support", "Customer Support"], list: [] },
-  { icon: "📣", title: "Support & Managed Services", desc: "Maintain, monitor, and optimize systems for long-term success.", tags: ["Application Support", "Infrastructure Support", "Customer Support"], list: [] },
+  { icon: "🎥", title: "Content Strategy & Digital Marketing", desc: "Improve digital visibility through targeted content and marketing strategies.", tags: ["Content planning", "SEO content writing", "Social media content", "Campaign strategy support"], list: [] },
+  { icon: "📣", title: "Quality Testing & Optimization", desc: "Ensure stable application performance through structured testing and quality improvements.", tags: ["Functional testing", "Compatibility testing", "Bug verification", "Performance validation"], list: [] },
+  { icon: "📣", title: "Technical Support & Maintenance", desc: "Maintain smooth digital operations with continuous support and system maintenance.", tags: ["Website maintenance", "Technical troubleshooting", "Security patch updates", "Operational support"], list: [] },
+  { icon: "📣", title: "Data Insights & Performance Tracking", desc: "Monitor digital growth through analytics, reporting, and performance measurement.", tags: ["Campaign reporting", "Traffic analysis", "Conversion monitoring", "User engagement tracking"], list: [] },
 ];
 
 const industries = [
@@ -307,10 +308,34 @@ const CLIENTS = [
 ];
 
 const TEAM_IMAGES = [
-  "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80",
-  "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&q=80",
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80",
-  "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80",
+  "/assets/img/RAHUL_MISHRA.jpg",
+  "/assets/img/SATYPAL_SINGH.jpg",
+  "/assets/img/SHIVESH_SINHA.jpg",
+  "/assets/img/VIKAS_PANDEY.jpg",
+];
+
+const TEAM_MEMBERS = [
+  {
+    src: "/assets/img/RAHUL_MISHRA.jpg",
+    name: "Rahul Mishra",
+    role: "Founder & CEO",
+  },
+   {
+    src: "/assets/img/VIKAS_PANDEY.jpg",
+    name: "Vikas Pandey",
+    role: "COO",
+  },
+  {
+    src: "/assets/img/SATYPAL_SINGH.jpg",
+    name: "Satypal Singh",
+    role: "CFO",
+  },
+  {
+    src: "/assets/img/SHIVESH_SINHA.jpg",
+    name: "Shivesh Sinha",
+    role: "Head of Ops (UAE)",
+  },
+ 
 ];
 
 // ─── Main Component ──────────────────────────────────────────────────────────
@@ -403,9 +428,9 @@ export default function TechSagaHomePage() {
                   </div>
                   <div className="h-full">
                     <img
-                      src="/assets/img/mainimg.png"
+                      src="/assets/img/building-trust.jpg"
                       alt="Team collaborating in a modern office"
-                      className="object-cover w-full left-auto h-full"
+                      className="object-cover rounded-sm w-full left-auto h-full"
                     />
                   </div>
                 </div>
@@ -422,7 +447,7 @@ export default function TechSagaHomePage() {
 
                 {/* Main Image */}
                 <Image
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=700&q=80"
+                  src="/assets/img/trusted-partner.jpg"
                   alt="Enterprise digital transformation team"
                   fill
                   className="object-cover rounded-sm"
@@ -438,7 +463,7 @@ export default function TechSagaHomePage() {
                 {/* Bottom-right small image */}
                 <div className="absolute -bottom-5 -right-5 w-44 h-30 overflow-hidden border-3 border-white shadow-md">
                   <Image
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&q=80"
+                    src="/assets/img/product-engineering.jpg"
                     alt="Team working"
                     fill
                     className="object-cover"
@@ -505,11 +530,12 @@ export default function TechSagaHomePage() {
                       {/* Service Badge */}
                       <div
                         className="
-      uppercase text-[10px]
+      uppercase text-[10px] flex items-center gap-1
       text-[#4291CE] bg-[#4291CE26] border border-[#4291CE40]
       py-1 px-2 w-fit transition-colors duration-200 rounded-sm tracking-widest font-bold
     "
                       >
+                        <img src={svc.icon} className="max-w-5 h-auto object-contain" alt="" />
                         {svc.service}
                       </div>
 
@@ -555,13 +581,13 @@ export default function TechSagaHomePage() {
             <FadeUp delay={100}>
               <div className="mt-10 bg-[#fff] border-2 border-[#4291CE] rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 p-6 lg:p-8">
                 <p className="text-black font-medium text-base max-w-3xl">
-                  <span className="text-[#4291CE] font-semibold">Need a custom enterprise solution?</span> Our certified architects scope, design, and deliver implementations aligned to your business outcomes.
+                  <span className="text-[#4291CE] font-semibold">Looking to scale with the right platforms?</span> We help you plan, implement, and manage solutions that support long-term growth.
                 </p>
                 <a
                   href="#"
                   className="border-2 border-white bg-[#4291CE] text-white hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200 whitespace-nowrap flex-shrink-0 rounded-md"
                 >
-                  Talk to an Enterprise Architect →
+                  Let’s Discuss Your Requirements →
                 </a>
               </div>
             </FadeUp>
@@ -608,10 +634,10 @@ export default function TechSagaHomePage() {
               {/* Featured */}
               <FadeUp>
                 <article
-                  className="relative h-111 overflow-hidden bg-cover bg-center flex items-end"
+                  className="relative h-118 overflow-hidden bg-cover bg-center flex items-end"
                   style={{
                     backgroundImage:
-                      "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80')",
+                      "url('/assets/img/product-engineering.jpg')",
                   }}
                 >
                   {/* Overlay */}
@@ -628,7 +654,7 @@ export default function TechSagaHomePage() {
                     </h3>
 
                     <p className="text-sm text-white/80 mb-4 max-w-lg">
-                      Build tailored applications designed around your business needs.
+                      Build digital products tailored to evolving business and customer requirements.
                     </p>
                     {/* <ul className="flex text-[12px] mb-3 text-white/50 flex-wrap">
                       <li className="basis-[50%]"><span className="bg-[#4291CE] rounded-full w-2 h-2 inline-block mr-1.5" />Custom Software Development</li>
@@ -638,11 +664,10 @@ export default function TechSagaHomePage() {
 
                     <div className="flex flex-wrap gap-2">
                       {[
-                        "SEO / SEM",
-                        "Social Media",
-                        "Content Marketing",
-                        "Marketplace",
-                        "Email & Whatsapp",
+                        "Custom portal development",
+                        "Business website solutions",
+                        "Feature enhancements",
+                        "Software maintenance",
                       ].map((t) => (
                         <span
                           key={t}
@@ -1024,12 +1049,14 @@ export default function TechSagaHomePage() {
             </FadeUp>
             <FadeUp delay={100}>
               <div className="grid grid-cols-4 gap-3">
-                {TEAM_IMAGES.map((src, i) => (
-                  <div key={i} className="relative h-40 overflow-hidden group">
-
+                {TEAM_MEMBERS.map((member, i) => (
+                  <div
+                    key={i}
+                    className="relative h-40 overflow-hidden group rounded-xl"
+                  >
                     <Image
-                      src={src}
-                      alt={`TechSaga team member ${i + 1}`}
+                      src={member.src}
+                      alt={member.name}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       unoptimized
@@ -1037,10 +1064,13 @@ export default function TechSagaHomePage() {
 
                     {/* Overlay Panel */}
                     <div className="absolute bottom-0 left-0 w-full bg-black/70 text-white px-3 py-2">
-                      <p className="text-sm font-semibold leading-tight">Priya S.</p>
-                      <p className="text-xs text-gray-300">Strategy Lead</p>
+                      <p className="text-sm font-semibold leading-tight">
+                        {member.name}
+                      </p>
+                      <p className="text-xs text-gray-300">
+                        {member.role}
+                      </p>
                     </div>
-
                   </div>
                 ))}
               </div>
