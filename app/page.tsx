@@ -237,10 +237,10 @@ const industries = [
 ];
 
 const TESTIMONIALS: Testimonial[] = [
-  { name: "Sara Timothy", role: "VP, Digital Transformation", avatar: "https://randomuser.me/api/portraits/women/44.jpg", stars: 5, quote: "TechSaga completely transformed our Salesforce environment. Their deep expertise and commitment to outcomes was unparalleled. We saw a 40% jump in team efficiency." },
-  { name: "Greg Phillips", role: "CTO, ScaleUp Technologies", avatar: "https://randomuser.me/api/portraits/men/32.jpg", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
-  { name: "Laura Hoffman", role: "Director, Global Operations", avatar: "https://randomuser.me/api/portraits/women/68.jpg", stars: 5, quote: "Working with TechSaga felt like having an internal team that genuinely cared about outcomes. Their digital marketing campaigns drove a 3x increase in qualified leads." },
-  { name: "Greg Phillipss", role: "CTO, ScaleUp Technologies", avatar: "https://randomuser.me/api/portraits/men/32.jpg", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
+  { name: "Sara Timothy", role: "VP, Digital Transformation", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "TechSaga completely transformed our Salesforce environment. Their deep expertise and commitment to outcomes was unparalleled. We saw a 40% jump in team efficiency." },
+  { name: "Greg Phillips", role: "CTO, ScaleUp Technologies", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
+  { name: "Laura Hoffman", role: "Director, Global Operations", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "Working with TechSaga felt like having an internal team that genuinely cared about outcomes. Their digital marketing campaigns drove a 3x increase in qualified leads." },
+  { name: "Greg Phillipss", role: "CTO, ScaleUp Technologies", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
 ];
 
 const BLOGS: BlogPost[] = [
@@ -520,7 +520,7 @@ export default function TechSagaHomePage() {
                   <FadeUp key={svc.title} delay={i * 50}>
                     <article
                       className={`
-    p-6 h-full flex flex-col transition-all duration-200 group
+    p-6 h-full flex flex-col transition-all duration-700 group
 
     ${!isLastColumn ? "border-r border-[#B3D3EC]" : ""}
     ${!isFirstRow ? "border-t border-[#B3D3EC]" : ""}
@@ -557,7 +557,7 @@ export default function TechSagaHomePage() {
       opacity-0
       max-h-0
       overflow-hidden
-      transition-all duration-300
+      transition-all duration-800
       group-hover:opacity-100
       group-hover:max-h-40
     "
@@ -841,7 +841,7 @@ export default function TechSagaHomePage() {
                       src={c.logo}
                       alt={c.name}
                       fill
-                      className="object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition"
+                      className="object-contain grayscale-0 opacity-100 hover:grayscale hover:opacity-50 transition"
                     />
                   </div>
                 ))}
@@ -873,13 +873,13 @@ export default function TechSagaHomePage() {
                     <FadeUp delay={i * 80}>
                       <blockquote className="p-6 border border-gray-300 rounded-xl duration-200 h-full flex flex-col">
                         <div className="flex items-center gap-3 mb-4">
-                          <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                            <Image
+                          <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                            <img
                               src={t.avatar}
                               alt={t.name}
-                              fill
+                              // fill
                               className="object-cover"
-                              unoptimized
+                              // unoptimized
                             />
                           </div>
                         </div>
@@ -1033,7 +1033,7 @@ export default function TechSagaHomePage() {
 
               <SectionTag>People & Culture</SectionTag>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                750+ Dedicated Thinkers Worldwide
+                A Global Team of 750+ Professionals 
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
                 Our global team of 750+ professionals brings together expertise across technology, strategy, and creativity. Every individual at TechSaga is empowered to think boldly and deliver brilliantly.
