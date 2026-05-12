@@ -482,15 +482,14 @@ export default function TechSagaHomePage() {
                 A Trusted Partner for Enterprise-Grade Digital Transformation
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                Founded in 2012 and headquartered in Noida, India, Techsaga Corporation is a global digital transformation and enterpriseenablement company. We bridge strategy, technology, and execution for enterprises, governments, and institutions across North
-                America, the Middle East, Europe, Australia, and India — operating with maturity, scale, and accountability.
+                Founded in 2012 and headquartered in Noida, India, TechSaga Corporation is a global digital transformation and enterprise enablement partner. We work with enterprises, governments, and institutions across North America, the Middle East, Europe, Australia, and India, delivering scalable solutions through a team of 750+ professionals and a proven track record of 2,000+ programs delivered.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Enterprise IT", "Digital Marketing", "Managed Services", "ERP & Cloud", "AI Solutions", "PR & Comms"].map((tag) => (
+                {["Product Development", "Data Engineering", "Cloud Solutions", "Application Development", "Managed Services", "Technology Consulting"].map((tag) => (
                   <span key={tag} className="bg-[#E6F3FB] text-[#1A4D78] text-xs font-medium uppercase px-3 py-1 rounded">{tag}</span>
                 ))}
               </div>
-              <p className="text-[#4291CE] block text-sm font-semibold mt-6 cursor-pointer">View Portfolio →</p>
+              <p className="text-[#4291CE] block text-sm font-semibold mt-6 cursor-pointer">View Our Portfolio → →</p>
             </FadeUp>
           </div>
         </section>
@@ -826,7 +825,7 @@ export default function TechSagaHomePage() {
                       src={c.logo}
                       alt={c.name}
                       fill
-                      className="object-contain grayscale-0 opacity-10 hover:grayscale hover:opacity-50 transition"
+                      className="object-contain grayscale-0 opacity-100 hover:grayscale hover:opacity-50 transition"
                     />
                   </div>
                 ))}
