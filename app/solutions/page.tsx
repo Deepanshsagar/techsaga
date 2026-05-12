@@ -101,7 +101,7 @@ export default function SolutionsPage() {
         <main className="font-sans text-gray-800 overflow-x-hidden">
             <Header />
             {/* ── HERO ── */}
-            <section className="relative pt-16  min-h-[620px] flex items-center bg-white overflow-hidden">
+            <section className="relative min-h-[550px] flex items-center bg-white overflow-hidden">
                 <div className="absolute inset-0">
                     <img
                         src="/assets/img/solutionbg.png"

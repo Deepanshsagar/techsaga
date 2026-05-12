@@ -183,7 +183,7 @@ const SERVICES: ServiceCard[] = [
   },
   {
     icon: "/assets/img/homes7.png",
-    service: "GEAR",
+    service: "Support Services",
     title: "Managed Support & Platform Operations",
     desc: "Maintain stable platform performance through continuous monitoring and operational support.",
     points: [
@@ -384,12 +384,15 @@ export default function TechSagaHomePage() {
 
 
           <Header />
-          <div className="pt-16">
+          <div style={{
+                    backgroundImage:
+                      "url('/assets/img/website-banner2.png')",
+                  }} className="pt-16">
             {/* ══════════════════════════════════════════════════
             HERO
         ══════════════════════════════════════════════════ */}
             <section
-              className="relative overflow-hidden min-h-[620px] flex items-center"
+              className="relative overflow-hidden min-h-[550px] flex items-center"
 
               aria-labelledby="hero-heading"
             >
@@ -422,7 +425,7 @@ export default function TechSagaHomePage() {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="bg-white p-4 absolute text-center mx-auto -left-3 md:-left-15 rounded-sm sm:-bottom-6 -bottom-6 md:bottom-6">
+                  {/* <div className="bg-white p-4 absolute text-center mx-auto -left-3 md:-left-15 rounded-sm sm:-bottom-6 -bottom-6 md:bottom-6">
                     <img src="assets/img/software-development-icon.png" className="mx-auto mb-2" />
                     <p className="text-[12px] font-semibold">Software Development</p>
                   </div>
@@ -431,8 +434,8 @@ export default function TechSagaHomePage() {
                       src="/assets/img/trusted-partner.jpg"
                       alt="Team collaborating in a modern office"
                       className="object-cover rounded-sm w-full left-auto h-full"
-                    />
-                  </div>
+                    /> */}
+                  {/* </div> */}
                 </div>
               </div>
             </section>
