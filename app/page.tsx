@@ -222,18 +222,18 @@ const PRODUCTST: ProductCard[] = [
 ];
 
 const industries = [
-  { icon: "ti-heart-rate-monitor", label: "Healthcare", img: '/assets/img/icon/healthcare1.png' },
-  { icon: "ti-school", label: "Education &\nE-learning", img: '/assets/img/icon/healthcare2.png' },
-  { icon: "ti-shopping-cart", label: "E-commerce\nSolutions", img: '/assets/img/icon/healthcare3.png' },
-  { icon: "ti-building-bank", label: "Banking &\nFinance", img: '/assets/img/icon/healthcare4.png' },
-  { icon: "ti-building-estate", label: "Real Estate", img: '/assets/img/icon/healthcare5.png' },
-  { icon: "ti-shopping-bag", label: "Retail &\nConsumer Goods", img: '/assets/img/icon/healthcare6.png' },
-  { icon: "ti-gavel", label: "Legal", img: '/assets/img/icon/healthcare7.png' },
-  { icon: "ti-bulb", label: "Consulting\nServices", img: '/assets/img/icon/healthcare8.png' },
-  { icon: "ti-plane", label: "Travel &\nTourism", img: '/assets/img/icon/healthcare9.png' },
-  { icon: "ti-device-tv", label: "Media &\nEntertainment", img: '/assets/img/icon/healthcare10.png' },
-  { icon: "ti-truck-delivery", label: "Logistics &\nTransportation", img: '/assets/img/icon/healthcare11.png' },
-  { icon: "ti-speakerphone", label: "Advertising &\nPublic Relations", img: '/assets/img/icon/healthcare12.png' },
+  { icon: "ti-heart-rate-monitor", label: "Healthcare", img: '/assets/img/icon/healthcare1.png', banner: '/assets/img/in/1.png' },
+  { icon: "ti-school", label: "Education &\nE-learning", img: '/assets/img/icon/healthcare2.png', banner: '/assets/img/in/2.png' },
+  { icon: "ti-shopping-cart", label: "E-commerce\nSolutions", img: '/assets/img/icon/healthcare3.png', banner: '/assets/img/in/3.png' },
+  { icon: "ti-building-bank", label: "Banking &\nFinance", img: '/assets/img/icon/healthcare4.png', banner: '/assets/img/in/4.png' },
+  { icon: "ti-building-estate", label: "Real Estate", img: '/assets/img/icon/healthcare5.png', banner: '/assets/img/in/5.png' },
+  { icon: "ti-shopping-bag", label: "Retail &\nConsumer Goods", img: '/assets/img/icon/healthcare6.png', banner: '/assets/img/in/6.png' },
+  { icon: "ti-gavel", label: "Legal", img: '/assets/img/icon/healthcare7.png', banner: '/assets/img/in/7.png' },
+  { icon: "ti-bulb", label: "Consulting\nServices", img: '/assets/img/icon/healthcare8.png', banner: '/assets/img/in/8.png' },
+  { icon: "ti-plane", label: "Travel &\nTourism", img: '/assets/img/icon/healthcare9.png', banner: '/assets/img/in/9.png' },
+  { icon: "ti-device-tv", label: "Media &\nEntertainment", img: '/assets/img/icon/healthcare10.png', banner: '/assets/img/in/10.png' },
+  { icon: "ti-truck-delivery", label: "Logistics &\nTransportation", img: '/assets/img/icon/healthcare11.png', banner: '/assets/img/in/11.png' },
+  { icon: "ti-speakerphone", label: "Advertising &\nPublic Relations", img: '/assets/img/icon/healthcare12.png', banner: '/assets/img/in/12.png' },
 ];
 
 const TESTIMONIALS: Testimonial[] = [
@@ -344,6 +344,8 @@ export default function TechSagaHomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
   const firstRow = CLIENTS.slice(0, Math.ceil(CLIENTS.length / 2));
   const secondRow = CLIENTS.slice(Math.ceil(CLIENTS.length / 2));
 
@@ -358,6 +360,20 @@ export default function TechSagaHomePage() {
   const [emblaRef1, emblaApi1] = useEmblaCarousel({ loop: true, align: "start" });
   const [emblaRef2, emblaApi2] = useEmblaCarousel({ loop: true, align: "start" });
   const [emblaRef3, emblaApi3] = useEmblaCarousel({ loop: true, align: "start" });
+  const [emblaRef4, emblaApi4] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    // dragFree: true,
+    // containScroll: "trimSnaps",
+  });
+
+  // useEffect(() => {
+  //   if (!emblaApi4) return;
+  //   const i4 = setInterval(() => emblaApi4.scrollNext(), 2000); // reverse
+  //   return () => {
+  //     clearInterval(i4);
+  //   };
+  // }, [emblaApi4]);
 
   useEffect(() => {
     if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
@@ -365,6 +381,7 @@ export default function TechSagaHomePage() {
     const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
     const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
     const i3 = setInterval(() => emblaApi3.scrollNext(), 2000); // reverse
+
 
     return () => {
       clearInterval(i1);
@@ -754,23 +771,159 @@ export default function TechSagaHomePage() {
             </FadeUp>
           </div>
           <div className="mx-auto ">
-            <div className=" p-6" style={{ background: "linear-gradient(102.8deg, #4291CE 17.82%, #8DCCFD 91.13%)" }}>
-              <div className="grid m-auto pb-14 max-w-7xl grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-                {industries.map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col items-center justify-center gap-2.5 rounded-xl px-2.5 py-3 text-center aspect-square bg-white/[0.18] cursor-pointer min-h-[110px]
-                       transition-all duration-250 hover:bg-white/[0.28] hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    {/* <i className={`ti ${item.icon} text-white/95 text-3xl`} aria-hidden="true" /> */}
-                    <img src={item?.img} alt="" className="lg:w-[63px] sm:w-[40px] w-[40px]" />
-                    <span className="text-[16px] font-semibold leading-snug text-white/95 whitespace-pre-line">
-                      {item.label}
-                    </span>
-                  </div>
-                ))}
+            <div
+              className="p-6 overflow-hidden"
+              style={{
+                background:
+                  "linear-gradient(102.8deg, #4291CE 17.82%, #8DCCFD 91.13%)",
+              }}
+            >
+              <div className="overflow-hidden max-w-7xl m-auto" ref={emblaRef4}>
+                <div className="flex ">
+                  {industries.map((item, i) => {
+                    const isExpanded = expandedIndex === i;
+
+                    return (
+                      <div
+                        key={i}
+                        onClick={() =>
+                          setExpandedIndex(isExpanded ? null : i)
+                        }
+                        className={`
+              relative flex-[0_0_85%]
+              px-5
+              sm:flex-[0_0_45%]
+              lg:flex-[0_0_20%]
+              min-h-[250px]
+              max-h-[250px]
+              cursor-pointer
+              ease-[cubic-bezier(0.16,1,0.3,1)]
+              will-change-transform
+              ${isExpanded ? "lg:flex-[0_0_35%]" : ""}
+            `}
+                      >
+                        <div
+                          style={{
+                            backgroundImage: `url('${isExpanded ? item.banner : ""}')`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                          }}
+                          className={`
+    relative h-full overflow-hidden rounded-[28px]
+    border border-white/20
+    backdrop-blur-xl
+    transition-all duration-[1200ms]
+    ease-[cubic-bezier(0.16,1,0.3,1)]
+
+    ${isExpanded ? "" : "hover:bg-white/20"}
+  `}
+                        >
+                          {/* Dark Overlay */}
+                          <div
+                            className={`
+      absolute inset-0 bg-black/50 z-0
+      transition-opacity duration-[1200ms]
+      ${isExpanded ? "opacity-100" : "opacity-0"}
+    `}
+                          />
+
+                          {/* Glow */}
+                          <div
+                            className={`
+      absolute inset-0
+      transition-opacity duration-[1400ms]
+      ${isExpanded ? "opacity-100" : "opacity-0"}
+    `}
+                          />
+
+                          {/* Content */}
+                          <div
+                            className={`
+      relative z-10 h-full p-6
+      flex flex-col justify-center
+      transition-all duration-[1200ms]
+      ease-[cubic-bezier(0.16,1,0.3,1)]
+
+      ${isExpanded
+                                ? "items-start text-left"
+                                : "items-center text-center"}
+    `}
+                          >
+                            {/* Icon */}
+                            <div
+                              className={`
+        transition-all duration-[1200ms]
+        ease-[cubic-bezier(0.16,1,0.3,1)]
+
+        ${isExpanded ? "scale-110 -translate-y-1" : ""}
+      `}
+                            >
+                              <img
+                                src={item.img}
+                                alt={item.label}
+                                className={`
+          w-[55px]
+          transition-all duration-700
+          ${isExpanded ? "invert" : ""}
+        `}
+                              />
+                            </div>
+
+                            {/* Title */}
+                            <h3
+                              className={`
+        mt-5 text-[16px]
+        font-semibold leading-snug
+        transition-all duration-[900ms]
+
+        ${isExpanded ? "text-white" : "text-white"}
+      `}
+                            >
+                              {item.label}
+                            </h3>
+
+                            {/* Expand Area */}
+                            <div
+                              className={`
+        grid overflow-hidden
+        transition-all duration-[1200ms]
+        ease-[cubic-bezier(0.16,1,0.3,1)]
+
+        ${isExpanded
+                                  ? "grid-rows-[1fr] opacity-100 pt-4"
+                                  : "grid-rows-[0fr] opacity-0 pt-0"}
+      `}
+                            >
+                              <div className="overflow-hidden">
+                                <p className="text-sm leading-6 text-gray-200">
+                                  We build scalable digital solutions tailored
+                                  for the {item.label.toLowerCase()} industry
+                                  with modern technologies and seamless user
+                                  experiences.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Animated Border */}
+                          <div
+                            className={`
+      absolute inset-0 rounded-[28px]
+      border transition-all duration-[1200ms]
+
+      ${isExpanded
+                                ? "border-[#4291CE]/30"
+                                : "border-transparent"}
+    `}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
+
             {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80", imgtitle: "Enterprise & Government", title: "Healthcare", tags: ["Healthcare management systems", "Patient portals and mobile apps", "Data security and compliance solutions"] },
@@ -972,13 +1125,7 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             BLOG
         ══════════════════════════════════════════════════ */}
-        <section style={{
-          background: `linear-gradient(
-    45deg,
-    rgba(108, 169, 217, 0.28) 8%,
-    rgba(147, 192, 227, 0.7) 51%,
-    rgba(180, 205, 225, 1) 74%
-  )` }} className="bg-white py-16 lg:py-20" aria-label="News Articles and Blogs" >
+        <section className="py-16 lg:py-20 bg-[#e3eff8]" aria-label="News Articles and Blogs" >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
               <SplitContainer>
@@ -992,7 +1139,7 @@ export default function TechSagaHomePage() {
               {BLOGS.map((b, i) => (
                 <FadeUp key={b.title} delay={i * 80}>
                   <article className="overflow-hidden rounded hover:-translate-y-1 transition-all duration-200 group flex flex-col">
-                    <div className="relative h-44 overflow-hidden">
+                    <div className="relative h-60 overflow-hidden">
                       <Image
                         src={b.img}
                         alt={b.title}
