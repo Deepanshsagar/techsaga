@@ -47,32 +47,29 @@ const ServicePage = () => {
     return (
         <>
             <Header />
+            <section
+                className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('/assets/img/service-banner.png')",
+                }}
+            >
+                <div className="relative max-w-7xl mx-auto px-4 w-full">
+                    <div className="grid lg:grid-cols-2 items-center gap-12">
 
-            <section className="pb-20 lg:pb-30 pt-30 min-h-[550px] hero-gradient " >
-                <div className="max-w-[1140px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
-                    <div className="lg:w-1/2 relative">
-                        <h1 className="font-heading text-4xl  font-bold text-dark leading-tight mb-6">
-                            <span className="text-[#4291CE] block ">Your Trusted Partner </span>
-                            for Custom Software<br />
-                            <span className="text-[#4291CE] ">Development</span>
-                        </h1>
-
-                        <div className="flex flex-wrap gap-4">
-                            <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Get in Touch <i className="fa-solid fa-arrow-right"></i></a>
-
+                        {/* Left Content */}
+                        <div className="max-w-xl">
+                            <h1 className="font-heading text-5xl sm:text-5xl lg:text-5xl font-bold text-[#111827] leading-tight">
+                                Your Trusted Partner
+                                <span className="block text-[#4291CE]">
+                                    for Custom Software
+                                </span>
+                                Development
+                            </h1>
                         </div>
-                    </div>
-                    <div className="lg:w-1/2 flex justify-center">
-                        <div className="relative">
-                            <div className="bg-white rounded-2xl flex items-center justify-center">
-                                <img width="100%" src="assets/img/serviceimg.png" className="rounded-sm" alt="" />
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </section>
-
-
             <div className="section-decription">
                 <div className="header-sec text-center mt-12 mb-6">
                     <SplitContainer className="">

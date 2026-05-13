@@ -100,18 +100,16 @@ export default function SolutionsPage() {
     return (
         <main className="font-sans text-gray-800 overflow-x-hidden">
             <Header />
-            {/* ── HERO ── */}
-            <section className="relative min-h-[550px] flex items-center bg-white overflow-hidden">
-                <div className="absolute inset-0">
-                    <img
-                        src="/assets/img/solutionbg.png"
-                        alt="professionals collaborating"
-                        className="w-full h-full object-cover object-center"
-                    />
-                    {/* <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/20" /> */}
-                </div>
-                <div className="relative flex justify-end items-center z-10 max-w-7xl mx-auto px-6 lg:px-16 py-24 pt-30 w-full">
-                    <div className="w-1/2">
+              <section
+                className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('/assets/img/solution-banner2.png')",
+                }}
+            >
+                <div className="relative max-w-7xl mx-auto px-4 w-full">
+                    <div className="grid lg:grid-cols-2 items-center gap-12">
+
+                        <div >
                         <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                            Stop losing time to bad hires. Get the right IT talent NOW.
                         </h1>
@@ -121,20 +119,19 @@ export default function SolutionsPage() {
                         <div className="flex flex-wrap gap-4">
                             <a
                                 href="#contact"
-                                className="inline-flex items-center gap-2 bg-[#4291CE] text-white px-6 py-3 rounded font-semibold hover:bg-[#347eb8] transition-colors text-sm"
+                                className="inline-flex items-center gap-2 bg-[#fff] text-[#4291CE] px-6 py-3 rounded font-bold hover:bg-[#fff] transition-colors text-sm"
                             >
                                 Discover Our Talent →
                             </a>
                             <a
                                 href="#cases"
-                                className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-white transition-colors text-sm"
+                                className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-[#4291CE] transition-colors text-sm"
                             >
                                 View Our Staffing
                             </a>
                         </div>
                     </div>
-                    <div className="">
-                        <img src="/assets/img/solution-banner.png" alt="" className="" />
+
                     </div>
                 </div>
             </section>

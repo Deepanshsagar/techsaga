@@ -113,15 +113,15 @@ body {
   letter-spacing: 1px;
 }
 
-.hero-gradient {
+/* .hero-gradient {
   position: relative;
   width: 100%;
   /* height: 100%; */
-  overflow: hidden;
-}
+  /* overflow: hidden; */
+/* } */ 
 
 /* Background Image Layer */
-.hero-gradient::before {
+/* .hero-gradient::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -133,4 +133,4 @@ body {
 
 
   /* z-index: -1; */
-}
+/* } */

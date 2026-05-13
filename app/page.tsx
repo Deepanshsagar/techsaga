@@ -384,10 +384,7 @@ export default function TechSagaHomePage() {
 
 
           <Header />
-          <div style={{
-                    backgroundImage:
-                      "url('/assets/img/website-banner2.png')",
-                  }} className="pt-16 bg-cover bg-bottom">
+          <div style={{ backgroundImage: "url('/assets/img/home-banner.png')", }} className="pt-16  min-h-[650px] bg-cover bg-bottom">
             {/* ══════════════════════════════════════════════════
             HERO
         ══════════════════════════════════════════════════ */}
@@ -403,23 +400,23 @@ export default function TechSagaHomePage() {
               <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-0 w-full py-20 lg:py-0 grid lg:grid-cols-2 gap-6 items-center z-10">
                 <div>
                   <div className="flex items-center gap-3 pb-4">
-                    <span className="w-8 border-t-2 border border-[#fff]"></span>
-                    <p className="text-[#fff] text-[14px] uppercase tracking-widest font-medium">
+                    <span className="w-8 border-t-2 border border-[#000]"></span>
+                    <p className="text-[#000] text-[14px] uppercase tracking-widest font-medium">
                       Trusted by 500+ companies across 50+ countries
                     </p>
                   </div>
-                  <h1 id="hero-heading" className="font-bold tracking-tight text-4xl sm:text-4xl lg:text-4xl text-white leading-tight mb-5 hero-animate">
+                  <h1 id="hero-heading" className="font-bold tracking-tight text-5xl sm:text-5xl lg:text-5xl text-black leading-tight mb-5 hero-animate">
                     Building Trust.<br />
-                    <span className="text-[#fff]">Enabling</span> Transformation.
+                    <span className="text-[#000]">Enabling</span> Transformation.
                   </h1>
-                  <p className="text-white/60 text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  <p className="text-black/60 text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
                     We don't just build software - we engineer momentum. From strategy to deployment, TechSaga partners with forward-thinking businesses to turn complex challenges into scalable digital solutions that actually move the needle.
                   </p>
                   <div className="flex flex-wrap gap-4 hero-animate-3">
-                    <a href="#" className="bg-[#fff] hover:bg-[#fff] text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px">
+                    <a href="#" className="bg-[#4291CE] hover:bg-[#4291CE] text-[#fff] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px">
                       Get Started Today
                     </a>
-                    <a href="#" className="border border-white/50 text-white hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200">
+                    <a href="#" className="border border-black/50 text-black hover:bg-black hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200">
                       Explore Our Work
                     </a>
                   </div>
@@ -882,7 +879,7 @@ export default function TechSagaHomePage() {
                               alt={t.name}
                               // fill
                               className="object-cover"
-                              // unoptimized
+                            // unoptimized
                             />
                           </div>
                         </div>
@@ -1036,7 +1033,7 @@ export default function TechSagaHomePage() {
 
               <SectionTag>People & Culture</SectionTag>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                A Global Team of 750+ Professionals 
+                A Global Team of 750+ Professionals
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
                 Our global team of 750+ professionals brings together expertise across technology, strategy, and creativity. Every individual at TechSaga is empowered to think boldly and deliver brilliantly.
