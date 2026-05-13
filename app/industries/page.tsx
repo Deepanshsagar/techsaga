@@ -5,7 +5,7 @@ import Header from "@/components/Header"
 const Industries = () => {
     return (
         <>
-        <Header />
+            <Header />
             <section style={{ backgroundImage: "url('/assets/img/Indesterisbg.png')" }} className="hero-bg bg-repeat  bg-cover relative overflow-hidden py-16 md:py-16">
 
 
@@ -262,8 +262,123 @@ const Industries = () => {
                     </div>
                 </div>
             </section> */}
+            <div className="bg-[#F6F6F6]">
+            <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
 
-             <section  className=" mt-10 px-4">
+                <div className="flex items-start justify-between flex-wrap gap-6">
+
+                    <div>
+                        <h2 className="font-display text-[34px]  leading-none font-semibold tracking-[-2px] text-[#111111]">
+                            E-Commerce Solution
+                        </h2>
+
+                        <div className="w-16 h-[4px] bg-[#3B82F6] rounded-full mt-5"></div>
+                    </div>
+
+                    <button
+                        className="group flex items-center gap-0 rounded-full pl-2  py-2 bg-transparent"
+                    >
+
+                        <div className="w-[64px] h-[64px] absolute  -ml-3 rounded-full bg-[#6EA8E8] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+
+                        </div>
+
+                        <div className="flex items-center relative z-10 gap-4">
+
+                            <span className="text-[18px] font-semibold text-black tracking-[-0.3px]">
+                                Let's Get Started
+                            </span>
+
+                            <span className="text-2xl transition-all duration-300 group-hover:translate-x-1">
+                                →
+                            </span>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-16">
+
+                    <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+                            alt=""
+                            className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
+                        />
+
+                        <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
+
+                        </div>
+
+                        <div className="absolute bottom-0 left-0 w-full p-8 flex items-center justify-between opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+                            <div>
+
+                                <p className="uppercase tracking-[3px] text-white/60 text-[10px] mb-3">
+                                    Beauty & Cosmetics
+                                </p>
+
+                                <h3 className="font-display text-white text-[24px] leading-none font-semibold">
+                                    Foreversz Store
+                                </h3>
+
+                            </div>
+
+                            <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
+
+                                →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
+                            alt=""
+                            className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
+                        />
+
+                        <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
+
+                        </div>
+
+                        <div className="absolute bottom-0 left-0 w-full p-8 flex items-center justify-between opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+                            <div>
+
+                                <p className="uppercase tracking-[3px] text-white/60 text-[10px] mb-3">
+                                    Fashion & Apparel
+                                </p>
+
+                                <h3 className="font-display text-white text-[24px] leading-none font-semibold">
+                                    Zuhd Store
+                                </h3>
+
+                            </div>
+
+                            <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
+
+                                →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+            </div>
+
+            <section className=" mt-10 px-4">
                 <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
 
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Next Great Project Starts With One Conversation </h2>
@@ -274,7 +389,7 @@ const Industries = () => {
                 </div>
             </section>
 
-         <Footer />
+            <Footer />
         </>
     )
 }

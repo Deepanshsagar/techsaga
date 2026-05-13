@@ -241,16 +241,16 @@ export default function SolutionsPage() {
 
                         <div className="flex justify-center">
                             <div
-                                className="w-64 h-64 overflow-hidden shadow-xl"
-                                style={{
-                                    clipPath:
-                                        "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)",
-                                }}
+                                className=" overflow-hidden "
+                                // style={{
+                                //     clipPath:
+                                //         "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)",
+                                // }}
                             >
                                 <img
-                                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80"
+                                    src="/assets/img/solution-vec1.png"
                                     alt="expertise"
-                                    className="w-full h-full object-cover"
+                                    className="w-full max-w-[300px] h-full object-cover"
                                 />
                             </div>
                         </div>
@@ -341,14 +341,16 @@ export default function SolutionsPage() {
                             ))}
                         </div>
 
-                        <div className="flex justify-center">
-                            <div className="w-56 h-56 rounded-full overflow-hidden shadow-xl ring-4 ring-blue-100">
+                        <div className="flex justify-center relative">
+                            <img src="/assets/img/leftarrow.png" className="absolute -top-15 -left-8" />
+                            <div className=" overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80"
+                                    src="/assets/img/solution-vec.png"
                                     alt="requirements path"
-                                    className="w-full h-full object-cover"
+                                    className="w-full max-w-[300px] z-50 relative h-full object-cover"
                                 />
                             </div>
+                            <img src="/assets/img/leftarrow.png" className="absolute rotate-180 -bottom-15 -right-8" />
                         </div>
 
                         <div className="flex flex-col gap-5">

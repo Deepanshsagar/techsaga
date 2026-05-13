@@ -387,7 +387,7 @@ export default function TechSagaHomePage() {
           <div style={{
                     backgroundImage:
                       "url('/assets/img/website-banner2.png')",
-                  }} className="pt-16">
+                  }} className="pt-16 bg-cover bg-bottom">
             {/* ══════════════════════════════════════════════════
             HERO
         ══════════════════════════════════════════════════ */}
@@ -459,8 +459,8 @@ export default function TechSagaHomePage() {
 
                 {/* Top-left box */}
                 <div className="absolute top-2 rounded-sm -left-6 bg-white text-[#4291CE] px-4 py-2  shadow-md">
-                  <p className="font-semibold  text-xl text-[#4291CE] text-center">6</p>
-                  <p className="text-xs text-black/80 uppercase text-center">Countries</p>
+                  <p className="font-semibold  text-xl text-[#4291CE] text-center">12+</p>
+                  <p className="text-xs text-black/80 uppercase text-center">Experience</p>
                 </div>
 
                 {/* Bottom-right small image */}
@@ -758,7 +758,7 @@ export default function TechSagaHomePage() {
           </div>
           <div className="mx-auto ">
             <div className=" p-6" style={{ background: "linear-gradient(102.8deg, #4291CE 17.82%, #8DCCFD 91.13%)" }}>
-              <div className="grid m-auto pb-14 max-w-7xl grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+              <div className="grid m-auto pb-14 max-w-7xl grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
                 {industries.map((item, i) => (
                   <div
                     key={i}
@@ -766,7 +766,7 @@ export default function TechSagaHomePage() {
                        transition-all duration-250 hover:bg-white/[0.28] hover:-translate-y-1 hover:shadow-lg"
                   >
                     {/* <i className={`ti ${item.icon} text-white/95 text-3xl`} aria-hidden="true" /> */}
-                    <img src={item?.img} alt="" className="" />
+                    <img src={item?.img} alt="" className="lg:w-[63px] sm:w-[40px] w-[40px]" />
                     <span className="text-[16px] font-semibold leading-snug text-white/95 whitespace-pre-line">
                       {item.label}
                     </span>
@@ -823,12 +823,12 @@ export default function TechSagaHomePage() {
             <div className="overflow-hidden" ref={emblaRef1}>
               <div className="flex">
                 {firstRow.map((c) => (
-                  <div key={c.name} className="flex-[0_0_16.6667%] px-3 h-32 relative">
+                  <div key={c.name} className="flex-[0_0_16.6667%]  px-3 h-25 relative mx-3 p-0 border-2 border-black/10">
                     <Image
                       src={c.logo}
                       alt={c.name}
                       fill
-                      className="object-contain grayscale-0 opacity-100 hover:grayscale hover:opacity-50 transition"
+                      className="object-contain !w-120 grayscale-0 opacity-100 hover:grayscale hover:opacity-50 transition "
                     />
                   </div>
                 ))}
@@ -839,12 +839,12 @@ export default function TechSagaHomePage() {
             <div className="overflow-hidden mt-6" ref={emblaRef2}>
               <div className="flex">
                 {secondRow.map((c) => (
-                  <div key={c.name} className="flex-[0_0_16.6667%] px-3 h-32 relative">
+                  <div key={c.name} className="flex-[0_0_16.6667%]  px-3 h-25 relative mx-3 p-0 border-2 border-black/10">
                     <Image
                       src={c.logo}
                       alt={c.name}
                       fill
-                      className="object-contain grayscale-0 opacity-100 hover:grayscale hover:opacity-50 transition"
+                      className="object-contain !w-120 grayscale-0 opacity-100 hover:grayscale hover:opacity-50 transition "
                     />
                   </div>
                 ))}
@@ -963,7 +963,7 @@ export default function TechSagaHomePage() {
                 <a
                   href="#"
                   // className="inline-block border-1 border-white/60 bg-transparent  rounded-md bg-white/5 shadow-[inset_-1px_-1px_2px_2px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] text-[#4291CE] px-50 py-3 font-bold text-[15px] mt-4 transition-all "
-                  className="inline-block bg-white/5 px-40 py-3 rounded-md shadow-[inset_-1px_-1px_2px_1px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] border-1 border-white/50 "
+                  className="inline-block bg-white/5 lg:px-40 px-10 py-3 rounded-md shadow-[inset_-1px_-1px_2px_1px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] border-1 border-white/50 "
                 >
                   Explore Career Page
                 </a>

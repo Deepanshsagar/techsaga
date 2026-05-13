@@ -78,15 +78,15 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            <section className="py-16 px-4 bg-[linear-gradient(135deg,#e8f1fb_0%,#f0f5fd_60%,#ffffff_100%)]">
+            <section className="py-16 px-4 " style={{ background: 'linear-gradient(288.19deg, #D9D9D9 1.6%, #FFFFFF 50.28%, rgba(66, 145, 206, 0.8) 99.96%)' }}>
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
                         <p className="text-[10px] font-semibold tracking-[0.12em] uppercase text-[#1a73c5] mb-3">
-                            Through Passion and Well-being
+                            Delivering Technology Solutions
                         </p>
 
                         <h1 className="font-playfair text-3xl md:text-4xl lg:text-4xl font-bold leading-tight !leading-[54px] text-gray-800 max-w-7xl mx-auto">
-                            We Pave Your Path to Success.
+                            With Years of Experience and Excellence and <br />Still Counting
                         </h1>
                     </div>
 
@@ -104,7 +104,7 @@ export default function AboutUs() {
                                             {item.year}
                                         </div>
 
-                                        <h3 className="text-xl font-bold text-gray-800 mb-3">
+                                        <h3 className="text-xl font-black text-gray-800 mb-3">
                                             {item.title}
                                         </h3>
 
