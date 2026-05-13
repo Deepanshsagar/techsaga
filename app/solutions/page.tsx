@@ -150,7 +150,7 @@ export default function SolutionsPage() {
                             </span> */}
                         </h2>
                         <p className="text-gray-600 leading-relaxed text-sm">
-                           From short-term specialists to full team extensions; we match skills to scope, and people to purpose.
+                           Scale with confidence using a workforce designed for agility. Whether you require a single niche consultant or a full-team extension, we align human capital with your long-term business objectives.
                         </p>
                     </div>
 
