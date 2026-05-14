@@ -10,13 +10,11 @@ const NAV_LINKS = [
     label: "Services",
     url: "/services",
     children: [
-      { label: "Software Development", url: "#" },
-      { label: "Cloud & Infrastructure", url: "#" },
-      { label: "Testing & QA", url: "#" },
-      { label: "Digital Marketing", url: "#" },
-      { label: "Digital Transformation", url: "#" },
-      { label: "Technology Consulting", url: "#" },
-      { label: "Support & Maintenance", url: "#" },
+      { label: "Software & Product Development", url: "#" },
+      { label: "IT Infrastructure & Cloud Services", url: "#" },
+      { label: "Testing & QA (Quality Assurance)", url: "#" },
+      { label: "Digital Marketing & Growth", url: "#" },
+      { label: "Strategy & Managed Support", url: "#" },
     ],
   },
 
@@ -25,13 +23,13 @@ const NAV_LINKS = [
     url: "/solutions",
     children: [
       { label: "Workday", url: "#" },
-      { label: "SAP", url: "#" },
-      { label: "ERPNext", url: "#" },
       { label: "Salesforce", url: "#" },
+      { label: "Zoho", url: "#" },
+      { label: "SAP", url: "#" },
+      { label: "Data Solutions", url: "#" },
+      { label: "ERPNext", url: "#" },
       { label: "ServiceNow", url: "#" },
       { label: "AWS", url: "#" },
-      { label: "Zoho", url: "#" },
-      { label: "Data Solutions", url: "#" },
       { label: "Contract Consulting", url: "#" },
     ],
   },
@@ -161,7 +159,7 @@ export default function Header() {
                   >
                     <div
                       className="
-                      min-w-[260px]
+                      min-w-[270px]
                       bg-white rounded-2xl border border-gray-100
                       shadow-[0_10px_40px_rgba(0,0,0,0.08)]
                       p-3

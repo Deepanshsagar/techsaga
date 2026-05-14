@@ -344,7 +344,7 @@ export default function TechSagaHomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const firstRow = CLIENTS.slice(0, Math.ceil(CLIENTS.length / 2));
   const secondRow = CLIENTS.slice(Math.ceil(CLIENTS.length / 2));
@@ -375,20 +375,20 @@ const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
     };
   }, [emblaApi4]);
 
-  useEffect(() => {
-    if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
+  // useEffect(() => {
+  //   if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
 
-    const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
-    const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
-    const i3 = setInterval(() => emblaApi3.scrollNext(), 2000); // reverse
+  //   const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
+  //   const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
+  //   const i3 = setInterval(() => emblaApi3.scrollNext(), 2000); // reverse
 
 
-    return () => {
-      clearInterval(i1);
-      clearInterval(i2);
-      clearInterval(i3);
-    };
-  }, [emblaApi1, emblaApi2, emblaApi3]);
+  //   return () => {
+  //     clearInterval(i1);
+  //     clearInterval(i2);
+  //     clearInterval(i3);
+  //   };
+  // }, [emblaApi1, emblaApi2, emblaApi3]);
 
   return (
     <div className="font-[Manrope,sans-serif] text-gray-800 bg-white antialiased">
@@ -464,7 +464,7 @@ const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
                 {/* Main Image */}
                 <Image
-                  src="/assets/img/building-trust.jpg"
+                  src="/assets/img/building-trust.png"
                   alt="Enterprise digital transformation team"
                   fill
                   className="object-cover rounded-sm"
@@ -973,12 +973,44 @@ const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
             <div className="overflow-hidden" ref={emblaRef1}>
               <div className="flex">
                 {firstRow.map((c) => (
-                  <div key={c.name} className="flex-[0_0_16.6667%]  px-3 h-25 relative mx-3 p-0 border-2 border-black/10">
+                  <div
+                    key={c.name}
+                    className="
+    group relative h-25 flex-[0_0_16.6667%] overflow-hidden
+    rounded-2xl border border-white/20
+    bg-white/10 px-3 m-3
+    backdrop-blur-xl
+  shadow-[1px_1px_5px_rgba(0,0,0,0.09)]
+    hover:bg-white/20
+  "
+                  >
+                    {/* Glass shine */}
+                    <div
+                      className="
+      pointer-events-none absolute inset-0
+      bg-gradient-to-br
+      from-white/30 via-white/10 to-transparent
+    "
+                    />
+
+                    {/* Border glow */}
+                    <div
+                      className="
+      absolute inset-0 rounded-2xl
+      border border-white/10
+    "
+                    />
+
                     <Image
                       src={c.logo}
                       alt={c.name}
                       fill
-                      className="object-contain !w-120 grayscale-0 opacity-100 hover:grayscale hover:opacity-50 transition "
+                      className="
+      object-contain p-4
+      transition-all duration-500
+      group-hover:scale-105
+      group-hover:opacity-90
+    "
                     />
                   </div>
                 ))}
@@ -986,15 +1018,49 @@ const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
             </div>
 
             {/* Row 2 */}
-            <div className="overflow-hidden mt-6" ref={emblaRef2}>
+            <div className="overflow-hidden mt-2" ref={emblaRef2}>
               <div className="flex">
                 {secondRow.map((c) => (
-                  <div key={c.name} className="flex-[0_0_16.6667%]  px-3 h-25 relative mx-3 p-0 border-2 border-black/10">
+                    <div
+                    key={c.name}
+                    className="
+    group relative h-25 flex-[0_0_16.6667%] overflow-hidden
+    rounded-2xl border border-white/20
+    bg-white/10 px-3 m-3
+    backdrop-blur-xl
+    shadow-[1px_1px_5px_rgba(0,0,0,0.09)]
+    hover:bg-white/20
+  "
+                  >
+                    {/* Glass shine */}
+                    <div
+                      className="
+      pointer-events-none absolute inset-0
+    "
+                    />
+
+                    {/* Border glow */}
+                    {/* <div
+                      className="
+      absolute inset-0 rounded-2xl
+      border border-white/10
+    "
+                    /> */}
+                    {/* <img src="/assets/img/bg-logo.png" className="absolute inset-0 rounded-2xl" /> */}
+
                     <Image
                       src={c.logo}
                       alt={c.name}
                       fill
-                      className="object-contain !w-120 grayscale-0 opacity-100 hover:grayscale hover:opacity-50 transition "
+                      className="
+      object-contain p-4
+      rounded-[300px]
+      !w-auto
+      m-auto
+      transition-all duration-500
+      group-hover:scale-105
+      group-hover:opacity-90
+    "
                     />
                   </div>
                 ))}
