@@ -812,10 +812,10 @@ const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
     relative h-full overflow-hidden rounded-[28px]
     border border-white/20
     backdrop-blur-xl
-    transition-all duration-[1200ms]
+    
     ease-[cubic-bezier(0.16,1,0.3,1)]
 
-    ${isExpanded ? "" : "hover:bg-white/20"}
+    ${isExpanded ? "border-0" : "hover:bg-white/20"}
   `}
                         >
                           {/* Dark Overlay */}
