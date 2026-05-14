@@ -367,13 +367,13 @@ const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
     // containScroll: "trimSnaps",
   });
 
-  // useEffect(() => {
-  //   if (!emblaApi4) return;
-  //   const i4 = setInterval(() => emblaApi4.scrollNext(), 2000); // reverse
-  //   return () => {
-  //     clearInterval(i4);
-  //   };
-  // }, [emblaApi4]);
+  useEffect(() => {
+    if (!emblaApi4) return;
+    const i4 = setInterval(() => emblaApi4.scrollNext(), 4000); // reverse
+    return () => {
+      clearInterval(i4);
+    };
+  }, [emblaApi4]);
 
   useEffect(() => {
     if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
