@@ -343,8 +343,8 @@ const TEAM_MEMBERS = [
 export default function TechSagaHomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const [expandedIndex, setExpandedIndex] = useState(null);
+  
+const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const firstRow = CLIENTS.slice(0, Math.ceil(CLIENTS.length / 2));
   const secondRow = CLIENTS.slice(Math.ceil(CLIENTS.length / 2));
