@@ -198,7 +198,7 @@ export default function Header() {
               </div>
             ))}
 
-            {/* {fetchHeader.map((link: any) => (
+            {fetchHeader.map((link: any) => (
               <div key={link.slug} className="relative group">
                 <a
                   href={`/${link.slug}`}
@@ -318,7 +318,7 @@ export default function Header() {
                   </div>
                 )}
               </div>
-            ))} */}
+            ))}
           </nav>
 
           {/* CTA */}
