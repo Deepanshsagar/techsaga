@@ -222,18 +222,18 @@ const PRODUCTST: ProductCard[] = [
 ];
 
 const industries = [
-  { icon: "ti-heart-rate-monitor", label: "Healthcare", img: '/assets/img/icon/healthcare1.png', banner: '/assets/img/in/1.png' },
-  { icon: "ti-school", label: "Education &\nE-learning", img: '/assets/img/icon/healthcare2.png', banner: '/assets/img/in/2.png' },
-  { icon: "ti-shopping-cart", label: "E-commerce\nSolutions", img: '/assets/img/icon/healthcare3.png', banner: '/assets/img/in/3.png' },
-  { icon: "ti-building-bank", label: "Banking &\nFinance", img: '/assets/img/icon/healthcare4.png', banner: '/assets/img/in/4.png' },
-  { icon: "ti-building-estate", label: "Real Estate", img: '/assets/img/icon/healthcare5.png', banner: '/assets/img/in/5.png' },
-  { icon: "ti-shopping-bag", label: "Retail &\nConsumer Goods", img: '/assets/img/icon/healthcare6.png', banner: '/assets/img/in/6.png' },
-  { icon: "ti-gavel", label: "Legal", img: '/assets/img/icon/healthcare7.png', banner: '/assets/img/in/7.png' },
-  { icon: "ti-bulb", label: "Consulting\nServices", img: '/assets/img/icon/healthcare8.png', banner: '/assets/img/in/8.png' },
-  { icon: "ti-plane", label: "Travel &\nTourism", img: '/assets/img/icon/healthcare9.png', banner: '/assets/img/in/9.png' },
-  { icon: "ti-device-tv", label: "Media &\nEntertainment", img: '/assets/img/icon/healthcare10.png', banner: '/assets/img/in/10.png' },
-  { icon: "ti-truck-delivery", label: "Logistics &\nTransportation", img: '/assets/img/icon/healthcare11.png', banner: '/assets/img/in/11.png' },
-  { icon: "ti-speakerphone", label: "Advertising &\nPublic Relations", img: '/assets/img/icon/healthcare12.png', banner: '/assets/img/in/12.png' },
+  { icon: "ti-heart-rate-monitor", label: "Healthcare", img: '/assets/img/icon/healthcare1.png', banner: '/assets/img/in/1.webp' },
+  { icon: "ti-school", label: "Education &\nE-learning", img: '/assets/img/icon/healthcare2.png', banner: '/assets/img/in/2.webp' },
+  { icon: "ti-shopping-cart", label: "E-commerce\nSolutions", img: '/assets/img/icon/healthcare3.png', banner: '/assets/img/in/3.webp' },
+  { icon: "ti-building-bank", label: "Banking &\nFinance", img: '/assets/img/icon/healthcare4.png', banner: '/assets/img/in/4.webp' },
+  { icon: "ti-building-estate", label: "Real Estate", img: '/assets/img/icon/healthcare5.png', banner: '/assets/img/in/5.webp' },
+  { icon: "ti-shopping-bag", label: "Retail &\nConsumer Goods", img: '/assets/img/icon/healthcare6.png', banner: '/assets/img/in/6.webp' },
+  { icon: "ti-gavel", label: "Legal", img: '/assets/img/icon/healthcare7.png', banner: '/assets/img/in/7.webp' },
+  { icon: "ti-bulb", label: "Consulting\nServices", img: '/assets/img/icon/healthcare8.png', banner: '/assets/img/in/8.webp' },
+  { icon: "ti-plane", label: "Travel &\nTourism", img: '/assets/img/icon/healthcare9.png', banner: '/assets/img/in/9.webp' },
+  { icon: "ti-device-tv", label: "Media &\nEntertainment", img: '/assets/img/icon/healthcare10.png', banner: '/assets/img/in/10.webp' },
+  { icon: "ti-truck-delivery", label: "Logistics &\nTransportation", img: '/assets/img/icon/healthcare11.png', banner: '/assets/img/in/11.webp' },
+  { icon: "ti-speakerphone", label: "Advertising &\nPublic Relations", img: '/assets/img/icon/healthcare12.png', banner: '/assets/img/in/12.webp' },
 ];
 
 const TESTIMONIALS: Testimonial[] = [
@@ -343,7 +343,7 @@ const TEAM_MEMBERS = [
 export default function TechSagaHomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  
+
 const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const firstRow = CLIENTS.slice(0, Math.ceil(CLIENTS.length / 2));
@@ -864,7 +864,7 @@ const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
                                 className={`
           w-[55px]
           transition-all duration-700
-          ${isExpanded ? "invert" : ""}
+          ${isExpanded ? "" : ""}
         `}
                               />
                             </div>
