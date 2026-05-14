@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import {
   BriefcaseBusiness,
   Plus,
   Trash2,
   Sparkles,
   X,
+  RefreshCw,
 } from "lucide-react";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -31,8 +32,6 @@ interface CustomField {
 }
 
 // ─── Service Template ─────────────────────────────────────────────────────────
-// Pre-filled when a category whose title includes "service" (case-insensitive)
-// is selected. Covers every section visible in the TechSaga screenshot.
 
 const SERVICE_TEMPLATE: CustomField[] = [
   // 1. Hero
@@ -81,7 +80,7 @@ const SERVICE_TEMPLATE: CustomField[] = [
     required: true,
   },
 
-  // 3. Feature Block 1 (text-left / image-right)
+  // 3. Feature Block 1
   {
     label: "Feature Block 1 — Title",
     key: "featureBlock1Title",
@@ -119,7 +118,7 @@ const SERVICE_TEMPLATE: CustomField[] = [
     required: false,
   },
 
-  // 4. Feature Block 2 (image-left / text-right)
+  // 4. Feature Block 2
   {
     label: "Feature Block 2 — Title",
     key: "featureBlock2Title",
@@ -156,13 +155,12 @@ const SERVICE_TEMPLATE: CustomField[] = [
     required: false,
   },
 
-  // 5. Feature Block 3 (text-left / image-right)
+  // 5. Feature Block 3
   {
     label: "Feature Block 3 — Title",
     key: "featureBlock3Title",
     type: "text",
-    value:
-      "Transforming Future With the Custom Software Development",
+    value: "Transforming Future With the Custom Software Development",
     required: true,
   },
   {
@@ -195,7 +193,7 @@ const SERVICE_TEMPLATE: CustomField[] = [
     required: false,
   },
 
-  // 6. Feature Block 4 (image-left / text-right)
+  // 6. Feature Block 4
   {
     label: "Feature Block 4 — Title",
     key: "featureBlock4Title",
@@ -248,7 +246,7 @@ const SERVICE_TEMPLATE: CustomField[] = [
     required: true,
   },
 
-  // 8. Benefits Grid (6 cards)
+  // 8. Benefits Grid
   {
     label: "Benefits Grid — Cards (JSON array)",
     key: "benefitsGrid",
@@ -306,8 +304,7 @@ const SERVICE_TEMPLATE: CustomField[] = [
     label: "Power Section — Sub Heading",
     key: "powerSectionSubHeading",
     type: "text",
-    value:
-      "Fostering Innovation and Efficiency With Custom Software Solutions",
+    value: "Fostering Innovation and Efficiency With Custom Software Solutions",
     required: false,
   },
   {
@@ -402,22 +399,26 @@ const SERVICE_TEMPLATE: CustomField[] = [
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-/** Returns true if the category title looks like a "Services" category. */
 function isServicesCategory(title: string): boolean {
   return title.toLowerCase().includes("service");
 }
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function CreateServicePage() {
+export default function EditServicePage() {
+  const params = useParams();
   const router = useRouter();
 
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const [subCategories, setSubCategories] = useState<SubCategory[]>([]);
-  const [loading, setLoading] = useState(false);
 
-  // Banner shown after template is injected
+  // Track whether the current customFields came from the DB (not the template)
+  const [hasExistingFields, setHasExistingFields] = useState(false);
+  // Banner states
   const [templateApplied, setTemplateApplied] = useState(false);
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
 
   const [form, setForm] = useState({
     title: "",
@@ -432,36 +433,19 @@ export default function CreateServicePage() {
     customFields: [] as CustomField[],
   });
 
-  // ── Fetch categories on mount ────────────────────────────────────────────
+  // ── On mount: fetch categories + service data ────────────────────────────
   useEffect(() => {
     fetchCategories();
-  }, []);
+    if (params?.id) fetchService();
+  }, [params?.id]);
 
-  // ── Fetch sub-categories + inject template whenever categoryId changes ───
+  // ── Fetch sub-categories when categoryId changes ─────────────────────────
   useEffect(() => {
     if (!form.categoryId) {
       setSubCategories([]);
       return;
     }
     fetchSubCategories();
-
-    // Find the selected category object
-    const selected = categories.find((c) => c._id === form.categoryId);
-    if (selected && isServicesCategory(selected.title)) {
-      setForm((prev) => ({
-        ...prev,
-        // Deep-clone so each session gets fresh objects
-        customFields: SERVICE_TEMPLATE.map((f) => ({ ...f })),
-      }));
-      setTemplateApplied(true);
-    } else {
-      // Clear template fields when switching away from a services category
-      setForm((prev) => ({
-        ...prev,
-        customFields: [],
-      }));
-      setTemplateApplied(false);
-    }
   }, [form.categoryId]);
 
   // ── API helpers ──────────────────────────────────────────────────────────
@@ -487,7 +471,71 @@ export default function CreateServicePage() {
     }
   };
 
-  // ── Custom-field CRUD ────────────────────────────────────────────────────
+  const fetchService = async () => {
+    try {
+      const res = await fetch(`/api/services/${params.id}`);
+      const data = await res.json();
+
+      if (data.success) {
+        const existingFields: CustomField[] =
+          data.data.customFields || [];
+
+        setForm({
+          title: data.data.title || "",
+          slug: data.data.slug || "",
+          categoryId: data.data.categoryId?._id || "",
+          subCategoryId: data.data.subCategoryId?._id || "",
+          shortDescription: data.data.shortDescription || "",
+          seo: {
+            metaTitle: data.data.seo?.metaTitle || "",
+            metaDescription: data.data.seo?.metaDescription || "",
+          },
+          customFields: existingFields,
+        });
+
+        // Remember that we loaded real fields from the DB
+        setHasExistingFields(existingFields.length > 0);
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // ── Template injection ────────────────────────────────────────────────────
+  // Called when the user explicitly clicks "Apply Template" or when the
+  // category is changed to a Services category AND there are no existing fields.
+  const applyTemplate = () => {
+    setForm((prev) => ({
+      ...prev,
+      customFields: SERVICE_TEMPLATE.map((f) => ({ ...f })),
+    }));
+    setTemplateApplied(true);
+    setShowResetConfirm(false);
+    setHasExistingFields(false);
+  };
+
+  // When category selection changes, auto-inject only if no fields exist yet
+  const handleCategoryChange = (categoryId: string) => {
+    setForm((prev) => ({ ...prev, categoryId, subCategoryId: "" }));
+
+    const selected = categories.find((c) => c._id === categoryId);
+    if (selected && isServicesCategory(selected.title) && !hasExistingFields) {
+      // Delay slightly so `form` state is consistent
+      setTimeout(() => {
+        setForm((prev) => ({
+          ...prev,
+          categoryId,
+          subCategoryId: "",
+          customFields: SERVICE_TEMPLATE.map((f) => ({ ...f })),
+        }));
+        setTemplateApplied(true);
+      }, 0);
+    }
+  };
+
+  // ── Custom-field CRUD ─────────────────────────────────────────────────────
   const addField = () => {
     setForm((prev) => ({
       ...prev,
@@ -516,11 +564,11 @@ export default function CreateServicePage() {
   };
 
   // ── Submit ────────────────────────────────────────────────────────────────
-  const handleSubmit = async () => {
+  const handleUpdate = async () => {
     try {
-      setLoading(true);
-      const res = await fetch("/api/services", {
-        method: "POST",
+      setSaving(true);
+      const res = await fetch(`/api/services/${params.id}`, {
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
@@ -531,9 +579,20 @@ export default function CreateServicePage() {
     } catch (error) {
       console.error(error);
     } finally {
-      setLoading(false);
+      setSaving(false);
     }
   };
+
+  // ── Check if current category is a services category ─────────────────────
+  const currentCategoryIsService = (() => {
+    const selected = categories.find((c) => c._id === form.categoryId);
+    return selected ? isServicesCategory(selected.title) : false;
+  })();
+
+  // ── Loading state ─────────────────────────────────────────────────────────
+  if (loading) {
+    return <div className="py-20 text-center">Loading...</div>;
+  }
 
   // ── Render ────────────────────────────────────────────────────────────────
   return (
@@ -551,10 +610,10 @@ export default function CreateServicePage() {
           <BriefcaseBusiness size={30} />
         </div>
 
-        <h1 className="text-4xl font-bold">Create Service</h1>
+        <h1 className="text-4xl font-bold">Edit Service</h1>
 
         <p className="text-gray-500 mt-3 text-lg">
-          Create dynamic service pages with custom content blocks
+          Update service information and dynamic content blocks
         </p>
       </div>
 
@@ -569,7 +628,6 @@ export default function CreateServicePage() {
               <label className="block mb-3 font-medium">Service Title</label>
               <input
                 type="text"
-                placeholder="Web Development"
                 value={form.title}
                 onChange={(e) => setForm({ ...form, title: e.target.value })}
                 className="w-full h-14 rounded-2xl border border-black/10 px-5 outline-none"
@@ -581,7 +639,6 @@ export default function CreateServicePage() {
               <label className="block mb-3 font-medium">Slug</label>
               <input
                 type="text"
-                placeholder="web-development"
                 value={form.slug}
                 onChange={(e) => setForm({ ...form, slug: e.target.value })}
                 className="w-full h-14 rounded-2xl border border-black/10 px-5 outline-none"
@@ -593,9 +650,7 @@ export default function CreateServicePage() {
               <label className="block mb-3 font-medium">Category</label>
               <select
                 value={form.categoryId}
-                onChange={(e) =>
-                  setForm({ ...form, categoryId: e.target.value })
-                }
+                onChange={(e) => handleCategoryChange(e.target.value)}
                 className="w-full h-14 rounded-2xl border border-black/10 px-5 outline-none"
               >
                 <option value="">Select Category</option>
@@ -633,7 +688,6 @@ export default function CreateServicePage() {
               </label>
               <textarea
                 rows={5}
-                placeholder="Short service description"
                 value={form.shortDescription}
                 onChange={(e) =>
                   setForm({ ...form, shortDescription: e.target.value })
@@ -684,29 +738,62 @@ export default function CreateServicePage() {
             <div>
               <h2 className="text-2xl font-bold">Dynamic Custom Fields</h2>
               <p className="text-gray-500 mt-2">
-                Add Hero, FAQ, Gallery, CTA, Features and more
+                Flexible content sections for service pages
               </p>
             </div>
 
-            <button
-              type="button"
-              onClick={addField}
-              className="inline-flex items-center gap-2 bg-black text-white px-5 py-3 rounded-2xl"
-            >
-              <Plus size={18} />
-              Add Field
-            </button>
+            <div className="flex items-center gap-3">
+              {/* Reset to template button — shown when category is a service
+                  and fields already exist (i.e. loaded from DB) */}
+              {currentCategoryIsService && hasExistingFields && (
+                <button
+                  type="button"
+                  onClick={() => setShowResetConfirm(true)}
+                  className="
+                    inline-flex items-center gap-2
+                    border border-black/10
+                    px-5 py-3 rounded-2xl
+                    text-sm hover:bg-black/5
+                    transition-colors
+                  "
+                >
+                  <RefreshCw size={15} />
+                  Reset to Template
+                </button>
+              )}
+
+              {/* Apply template button — shown when category is a service
+                  and currently no fields at all */}
+              {currentCategoryIsService && form.customFields.length === 0 && (
+                <button
+                  type="button"
+                  onClick={applyTemplate}
+                  className="
+                    inline-flex items-center gap-2
+                    bg-emerald-500 text-white
+                    px-5 py-3 rounded-2xl
+                    text-sm
+                  "
+                >
+                  <Sparkles size={15} />
+                  Apply Template
+                </button>
+              )}
+
+              <button
+                type="button"
+                onClick={addField}
+                className="inline-flex items-center gap-2 bg-black text-white px-5 py-3 rounded-2xl"
+              >
+                <Plus size={18} />
+                Add Field
+              </button>
+            </div>
           </div>
 
           {/* ── Template-applied banner ─────────────────────────────── */}
           {templateApplied && (
-            <div
-              className="
-                flex items-start justify-between gap-4
-                bg-emerald-50 border border-emerald-200
-                rounded-2xl px-5 py-4 mb-8
-              "
-            >
+            <div className="flex items-start justify-between gap-4 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 mb-6">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0">
                   <Sparkles size={18} />
@@ -716,12 +803,11 @@ export default function CreateServicePage() {
                     Service template applied
                   </p>
                   <p className="text-emerald-700 text-sm mt-0.5">
-                    {SERVICE_TEMPLATE.length} pre-filled fields have been loaded
-                    — just update the values to match your service.
+                    {SERVICE_TEMPLATE.length} pre-filled fields have been
+                    loaded — update the values to match your service content.
                   </p>
                 </div>
               </div>
-
               <button
                 type="button"
                 onClick={() => setTemplateApplied(false)}
@@ -732,19 +818,79 @@ export default function CreateServicePage() {
             </div>
           )}
 
+          {/* ── Reset confirmation banner ───────────────────────────── */}
+          {showResetConfirm && (
+            <div className="flex items-start justify-between gap-4 bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4 mb-6">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-xl bg-amber-400 text-white flex items-center justify-center shrink-0 mt-0.5">
+                  <RefreshCw size={18} />
+                </div>
+                <div>
+                  <p className="font-semibold text-amber-800 text-sm">
+                    Reset all fields to template?
+                  </p>
+                  <p className="text-amber-700 text-sm mt-0.5">
+                    This will replace your current{" "}
+                    <strong>{form.customFields.length} fields</strong> with the{" "}
+                    {SERVICE_TEMPLATE.length} default service template fields.
+                    This cannot be undone.
+                  </p>
+                  <div className="flex items-center gap-3 mt-3">
+                    <button
+                      type="button"
+                      onClick={applyTemplate}
+                      className="bg-amber-500 text-white text-sm px-4 py-2 rounded-xl"
+                    >
+                      Yes, reset
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowResetConfirm(false)}
+                      className="text-sm px-4 py-2 rounded-xl border border-amber-200"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowResetConfirm(false)}
+                className="text-amber-400 hover:text-amber-600 shrink-0"
+              >
+                <X size={18} />
+              </button>
+            </div>
+          )}
+
+          {/* ── Empty state ─────────────────────────────────────────── */}
+          {form.customFields.length === 0 && (
+            <div className="text-center py-16 text-gray-400 border-2 border-dashed border-black/10 rounded-3xl">
+              <p className="font-medium">No custom fields</p>
+              <p className="text-sm mt-1">
+                {currentCategoryIsService ? (
+                  <>
+                    Click{" "}
+                    <span className="text-emerald-600 font-medium">
+                      Apply Template
+                    </span>{" "}
+                    to load the default service fields, or{" "}
+                    <span className="text-black font-medium">Add Field</span>{" "}
+                    manually.
+                  </>
+                ) : (
+                  <>
+                    Click{" "}
+                    <span className="text-black font-medium">Add Field</span>{" "}
+                    to add a custom field.
+                  </>
+                )}
+              </p>
+            </div>
+          )}
+
           {/* ── Field list ─────────────────────────────────────────── */}
           <div className="space-y-6">
-            {form.customFields.length === 0 && (
-              <div className="text-center py-16 text-gray-400 border-2 border-dashed border-black/10 rounded-3xl">
-                <p className="font-medium">No fields yet</p>
-                <p className="text-sm mt-1">
-                  Select a <span className="text-black font-medium">Services</span> category
-                  above to auto-load the template, or click{" "}
-                  <span className="text-black font-medium">Add Field</span> manually.
-                </p>
-              </div>
-            )}
-
             {form.customFields.map((field, index) => (
               <div
                 key={index}
@@ -772,7 +918,6 @@ export default function CreateServicePage() {
                       onChange={(e) =>
                         updateField(index, "label", e.target.value)
                       }
-                      placeholder="Hero Title"
                       className="w-full h-14 rounded-2xl border border-black/10 px-5 outline-none"
                     />
                   </div>
@@ -786,14 +931,13 @@ export default function CreateServicePage() {
                       onChange={(e) =>
                         updateField(index, "key", e.target.value)
                       }
-                      placeholder="hero_title"
                       className="w-full h-14 rounded-2xl border border-black/10 px-5 outline-none"
                     />
                   </div>
 
                   {/* Type */}
                   <div>
-                    <label className="block mb-3 font-medium">Field Type</label>
+                    <label className="block mb-3 font-medium">Type</label>
                     <select
                       value={field.type}
                       onChange={(e) =>
@@ -887,11 +1031,11 @@ export default function CreateServicePage() {
 
           <button
             type="button"
-            disabled={loading}
-            onClick={handleSubmit}
+            disabled={saving}
+            onClick={handleUpdate}
             className="bg-black text-white px-7 py-3 rounded-2xl disabled:opacity-50"
           >
-            {loading ? "Creating..." : "Create Service"}
+            {saving ? "Updating..." : "Update Service"}
           </button>
         </div>
       </div>

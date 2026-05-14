@@ -328,12 +328,12 @@ const TEAM_MEMBERS = [
   {
     src: "/assets/img/SATYPAL_SINGH.jpg",
     name: "Satypal Singh",
-    role: "CFO",
+    role: "Head of Ops (UAE)",
   },
   {
     src: "/assets/img/SHIVESH_SINHA.jpg",
     name: "Shivesh Sinha",
-    role: "Head of Ops (UAE)",
+    role: "CFO",
   },
 
 ];
