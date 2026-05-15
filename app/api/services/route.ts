@@ -4,6 +4,9 @@ import { NextRequest, NextResponse } from "next/server";
 import connectDB from "@/app/lib/mongodb";
 import Service from "@/app/models/Service";
 
+import "@/app/models/SubCategory";
+import "@/app/models/Category";
+
 export async function GET() {
   await connectDB();
 
