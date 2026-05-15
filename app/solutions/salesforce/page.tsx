@@ -5,76 +5,76 @@ import Header from "@/components/Header";
 import { useState } from "react";
 
 const servicesLeft = [
-    {
-        title: "IT Consultant",
-        desc: "Modernize systems, cut complexity, move faster with senior IT minds who've done it before.",
+  {
+        title: "Einstein 1 Platform Integration",
+        desc: "Replace disconnected data silos with a unified metadata framework that allows Sales, Service, and Marketing to act on the same intelligence.",
         img: "/assets/img/dot-graphic1.png",
     },
     {
-        title: "Operations Consultant",
-        desc: "Tighten workflows, kill bottlenecks, and get more from your existing teams - fast.",
+        title: "Proactive Predictive Analytics",
+        desc: "Utilize Einstein AI to surface 'Next Best Actions' and predictive lead scoring directly within your daily workflow to close deals faster.",
         img: "/assets/img/dot-graphic2.png",
     },
     {
-        title: "Compliance Consultant",
-        desc: "Stay audit-ready. Our consultants navigate regulations so your business doesn't miss a beat.",
+        title: "Hyperforce Global Infrastructure",
+        desc: "Benefit from a platform re-engineered for the public cloud, allowing for regional data residency and massive scale across global markets.",
         img: "/assets/img/dot-graphic3.png",
     },
 ];
-const BillableLeft = [
-    {
-        title: "Tell us what you need",
-        desc: "Share your gaps, goals, and timeline. We listen first.",
-        img: "/assets/img/dot-graphic1.png",
-    },
-    {
-        title: "Proposal and Agreement",
-        desc: "Clear proposal. No hidden fees. Sign off and we handle onboarding.",
-        img: "/assets/img/dot-graphic2.png",
-    },
-    {
-        title: "Review and settle",
-        desc: "Milestone met. We review together, invoice transparently, and close clean.",
-        img: "/assets/img/dot-graphic3.png",
-    },
-];
+// const BillableLeft = [
+//     {
+//         title: "Tell us what you need",
+//         desc: "Share your gaps, goals, and timeline. We listen first.",
+//         img: "/assets/img/dot-graphic1.png",
+//     },
+//     {
+//         title: "Proposal and Agreement",
+//         desc: "Clear proposal. No hidden fees. Sign off and we handle onboarding.",
+//         img: "/assets/img/dot-graphic2.png",
+//     },
+//     {
+//         title: "Review and settle",
+//         desc: "Milestone met. We review together, invoice transparently, and close clean.",
+//         img: "/assets/img/dot-graphic3.png",
+//     },
+// ];
 
 const servicesRight = [
     {
-        title: "App Managed Services",
-        desc: "Your apps, always on. We handle monitoring, maintenance, and upgrades so you don't have to.",
-        img: "/assets/img/dot-graphic4.png",
+        title: "Low-Code Flow Orchestration",
+        desc: "Leverage Salesforce Flow to automate complex business processes across external systems without writing a single line of custom code.",
+        img: "/assets/img/dot-graphic1.png",
     },
     {
-        title: "HR Consultant",
-        desc: "Build teams that stay, perform, and grow - strategy backed by people expertise.",
-        img: "/assets/img/dot-graphic5.png",
+        title: "AppExchange Ecosystem Synergy",
+        desc: "Eliminate feature gaps by tapping into thousands of pre-built, lightning-ready solutions that integrate natively with your core environment.",
+        img: "/assets/img/dot-graphic2.png",
     },
     {
-        title: "Project IT Consultant",
-        desc: "Goal-first. Tech-agnostic. Deployed to deliver measurable outcomes from day one.",
-        img: "/assets/img/dot-graphic6.png",
+        title: "Real-Time Data Streamlining",
+        desc: "Maintain a single source of truth with Data Cloud, harmonizing trillions of data points into a single, actionable customer profile in real-time.",
+        img: "/assets/img/dot-graphic3.png",
     },
 ];
-const BillableRight = [
-    {
-        title: "Find a Compatible Consultant",
-        desc: "We shortlist qualified professionals based on your project requirements.",
-        img: "/assets/img/dot-graphic4.png",
-    },
-    {
-        title: "Project Execution",
-        desc: "Your consultant integrates with your workflows and starts delivering from day one.",
-        img: "/assets/img/dot-graphic5.png",
-    },
-    {
-        title: "Need More?",
-        desc: "Your consultant stays on, scales up, or we find the next right fit.",
-        img: "/assets/img/dot-graphic6.png",
-    },
-];
+// const BillableRight = [
+//     {
+//         title: "Find a Compatible Consultant",
+//         desc: "We shortlist qualified professionals based on your project requirements.",
+//         img: "/assets/img/dot-graphic4.png",
+//     },
+//     {
+//         title: "Project Execution",
+//         desc: "Your consultant integrates with your workflows and starts delivering from day one.",
+//         img: "/assets/img/dot-graphic5.png",
+//     },
+//     {
+//         title: "Need More?",
+//         desc: "Your consultant stays on, scales up, or we find the next right fit.",
+//         img: "/assets/img/dot-graphic6.png",
+//     },
+// ];
 
-export default function SolutionsPage() {
+export default function SalesforcePage() {
     const [form, setForm] = useState({
         firstName: "",
         lastName: "",
@@ -111,25 +111,12 @@ export default function SolutionsPage() {
 
                         <div >
                         <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                           Stop losing time to bad hires. Get the right IT talent NOW.
+                           One Platform. Your Entire Customer Success.
                         </h1>
                         <p className="text-white/60 text-base leading-relaxed mb-8">
-                            Techsaga provides IT staff augmentation and contract consulting services to help businesses hire skilled tech professionals for cloud, enterprise, and managed service projects with flexible and scalable solutions.
+                            Techsaga, an official Salesforce partner, goes beyond deploying Salesforce. We create connected, AI-powered ecosystems that turn customer data into measurable business growth.
                         </p>
-                        <div className="flex flex-wrap gap-4">
-                            <a
-                                href="#contact"
-                                className="inline-flex items-center gap-2 bg-[#fff] text-[#4291CE] px-6 py-3 rounded font-bold hover:bg-[#fff] transition-colors text-sm"
-                            >
-                                Discover Our Talent →
-                            </a>
-                            <a
-                                href="#cases"
-                                className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-[#4291CE] transition-colors text-sm"
-                            >
-                                View Our Staffing
-                            </a>
-                        </div>
+                        
                     </div>
 
                     </div>
@@ -137,93 +124,12 @@ export default function SolutionsPage() {
             </section>
 
             {/* ── STRATEGIC STAFFING + FORM ── */}
-            <section id="contact" className="bg-gray-50 py-20">
-                <div className="max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-2 gap-16 items-start">
-                    <div>
-                        <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-snug mb-6">
-                            Your Next Great Hire Is<br /> Already On Our Bench.{" "}
-                            {/* <span className="text-[#4291CE]">
-                                The Right Talent at the Right Time
-                            </span> */}
-                        </h2>
-                        <p className="text-gray-600 leading-relaxed text-sm">
-                           Scale with confidence using a workforce designed for agility. Whether you require a single niche consultant or a full-team extension, we align human capital with your long-term business objectives.
-                        </p>
-                    </div>
-
-                    <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                        <h3 className="text-lg font-bold text-gray-900 mb-6">
-                            Discuss Your Project
-                        </h3>
-                        <form onSubmit={handleSubmit}>
-                            <div className="grid grid-cols-2 gap-4 mb-4">
-                                <input
-                                    name="firstName"
-                                    value={form.firstName}
-                                    onChange={handleChange}
-                                    placeholder="First Name"
-                                    className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                                />
-                                <input
-                                    name="lastName"
-                                    value={form.lastName}
-                                    onChange={handleChange}
-                                    placeholder="Last Name"
-                                    className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                                />
-                            </div>
-                            <div className="grid grid-cols-2 gap-4 mb-4">
-                                <input
-                                    name="email"
-                                    value={form.email}
-                                    onChange={handleChange}
-                                    placeholder="Email Address"
-                                    type="email"
-                                    className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                                />
-                                <input
-                                    name="phone"
-                                    value={form.phone}
-                                    onChange={handleChange}
-                                    placeholder="Phone Number"
-                                    type="tel"
-                                    className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                                />
-                            </div>
-                            <textarea
-                                name="description"
-                                value={form.description}
-                                onChange={handleChange}
-                                placeholder="Your project needs"
-                                rows={4}
-                                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition mb-4 resize-none"
-                            />
-                            <label className="flex items-center gap-3 text-sm text-gray-500 mb-6 cursor-pointer select-none">
-                                <input
-                                    type="checkbox"
-                                    name="robot"
-                                    checked={form.robot}
-                                    onChange={handleChange}
-                                    className="w-4 h-4 rounded border-gray-300 accent-blue-600"
-                                />
-                                I&apos;m not a robot
-                            </label>
-                            <button
-                                type="submit"
-                                className="w-full bg-[#4291CE] hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm"
-                            >
-                                Tell Us What You Need. →
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
+         
             {/* ── EXCELLING THE EXPERTISE ── */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-16">
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
-                        Whatever The Role, We've Got The Expert.
+                        Accelerate Digital Transformation with Salesforce’s Metadata-Driven Cloud
                     </h2>
                     <p className="text-center text-gray-500 max-w-3xl mx-auto mb-14 text-sm leading-relaxed">
                        We’re the specialists who hit the ground running in a user-centric approach.
@@ -261,6 +167,19 @@ export default function SolutionsPage() {
                 </div>
             </section>
 
+             <section  className=" mt-10 px-4 mb-20">
+                <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
+
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                        Your Next Great Project Starts With One Conversation
+                    </h2>
+                    <p className="text-xs text-gray-500 mb-10 max-w-xl mx-auto">
+                        Thousands of businesses. 50+ countries 14+ years . we know how to deliver
+                    </p>
+                    <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Start a conversation</a>
+                </div>
+            </section>
+
             {/* ── OPTIMIZING IT STAFF AUGMENTATION ── */}
             <section className="text-white py-20 relative overflow-hidden">
                 <div
@@ -274,10 +193,10 @@ export default function SolutionsPage() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-3 gap-12 ">
                     <div className="lg:col-span-1">
                         <h2 className="text-3xl font-bold leading-snug mb-5">
-                           Scale Your Team Without Scaling Your Headaches.
+                           One Source of Truth for Your Entire Customer 360
                         </h2>
                         <p className="text-white/60 text-sm leading-relaxed">
-                            We are committed to delivering exceptional outcomes. We collaborate closely with clients, understanding their unique goals and challenges, and harnessing our expertise to provide transformative solutions.
+                           Salesforce is the "engagement engine" of your organization. It’s a single, secure cloud space where customer relationships, Slack collaborations, and Tableau analytics finally live together in one interface.
                         </p>
                     </div>
 
@@ -295,13 +214,13 @@ export default function SolutionsPage() {
                         {[
                             {
                                 // icon: "🌐",
-                                title: "Remote Replication",
-                                desc: "In-house efficiency. Remote flexibility. Your extended team works like they're in the room.",
+                                title: "Built-In Intelligence and Massive Scale",
+                                desc: "Move to Salesforce and gain Einstein AI that anticipates customer needs before they arise. The platform scales effortlessly from startup speed to Fortune 500 complexity.",
                             },
                             {
                                 // icon: "🖥️",
-                                title: "Web Hosting Setup",
-                                desc: "Launch faster. Our infrastructure specialists get your hosting right the first time.",
+                                title: "The Power of the Metadata Framework",
+                                desc: "Because of its unique metadata architecture, your customizations never break during updates, ensuring you are always running on the world's most advanced CRM technology.",
                             },
                         ].map((item, i) => (
                             <div
@@ -322,7 +241,7 @@ export default function SolutionsPage() {
             </section>
 
             {/* ── ILLUMINATING YOUR REQUIREMENTS PATH ── */}
-            <section className="py-20 ">
+            {/* <section className="py-20 ">
                 <div className="max-w-7xl mx-auto px-6 lg:px-16">
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
                         From Brief To Billable In 6 Steps.
@@ -357,18 +276,80 @@ export default function SolutionsPage() {
                         </div>
                     </div>
                 </div>
-            </section>
-
+            </section> */}
             <section  className=" mt-10 px-4">
-                <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
+                
+            <div className="text-3xl font-bold text-gray-900 text-center mb-14">
+                Are Your Customers Just Rows in a Spreadsheet? Take Back Control.
+            </div>
 
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Next Great Project Starts With One Conversation </h2>
-                    <p className="text-xs text-gray-500 mb-10 max-w-xl mx-auto">
-                        Thousands of businesses. 50+ countries 13+ years . we know how to deliver
-                    </p>
-                    <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Start a conversation</a>
+                <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-1/2 mx-auto">
+                            {/* <h3 className="text-lg font-bold text-gray-900 mb-6">
+                                Discuss Your Project
+                            </h3> */}
+                            <form onSubmit={handleSubmit}>
+                                <div className="grid grid-cols-2 gap-4 mb-4">
+                                    <input
+                                        name="firstName"
+                                        value={form.firstName}
+                                        onChange={handleChange}
+                                        placeholder="First Name"
+                                        className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                                    />
+                                    <input
+                                        name="lastName"
+                                        value={form.lastName}
+                                        onChange={handleChange}
+                                        placeholder="Last Name"
+                                        className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                                    />
+                                </div>
+                                <div className="grid grid-cols-2 gap-4 mb-4">
+                                    <input
+                                        name="email"
+                                        value={form.email}
+                                        onChange={handleChange}
+                                        placeholder="Email Address"
+                                        type="email"
+                                        className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                                    />
+                                    <input
+                                        name="phone"
+                                        value={form.phone}
+                                        onChange={handleChange}
+                                        placeholder="Phone Number"
+                                        type="tel"
+                                        className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                                    />
+                                </div>
+                                <textarea
+                                    name="description"
+                                    value={form.description}
+                                    onChange={handleChange}
+                                    placeholder="Your project needs"
+                                    rows={4}
+                                    className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition mb-4 resize-none"
+                                />
+                                <label className="flex items-center gap-3 text-sm text-gray-500 mb-6 cursor-pointer select-none">
+                                    <input
+                                        type="checkbox"
+                                        name="robot"
+                                        checked={form.robot}
+                                        onChange={handleChange}
+                                        className="w-4 h-4 rounded border-gray-300 accent-blue-600"
+                                    />
+                                    I&apos;m not a robot
+                                </label>
+                                <button
+                                    type="submit"
+                                    className="w-full bg-[#4291CE] hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm"
+                                >
+                                    Submit Now →
+                                </button>
+                            </form>
                 </div>
             </section>
+           
 
             {/* ── TRUST TICKER ── */}
             {/* <div className="bg-[#4291CE] py-3 overflow-hidden">
@@ -417,7 +398,7 @@ function ServiceCard({ title, desc, img, }: ServiceCardProps) {
             <h4 className="font-bold text-gray-900 mb-2 text-l group-hover:text-[#4291CE] transition-colors">
                 {title}
             </h4>
-            <p className="text-gray-500 text-xs leading-relaxed">{desc}</p>
+            <p className="text-gray-500 text-xs leading-relaxed relative z-[1]">{desc}</p>
             <img src={img} alt="" className="absolute right-0 bottom-0" />
         </div>
     );
