@@ -37,17 +37,18 @@ const Industries = () => {
             <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
-                    backgroundImage: "url('/assets/img/solution-banner2.png')",
+                    backgroundImage: "url('/assets/img/industries-page/E-Commerce.png')",
                 }}
             >
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
                     <div className="grid lg:grid-cols-2 items-center gap-12">
                         <div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                                Reimagining the Digital Storefront
+                                E-Commerce
+                                <div className="text-3xl lg:text-4xl mt-2">Reimagining the Digital Storefront</div>
                             </h1>
 
-                            <p className="text-white/60 text-base leading-relaxed mb-8">
+                            <p className="text-white text-base leading-relaxed mb-8">
                                 In a click-and-go world, your eCommerce platform shouldn’t just exist, it should captivate. At Techsaga, we build high-velocity digital marketplaces that bridge the gap between "just browsing" and "place order."
                             </p>
 

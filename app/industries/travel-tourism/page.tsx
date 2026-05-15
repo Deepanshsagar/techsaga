@@ -13,7 +13,7 @@ const Industries = () => {
             <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
-                    backgroundImage: "url('/assets/img/solution-banner2.png')",
+                    backgroundImage: "url('/assets/img/industries-page/Travel-Tourism.png')",
                 }}
             >
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
@@ -22,10 +22,11 @@ const Industries = () => {
                         <div>
 
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                                Precision in Personalization
+                                Travel & Hospitality Solutions
+                                <div className="text-3xl lg:text-4xl mt-2">Precision in Personalization</div>
                             </h1>
 
-                            <p className="text-white/60 text-base leading-relaxed mb-8">
+                            <p className="text-white text-base leading-relaxed mb-8">
                                 In a world where experiences are the ultimate currency, your travel platform must be as inspiring as the destinations you promote. We build high-velocity, guest-centric ecosystems that bridge the gap between booking complexity and seamless, unforgettable journeys.
                             </p>
 

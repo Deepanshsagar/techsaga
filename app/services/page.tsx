@@ -870,7 +870,7 @@ const ServicePage = () => {
       <section
         className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
         style={{
-          backgroundImage: "url('/assets/img/service-banner.png')",
+          backgroundImage: "url('/assets/img/solutions-page/WORKDAY.png')",
         }}
       >
         <div className="relative max-w-7xl mx-auto px-4 w-full">
