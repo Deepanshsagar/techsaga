@@ -13,7 +13,7 @@ const Industries = () => {
             <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
-                    backgroundImage: "url('/assets/img/solution-banner2.png')",
+                    backgroundImage: "url('/assets/img/industries-page/Real-Estate.png')",
                 }}
             >
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
@@ -22,10 +22,11 @@ const Industries = () => {
                         <div>
 
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                                Precision in Property Intelligence
+                               Real Estate & PropTech Solutions
+                               <div className="text-3xl lg:text-4xl mt-2"> Precision in Property Intelligence</div>
                             </h1>
 
-                            <p className="text-white/60 text-base leading-relaxed mb-8">
+                            <p className="text-white text-base leading-relaxed mb-8">
                                 In a high-stakes market where speed and transparency define success, your digital infrastructure must do more than just list properties. It must close the gap between search and settlement. We build intelligent, asset-centric ecosystems that bridge the gap between market complexity and seamless, high-velocity transactions.
                             </p>
 

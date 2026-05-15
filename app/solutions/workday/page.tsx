@@ -104,15 +104,27 @@ export default function WorkdayPage() {
               <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
-                    backgroundImage: "url('/assets/img/solution-banner2.png')",
+                    backgroundImage: "url('/assets/img/solutions-page/WORKDAY.png')",
                 }}
             >
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
                     <div className="grid lg:grid-cols-2 items-center gap-12">
 
                         <div >
+                            <div>
+                                <img
+                                src="/assets/img/solutions-icon/Workday.png"
+                                width={70}
+                                height={70}
+                                className="object-contain rounded-[10px]"
+                                />
+                            </div>
                         <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                         Workday 
+                    
+                     <div className="lg:text-3xl text-3xl mt-2">
                            One Platform. Your Entire Business.
+                           </div>
                         </h1>
                         <p className="text-white/60 text-base leading-relaxed mb-8">
                             As an Official Workday Partner, we don't just "install" software; we unify your business. We bridge the gap between your people and your profits with the world’s most powerful cloud-native platform.

@@ -360,22 +360,21 @@ const Resources = () => {
       <section
         className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
         style={{
-          backgroundImage: "url('/assets/img/service-banner.png')",
+          backgroundImage: "url('/assets/img/resources.png')",
         }}
       >
         <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="grid lg:grid-cols-2 items-center gap-12">
 
             <div className="max-w-xl">
-              <h1 className="mb-5 text-5xl font-bold text-[#111827] leading-tight">
-                Get in touch with us today!
+              <h1 className="mb-5 text-5xl font-bold text-white leading-tight">
+                Ideas, Trends & Tech Insights
               </h1>
 
-              <p className="text-black/60 text-base lg:text-md mb-8 max-w-lg leading-relaxed">
-                Get in touch with us for seamless communication with our
-                business front. Submit the form below and brace yourself for a
-                swift response, delivered straight to your inbox within 24
-                hours.
+              <p className="text-white text-base lg:text-md mb-8 max-w-lg leading-relaxed">
+                Stay ahead in the digital world with fresh insights, smart ideas, and the latest
+                 technology trends from industry experts. Explore innovation, business strategies,
+                  and emerging IT solutions that help you adapt, grow, and lead with confidence.
               </p>
             </div>
 

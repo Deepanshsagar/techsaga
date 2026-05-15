@@ -13,7 +13,7 @@ const Industries = () => {
             <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
-                    backgroundImage: "url('/assets/img/solution-banner2.png')",
+                    backgroundImage: "url('/assets/img/industries-page/Logistics-Transportation.png')",
                 }}
             >
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
@@ -22,10 +22,11 @@ const Industries = () => {
                         <div>
 
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                                Precision in Motion
+                                Logistics & Supply Chain Solutions
+                                <div className="text-3xl lg:text-4xl mt-2">Precision in Motion</div>
                             </h1>
 
-                            <p className="text-white/60 text-base leading-relaxed mb-8">
+                            <p className="text-white text-base leading-relaxed mb-8">
                                 In an interconnected global economy, your logistics infrastructure must be as agile as the markets you serve. We build intelligent, visibility-driven ecosystems that bridge the gap between supply chain complexity and seamless, real-time fulfillment.
                             </p>
 

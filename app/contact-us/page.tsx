@@ -114,7 +114,7 @@ const Contact_Us = () => {
       <section
         className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
         style={{
-          backgroundImage: "url('/assets/img/service-banner.png')",
+          backgroundImage: "url('/assets/img/Contact.png')",
         }}
       >
         <div className="relative max-w-7xl mx-auto px-4 w-full">
@@ -122,10 +122,10 @@ const Contact_Us = () => {
 
             {/* Left Content */}
             <div className="max-w-xl">
-              <h1 className="mb-5 font-heading text-5xl sm:text-5xl lg:text-5xl font-bold text-[#111827] leading-tight">
+              <h1 className="mb-5 font-heading text-5xl sm:text-5xl lg:text-5xl font-bold text-white leading-tight">
                 Get in touch with us today!
               </h1>
-              <p className="text-black/60 text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">Get in touch with us for seamless communication with our business front. Submit the form below and brace yourself for a swift response, delivered straight to your inbox within 24 hours. </p>
+              <p className="text-white text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">Get in touch with us for seamless communication with our business front. Submit the form below and brace yourself for a swift response, delivered straight to your inbox within 24 hours. </p>
             </div>
 
           </div>

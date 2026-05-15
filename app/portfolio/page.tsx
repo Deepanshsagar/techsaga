@@ -151,14 +151,14 @@ export default function PortfolioSection() {
       <section
         className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
         style={{
-          backgroundImage: "url('/assets/img/service-banner.png')",
+          backgroundImage: "url('/assets/img/Portfolio.png')",
         }}
       >
         <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="grid lg:grid-cols-2 items-center gap-12">
             <div className="max-w-xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111827] leading-tight">
-                Our Portfolio
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111827] leading-tight mb-5">
+              Our Portfolio
 
                 {/* Your Trusted Partner
                 <span className="block text-[#4291CE]">
@@ -166,6 +166,11 @@ export default function PortfolioSection() {
                 </span>
                 Development */}
               </h1>
+            <p className="text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                Every project tells a story of innovation, collaboration, and measurable success. Explore the solutions
+                 we’ve built for growing businesses worldwide.
+                </p>
+
             </div>
           </div>
         </div>
