@@ -640,22 +640,22 @@ const servicesData: any = {
     {
       title: "Digital Marketing",
       desc: "Brand invisible in search results? We deploy strategies that put you in front.",
-      img: "/assets/img/service-icon/s16.png",
+      img: "/assets/img/service-icon/s51.png",
     },
     {
       title: "Influencer Marketing",
       desc: "Struggling to build trust? We connect you with voices your audience already follows.",
-      img: "/assets/img/service-icon/s17.png",
+      img: "/assets/img/service-icon/s52.png",
     },
     {
       title: "Online Reputation Management",
       desc: "Seeing negative feedback online? We protect and enhance your brand’s digital image.",
-      img: "/assets/img/service-icon/s18.png",
+      img: "/assets/img/service-icon/s53.png",
     },
     {
       title: "Improved ROI",
       desc: "Marketing budget going to waste? We focus on data-driven growth to maximize returns.",
-      img: "/assets/img/service-icon/s19.png",
+      img: "/assets/img/service-icon/s54.png",
     },
 
     {
@@ -778,22 +778,22 @@ const servicesData: any = {
     {
       title: "Digital Marketing",
       desc: "Strategies that improve online visibility.",
-      img: "/assets/img/service-icon/s16.png",
+      img: "/assets/img/service-icon/s51.png",
     },
     {
       title: "Influencer Marketing",
       desc: "Connect with trusted audience voices.",
-      img: "/assets/img/service-icon/s17.png",
+      img: "/assets/img/service-icon/s52.png",
     },
     {
       title: "Online Reputation Management",
       desc: "Enhance your digital brand image.",
-      img: "/assets/img/service-icon/s18.png",
+      img: "/assets/img/service-icon/s53.png",
     },
     {
       title: "Improved ROI",
       desc: "Data-driven marketing focused on results.",
-      img: "/assets/img/service-icon/s19.png",
+      img: "/assets/img/service-icon/s54.png",
     },
   ],
 
