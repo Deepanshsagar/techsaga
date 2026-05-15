@@ -459,7 +459,7 @@ export default function Header() {
                           >
                             {child.label}
 
-                            {child.children && (
+                            {"children" in child && child.children && (
                               <svg
                                 className="w-3 h-3"
                                 fill="none"
@@ -477,7 +477,7 @@ export default function Header() {
                           </Link>
 
                           {/* Level 2 Dropdown */}
-                          {child.children && (
+                          {"children" in child && child.children && (
                             <div
                               className="
                     absolute left-full top-0 pl-3
