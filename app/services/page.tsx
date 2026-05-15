@@ -608,7 +608,7 @@ const servicesData: any = {
     {
       title: "Migration Services",
       desc: "Scared of losing data during moves? We ensure a seamless transition to modern systems.",
-      img: "/assets/images/service-icon/s11.png",
+      img: "/assets/img/service-icon/s_42.png",
     },
     {
       title: "Integration Services",
@@ -619,7 +619,7 @@ const servicesData: any = {
     {
       title: "Manual Testing",
       desc: "Worried about hidden glitches? Our experts test your software to ensure total reliability.",
-      img: "/assets/img/service-icon/s20.png",
+      img: "/assets/img/service-icon/s_43.png",
     },
     {
       title: "Automation Testing",
@@ -742,7 +742,7 @@ const servicesData: any = {
     {
       title: "Migration Services",
       desc: "Seamless migration to modern systems.",
-      img: "/assets/img/service-icon/s11.png",
+      img: "/assets/img/service-icon/s_42.png",
     },
     {
       title: "Integration Services",
@@ -755,7 +755,7 @@ const servicesData: any = {
     {
       title: "Manual Testing",
       desc: "Ensure software reliability with expert testing.",
-      img: "/assets/img/service-icon/s20.png",
+      img: "/assets/img/service-icon/s_43.png",
     },
     {
       title: "Automation Testing",
