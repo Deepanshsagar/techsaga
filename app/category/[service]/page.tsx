@@ -384,7 +384,7 @@ export default async function ServicePage({
                             <div className="p-6 text-white relative z-10">
                                 <h3 className="text-lg font-bold mb-2">{customFieldMap?.expertiseSidebarTitle}</h3>
                                 <p className="text-blue-100 text-xs leading-relaxed">
-                                   {customFieldMap?.expertiseSidebarDescription}
+                                    {customFieldMap?.expertiseSidebarDescription}
                                 </p>
                             </div>
                             <img
@@ -395,7 +395,7 @@ export default async function ServicePage({
                         </div>
 
                         <div className="lg:w-3/5 space-y-3">
-                        {JSON.parse(customFieldMap?.faqItems).map((faq:any, index:any) => (
+                            {JSON.parse(customFieldMap?.faqItems).map((faq: any, index: any) => (
                                 <div
                                     key={index}
                                     className="border border-gray-200 rounded-xl overflow-hidden transition-all duration-300"
