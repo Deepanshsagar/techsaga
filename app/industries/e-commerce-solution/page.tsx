@@ -286,7 +286,7 @@ const Industries = () => {
                     </div>
                 </div>
             </section> */}
-            <div className="bg-[#F6F6F6]">
+            {/* <div className="bg-[#F6F6F6]">
                 <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
 
                     <div className="flex items-start justify-between flex-wrap gap-6">
@@ -400,7 +400,7 @@ const Industries = () => {
                     </div>
 
                 </section>
-            </div>
+            </div> */}
 
             {/* <section className=" mt-10 px-4">
                 <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
