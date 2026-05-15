@@ -80,16 +80,46 @@ const Footer = () => {
 
                             {/* Enterprise Services */}
                             <div>
-                                <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Enterprise Services</h4>
+                                <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">What We Do</h4>
                                 <ul className="space-y-1.5 text-[13px]">
                                     {[
-                                        "Workday Implementation", "HCM & Core HR", "Financial Management",
-                                        "Workday Integrations", "Post Go-Live Support", "",
-                                        "Salesforce Services", "Sales & Service Cloud", "Marketing Cloud",
-                                        "Custom Development", "",
-                                        "AWS Cloud Solutions", "Cloud Migration", "DevOps & CI/CD", "",
-                                        "SAP Implementation", "SAP S/4HANA", "SAP SuccessFactors", "",
-                                        "ERPNext / Frappe", "", "AI & ML Solutions", "", "Data Warehousing", "", "Multi-Cloud Strategy"
+                                        "Software Development",
+"Custom Software Development",
+"Enterprise Software Development",
+"Product Development",
+"Web Application Development",
+"Mobile Application Development",
+"Cloud Application Development",
+
+"Maintenance and Support",
+"Application Support",
+"Infrastructure Support",
+"Customer Support",
+
+"Infrastructure",
+"Cloud Infrastructure",
+"Hybrid Infrastructure",
+"On-Premises Infrastructure",
+"Integration",
+"Migration",
+"DevOps",
+
+"Testing",
+"Manual Testing",
+"Automation Testing",
+"Continuous Testing",
+
+"Marketing Solutions",
+"Digital Marketing",
+"Influential Marketing",
+"Online Reputation Management",
+"Digital Consultation",
+"Improved ROI",
+
+"Advisory",
+"Digital Transformation",
+"Business Technology Consulting",
+"Cloud Strategy Consulting"
                                     ].map((item, i) =>
                                         item === "" ? <li key={i} className="h-2" /> : (
                                             <li key={i}><a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">{item}</a></li>
@@ -100,19 +130,17 @@ const Footer = () => {
 
                             {/* Digital Services */}
                             <div>
-                                <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Digital Services</h4>
+                                <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Solutions</h4>
                                 <ul className="space-y-1.5 text-[13px]">
-                                    {[
-                                        "Digital Marketing", "SEO & SEM", "Social Media Marketing",
-                                        "Content Marketing", "Email / WhatsApp", "",
-                                        "Advertising Services", "Paid Media Planning", "Production & Design",
-                                        "Online Reputation Mgmt", "",
-                                        "Performance Marketing", "",
-                                        "Sales Support & CRM", "Lead Generation", "CRO", "Marketing Automation", "",
-                                        "PR & Crisis Management", "",
-                                        "Influencer Marketing", "",
-                                        "Event Management", "",
-                                        "Training & Workshops"
+                                    {["Workday Solutions",
+"Salesforce Solutions",
+"ZOHO Solutions",
+"SAP Solutions",
+"ERPNext Solutions",
+"ServiceNOW Solutions",
+"AWS Solutions",
+"Contract Consulting", "Data Solutions"
+
                                     ].map((item, i) =>
                                         item === "" ? <li key={i} className="h-2" /> : (
                                             <li key={i}><a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">{item}</a></li>
@@ -123,14 +151,17 @@ const Footer = () => {
 
                             {/* Company */}
                             <div>
-                                <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Company</h4>
+                                <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Who We Are
+</h4>
                                 <ul className="space-y-1.5 text-[13px]">
                                     {[
-                                        "About Techsaga", "Mission & Vision", "Leadership Team",
-                                        "Our Values", "Global Presence", "Technology Partners",
-                                        "Agency Partners", "Certifications", "Awards & Recognition",
-                                        "CSR Initiatives", "Media & Press", "Brand Guidelines",
-                                        "Investor Relations"
+                                        "About Techsaga",
+"Careers at Techsaga",
+"Client Portfolio",
+"Our Team",
+"Terms & Conditions",
+"Privacy Policy",
+"Cancellation & Refund Policy"
                                     ].map((item) => (
                                         <li key={item}><a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">{item}</a></li>
                                     ))}
@@ -142,11 +173,8 @@ const Footer = () => {
                                 <h4 className="hover:text-black/60 text-black/80 font-semibold text-[11px] uppercase tracking-[0.15em] mb-5">Resources</h4>
                                 <ul className="space-y-1.5 text-[13px]">
                                     {[
-                                        "Case Studies", "Blog & Insights", "Whitepapers",
-                                        "Webinars & Events", "Agency Profile (PDF)", "Workday Deck",
-                                        "FAQs", "Client Portal Login", "Request a Proposal",
-                                        "Schedule a Demo", "Newsletter Signup", "Careers",
-                                        "Life at Techsaga"
+                                        "Case Studies", "Blog & Insights", 
+                                    
                                     ].map((item) => (
                                         <li key={item}><a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">{item}</a></li>
                                     ))}
@@ -182,11 +210,12 @@ const Footer = () => {
                     <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4">
                         <div className="flex flex-wrap gap-x-6 gap-y-1.5 text-[10px] uppercase tracking-widest text-gray-500">
                             {[
-                                "Google Advertising Partner", "SEMrush Agency Network",
-                                "Klaviyo Agency Partner", "Salesforce Partner",
-                                "Zoho CRM Partner", "AWS Partner Network",
-                                "DAN Digital Agency Network", "DesignRush Agency Network",
-                                "InviteReferrals Partner",
+                                "Google Partner",
+"Microsoft Partner",
+"ZOHO Partner",
+"WORKDAY Partner",
+"SAP Partner",
+"AWS Partner"
                             ].map((p) => (
                                 <span key={p} className="flex items-center gap-1">
                                     <span className="text-[#4291CE]">•</span> {p}
