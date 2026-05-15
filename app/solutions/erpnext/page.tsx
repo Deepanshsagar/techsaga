@@ -73,14 +73,23 @@ export default function ERPNextPage() {
             <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
-                    backgroundImage: "url('/assets/img/solution-banner2.png')",
+                    backgroundImage: "url('/assets/img/solutions-page/ERPNext.png')",
                 }}
             >
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
                     <div className="grid lg:grid-cols-2 items-center gap-12">
                         <div>
+                            <div>
+                                <img
+                                src="/assets/img/solutions-icon/ERP-Next.png"
+                                width={70}
+                                height={70}
+                                className="object-contain rounded-[10px]"
+                                />
+                            </div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                                One Platform. Your Entire Open-Source Core.
+                               ERPNext
+                               <div className="text-3xl lg:text-4xl mt-2"> One Platform. Your Entire Open-Source Core.</div>
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">

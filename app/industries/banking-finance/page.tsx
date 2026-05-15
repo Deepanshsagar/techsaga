@@ -13,7 +13,7 @@ const Industries = () => {
             <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
-                    backgroundImage: "url('/assets/img/solution-banner2.png')",
+                    backgroundImage: "url('/assets/img/industries-page/Banking-Finance.png')",
                 }}
             >
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
@@ -22,10 +22,11 @@ const Industries = () => {
                         <div>
 
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                                Precision in Every Transaction
+                               Banking and Finance Solutions
+                               <div className="text-3xl lg:text-4xl mt-2"> Precision in Every Transaction</div>
                             </h1>
 
-                            <p className="text-white/60 text-base leading-relaxed mb-8">
+                            <p className="text-white text-base leading-relaxed mb-8">
                                 In a landscape defined by rapid digital evolution, your financial platform must be as resilient as the trust your clients place in you. We build high-performance, secure ecosystems that bridge the gap between institutional complexity and seamless, intuitive user experiences.
                             </p>
 

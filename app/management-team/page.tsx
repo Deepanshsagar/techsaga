@@ -134,14 +134,14 @@ export default function MeetOurTeam() {
       <section
         className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
         style={{
-          backgroundImage: "url('/assets/img/service-banner.png')",
+          backgroundImage: "url('/assets/img/Team-member.png')",
         }}
       >
         <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="grid lg:grid-cols-2 items-center gap-12">
             <div className="max-w-xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111827] leading-tight">
-               Our Team
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+               The People Behind Techsaga
 
                 {/* Your Trusted Partner
                 <span className="block text-[#4291CE]">
@@ -149,6 +149,9 @@ export default function MeetOurTeam() {
                 </span>
                 Development */}
               </h1>
+            <p className="text-white text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                    People driven by innovation, collaboration, and a passion for technology. We design and develop smart digital solutions that improve efficiency, enhance user experiences, and support sustainable business growth across industries.
+                </p>
             </div>
           </div>
         </div>
