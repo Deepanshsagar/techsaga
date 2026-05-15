@@ -157,7 +157,7 @@ export default function PortfolioSection() {
           <div className="grid lg:grid-cols-2 items-center gap-12">
             <div className="max-w-xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#111827] leading-tight">
-               A Unified Ecosystem For Engineering, Cloud, And Business Growth.
+              Our Portfolio
 
                 {/* Your Trusted Partner
                 <span className="block text-[#4291CE]">
