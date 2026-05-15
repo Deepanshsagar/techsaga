@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
+import BottomFrom from "@/components/BottomForm"
 
 const Industries = () => {
     return (
@@ -328,69 +329,8 @@ const Industries = () => {
                     Turn every shipment into a competitive edge with quick logistics engines built to scale.
                 </p>
 
-                <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-1/2 mx-auto">
-
-                    <form className="space-y-4">
-
-                        <div className="flex gap-3">
-
-                            <div className="flex-1">
-                                <input
-                                    type="text"
-                                    placeholder="First Name"
-                                    className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
-                                />
-                            </div>
-
-                            <div className="flex-1">
-                                <input
-                                    type="text"
-                                    placeholder="Last Name"
-                                    className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
-                                />
-                            </div>
-
-                        </div>
-
-                        <div className="flex gap-3">
-
-                            <div className="flex-1">
-                                <input
-                                    type="email"
-                                    placeholder="Email Address"
-                                    className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
-                                />
-                            </div>
-
-                            <div className="flex-1">
-                                <input
-                                    type="tel"
-                                    placeholder="Phone Number"
-                                    className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
-                                />
-                            </div>
-
-                        </div>
-
-                        <div>
-
-                            <textarea
-                                rows={3}
-                                placeholder="Your project needs"
-                                className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50 resize-none"
-                            ></textarea>
-
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="btn-primary w-full text-white font-semibold py-3 rounded-lg text-sm shadow-md"
-                        >
-                            Get a Proposal →
-                        </button>
-
-                    </form>
-
+                <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+                <BottomFrom />
                 </div>
 
             </section>

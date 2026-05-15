@@ -311,7 +311,7 @@ export default function AboutUs() {
                                 <div>
 
                                     <h3 className="text-5xl font-extrabold text-black mb-3">
-                                        10+
+                                        14+
                                     </h3>
 
                                     <p className="text-gray-600 text-lg">

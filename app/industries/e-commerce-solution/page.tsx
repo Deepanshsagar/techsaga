@@ -1,6 +1,7 @@
 "use client"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
+import BottomFrom from "@/components/BottomForm"
 
 const Industries = () => {
     return (
@@ -33,7 +34,7 @@ const Industries = () => {
                 </div>
             </section> */}
 
-        <section
+            <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
                     backgroundImage: "url('/assets/img/solution-banner2.png')",
@@ -50,11 +51,11 @@ const Industries = () => {
                                 In a click-and-go world, your eCommerce platform shouldn’t just exist, it should captivate. At Techsaga, we build high-velocity digital marketplaces that bridge the gap between "just browsing" and "place order."
                             </p>
 
-                           
+
                         </div>
                     </div>
                 </div>
-        </section>
+            </section>
 
             {/* <section id="services" className="py-20 bg-gray-50">
                 <div className="max-w-[1140px] mx-auto px-4 flex flex-col lg:flex-row  gap-12">
@@ -133,7 +134,7 @@ const Industries = () => {
   before:top-020 before:bg-[url('/assets/img/effect1.png')] before:bg-cover before:bg-center">
                     <div className=" fade-in">
                         <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0b1535] leading-tight">
-                        Where Tech Meets Transformation
+                            Where Tech Meets Transformation
                         </h2>
                         <p className="text-gray-400 mt-3 text-sm max-w-xl">
                             Developing an e-commerce website is complex and challenging, involving multiple intricacies and hurdles that need to be overcome for successful implementation and operation.
@@ -153,7 +154,7 @@ const Industries = () => {
                                     <div>
                                         <h4 className="font-bold text-[#0b1535] mb-2">Bespoke Ecosystems vs. The Abandoned Cart</h4>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                        We design tailor-made web and mobile apps with "One-Click" checkouts and lightning-fast UIs to capture every intent and stop sales from slipping away.
+                                            We design tailor-made web and mobile apps with "One-Click" checkouts and lightning-fast UIs to capture every intent and stop sales from slipping away.
                                         </p>
                                     </div>
                                 </div>
@@ -169,7 +170,7 @@ const Industries = () => {
                                     <div>
                                         <h4 className="font-bold text-[#0b1535] mb-2">Unified Operations vs. Data Fragmentation</h4>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                         By syncing your ERP, CRM, and inventory into one powerhouse dashboard, we eliminate "out-of-stock" nightmares through a single source of truth.
+                                            By syncing your ERP, CRM, and inventory into one powerhouse dashboard, we eliminate "out-of-stock" nightmares through a single source of truth.
                                         </p>
                                     </div>
                                 </div>
@@ -201,7 +202,7 @@ const Industries = () => {
                                     <div>
                                         <h4 className="font-bold text-[#0b1535] mb-2">Security by Design vs. The Trust Deficit</h4>
                                         <p className="text-gray-500 text-sm leading-relaxed">
-                                        We implement enterprise-grade encryption and PCI-DSS compliance, transforming your store into a digital fortress that turns skeptical browsers into loyal, lifelong customers.
+                                            We implement enterprise-grade encryption and PCI-DSS compliance, transforming your store into a digital fortress that turns skeptical browsers into loyal, lifelong customers.
                                         </p>
                                     </div>
                                 </div>
@@ -285,119 +286,119 @@ const Industries = () => {
                 </div>
             </section> */}
             <div className="bg-[#F6F6F6]">
-            <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+                <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
 
-                <div className="flex items-start justify-between flex-wrap gap-6">
+                    <div className="flex items-start justify-between flex-wrap gap-6">
 
-                    <div>
-                        <h2 className="font-display text-[34px]  leading-none font-semibold tracking-[-2px] text-[#111111]">
-                            E-Commerce Solution
-                        </h2>
+                        <div>
+                            <h2 className="font-display text-[34px]  leading-none font-semibold tracking-[-2px] text-[#111111]">
+                                E-Commerce Solution
+                            </h2>
 
-                        <div className="w-16 h-[4px] bg-[#3B82F6] rounded-full mt-5"></div>
-                    </div>
-
-                    <button
-                        className="group flex items-center gap-0 rounded-full pl-2  py-2 bg-transparent"
-                    >
-
-                        <div className="w-[64px] h-[64px] absolute  -ml-3 rounded-full bg-[#6EA8E8] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
-
+                            <div className="w-16 h-[4px] bg-[#3B82F6] rounded-full mt-5"></div>
                         </div>
 
-                        <div className="flex items-center relative z-10 gap-4">
+                        <button
+                            className="group flex items-center gap-0 rounded-full pl-2  py-2 bg-transparent"
+                        >
 
-                            <span className="text-[18px] font-semibold text-black tracking-[-0.3px]">
-                                Let's Get Started
-                            </span>
-
-                            <span className="text-2xl transition-all duration-300 group-hover:translate-x-1">
-                                →
-                            </span>
-
-                        </div>
-
-                    </button>
-
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-16">
-
-                    <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
-                            alt=""
-                            className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
-                        />
-
-                        <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
-
-                        </div>
-
-                        <div className="absolute bottom-0 left-0 w-full p-8 flex items-center justify-between opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-
-                            <div>
-
-                                <p className="uppercase tracking-[3px] text-white/60 text-[10px] mb-3">
-                                    Beauty & Cosmetics
-                                </p>
-
-                                <h3 className="font-display text-white text-[24px] leading-none font-semibold">
-                                    Foreversz Store
-                                </h3>
+                            <div className="w-[64px] h-[64px] absolute  -ml-3 rounded-full bg-[#6EA8E8] flex items-center justify-center transition-all duration-300 group-hover:scale-110">
 
                             </div>
 
-                            <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
+                            <div className="flex items-center relative z-10 gap-4">
 
-                                →
+                                <span className="text-[18px] font-semibold text-black tracking-[-0.3px]">
+                                    Let's Get Started
+                                </span>
 
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
-                            alt=""
-                            className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
-                        />
-
-                        <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
-
-                        </div>
-
-                        <div className="absolute bottom-0 left-0 w-full p-8 flex items-center justify-between opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-
-                            <div>
-
-                                <p className="uppercase tracking-[3px] text-white/60 text-[10px] mb-3">
-                                    Fashion & Apparel
-                                </p>
-
-                                <h3 className="font-display text-white text-[24px] leading-none font-semibold">
-                                    Zuhd Store
-                                </h3>
+                                <span className="text-2xl transition-all duration-300 group-hover:translate-x-1">
+                                    →
+                                </span>
 
                             </div>
 
-                            <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
+                        </button>
 
-                                →
+                    </div>
 
-                            </button>
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-16">
+
+                        <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+                                alt=""
+                                className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
+                            />
+
+                            <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
+
+                            </div>
+
+                            <div className="absolute bottom-0 left-0 w-full p-8 flex items-center justify-between opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+                                <div>
+
+                                    <p className="uppercase tracking-[3px] text-white/60 text-[10px] mb-3">
+                                        Beauty & Cosmetics
+                                    </p>
+
+                                    <h3 className="font-display text-white text-[24px] leading-none font-semibold">
+                                        Foreversz Store
+                                    </h3>
+
+                                </div>
+
+                                <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
+
+                                    →
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
+                                alt=""
+                                className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
+                            />
+
+                            <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
+
+                            </div>
+
+                            <div className="absolute bottom-0 left-0 w-full p-8 flex items-center justify-between opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+
+                                <div>
+
+                                    <p className="uppercase tracking-[3px] text-white/60 text-[10px] mb-3">
+                                        Fashion & Apparel
+                                    </p>
+
+                                    <h3 className="font-display text-white text-[24px] leading-none font-semibold">
+                                        Zuhd Store
+                                    </h3>
+
+                                </div>
+
+                                <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
+
+                                    →
+
+                                </button>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                </div>
-
-            </section>
+                </section>
             </div>
 
             {/* <section className=" mt-10 px-4">
@@ -411,51 +412,19 @@ const Industries = () => {
                 </div>
             </section> */}
 
-                <section  className=" mt-10 px-4">
-                
-            <div className="text-3xl font-bold text-gray-900 text-center mb-2">Get In Touch With Us.</div>
-            <p className="text-gray-500 text-sm leading-relaxed text-center mb-14">
-                    Turn every millisecond into revenue with high-velocity eCommerce engines built to scale
-            </p>
+            <section className=" mt-10 px-4">
 
-                <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-1/2 mx-auto">
-                            {/* <h3 className="text-lg font-bold text-gray-900 mb-6">
+                <div className="text-3xl font-bold text-gray-900 text-center mb-2">Get In Touch With Us.</div>
+                <p className="text-gray-500 text-sm leading-relaxed text-center mb-14">
+                    Turn every millisecond into revenue with high-velocity eCommerce engines built to scale
+                </p>
+
+                <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+                    {/* <h3 className="text-lg font-bold text-gray-900 mb-6">
                                 Discuss Your Project
                             </h3> */}
-                            <form className="space-y-4" >
-                                <div className="flex gap-3">
-                                    <div className="flex-1">
-                                        <input type="text" placeholder="First Name" className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50" />
-                                    </div>
-                                    <div className="flex-1">
-                                        <input type="text" placeholder="Last Name" className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50" />
-                                    </div>
-                                </div>
-                                <div className="flex gap-3">
-                                    <div className="flex-1">
-                                        <input type="email" placeholder="Email Address" className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50" />
-                                    </div>
-                                    <div className="flex-1">
-                                        <input type="tel" placeholder="Phone Number" className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50" />
-                                    </div>
-                                </div>
+                    <BottomFrom />
 
-                                <div>
-                                    <textarea rows={3} placeholder="Your project needs" className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50 resize-none"></textarea>
-                                </div>
-                                <div className="border border-gray-200 rounded-lg px-4 py-3 flex items-center gap-3 bg-gray-50">
-                                    <input type="checkbox" className="w-4 h-4 accent-blue-600" />
-                                    <span className="text-xs text-gray-500">I'm not a robot</span>
-                                    <div className="ml-auto text-right">
-                                        <div className="text-xs text-gray-300 font-bold">reCAPTCHA</div>
-                                        <div className="text-[10px] text-gray-300">Privacy · Terms</div>
-                                    </div>
-                                </div>
-                                <button type="submit" className="btn-primary w-full text-white font-semibold py-3 rounded-lg text-sm shadow-md">
-                                    Get a Proposal. →
-                                </button>
-                            </form>
-                            
                 </div>
             </section>
 

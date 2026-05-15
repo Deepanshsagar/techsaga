@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
@@ -21,17 +22,17 @@ const NAV_LINKS = [
 
   {
     label: "Solutions",
-    url: "/solutions",
+    url: "#",
     children: [
-      { label: "Workday", url: "#" },
-      { label: "Salesforce", url: "#" },
-      { label: "Zoho", url: "#" },
-      { label: "SAP", url: "#" },
-      { label: "Data Solutions", url: "#" },
-      { label: "ERPNext", url: "#" },
-      { label: "ServiceNow", url: "#" },
-      { label: "AWS", url: "#" },
-      { label: "Contract Consulting", url: "#" },
+      { label: "Workday", url: "/solutions/workday" },
+      { label: "Salesforce", url: "/solutions/salesforce" },
+      { label: "Zoho", url: "/solutions/zoho" },
+      { label: "SAP", url: "/solutions/sap" },
+      { label: "Data Solutions", url: "/solutions/data-solutions" },
+      { label: "ERPNext", url: "/solutions/erpnext" },
+      { label: "ServiceNow", url: "/solutions/servicenow" },
+      { label: "AWS", url: "/solutions/aws-amazon-web-services" },
+      { label: "Contract Consulting", url: "/solutions/contract-consulting" },
     ],
   },
 
@@ -39,16 +40,16 @@ const NAV_LINKS = [
     label: "Industries",
     url: "/industries",
     children: [
-      { label: "E-Commerce", url: "#" },
-      { label: "Healthcare", url: "#" },
-      { label: "Banking & Finance", url: "#" },
-      { label: "Education", url: "#" },
-      { label: "Retail", url: "#" },
-      { label: "Manufacturing", url: "#" },
-      { label: "Real Estate", url: "#" },
-      { label: "Logistics", url: "#" },
-      { label: "Travel & Tourism", url: "#" },
-      { label: "Government", url: "#" },
+      { label: "E-Commerce", url: "/industries/e-commerce-solution" },
+      { label: "Healthcare", url: "/industries/healthcare" },
+      { label: "Banking & Finance", url: "/industries/banking-finance" },
+      { label: "Education", url: "/industries/education-e-learning" },
+      { label: "Retail", url: "/industries/retail-and-consumer-goods" },
+      { label: "Manufacturing", url: "/industries/manufacturing" },
+      { label: "Real Estate", url: "/industries/real-estate" },
+      { label: "Logistics", url: "/industries/logistics-and-transportation" },
+      { label: "Travel & Tourism", url: "/industries/travel-tourism" },
+      { label: "Government", url: "/industries/government" },
     ],
   },
 
@@ -71,9 +72,6 @@ const NAV_LINKS = [
       { label: "Management Team", url: "#" },
       { label: "Clients & Portfolio", url: "#" },
       { label: "Careers", url: "/careers" },
-      { label: "Development Approach", url: "#" },
-      { label: "Quality Assurance", url: "#" },
-      { label: "How We Work", url: "#" },
     ],
   },
 
@@ -134,7 +132,7 @@ export default function Header() {
           >
             {NAV_LINKS.map((link) => (
               <div key={link.label} className="relative group">
-                <a
+                <Link
                   href={link.url}
                   className="flex items-center gap-1 text-sm font-semibold text-gray-700 hover:text-[#4291CE] transition-colors"
                 >
@@ -155,7 +153,7 @@ export default function Header() {
                       />
                     </svg>
                   )}
-                </a>
+                </Link>
 
                 {/* Underline */}
                 <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#4291CE] group-hover:w-full transition-all duration-300" />
@@ -178,7 +176,7 @@ export default function Header() {
                     "
                     >
                       {link.children.map((child) => (
-                        <a
+                        <Link
                           key={child.label}
                           href={child.url}
                           className="
@@ -190,7 +188,7 @@ export default function Header() {
                         "
                         >
                           {child.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -200,7 +198,7 @@ export default function Header() {
 
             {fetchHeader.map((link: any) => (
               <div key={link.slug} className="relative group">
-                <a
+                <Link
                   href={`/${link.slug}`}
                   className="flex items-center gap-1 text-sm font-semibold text-gray-700 hover:text-[#4291CE] transition-colors"
                 >
@@ -221,7 +219,7 @@ export default function Header() {
                       />
                     </svg>
                   )}
-                </a>
+                </Link>
 
                 <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-[#4291CE] group-hover:w-full transition-all duration-300" />
 
@@ -295,7 +293,7 @@ export default function Header() {
                       "
                                 >
                                   {child.services.map((sub: any) => (
-                                    <a
+                                    <Link
                                       key={sub.slug}
                                       href={`/${link.slug}/${sub.slug}`}
                                       className="
@@ -307,7 +305,7 @@ export default function Header() {
                           "
                                     >
                                       {sub.title}
-                                    </a>
+                                    </Link>
                                   ))}
                                 </div>
                               </div>
@@ -397,7 +395,7 @@ export default function Header() {
                     text-sm font-semibold text-gray-700
                   "
                 >
-                  <a href={link.url}>{link.label}</a>
+                  <Link href={link.url}>{link.label}</Link>
 
                   {link.children && (
                     <svg
@@ -420,7 +418,7 @@ export default function Header() {
                 {link.children && openMobileMenu === link.label && (
                   <div className="pb-4 pl-3 flex flex-col gap-1">
                     {link.children.map((child) => (
-                      <a
+                      <Link
                         key={child.label}
                         href={child.url}
                         className="
@@ -432,7 +430,7 @@ export default function Header() {
                         "
                       >
                         {child.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}

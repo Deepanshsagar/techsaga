@@ -3,6 +3,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { useState } from "react";
+import BottomFrom from "@/components/BottomForm"
 
 const servicesLeft = [
     {
@@ -244,74 +245,8 @@ export default function ServiceNowPage() {
                     Is Your Work Getting Lost in Email? Take Back Control.
                 </div>
 
-                <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-1/2 mx-auto">
-                    <form onSubmit={handleSubmit}>
-                        <div className="grid grid-cols-2 gap-4 mb-4">
-                            <input
-                                name="firstName"
-                                value={form.firstName}
-                                onChange={handleChange}
-                                placeholder="First Name"
-                                className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                            />
-
-                            <input
-                                name="lastName"
-                                value={form.lastName}
-                                onChange={handleChange}
-                                placeholder="Last Name"
-                                className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                            />
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-4 mb-4">
-                            <input
-                                name="email"
-                                value={form.email}
-                                onChange={handleChange}
-                                placeholder="Email Address"
-                                type="email"
-                                className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                            />
-
-                            <input
-                                name="phone"
-                                value={form.phone}
-                                onChange={handleChange}
-                                placeholder="Phone Number"
-                                type="tel"
-                                className="border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-                            />
-                        </div>
-
-                        <textarea
-                            name="description"
-                            value={form.description}
-                            onChange={handleChange}
-                            placeholder="Your project needs"
-                            rows={4}
-                            className="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition mb-4 resize-none"
-                        />
-
-                        <label className="flex items-center gap-3 text-sm text-gray-500 mb-6 cursor-pointer select-none">
-                            <input
-                                type="checkbox"
-                                name="robot"
-                                checked={form.robot}
-                                onChange={handleChange}
-                                className="w-4 h-4 rounded border-gray-300 accent-blue-600"
-                            />
-
-                            I&apos;m not a robot
-                        </label>
-
-                        <button
-                            type="submit"
-                            className="w-full bg-[#4291CE] hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm"
-                        >
-                            Submit Now →
-                        </button>
-                    </form>
+                <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+                   <BottomFrom />
                 </div>
             </section>
 

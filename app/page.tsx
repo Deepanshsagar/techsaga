@@ -108,6 +108,31 @@ function FadeUp({
 
 
 const SERVICES: ServiceCard[] = [
+   {
+    icon: "/assets/img/homes4.png",
+    service: "Workday",
+    title: "Workforce Management Solutions",
+    desc: "Simplify workforce operations with centralized HR and employee management systems.",
+    points: [
+      "Payroll configuration support",
+      "HR process automation",
+      "Employee lifecycle management",
+      "Platform integration services"
+    ]
+  },
+  {
+    icon: "/assets/img/homes3.png",
+    service: "Salesforce",
+    title: "CRM & Customer Management Solutions",
+    desc: "Improve customer engagement with scalable CRM implementation and operational support.",
+    points: [
+      "Sales pipeline management",
+      "Workflow automation setup",
+      "Business process automation",
+      "Dashboard configuration services",
+      "Third-party system integration"
+    ]
+  },
   {
     icon: "/assets/img/homes1.png",
     service: "Zoho",
@@ -132,31 +157,7 @@ const SERVICES: ServiceCard[] = [
       "Data migration management"
     ]
   },
-  {
-    icon: "/assets/img/homes3.png",
-    service: "Salesforce",
-    title: "CRM & Customer Management Solutions",
-    desc: "Improve customer engagement with scalable CRM implementation and operational support.",
-    points: [
-      "Sales pipeline management",
-      "Workflow automation setup",
-      "Business process automation",
-      "Dashboard configuration services",
-      "Third-party system integration"
-    ]
-  },
-  {
-    icon: "/assets/img/homes4.png",
-    service: "Workday",
-    title: "Workforce Management Solutions",
-    desc: "Simplify workforce operations with centralized HR and employee management systems.",
-    points: [
-      "Payroll configuration support",
-      "HR process automation",
-      "Employee lifecycle management",
-      "Platform integration services"
-    ]
-  },
+  
   {
     icon: "/assets/img/homes5.png",
     service: "Microsoft",
@@ -473,7 +474,7 @@ export default function TechSagaHomePage() {
 
                 {/* Top-left box */}
                 <div className="absolute top-2 rounded-sm -left-6 bg-white text-[#4291CE] px-4 py-2  shadow-md">
-                  <p className="font-semibold  text-xl text-[#4291CE] text-center">12+</p>
+                  <p className="font-semibold  text-xl text-[#4291CE] text-center">14+</p>
                   <p className="text-xs text-black/80 uppercase text-center">Experience</p>
                 </div>
 
@@ -506,7 +507,7 @@ export default function TechSagaHomePage() {
                   <span key={tag} className="bg-[#E6F3FB] text-[#1A4D78] text-xs font-medium uppercase px-3 py-1 rounded">{tag}</span>
                 ))}
               </div>
-              <p className="text-[#4291CE] block text-sm font-semibold mt-6 cursor-pointer">View Our Portfolio → →</p>
+              <p className="text-[#4291CE] block text-sm font-semibold mt-6 cursor-pointer">View Our Portfolio →</p>
             </FadeUp>
           </div>
         </section>
@@ -976,7 +977,7 @@ export default function TechSagaHomePage() {
                   <div
                     key={c.name}
                     className="
-    group relative h-25 flex-[0_0_16.6667%] overflow-hidden
+    group relative h-25 flex-[0_0_50%] sm:flex-[0_0_50%] md:flex-[0_0_16.6667%] overflow-hidden
     rounded-2xl border border-white/20
     bg-white/10 px-3 m-3
     backdrop-blur-xl
@@ -1024,7 +1025,7 @@ export default function TechSagaHomePage() {
                     <div
                     key={c.name}
                     className="
-    group relative h-25 flex-[0_0_16.6667%] overflow-hidden
+    group relative h-25 flex-[0_0_50%] sm:flex-[0_0_50%] md:flex-[0_0_16.6667%] overflow-hidden
     rounded-2xl border border-white/20
     bg-white/10 px-3 m-3
     backdrop-blur-xl
@@ -1262,7 +1263,7 @@ export default function TechSagaHomePage() {
               </div>
             </FadeUp>
             <FadeUp delay={100}>
-              <div className="grid grid-cols-4 gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 {TEAM_MEMBERS.map((member, i) => (
                   <div
                     key={i}
