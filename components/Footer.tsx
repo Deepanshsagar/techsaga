@@ -204,7 +204,7 @@ const Footer = () => {
                 {/* Copyright bar */}
                 <div className="border-t border-white/10">
                     <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-gray-600">
-                        <p>© 2012–2026 Techsaga Corporation. All rights reserved.</p>
+                        <p>© 2012-2026 Techsaga Corporation. All rights reserved.</p>
 
                         <div className="flex gap-5">
                             {["Privacy Policy", "Terms of Use"].map((item) => (
