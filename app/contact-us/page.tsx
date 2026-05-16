@@ -5,6 +5,7 @@ import { SectionTag } from "../utils/utils";
 import { useState } from "react";
 import SplitContainer from "@/components/SplitContainer";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Contact_Us = () => {
@@ -303,7 +304,7 @@ const Contact_Us = () => {
           <p className="text-xs text-gray-500 mb-10 max-w-xl mx-auto">
             Thousands of businesses. 50+ countries 13+ years . we know how to deliver
           </p>
-          <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Start a conversation</a>
+          <Link href="/contact-us" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Start a conversation</Link>
         </div>
       </section>
       <Footer />

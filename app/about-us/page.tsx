@@ -64,7 +64,7 @@ export default function AboutUs() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                 <Link
                                     href="/contact-us"
-                                    className="inline-flex items-center justify-center gap-2 bg-[#fff] text-[#4291CE] px-6 py-3 rounded font-semibold hover:bg-[#347eb8] transition-colors text-sm"
+                                    className="inline-flex items-center justify-center gap-2 bg-[#fff] text-[#4291CE] px-6 py-3 rounded font-semibold hover:bg-[#347eb8] hover:text-[#fff] transition-colors text-sm"
                                 >
                                     Connect with expert →
                                 </Link>
