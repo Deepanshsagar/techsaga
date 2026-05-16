@@ -154,11 +154,14 @@ export default function CloudApplicationDevelopment() {
 
             <div className="max-w-xl">
               <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-[#111827] leading-tight">
-                Cloud Application
-                <span className="block text-[#4291CE]">
+                Cloud Application Development
+                {/* <span className="block text-[#4291CE]">
                   Development
-                </span>
+                </span> */}
               </h1>
+               <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Cloud-based applications designed for flexibility, scalability, and faster business operations.
+                </p>
             </div>
 
           </div>

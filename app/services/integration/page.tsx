@@ -159,6 +159,9 @@ export default function InfrastructureIntegrationPage() {
                   Support Services
                 </span> */}
               </h1>
+              <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Seamless system integration services that connect platforms, applications, and business workflows.
+                </p>
             </div>
           </div>
         </div>

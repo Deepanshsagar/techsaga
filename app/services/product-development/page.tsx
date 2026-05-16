@@ -165,6 +165,9 @@ export default function ProductDevelopment() {
                   Development
                 </span>
               </h1>
+               <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Scalable enterprise applications designed to improve operations, collaboration, and productivity.
+                </p>
             </div>
 
           </div>

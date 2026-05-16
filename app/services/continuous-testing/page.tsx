@@ -160,11 +160,14 @@ export default function ContinuousTestingPage() {
           <div className="grid lg:grid-cols-2 items-center gap-12">
             <div className="max-w-xl">
               <h1 className="font-heading text-5xl sm:text-5xl lg:text-5xl font-bold text-[#111827] leading-tight">
-                Continuous
-                <span className="block text-[#4291CE]">
+                Continuous Testing
+                {/* <span className="block text-[#4291CE]">
                   Testing Services
-                </span>
+                </span> */}
               </h1>
+               <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                Continuous testing practices integrated into development for faster and reliable releases.
+                </p>
             </div>
           </div>
         </div>
