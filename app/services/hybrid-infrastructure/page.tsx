@@ -82,6 +82,9 @@ export default function HybridInfrastructurePage() {
                   Support Services
                 </span> */}
               </h1>
+               <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Integrated hybrid infrastructure that combines on-premises systems with cloud flexibility.
+                </p>
             </div>
           </div>
         </div>

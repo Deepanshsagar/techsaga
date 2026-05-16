@@ -114,6 +114,9 @@ export default function CloudMigrationPage() {
                   Support Services
                 </span> */}
               </h1>
+               <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Smooth and secure migration services for applications, data, and infrastructure modernization.
+                </p>
             </div>
           </div>
         </div>

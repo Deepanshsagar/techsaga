@@ -165,11 +165,14 @@ export default function ApplicationSupportPage() {
             {/* Left Content */}
             <div className="max-w-xl">
               <h1 className="font-heading text-5xl sm:text-5xl lg:text-5xl font-bold text-[#111827] leading-tight">
-                Application
-                <span className="block text-[#4291CE]">
+                Application Support
+                {/* <span className="block text-[#4291CE]">
                   Support Services
-                </span>
+                </span> */}
               </h1>
+               <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                Reliable support services to keep your applications secure, updated, and running smoothly.
+                </p>
             </div>
           </div>
         </div>

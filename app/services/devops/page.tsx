@@ -155,6 +155,9 @@ export default function DevOpsDevelopmentPage() {
                   Support Services
                 </span> */}
               </h1>
+              <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  DevOps solutions that improve collaboration, automation, and faster software delivery cycles.
+                </p>
             </div>
           </div>
         </div>

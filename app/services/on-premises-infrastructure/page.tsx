@@ -168,6 +168,9 @@ export default function OnPremisesInfrastructurePage() {
                   Support Services
                 </span> */}
               </h1>
+              <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Robust on-premises infrastructure solutions designed for security, control, and reliability.
+                </p>
             </div>
           </div>
         </div>
