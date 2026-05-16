@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import BottomFrom from "@/components/BottomForm"
+import { Link } from "lucide-react"
 
 const Industries = () => {
     return (
@@ -286,7 +287,7 @@ const Industries = () => {
                     </div>
                 </div>
             </section> */}
-            {/* <div className="bg-[#F6F6F6]">
+             <div className="bg-[#F6F6F6]">
                 <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
 
                     <div className="flex items-start justify-between flex-wrap gap-6">
@@ -308,15 +309,15 @@ const Industries = () => {
                             </div>
 
                             <div className="flex items-center relative z-10 gap-4">
-
+                                <a href="/contact-us">
                                 <span className="text-[18px] font-semibold text-black tracking-[-0.3px]">
                                     Let's Get Started
                                 </span>
-
+                               
                                 <span className="text-2xl transition-all duration-300 group-hover:translate-x-1">
                                     →
                                 </span>
-
+ </a>
                             </div>
 
                         </button>
@@ -328,9 +329,9 @@ const Industries = () => {
                         <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
 
                             <img
-                                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+                                src="/assets/img/portfolio-img/dailylifeforever52_one.in_-scaled.jpg"
                                 alt=""
-                                className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
+                                className="object-top w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
                             />
 
                             <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
@@ -350,13 +351,15 @@ const Industries = () => {
                                     </h3>
 
                                 </div>
-
+                            <a href="https://resources.techsaga.co.in/case-study/daily-life-forever52/">
+                             
                                 <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
 
                                     →
 
                                 </button>
-
+                            </a>
+                           
                             </div>
 
                         </div>
@@ -364,9 +367,9 @@ const Industries = () => {
                         <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
 
                             <img
-                                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
+                                src="/assets/img/portfolio-img/zuhd-store1.png"
                                 alt=""
-                                className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
+                                className="object-top w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
                             />
 
                             <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
@@ -386,13 +389,13 @@ const Industries = () => {
                                     </h3>
 
                                 </div>
-
+                            <a href="https://resources.techsaga.co.in/case-study/zuhd-store/">
                                 <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
 
                                     →
 
                                 </button>
-
+                            </a>
                             </div>
 
                         </div>
@@ -400,7 +403,7 @@ const Industries = () => {
                     </div>
 
                 </section>
-            </div> */}
+            </div> 
 
             {/* <section className=" mt-10 px-4">
                 <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
