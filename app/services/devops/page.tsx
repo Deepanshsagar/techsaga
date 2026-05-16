@@ -156,6 +156,9 @@ export default function DevOpsDevelopmentPage() {
                   Support Services
                 </span> */}
               </h1>
+              <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  DevOps solutions that improve collaboration, automation, and faster software delivery cycles.
+                </p>
             </div>
           </div>
         </div>
@@ -200,7 +203,7 @@ export default function DevOpsDevelopmentPage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/devops-services-img1.png"
+                src="/assets/img/services/devops-services-img1.png"
                 alt="DevOps"
                 width={700}
                 height={600}
@@ -217,7 +220,7 @@ export default function DevOpsDevelopmentPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/devops-services-img3.png"
+                src="/assets/img/services/devops-services-img3.png"
                 alt="Services"
                 width={700}
                 height={600}
@@ -277,7 +280,7 @@ export default function DevOpsDevelopmentPage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/devops-services-img2.png"
+                src="/assets/img/services/devops-services-img2.png"
                 alt="Why Choose"
                 width={700}
                 height={600}
@@ -342,7 +345,7 @@ export default function DevOpsDevelopmentPage() {
                 key={index}
                 className="group rounded-3xl overflow-hidden border hover:shadow-2xl transition-all duration-300"
               >
-                <div className="relative h-64">
+                <div className="relative h-64 overflow-hidden">
                   <img
                     src={item.img}
                     alt={item.title}
@@ -382,7 +385,7 @@ export default function DevOpsDevelopmentPage() {
               </p>
 
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/faq-mod.png"
+                src="/assets/img/services/faq-mod.png"
                 alt="FAQ"
                 width={500}
                 height={400}

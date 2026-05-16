@@ -160,6 +160,9 @@ export default function InfrastructureIntegrationPage() {
                   Support Services
                 </span> */}
               </h1>
+              <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Seamless system integration services that connect platforms, applications, and business workflows.
+                </p>
             </div>
           </div>
         </div>
@@ -212,7 +215,7 @@ export default function InfrastructureIntegrationPage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/integration-services-img1.png"
+                src="/assets/img/services/integration-services-img1.png"
                 alt="Infrastructure Integration"
                 width={700}
                 height={500}
@@ -229,7 +232,7 @@ export default function InfrastructureIntegrationPage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/integation-services-img2.png"
+                src="/assets/img/services/integation-services-img2.png"
                 alt="Cloud Integration Services"
                 width={700}
                 height={500}
@@ -295,7 +298,7 @@ export default function InfrastructureIntegrationPage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/integation-services-img2.png"
+                src="/assets/img/services/integation-services-img3.png"
                 alt="Why Choose Us"
                 width={700}
                 height={500}
@@ -312,7 +315,7 @@ export default function InfrastructureIntegrationPage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/integation-services-img4.png"
+                src="/assets/img/services/integation-services-img4.png"
                 alt="Future Ready"
                 width={700}
                 height={500}

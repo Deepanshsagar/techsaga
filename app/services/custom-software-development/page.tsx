@@ -165,11 +165,15 @@ export default function ApplicationSupportPage() {
             {/* Left Content */}
             <div className="max-w-xl">
               <h1 className="font-heading text-5xl sm:text-5xl lg:text-5xl font-bold text-[#111827] leading-tight">
-                Application
-                <span className="block text-[#4291CE]">
+               Custom Software Development
+                {/* <span className="block text-[#4291CE]">
                   Support Services
-                </span>
+                </span> */}
               </h1>
+                <p className="text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2 mt-3">
+                  Tailored software solutions built to match your unique business processes and goals.
+                </p>
+
             </div>
           </div>
         </div>

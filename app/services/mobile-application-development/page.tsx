@@ -160,11 +160,14 @@ export default function MobileApplicationDevelopment() {
 
             <div className="max-w-xl">
               <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-[#111827] leading-tight">
-                Mobile Application
-                <span className="block text-[#4291CE]">
+                Mobile Application Development
+                {/* <span className="block text-[#4291CE]">
                   Development
-                </span>
+                </span> */}
               </h1>
+              <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Custom mobile apps for Android and iOS that deliver performance, usability, and engagement.
+                </p>
             </div>
 
           </div>

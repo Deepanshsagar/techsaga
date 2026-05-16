@@ -9,32 +9,32 @@ export default function HybridInfrastructurePage() {
     {
       title: "Agility and Innovation",
       desc: "Leverage hybrid infrastructure solutions to rapidly deploy services and adapt to evolving business demands.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/service1.jpg",
+      img: "/assets/img/services/service1.jpg",
     },
     {
       title: "Enhanced Customer Experience",
       desc: "Deliver reliable and personalized experiences with seamless hybrid infrastructure integration.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/ds3.jpg",
+      img: "/assets/img/services/ds3.jpg",
     },
     {
       title: "Data Security and Compliance",
       desc: "Protect sensitive business and customer data with robust security and compliance measures.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/competative-advantage.jpg",
+      img: "/assets/img/services/competative-advantage.jpg",
     },
     {
       title: "Competitive Edge",
       desc: "Gain market advantage with scalable and cost-efficient hybrid infrastructure solutions.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l1.jpg",
+      img: "/assets/img/services/services-l1.jpg",
     },
     {
       title: "Collaboration and Integration",
       desc: "Enable seamless collaboration and workflow efficiency through integrated hybrid systems.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l2.jpg",
+      img: "/assets/img/services/services-l2.jpg",
     },
     {
       title: "Strategic Growth",
       desc: "Scale operations and customer reach effectively with future-ready hybrid infrastructure.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l3.jpg",
+      img: "/assets/img/services/services-l3.jpg",
     },
   ];
 
@@ -83,6 +83,9 @@ export default function HybridInfrastructurePage() {
                   Support Services
                 </span> */}
               </h1>
+               <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Integrated hybrid infrastructure that combines on-premises systems with cloud flexibility.
+                </p>
             </div>
           </div>
         </div>
@@ -137,7 +140,7 @@ export default function HybridInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/hybrid-infa-services1.png"
+                src="/assets/img/services/hybrid-infa-services1.png"
                 alt="hybrid"
                 width={700}
                 height={500}
@@ -157,7 +160,7 @@ export default function HybridInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/hybrid-infa-services3.png"
+                src="/assets/img/services/hybrid-infa-services3.png"
                 alt="hybrid"
                 width={700}
                 height={500}
@@ -254,7 +257,7 @@ export default function HybridInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/hybrid-infa-services2.png"
+                src="/assets/img/services/hybrid-infa-services2.png"
                 alt="hybrid"
                 width={700}
                 height={500}
@@ -274,7 +277,7 @@ export default function HybridInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/hybrid-infa-services4.png"
+                src="/assets/img/services/hybrid-infa-services4.png"
                 alt="hybrid"
                 width={700}
                 height={500}
@@ -445,7 +448,7 @@ export default function HybridInfrastructurePage() {
               </p>
 
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/faq-mod.png"
+                src="/assets/img/services/faq-mod.png"
                 alt="faq"
                 width={500}
                 height={400}
@@ -498,7 +501,7 @@ export default function HybridInfrastructurePage() {
             <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
 
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/best-price.png"
+                src="/assets/img/services/best-price.png"
                 alt="pricing"
                 width={80}
                 height={80}
@@ -518,7 +521,7 @@ export default function HybridInfrastructurePage() {
             <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
 
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/hourly-eng.png"
+                src="/assets/img/services/hourly-eng.png"
                 alt="hourly"
                 width={80}
                 height={80}
@@ -538,7 +541,7 @@ export default function HybridInfrastructurePage() {
             <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
 
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/direct-requirement.png"
+                src="/assets/img/services/direct-requirement.png"
                 alt="recruitment"
                 width={80}
                 height={80}

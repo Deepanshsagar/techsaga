@@ -151,11 +151,14 @@ export default function WebApplicationDevelopment() {
 
             <div className="max-w-xl">
               <h1 className="text-5xl sm:text-5xl lg:text-6xl font-bold text-[#111827] leading-tight">
-                Web Application
-                <span className="block text-[#4291CE]">
+                Web Application Development
+                {/* <span className="block text-[#4291CE]">
                   Development
-                </span>
+                </span> */}
               </h1>
+              <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Responsive and secure web applications built for seamless user experience and business growth.
+                </p>
             </div>
 
           </div>

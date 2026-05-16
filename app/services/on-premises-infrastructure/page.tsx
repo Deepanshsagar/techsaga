@@ -65,37 +65,37 @@ export default function OnPremisesInfrastructurePage() {
       title: "Seamless Integration",
       desc: "Our expertise lies in seamlessly integrating and customizing on-premises infrastructure to align with your unique business requirements, ensuring optimal performance and efficiency.",
       icon: "flaticon-data",
-      bg: "https://www.techsaga.co.in/public/assets/images/my-img/services/service1.jpg",
+      bg: "/assets/img/services/service1.jpg",
     },
     {
       title: "Enhanced Security",
       desc: "Techsaga prioritizes data security and compliance, implementing robust measures to protect sensitive information and meet industry-specific regulations.",
       icon: "flaticon-author",
-      bg: "https://www.techsaga.co.in/public/assets/images/my-img/services/ds3.jpg",
+      bg: "/assets/img/services/ds3.jpg",
     },
     {
       title: "Scalability and Flexibility",
       desc: "Our on-premises infrastructure solutions are designed to scale and adapt as your business grows, allowing for seamless expansion and flexibility to accommodate evolving needs.",
       icon: "flaticon-icon-149196",
-      bg: "https://www.techsaga.co.in/public/assets/images/my-img/services/competative-advantage.jpg",
+      bg: "/assets/img/services/competative-advantage.jpg",
     },
     {
       title: "Proactive Monitoring",
       desc: "With our proactive monitoring and dedicated support, we ensure smooth operations, quick issue resolution, and minimized downtime for uninterrupted productivity.",
       icon: "flaticon-chart",
-      bg: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l1.jpg",
+      bg: "/assets/img/services/services-l1.jpg",
     },
     {
       title: "Compliance Assurance",
       desc: "Ensure compliance with industry regulations and prioritize data privacy with our on-premises infrastructure solutions, providing peace of mind and regulatory compliance for your business.",
       icon: "flaticon-design",
-      bg: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l2.jpg",
+      bg: "/assets/img/services/services-l2.jpg",
     },
     {
       title: "Unleashing Business Potential",
       desc: "Optimize resource utilization for enhanced operational efficiency and unlock business growth potential with our on-premises infrastructure solutions.",
       icon: "flaticon-group",
-      bg: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l3.jpg",
+      bg: "/assets/img/services/services-l3.jpg",
     },
   ];
 
@@ -134,17 +134,17 @@ export default function OnPremisesInfrastructurePage() {
     {
       title: "TRANSPARENT AND FIXED PRICING",
       desc: "With transparent and fixed pricing, we provide clear, upfront costs, ensuring that deliverables and value are achieved within the time and budget invested by our clients.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/best-price.png",
+      img: "/assets/img/services/best-price.png",
     },
     {
       title: "ADAPTIVE HOURLY ENGAGEMENT",
       desc: "Our Adaptive Hourly Engagement offers flexible collaboration based on project needs, optimizing resources and maximizing productivity with agile responsiveness.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/hourly-eng.png",
+      img: "/assets/img/services/hourly-eng.png",
     },
     {
       title: "DIRECT RECRUITMENT",
       desc: "We facilitate Direct Recruitment by providing the tools, resources, and expertise to help you efficiently hire top talent without intermediaries.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/direct-requirement.png",
+      img: "/assets/img/services/direct-requirement.png",
     },
   ];
 
@@ -169,6 +169,9 @@ export default function OnPremisesInfrastructurePage() {
                   Support Services
                 </span> */}
               </h1>
+              <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                  Robust on-premises infrastructure solutions designed for security, control, and reliability.
+                </p>
             </div>
           </div>
         </div>
@@ -220,7 +223,7 @@ export default function OnPremisesInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/on-premises-services1.png"
+                src="/assets/img/services/on-premises-services1.png"
                 alt="Infrastructure"
                 width={700}
                 height={500}
@@ -237,7 +240,7 @@ export default function OnPremisesInfrastructurePage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/onpremises-services4.png"
+                src="/assets/img/services/onpremises-services4.png"
                 alt="Considerations"
                 width={700}
                 height={500}
@@ -300,7 +303,7 @@ export default function OnPremisesInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/onpremises-services2.png"
+                src="/assets/img/services/onpremises-services2.png"
                 alt="Management"
                 width={700}
                 height={500}
@@ -317,7 +320,7 @@ export default function OnPremisesInfrastructurePage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/onpremises-services3.png"
+                src="/assets/img/services/onpremises-services3.png"
                 alt="Why Choose"
                 width={700}
                 height={500}
@@ -453,7 +456,7 @@ export default function OnPremisesInfrastructurePage() {
               </p>
 
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/faq-mod.png"
+                src="/assets/img/services/faq-mod.png"
                 alt="FAQ"
                 width={500}
                 height={400}

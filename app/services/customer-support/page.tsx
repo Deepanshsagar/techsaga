@@ -165,11 +165,14 @@ export default function CustomerSupportPage() {
           <div className="grid lg:grid-cols-2 items-center gap-12">
             <div className="max-w-xl">
               <h1 className="font-heading text-5xl sm:text-5xl lg:text-5xl font-bold text-[#111827] leading-tight">
-                Customer
-                <span className="block text-[#4291CE]">
+                Customer Support
+                {/* <span className="block text-[#4291CE]">
                   Support Services
-                </span>
+                </span> */}
               </h1>
+               <p className="mt-3 text-black text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
+                Dedicated customer support services focused on quick resolution and improved user satisfaction.
+                </p>
             </div>
           </div>
         </div>
