@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { useState } from "react";
 import BottomFrom from "@/components/BottomForm"
+import Link from "next/link";
 
 const servicesLeft = [
     {
@@ -170,12 +171,12 @@ export default function AWSPage() {
                        Thousands of businesses. 50+ countries 14+ years . we know how to deliver
                     </p>
 
-                    <a
+                    <Link
                         href="/contact-us"
                         className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm"
                     >
                         Start a conversation
-                    </a>
+                    </Link>
                 </div>
             </section>
 

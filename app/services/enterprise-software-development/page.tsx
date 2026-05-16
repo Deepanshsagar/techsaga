@@ -150,7 +150,7 @@ export default function Enterprises() {
    <section
         className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
         style={{
-          backgroundImage: "url('/assets/img/service-banner.png')",
+          backgroundImage: "url('/assets/img/software-development.png')",
         }}
       >
         <div className="relative max-w-7xl mx-auto px-4 w-full">
@@ -159,7 +159,7 @@ export default function Enterprises() {
             {/* Left Content */}
             <div className="max-w-xl">
               <h1 className="font-heading text-5xl sm:text-5xl lg:text-5xl font-bold text-[#111827] leading-tight">
-                Product Development
+                Enterprise Software Development
                 {/* <span className="block text-[#4291CE]">
                  Software development
                 </span> */}

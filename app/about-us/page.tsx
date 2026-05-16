@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import useEmblaCarousel from "embla-carousel-react";
+import Link from "next/link";
 
 const timelineData = [
     {
@@ -61,19 +62,19 @@ export default function AboutUs() {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <a
-                                    href="#contact"
-                                    className="inline-flex items-center justify-center gap-2 bg-[#fff] text-[#4291CE] px-6 py-3 rounded font-semibold hover:bg-[#347eb8] transition-colors text-sm"
+                                <Link
+                                    href="/contact-us"
+                                    className="inline-flex items-center justify-center gap-2 bg-[#fff] text-[#4291CE] px-6 py-3 rounded font-semibold hover:bg-[#347eb8] hover:text-[#fff] transition-colors text-sm"
                                 >
                                     Connect with expert →
-                                </a>
+                                </Link>
 
-                                <a
-                                    href="#cases"
+                                <Link
+                                    href="https://resources.techsaga.co.in/case-study/"
                                     className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-[#4291CE] transition-colors text-sm"
                                 >
                                     View Case Studies
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
@@ -365,7 +366,7 @@ export default function AboutUs() {
 
                         </div>
 
-                        <a href="mailto:hello@techsaga.com"
+                        <Link href="/contact-us"
                             className="group bg-[linear-gradient(135deg,_#076099_0%,_#3379B3_100%)] hover:bg-white border border-blue-300 text-white hover:text-[#1e3a5f] text-sm sm:text-base font-semibold px-7 py-4 rounded-lg flex items-center gap-3 transition-all duration-300">
 
                             Get In Touch
@@ -382,7 +383,7 @@ export default function AboutUs() {
                                     d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
 
-                        </a>
+                        </Link>
 
                     </div>
 
