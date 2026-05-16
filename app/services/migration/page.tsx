@@ -8,32 +8,32 @@ export default function CloudMigrationPage() {
     {
       title: "Accessibility",
       desc: "Cloud-based services can be accessed from anywhere and on any device, enabling seamless connectivity and productivity.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/service1.jpg",
+      img: "/assets/img/services/service1.jpg",
     },
     {
       title: "Scalability",
       desc: "Cloud systems easily adapt to workload spikes, allowing organizations to scale resources efficiently based on demand.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/ds3.jpg",
+      img: "/assets/img/services/ds3.jpg",
     },
     {
       title: "Accelerated Time to Market",
       desc: "Cloud infrastructure reduces deployment time for new apps and updates, helping businesses innovate faster.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/competative-advantage.jpg",
+      img: "/assets/img/services/competative-advantage.jpg",
     },
     {
       title: "Security",
       desc: "Modern cloud platforms provide advanced security features and tools to protect sensitive business data.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l1.jpg",
+      img: "/assets/img/services/services-l1.jpg",
     },
     {
       title: "Competitive Edge",
       desc: "Cloud migration empowers businesses with scalability and cost efficiency, helping them outperform competitors.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l2.jpg",
+      img: "/assets/img/services/services-l2.jpg",
     },
     {
       title: "Strategic Growth",
       desc: "Cloud migration creates opportunities for business expansion, innovation, and improved customer reach.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l3.jpg",
+      img: "/assets/img/services/services-l3.jpg",
     },
   ];
 
@@ -166,7 +166,7 @@ export default function CloudMigrationPage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/migration-services-img1.png"
+                src="/assets/img/services/migration-services-img1.png"
                 alt="Cloud Migration"
                 width={700}
                 height={500}
@@ -183,7 +183,7 @@ export default function CloudMigrationPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/migration-services-img2.png"
+                src="/assets/img/services/migration-services-img2.png"
                 alt="Services"
                 width={700}
                 height={500}
@@ -252,7 +252,7 @@ export default function CloudMigrationPage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/migration-servicws-img3.png"
+                src="/assets/img/services/migration-servicws-img3.png"
                 alt="Why Choose Us"
                 width={700}
                 height={500}
@@ -269,7 +269,7 @@ export default function CloudMigrationPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/migration-services-img4.png"
+                src="/assets/img/services/migration-services-img4.png"
                 alt="Future Ready"
                 width={700}
                 height={500}
@@ -325,7 +325,7 @@ export default function CloudMigrationPage() {
                 key={i}
                 className="group rounded-3xl overflow-hidden shadow-lg border bg-white hover:-translate-y-2 transition duration-300"
               >
-                <div className="relative h-64">
+                <div className="relative h-64 overflow-hidden ">
                   <img
                     src={item.img}
                     alt={item.title}
@@ -392,17 +392,17 @@ export default function CloudMigrationPage() {
               {
                 title: "Transparent and Fixed Pricing",
                 desc: "Clear and upfront pricing ensuring maximum value within your budget.",
-                img: "https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/best-price.png",
+                img: "/assets/img/services/best-price.png",
               },
               {
                 title: "Adaptive Hourly Engagement",
                 desc: "Flexible collaboration models optimized for project requirements.",
-                img: "https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/hourly-eng.png",
+                img: "/assets/img/services/hourly-eng.png",
               },
               {
                 title: "Direct Recruitment",
                 desc: "Hire top talent directly with our expert recruitment support.",
-                img: "https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/direct-requirement.png",
+                img: "/assets/img/services/direct-requirement.png",
               },
             ].map((item, i) => (
               <div
