@@ -8,122 +8,200 @@ const teamMembers = [
     name: "RAHUL MISHRA",
     role: "CEO",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/rahul-sir-1.png",
+      "/assets/img/teams-member/rahul-sir-1.png",
   },
   {
     name: "VIKAS PANDEY",
     role: "COO",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/VIKAS-PANDEY-new.png",
+      "/assets/img/teams-member/VIKAS-PANDEY-new.png",
   },
   {
     name: "SHIVESH SINHA",
     role: "CFO",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/SHIVESH-SINHA-new.png",
+      "/assets/img/teams-member/SHIVESH-SINHA-new.png",
   },
   {
     name: "SATYPAL SINGH",
     role: "Head Of Operations (UAE)",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/team/Head%20of%20Operations.jpg",
+      "/assets/img/teams-member/Head%20of%20Operations.jpg",
   },
   {
     name: "SAAD TAHSEEN MD AL-HASHMI",
     role: "Head Of Operations (KSA)",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/team/sheikh-sahab.jpg",
+      "/assets/img/teams-member/sheikh-sahab.jpg",
   },
   {
     name: "PRATIK GUPTA",
     role: "Legal Head",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/team/ag-img1.png",
+      "/assets/img/teams-member/ag-img1.png",
   },
   {
     name: "PYARIMOHAN MOHAPATRA",
     role: "Partner (Advisory)",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/team/pyarimohan.jpg",
+      "/assets/img/teams-member/pyarimohan.jpg",
   },
   {
     name: "NIKHIL SACHDEVA",
     role: "Partner (Advisory)",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/nikhil-img.png",
+      "/assets/img/teams-member/nikhil-img.png",
   },
   {
     name: "NEHA TIWARI",
     role: "Business Manager",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/neha-tiwari-new.png",
+      "/assets/img/teams-member/neha-tiwari-new.png",
   },
   {
     name: "RADHE MAURYA",
     role: "Project Manager",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/radhe_techsaga1.png",
+      "/assets/img/teams-member/radhe_techsaga1.png",
   },
   {
     name: "SHIVAM MISHRA",
     role: "Head Digital Marketing",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/shivam_techsaga.png",
+      "/assets/img/teams-member/shivam_techsaga.png",
   },
   {
     name: "PREETI RAGHAV",
     role: "Human Resource Manager",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/hr-mam.png",
+      "/assets/img/teams-member/hr-mam.png",
   },
   {
     name: "VAISHNAVI SOMANI",
     role: "Human Resource Manager",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/hr_ts2-2.png",
+      "/assets/img/teams-member/hr_ts2-2.png",
   },
   {
     name: "VIMAL KUMAR",
     role: "App Team Lead",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/vimal-sir-new.png",
+      "/assets/img/teams-member/vimal-sir-new.png",
   },
   {
     name: "GOURAV RAJPUT",
     role: "Developer Team Lead",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/team/gourav-rajput.png",
+      "/assets/img/teams-member/gourav-rajput.png",
   },
   {
     name: "SAURABH RAWAT",
     role: "Developer Team Lead",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/saurabh-rawat.png",
+      "/assets/img/teams-member/saurabh-rawat.png",
   },
   {
     name: "MANISH KUMAR PANDEY",
     role: "Software Tester Team Lead",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/manish-kr-new.png",
+      "/assets/img/teams-member/manish-kr-new.png",
   },
   {
     name: "VISHAL DAVID",
     role: "Frontend Team Lead",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/Vishal-Sir3.png",
+      "/assets/img/teams-member/Vishal-Sir3.png",
   },
   {
     name: "SHASHANK SHRIVASTAV",
     role: "Sr. Performance Marketer",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/Shashank-Srivastav.png",
+      "/assets/img/teams-member/Shashank-Srivastav.png",
   },
   {
     name: "ASHUTOSH KUMAR",
     role: "Sr. Web Developer",
     image:
-      "https://www.techsaga.co.in/public/assets/images/teams-image/ashutosh.png",
+      "/assets/img/teams-member/ashutosh.png",
   },
+  {
+  name: "VARUN KUMAR",
+  role: "Sr. Android Developer",
+  image:
+    "/assets/img/teams-member/varun-kr.png",
+},
+{
+  name: "PRIYA GUPTA",
+  role: "Sr. Android Developer",
+  image:
+    "/assets/img/teams-member/priyaandroid-new.png",
+},
+{
+  name: "DEEPANSH SAGAR",
+  role: "Sr. UI/UX Designer",
+  image:
+    "/assets/img/teams-member/deepansh-sagar.png",
+},
+{
+  name: "MANISHA KUMARI",
+  role: "Sr. Business Associate",
+  image:
+    "/assets/img/teams-member/manisha.png",
+},
+{
+  name: "SATPAL SINGH",
+  role: "Sr. Business Associate",
+  image:
+    "/assets/img/teams-member/satpal-singh-new.png",
+},
+{
+  name: "ANIL KOLI",
+  role: "Sr. Graphic Designer",
+  image:
+    "/assets/img/teams-member/anil-koli.png",
+},
+{
+  name: "GURMEET SINGH",
+  role: "Sr. Business Analyst",
+  image:
+    "/assets/img/teams-member/Gurmeet-Singh.png",
+},
+{
+  name: "HARERAM YADAV",
+  role: "Sr. iOS Developer",
+  image:
+    "/assets/img/teams-member/Hare-ram-ios-new.png",
+},
+{
+  name: "RADHA YADAV",
+  role: "Sr. iOS Developer",
+  image:
+    "/assets/img/teams-member/Radha-Kumari-new.png",
+},
+{
+  name: "PRIYANSHU SHRIVASTAV",
+  role: "Sr. Software Developer",
+  image:
+    "/assets/img/teams-member/Priyanshu-new.png",
+},
+{
+  name: "MUKUL RAJPUT",
+  role: "Sr. UI/UX Designer",
+  image:
+    "/assets/img/teams-member/Mukul-Rajput.png",
+},
+{
+  name: "SUBHAM KUMAR",
+  role: "Sr. Digital Marketer",
+  image:
+    "/assets/img/teams-member/Shubham-techsaga.png",
+},
+{
+  name: "REETIKA SINHA",
+  role: "Sr. Digital Marketer",
+  image:
+    "/assets/img/teams-member/Reetika-1.png",
+},
 ];
 
 export default function MeetOurTeam() {
