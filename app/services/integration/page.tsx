@@ -1,4 +1,5 @@
 "use client";
+import BottomForm from "@/components/BottomForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -169,7 +170,7 @@ export default function InfrastructureIntegrationPage() {
 
       {/* Intro Section */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mb-14 text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
               Enabling Digital Evolution
@@ -224,7 +225,7 @@ export default function InfrastructureIntegrationPage() {
 
       {/* Services */}
       <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div>
               <img
@@ -262,7 +263,7 @@ export default function InfrastructureIntegrationPage() {
 
       {/* Why Choose */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div>
               <h3 className="mb-6 text-3xl font-bold text-gray-900">
@@ -307,7 +308,7 @@ export default function InfrastructureIntegrationPage() {
 
       {/* Future Ready */}
       <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div>
               <img
@@ -351,7 +352,7 @@ export default function InfrastructureIntegrationPage() {
 
       {/* Integration Benefits */}
       <section className="bg-[#4291CE] py-20 text-white">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="mx-auto mb-14 max-w-4xl text-center">
             <h2 className="mb-4 text-4xl font-bold">
               Enable Remote Work With Infrastructure Integration
@@ -387,7 +388,7 @@ export default function InfrastructureIntegrationPage() {
 
       {/* Perks */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="mb-4 text-4xl font-bold text-gray-900">
               The Perks of Cloud Infrastructure Integration
@@ -428,7 +429,7 @@ export default function InfrastructureIntegrationPage() {
 
       {/* FAQ */}
       <section className="bg-gray-100 py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="text-4xl font-bold text-gray-900">
               Our Infrastructure Integration Expertise
@@ -479,7 +480,7 @@ export default function InfrastructureIntegrationPage() {
 
       {/* Collaboration */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="mb-4 text-4xl font-bold text-gray-900">
               Let's Get Started: Collaborating on Your Project
@@ -513,6 +514,17 @@ export default function InfrastructureIntegrationPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="pt-15 px-4 pb-20 bg-gradient-to-b from-[#f3f4f6] to-transparent">
+        <div className="text-3xl font-bold text-gray-900 text-center mb-2">
+          Get In Touch With Us.
+        </div>
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-10">
+          Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
+        </p>
+        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+          <BottomForm />
         </div>
       </section>
           <Footer />

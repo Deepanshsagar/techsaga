@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import BottomForm from "@/components/BottomForm";
 export default function CloudMigrationPage() {
   const perks = [
     {
@@ -123,7 +124,7 @@ export default function CloudMigrationPage() {
 
       {/* INTRO */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <span className="text-blue-600 font-semibold uppercase tracking-wider">
               Delivering Cloud Solutions
@@ -179,7 +180,7 @@ export default function CloudMigrationPage() {
 
       {/* SERVICES */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <img
@@ -222,7 +223,7 @@ export default function CloudMigrationPage() {
 
       {/* WHY CHOOSE */}
       <section className="py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">
@@ -265,7 +266,7 @@ export default function CloudMigrationPage() {
 
       {/* FUTURE READY */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <img
@@ -307,7 +308,7 @@ export default function CloudMigrationPage() {
 
       {/* PERKS */}
       <section className="py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-5">
               The Perks of Choosing Cloud
@@ -345,7 +346,7 @@ export default function CloudMigrationPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-5">
               Our Cloud Migration Expertise
@@ -375,7 +376,7 @@ export default function CloudMigrationPage() {
 
       {/* CTA */}
       <section className="py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-6">
               Let’s Get Started: Collaborating on Your Project
@@ -425,6 +426,17 @@ export default function CloudMigrationPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="pt-15 px-4 pb-20 bg-gradient-to-b from-[#f3f4f6] to-transparent">
+        <div className="text-3xl font-bold text-gray-900 text-center mb-2">
+          Get In Touch With Us.
+        </div>
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-10">
+          Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
+        </p>
+        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+          <BottomForm />
         </div>
       </section>
           <Footer />

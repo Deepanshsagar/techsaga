@@ -40,40 +40,43 @@ export default function AboutUs() {
     return (
         <>
             <Header />
-            <section className="relative pt-16  min-h-[550px] flex items-center bg-white overflow-hidden">
-                <div className="absolute inset-0">
-                    <img
-                        src="/assets/img/Indesterisbg.png"
-                        alt="professionals collaborating"
-                        className="w-full h-full object-cover object-center"
-                    />
-                    {/* <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/20" /> */}
-                </div>
-                <div className="relative flex justify-end items-center z-10 max-w-7xl mx-auto px-6 lg:px-16 py-24 pt-30 w-full">
-                    <div className="w-1/2">
-                        <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                            Techsaga <br />Digital Evolution
-                        </h1>
-                        <p className="text-white/60 text-base leading-relaxed mb-8">
-                            Harnessing Innovation for Digital Excellence: Crafting Software and Marketing Marvels to Propel Your Business Beyond Boundaries
-                        </p>
-                        <div className="flex flex-wrap gap-4">
-                            <a
-                                href="#contact"
-                                className="inline-flex items-center gap-2 bg-[#4291CE] text-white px-6 py-3 rounded font-semibold hover:bg-[#347eb8] transition-colors text-sm"
-                            >
-                                Connect with expert →
-                            </a>
-                            <a
-                                href="#cases"
-                                className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-white transition-colors text-sm"
-                            >
-                                View Case Studies
-                            </a>
-                        </div>
-                    </div>
+            <section
+                className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
+                style={{
+                    backgroundImage: "url('/assets/img/about-us.png')",
+                }}
+            >
+                <div className="relative max-w-7xl mx-auto px-4 w-full">
                     <div className="">
-                        <img src="/assets/img/diverse-business.png" alt="" className="" />
+
+                        <div className="w-full lg:w-1/2 text-left">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                                Techsaga <br />
+                                Digital Evolution
+                            </h1>
+
+                            <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                                Harnessing Innovation for Digital Excellence: Crafting Software and
+                                Marketing Marvels to Propel Your Business Beyond Boundaries
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                <a
+                                    href="#contact"
+                                    className="inline-flex items-center justify-center gap-2 bg-[#fff] text-[#4291CE] px-6 py-3 rounded font-semibold hover:bg-[#347eb8] transition-colors text-sm"
+                                >
+                                    Connect with expert →
+                                </a>
+
+                                <a
+                                    href="#cases"
+                                    className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-[#4291CE] transition-colors text-sm"
+                                >
+                                    View Case Studies
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>

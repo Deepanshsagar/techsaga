@@ -1,3 +1,4 @@
+import BottomForm from "@/components/BottomForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
@@ -510,6 +511,17 @@ export default function InfluentialMarketingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="pt-15 px-4 pb-20 bg-gradient-to-b from-[#f3f4f6] to-transparent">
+        <div className="text-3xl font-bold text-gray-900 text-center mb-2">
+          Get In Touch With Us.
+        </div>
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-10">
+          Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
+        </p>
+        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+          <BottomForm />
         </div>
       </section>
 

@@ -321,19 +321,14 @@ const Industries = () => {
 
             {/* CONTACT SECTION */}
             <section className="mt-10 px-4 mb-20">
-
                 <div className="text-3xl font-bold text-gray-900 text-center mb-2">
                     Get In Touch With Us.
                 </div>
-
                 <p className="text-gray-500 text-sm leading-relaxed text-center mb-14">
                     Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
                 </p>
-
                 <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
-
                     <BottomFrom />
-
                 </div>
 
             </section>

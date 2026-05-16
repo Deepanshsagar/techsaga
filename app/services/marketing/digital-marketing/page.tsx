@@ -1,5 +1,6 @@
 // app/services/marketing/digital-marketing/page.tsx
 
+import BottomForm from "@/components/BottomForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
@@ -174,7 +175,7 @@ export default function DigitalMarketingPage() {
 
       {/* Intro */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <span className="text-[#4291CE] font-semibold uppercase tracking-wider">
               Delivering Exponential Growth
@@ -247,7 +248,7 @@ export default function DigitalMarketingPage() {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <Image
@@ -296,7 +297,7 @@ export default function DigitalMarketingPage() {
 
       {/* Success Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">
@@ -343,7 +344,7 @@ export default function DigitalMarketingPage() {
 
       {/* Client Base */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <Image
@@ -390,7 +391,7 @@ export default function DigitalMarketingPage() {
 
       {/* Blue Section */}
       <section className="py-20 bg-[#4291CE] text-white">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-14">
             <h2 className="text-4xl font-bold mb-4">
               Unleash Your Business Potential by Online Presence
@@ -426,7 +427,7 @@ export default function DigitalMarketingPage() {
 
       {/* Features */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">
               Unleash Business Potential with Top Digital Marketing Agency
@@ -470,7 +471,7 @@ export default function DigitalMarketingPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-14">
             <h2 className="text-4xl font-bold">
               Our Digital Marketing Expertise
@@ -499,7 +500,7 @@ export default function DigitalMarketingPage() {
 
       {/* Collaboration */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-5">
               Let's Get Started: Collaborating on Your Project
@@ -536,6 +537,17 @@ export default function DigitalMarketingPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="pt-15 px-4 pb-20 bg-gradient-to-b from-[#f3f4f6] to-transparent">
+        <div className="text-3xl font-bold text-gray-900 text-center mb-2">
+          Get In Touch With Us.
+        </div>
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-10">
+          Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
+        </p>
+        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+          <BottomForm />
         </div>
       </section>
 

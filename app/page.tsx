@@ -415,7 +415,7 @@ export default function TechSagaHomePage() {
               {/* <div className="absolute top-12 right-16 w-72 h-72 rounded-full bg-[#4291CE] opacity-10 blur-3xl pointer-events-none" /> */}
               {/* <div className="absolute bottom-0 left-1/3 w-56 h-56 rounded-full bg-amber-400 opacity-10 blur-3xl pointer-events-none" /> */}
 
-              <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-0 w-full py-20 lg:py-0 grid lg:grid-cols-2 gap-6 items-center z-10">
+              <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-6 sm:px-10 lg:px-0 w-full py-20 lg:py-0 grid lg:grid-cols-2 gap-6 items-center z-10">
                 <div>
                   <div className="flex items-center gap-3 pb-4">
                     <span className="w-8 border-t-2 border border-[#000]"></span>
@@ -459,7 +459,7 @@ export default function TechSagaHomePage() {
         </div>
 
         <section className="bg-white py-16 lg:py-20" aria-label="Why TechSaga">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
             <FadeUp>
               <div className="relative w-full h-90 shadow-lg">
 
@@ -516,7 +516,7 @@ export default function TechSagaHomePage() {
             PLATFORM IMPLEMENTATION
         ══════════════════════════════════════════════════ */}
         <section className="bg-[#E3EFF8] py-16 lg:py-20" aria-label="Platform Implementation Services">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
               <SplitContainer className="">
                 <SectionTag>Enterprise Enablement</SectionTag>
@@ -624,7 +624,7 @@ export default function TechSagaHomePage() {
 
           aria-label="Product Engineering & Marketing"
         >
-          <div ref={triggerRef} className="max-w-7xl rounded-xl overflow-hidden mx-auto px-0 sm:px-0 lg:px-0">
+          <div ref={triggerRef} className="lg:max-w-6xl xl:max-w-7xl rounded-xl overflow-hidden mx-auto px-0 sm:px-0 lg:px-0">
             <FadeUp className="text-center mb-12">
 
               {/* <SplitTextReveal
@@ -761,7 +761,7 @@ export default function TechSagaHomePage() {
             INDUSTRY EXPERTISE
         ══════════════════════════════════════════════════ */}
         <section style={{ background: "linear-gradient(102.8deg, #4291CE 17.82%, #8DCCFD 91.13%)" }} className="bg-white py-16 lg:py-20" aria-label="Industry Expertise">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
               <SplitContainer>
                 <p className="text-xs font-bold tracking-[0.18em] uppercase text-[#fff] mb-2">
@@ -779,7 +779,7 @@ export default function TechSagaHomePage() {
                   "linear-gradient(102.8deg, #4291CE 17.82%, #8DCCFD 91.13%)",
               }}
             >
-              <div className="overflow-hidden max-w-7xl m-auto" ref={emblaRef4}>
+              <div className="overflow-hidden lg:max-w-6xl xl:max-w-7xl m-auto" ref={emblaRef4}>
                 <div className="flex ">
                   {industries.map((item, i) => {
                     const isExpanded = expandedIndex === i;
@@ -963,7 +963,7 @@ export default function TechSagaHomePage() {
             LEADING CLIENTS
         ══════════════════════════════════════════════════ */}
         <section className="bg-white py-14" aria-label="Our partner">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-10">
               <SplitContainer>
                 <SectionTag>Our partner</SectionTag>
@@ -1076,7 +1076,7 @@ export default function TechSagaHomePage() {
         <section style={{
           background: 'rgba(236, 242, 247, 1)',
         }} className="bg-white py-16 lg:py-20" aria-label="Partner Testimonials">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
               <SplitContainer>
                 <SectionTag>Testimonials</SectionTag>
@@ -1127,7 +1127,7 @@ export default function TechSagaHomePage() {
             MISSION, VISION & VALUES
         ══════════════════════════════════════════════════ */}
         <section className="bg-white pt-16 lg:pt-20 mb-0" aria-label="Mission Vision Values">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
               <SectionTag>Who We Are</SectionTag>
               <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">Mission, Vision & Values</h2>
@@ -1168,7 +1168,7 @@ export default function TechSagaHomePage() {
             JOIN TEAM CTA
         ══════════════════════════════════════════════════ */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <section style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} className="border-[#B7D2E8] border max-w-7xl mx-auto py-15 relative mb-19 rounded-2xl" aria-label="Join the TechSaga Team">
+          <section style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} className="border-[#B7D2E8] border lg:max-w-6xl xl:max-w-7xl mx-auto py-15 relative mb-19 rounded-2xl" aria-label="Join the TechSaga Team">
             {/* <div className="absolute top-0"><Image src={'/assets/img/element.png'} width={200} height={300} /></div> */}
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <FadeUp>
@@ -1193,7 +1193,7 @@ export default function TechSagaHomePage() {
             BLOG
         ══════════════════════════════════════════════════ */}
         <section className="py-16 lg:py-20 bg-[#e3eff8]" aria-label="News Articles and Blogs" >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeUp className="text-center mb-12">
               <SplitContainer>
                 <SectionTag>Latest trends</SectionTag>
@@ -1242,7 +1242,7 @@ export default function TechSagaHomePage() {
             TEAM STATS
         ══════════════════════════════════════════════════ */}
         <section className="bg-white py-16 lg:py-20" aria-label="Our Global Team">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
             <FadeUp>
 
               <SectionTag>People & Culture</SectionTag>
@@ -1296,7 +1296,7 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             CONTACT CTA
         ══════════════════════════════════════════════════ */}
-        <section className="max-w-7xl rounded-2xl  mx-auto " style={{ background: 'linear-gradient(95.27deg, #F8F8F8 0.18%, #E3EFF8 99.82%)' }}>
+        <section className="lg:max-w-6xl xl:max-w-7xl rounded-2xl  mx-auto " style={{ background: 'linear-gradient(95.27deg, #F8F8F8 0.18%, #E3EFF8 99.82%)' }}>
           <div className="grid lg:grid-cols-2">
 
             {/* LEFT SIDE */}

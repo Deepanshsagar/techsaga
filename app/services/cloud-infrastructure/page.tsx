@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import BottomForm from "@/components/BottomForm";
 export default function CloudInfrastructurePage() {
   const features = [
     {
@@ -62,7 +63,7 @@ export default function CloudInfrastructurePage() {
 
   return (
     <main className="w-full overflow-hidden">
- <Header />
+      <Header />
       <section
         className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
         style={{
@@ -84,7 +85,7 @@ export default function CloudInfrastructurePage() {
         </div>
       </section>
       {/* HERO SECTION */}
-   
+
 
       {/* SECTION 1 */}
       <section className="py-20 md:mx-auto max-w-7xl">
@@ -524,9 +525,20 @@ export default function CloudInfrastructurePage() {
           </div>
         </div>
       </section>
+      <section className="pt-15 px-4 pb-20 bg-gradient-to-b from-[#f3f4f6] to-transparent">
+        <div className="text-3xl font-bold text-gray-900 text-center mb-2">
+          Get In Touch With Us.
+        </div>
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-10">
+          Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
+        </p>
+        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+          <BottomForm />
+        </div>
+      </section>
       <Footer />
 
     </main>
-    
+
   );
 }

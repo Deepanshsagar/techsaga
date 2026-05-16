@@ -32,7 +32,7 @@ const Contact_Us = () => {
     email: "",
     phone: "",
     subject: "",
-    description: "",
+    message: "",
     captchaInput: "",
   });
 
@@ -95,7 +95,7 @@ const Contact_Us = () => {
         email: "",
         phone: "",
         subject: "",
-        description: "",
+        message: "",
         captchaInput: "",
       });
 
@@ -245,8 +245,8 @@ const Contact_Us = () => {
                 <div>
                   <textarea
                     rows={5}
-                    name="description"
-                    value={formData.description}
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
                     placeholder="Description"
                     required

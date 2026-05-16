@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import BottomForm from "@/components/BottomForm";
 export default function DevOpsDevelopmentPage() {
   const devopsCycle = [
     "Continuous Planning",
@@ -18,7 +19,7 @@ export default function DevOpsDevelopmentPage() {
     "DevOps S/W Development & Consulting",
     "DevOps Assessment Solution: Infrastructure Automation",
     "Continuous Integration and Continuous Delivery (CI/CD)",
-    "Containerization and Orchestration",
+    "max-w-7xlization and Orchestration",
     "DevOps Configuration Management",
     "Monitoring and DevOps Analytics",
   ];
@@ -49,7 +50,7 @@ export default function DevOpsDevelopmentPage() {
 
   const tailoredRight = [
     "Reduce manual errors and enhance software quality with continuous integration and deployment pipelines.",
-    "Simplify application deployment and enhance scalability with containerization technologies like Docker.",
+    "Simplify application deployment and enhance scalability with max-w-7xlization technologies like Docker.",
     "Optimize resource utilization and improve scalability with orchestration tools like Kubernetes.",
     "Benefit from our extensive expertise in migrating applications and infrastructure to the cloud.",
     "Gain real-time insights into performance and health with robust monitoring and analytics solutions.",
@@ -165,7 +166,7 @@ export default function DevOpsDevelopmentPage() {
 
       {/* ABOUT */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <span className="text-blue-600 font-semibold uppercase tracking-wider">
               Innovating Development & Operation
@@ -212,7 +213,7 @@ export default function DevOpsDevelopmentPage() {
 
       {/* SERVICES */}
       <section className="pb-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <img
@@ -250,7 +251,7 @@ export default function DevOpsDevelopmentPage() {
 
       {/* WHY CHOOSE */}
       <section className="pb-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">
@@ -289,7 +290,7 @@ export default function DevOpsDevelopmentPage() {
 
       {/* BENEFITS */}
       <section className="bg-[#4291CE] py-20 text-white ">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-6">
               Excel with Our Unique Tailored DevOps Solution
@@ -324,7 +325,7 @@ export default function DevOpsDevelopmentPage() {
 
       {/* PERKS */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-6">
               The Perks of Choosing DevOps Solutions
@@ -362,7 +363,7 @@ export default function DevOpsDevelopmentPage() {
 
       {/* FAQ */}
       <section className="bg-gray-100 py-20 ">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-4xl font-bold">
               Our DevOps Solution Expertise
@@ -408,7 +409,7 @@ export default function DevOpsDevelopmentPage() {
 
       {/* COLLABORATION */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-4xl font-bold mb-6">
               Let's Get Started: Collaborating on Your Project
@@ -440,6 +441,17 @@ export default function DevOpsDevelopmentPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="pt-15 px-4 pb-20 bg-gradient-to-b from-[#f3f4f6] to-transparent">
+        <div className="text-3xl font-bold text-gray-900 text-center mb-2">
+          Get In Touch With Us.
+        </div>
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-10">
+          Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
+        </p>
+        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+          <BottomForm />
         </div>
       </section>
         <Footer />

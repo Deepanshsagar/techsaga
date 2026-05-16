@@ -1,4 +1,5 @@
 "use client";
+import BottomForm from "@/components/BottomForm";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -177,7 +178,7 @@ export default function OnPremisesInfrastructurePage() {
 
       {/* Partner Section */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
               Enhancing Infrastructure Solutions
@@ -232,7 +233,7 @@ export default function OnPremisesInfrastructurePage() {
 
       {/* Considerations */}
       <section className="pb-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <img
@@ -269,7 +270,7 @@ export default function OnPremisesInfrastructurePage() {
 
       {/* Management Services */}
       <section className="pb-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <h3 className="mb-6 text-3xl font-bold text-gray-900">
@@ -312,7 +313,7 @@ export default function OnPremisesInfrastructurePage() {
 
       {/* Why Choose */}
       <section className="pb-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <img
@@ -353,7 +354,7 @@ export default function OnPremisesInfrastructurePage() {
 
       {/* Excellence Section */}
       <section className="bg-[#4291CE] py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="text-4xl font-bold text-white">
               Decades of Excellence In On-Premises Infrastructure
@@ -389,7 +390,7 @@ export default function OnPremisesInfrastructurePage() {
 
       {/* Features */}
       <section className="py-20 md:mx-auto max-w-7xl">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="text-4xl font-bold text-gray-900">
               Pioneering On-Premises Infrastructure Solutions
@@ -433,7 +434,7 @@ export default function OnPremisesInfrastructurePage() {
 
       {/* FAQ */}
       <section className="bg-gray-100 py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="text-4xl font-bold text-gray-900">
               Our On-Premises Infrastructure Expertise
@@ -480,7 +481,7 @@ export default function OnPremisesInfrastructurePage() {
 
       {/* Collaboration */}
       <section className="py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="text-4xl font-bold text-gray-900">
               Let&apos;s Get Started: Collaborating on Your Project
@@ -515,6 +516,17 @@ export default function OnPremisesInfrastructurePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="pt-15 px-4 pb-20 bg-gradient-to-b from-[#f3f4f6] to-transparent">
+        <div className="text-3xl font-bold text-gray-900 text-center mb-2">
+          Get In Touch With Us.
+        </div>
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-10">
+          Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
+        </p>
+        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+          <BottomForm />
         </div>
       </section>
             <Footer />

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import BottomForm from "@/components/BottomForm";
 export default function ImprovedROIPage() {
   const roiServices = [
     "DRaaS - Disaster Recovery as a Service",
@@ -135,7 +136,7 @@ export default function ImprovedROIPage() {
 
       {/* ROI Services */}
       <section className="py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-blue-600 font-semibold uppercase tracking-wide">
               Guaranteeing Maximized Returns
@@ -183,7 +184,7 @@ export default function ImprovedROIPage() {
 
       {/* Why Choose */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
@@ -221,7 +222,7 @@ export default function ImprovedROIPage() {
 
       {/* Benefits */}
       <section className="py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-semibold mb-5">
@@ -261,7 +262,7 @@ export default function ImprovedROIPage() {
 
       {/* Growth Section */}
       <section className="py-20 bg-[#4291CE] text-white">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-4xl mx-auto mb-14">
             <h2 className="text-4xl font-bold mb-5">
               SkyRocket Your Business Growth & Improved ROI
@@ -297,7 +298,7 @@ export default function ImprovedROIPage() {
 
       {/* Feature Cards */}
       <section className="py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h2 className="text-4xl font-bold mb-4">
               Unleash Business Potential with Improved ROI Experts
@@ -338,7 +339,7 @@ export default function ImprovedROIPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h2 className="text-4xl font-bold mb-4">
               Our Improved ROI Expertise
@@ -369,7 +370,7 @@ export default function ImprovedROIPage() {
 
       {/* Collaboration */}
       <section className="py-20">
-        <div className="container mx-auto px-4 md:mx-auto max-w-7xl">
+        <div className="max-w-7xl mx-auto px-4 md:mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h2 className="text-4xl font-bold mb-4">
               Let's Get Started: Collaborating on Your Project
@@ -419,6 +420,17 @@ export default function ImprovedROIPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="pt-15 px-4 pb-20 bg-gradient-to-b from-[#f3f4f6] to-transparent">
+        <div className="text-3xl font-bold text-gray-900 text-center mb-2">
+          Get In Touch With Us.
+        </div>
+        <p className="text-gray-500 text-sm leading-relaxed text-center mb-10">
+          Turn every digital interaction into a competitive advantage with high-velocity financial engines built to scale.
+        </p>
+        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
+          <BottomForm />
         </div>
       </section>
           <Footer />
