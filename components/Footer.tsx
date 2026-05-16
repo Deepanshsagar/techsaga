@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const Footer = () => {
@@ -139,18 +140,39 @@ const Footer = () => {
 
                                 <ul className="space-y-1.5 text-[13px]">
                                     {[
-                                        "About Techsaga",
-                                        "Careers at Techsaga",
-                                        "Client Portfolio",
-                                        "Our Team",
-                                        "Terms & Conditions",
-                                        "Privacy Policy",
-                                        "Cancellation & Refund Policy"
+                                        {
+                                            label: "About Techsaga",
+                                            link: "/about",
+                                        },
+                                        {
+                                            label: "Careers at Techsaga",
+                                            link: "/careers",
+                                        },
+                                        {
+                                            label: "Client Portfolio",
+                                            link: "/portfolio",
+                                        },
+                                        {
+                                            label: "Our Team",
+                                            link: "/team",
+                                        },
+                                        {
+                                            label: "Terms & Conditions",
+                                            link: "/terms-and-conditions",
+                                        },
+                                        {
+                                            label: "Privacy Policy",
+                                            link: "/privacy-policy",
+                                        },
+                                        {
+                                            label: "Cancellation & Refund Policy",
+                                            link: "/cancellation-refund-policy",
+                                        },
                                     ].map((item) => (
-                                        <li key={item}>
-                                            <a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
-                                                {item}
-                                            </a>
+                                        <li key={item?.label}>
+                                            <Link href={item?.link} className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
+                                                {item?.label}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -207,14 +229,14 @@ const Footer = () => {
                         <p>© 2012-2026 Techsaga Corporation. All rights reserved.</p>
 
                         <div className="flex gap-5">
-                            {["Privacy Policy", "Terms of Use"].map((item) => (
-                                <a
-                                    key={item}
-                                    href="#"
+                            {[{ label: "Privacy Policy", url: "/privacy-policy" }, { label: "Terms of Use", url: "/terms-and-conditions" }].map((item) => (
+                                <Link
+                                    key={item?.label}
+                                    href={item?.url}
                                     className="hover:text-[#4291CE] transition-colors"
                                 >
-                                    {item}
-                                </a>
+                                    {item?.label}
+                                </Link>
                             ))}
                         </div>
                     </div>
