@@ -9,6 +9,8 @@ import SplitContainer from "@/components/SplitContainer"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SectionTag } from "./utils/utils";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 interface ServiceCard {
@@ -108,7 +110,7 @@ function FadeUp({
 
 
 const SERVICES: ServiceCard[] = [
-   {
+  {
     icon: "/assets/img/homes4.png",
     service: "Workday",
     title: "Workforce Management Solutions",
@@ -157,7 +159,7 @@ const SERVICES: ServiceCard[] = [
       "Data migration management"
     ]
   },
-  
+
   {
     icon: "/assets/img/homes5.png",
     service: "Microsoft",
@@ -345,6 +347,8 @@ export default function TechSagaHomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const router = useRouter();
+
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const firstRow = CLIENTS.slice(0, Math.ceil(CLIENTS.length / 2));
@@ -375,6 +379,8 @@ export default function TechSagaHomePage() {
       clearInterval(i4);
     };
   }, [emblaApi4]);
+
+  
 
   // useEffect(() => {
   //   if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
@@ -431,12 +437,12 @@ export default function TechSagaHomePage() {
                     We don't just build software - we engineer momentum. From strategy to deployment, TechSaga partners with forward-thinking businesses to turn complex challenges into scalable digital solutions that actually move the needle.
                   </p>
                   <div className="flex flex-wrap gap-4 hero-animate-3">
-                    <a href="#" className="bg-[#4291CE] hover:bg-[#4291CE] text-[#fff] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px">
+                    <Link href="/contact-us" className="bg-[#4291CE] hover:bg-[#4291CE] text-[#fff] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px">
                       Get Started Today
-                    </a>
-                    <a href="#" className="border border-black/50 text-black hover:bg-black hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200">
+                    </Link>
+                    <Link href="/portfolio" className="border hover:border-black/0 border-black/50 text-black hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200">
                       Explore Our Work
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="relative">
@@ -507,7 +513,7 @@ export default function TechSagaHomePage() {
                   <span key={tag} className="bg-[#E6F3FB] text-[#1A4D78] text-xs font-medium uppercase px-3 py-1 rounded">{tag}</span>
                 ))}
               </div>
-              <p className="text-[#4291CE] block text-sm font-semibold mt-6 cursor-pointer">View Our Portfolio →</p>
+              <p onClick={() => router.push("/portfolio")} className="text-[#4291CE] block text-sm font-semibold mt-6 cursor-pointer">View Our Portfolio →</p>
             </FadeUp>
           </div>
         </section>
@@ -602,12 +608,12 @@ export default function TechSagaHomePage() {
                 <p className="text-black font-medium text-base max-w-3xl">
                   <span className="text-[#4291CE] font-semibold">Looking to scale with the right platforms?</span> We help you plan, implement, and manage solutions that support long-term growth.
                 </p>
-                <a
-                  href="#"
+                <Link
+                  href="/contact-us"
                   className="border-2 border-white bg-[#4291CE] text-white hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200 whitespace-nowrap flex-shrink-0 rounded-md"
                 >
                   Let’s Discuss Your Requirements →
-                </a>
+                </Link>
               </div>
             </FadeUp>
           </div>
@@ -1022,7 +1028,7 @@ export default function TechSagaHomePage() {
             <div className="overflow-hidden mt-2" ref={emblaRef2}>
               <div className="flex">
                 {secondRow.map((c) => (
-                    <div
+                  <div
                     key={c.name}
                     className="
     group relative h-25 flex-[0_0_50%] sm:flex-[0_0_50%] md:flex-[0_0_16.6667%] overflow-hidden
@@ -1177,13 +1183,13 @@ export default function TechSagaHomePage() {
                   Be part of what we are building and help us<br />
                   <span className="uppercase">think beyond the obvious.</span>
                 </h2>
-                <a
-                  href="#"
+                <Link
+                  href="/careers"
                   // className="inline-block border-1 border-white/60 bg-transparent  rounded-md bg-white/5 shadow-[inset_-1px_-1px_2px_2px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] text-[#4291CE] px-50 py-3 font-bold text-[15px] mt-4 transition-all "
                   className="inline-block bg-white/5 lg:px-40 px-10 py-3 rounded-md shadow-[inset_-1px_-1px_2px_1px_#ffffff,inset_1px_1px_2px_1px_#dfdfdfbd] border-1 border-white/50 "
                 >
                   Explore Career Page
-                </a>
+                </Link>
               </FadeUp>
             </div>
           </section>
@@ -1226,7 +1232,7 @@ export default function TechSagaHomePage() {
               ))}
             </div>
             <FadeUp className="text-center mt-10">
-              <a href="#" className="inline-flex items-center gap-2 bg-[#4291CE] hover:bg-[#4291CE] text-white px-8 py-3 rounded font-semibold text-sm transition-colors">
+              <a href="https://resources.techsaga.co.in/blog/" className="inline-flex items-center gap-2 bg-[#4291CE] hover:bg-[#4291CE] text-white px-8 py-3 rounded font-semibold text-sm transition-colors">
                 View All Blogs
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -1316,7 +1322,7 @@ export default function TechSagaHomePage() {
             <div className="px-6 lg:px-12 py-12 flex justify-center">
               <div className="">
 
-                <div className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white">
+                <div onClick={() => router.push("/contact-us")} className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white cursor-pointer">
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
@@ -1328,7 +1334,7 @@ export default function TechSagaHomePage() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 ">
                     <button className="text-[#4291CE] font-semibold text-sm text-left hover:underline">
                       Request a Consultation
                     </button>
@@ -1344,7 +1350,7 @@ export default function TechSagaHomePage() {
                   </div>
 
                 </div>
-                <div className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white">
+                <div onClick={() => router.push("/portfolio")} className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white cursor-pointer">
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
@@ -1372,7 +1378,7 @@ export default function TechSagaHomePage() {
                   </div>
 
                 </div>
-                <div className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white">
+                <div onClick={() => router.push("https://resources.techsaga.co.in/case-study/")} className="flex items-center gap-4 p-5 mb-4 rounded-xl bg-white/30 shadow-[inset_-2px_-2px_5px_2px_#ffffff,inset_2px_2px_4px_2px_#dfdfdfbd] border-2 border-white cursor-pointer">
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
@@ -1385,7 +1391,7 @@ export default function TechSagaHomePage() {
 
                   {/* Content */}
                   <div className="flex flex-col gap-2">
-                    <button className="text-[#4291CE] font-semibold text-sm text-left hover:underline">
+                    <button className="text-[#4291CE] font-semibold text-sm text-left ">
                       View Case Studies
                     </button>
 

@@ -147,7 +147,7 @@ const Contact_Us = () => {
           {/* Content */}
           <div className="grid lg:grid-cols-2 gap-10 pt-16 items-start">
             {/* Left Side */}
-            <div className="sticky top-20">
+            <div className="md:sticky top-20">
               <h4 className="text-3xl font-bold text-black mb-5">
                 Let's Talk Business Transformation.
               </h4>
