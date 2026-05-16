@@ -134,7 +134,7 @@ export default function ServiceNowPage() {
                         <div className="flex justify-center">
                             <div className="overflow-hidden">
                                 <img
-                                    src="/assets/img/solution-vec1.png"
+                                    src="/assets/img/solutions-upper-image/Servicenow.png"
                                     alt="ServiceNow"
                                     className="w-full max-w-[300px] h-full object-cover"
                                 />
@@ -175,7 +175,7 @@ export default function ServiceNowPage() {
                     </p>
 
                     <a
-                        href="#"
+                        href="/contact-us"
                         className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm"
                     >
                         Start a conversation

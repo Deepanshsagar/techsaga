@@ -150,7 +150,7 @@ const Industries = () => {
                             </div>
 
                             <div className="flex items-center relative z-10 gap-4">
-
+                                <a href="/contact-us">
                                 <span className="text-[18px] font-semibold text-black tracking-[-0.3px]">
                                     Let's Get Started
                                 </span>
@@ -158,7 +158,7 @@ const Industries = () => {
                                 <span className="text-2xl transition-all duration-300 group-hover:translate-x-1">
                                     →
                                 </span>
-
+                                </a>
                             </div>
 
                         </button>
@@ -170,9 +170,9 @@ const Industries = () => {
                         <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
 
                             <img
-                                src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop"
+                                src="/assets/img/portfolio-img/gymwise.webp"
                                 alt=""
-                                className="w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
+                                className="object-top w-full h-[300px] object-cover transition-all duration-700 group-hover:scale-110"
                             />
 
                             <div className="absolute inset-0 bg-[#0D2B63]/85 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
@@ -181,26 +181,23 @@ const Industries = () => {
                             <div className="absolute bottom-0 left-0 w-full p-8 flex items-center justify-between opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
 
                                 <div>
-
-                                    <p className="uppercase tracking-[3px] text-white/60 text-[10px] mb-3">
+                                    {/* <p className="uppercase tracking-[3px] text-white/60 text-[10px] mb-3">
                                         Patient Care
-                                    </p>
-
+                                    </p> */}
                                     <h3 className="font-display text-white text-[24px] leading-none font-semibold">
-                                        Smart Health Portal
+                                        Gymwise
                                     </h3>
-
                                 </div>
-
+                                <a href="https://resources.techsaga.co.in/case-study/gymwise/">
                                 <button className="w-[58px] h-[58px] rounded-full bg-[#3B82F6] flex items-center justify-center text-white text-2xl shadow-xl transition-all duration-300 hover:rotate-[-45deg] hover:scale-110">
                                     →
                                 </button>
-
+                                </a>
                             </div>
 
                         </div>
 
-                        <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
+                        {/* <div className="group relative overflow-hidden rounded-[18px] bg-white shadow-[0_12px_40px_rgba(0,0,0,0.08)]">
 
                             <img
                                 src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop"
@@ -231,7 +228,7 @@ const Industries = () => {
 
                             </div>
 
-                        </div>
+                        </div> */}
 
                     </div>
 

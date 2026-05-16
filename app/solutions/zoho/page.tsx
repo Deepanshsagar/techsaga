@@ -161,7 +161,7 @@ export default function ZohoPage() {
                                 // }}
                             >
                                 <img
-                                    src="/assets/img/solution-vec1.png"
+                                    src="/assets/img/solutions-upper-image/ZOHO.png"
                                     alt="expertise"
                                     className="w-full max-w-[300px] h-full object-cover"
                                 />
@@ -186,7 +186,7 @@ export default function ZohoPage() {
                     <p className="text-xs text-gray-500 mb-10 max-w-xl mx-auto">
                         Thousands of businesses. 50+ countries 14+ years . we know how to deliver
                     </p>
-                    <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Start a conversation</a>
+                    <a href="/contact-us" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Start a conversation</a>
                 </div>
             </section>
 

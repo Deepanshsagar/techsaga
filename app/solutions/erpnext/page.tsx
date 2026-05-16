@@ -130,7 +130,7 @@ export default function ERPNextPage() {
                         <div className="flex justify-center">
                             <div className="overflow-hidden">
                                 <img
-                                    src="/assets/img/solution-vec1.png"
+                                    src="/assets/img/solutions-upper-image/ERPNext.png"
                                     alt="ERPNext"
                                     className="w-full max-w-[300px] h-full object-cover"
                                 />
@@ -169,7 +169,7 @@ export default function ERPNextPage() {
                     </p>
 
                     <a
-                        href="#"
+                        href="/contact-us"
                         className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm"
                     >
                         Start a conversation
