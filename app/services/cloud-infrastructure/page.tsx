@@ -8,32 +8,32 @@ export default function CloudInfrastructurePage() {
     {
       title: "Scalability",
       desc: "Cloud infrastructure allows for easy scalability, enabling businesses to quickly and efficiently adjust their computing resources based on demand.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/service1.jpg",
+      img: "/assets/img/services/service1.png",
     },
     {
       title: "Cost Efficiency",
       desc: "With cloud infrastructure, businesses can avoid significant upfront investments in hardware and infrastructure while benefiting from pay-as-you-go models.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/ds3.jpg",
+      img: "/assets/img/services/ds3.jpg",
     },
     {
       title: "Accessibility & Flexibility",
       desc: "Cloud infrastructure enables users to access applications and data from anywhere with internet connectivity.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/competative-advantage.jpg",
+      img: "/assets/img/services/competative-advantage.jpg",
     },
     {
       title: "Reliability & High Availability",
       desc: "Redundant systems and multiple data centers ensure maximum uptime and operational continuity.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l1.jpg",
+      img: "/assets/img/services/services-l1.jpg",
     },
     {
       title: "Security",
       desc: "Advanced security technologies, encryption, and compliance frameworks protect sensitive business data.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l2.jpg",
+      img: "/assets/img/services/services-l2.jpg",
     },
     {
       title: "Simplified Management",
       desc: "Cloud infrastructure simplifies administration, monitoring, and deployment through advanced management tools.",
-      img: "https://www.techsaga.co.in/public/assets/images/my-img/services/services-l3.jpg",
+      img: "/assets/img/services/services-l3.jpg",
     },
   ];
 
@@ -138,8 +138,8 @@ export default function CloudInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/cloud-support-services1.png"
-                alt="cloud"
+                src="/assets/img/services/cloud-support-services1.png" 
+                               alt="cloud"
                 width={700}
                 height={500}
                 className="rounded-3xl shadow-xl"
@@ -157,7 +157,7 @@ export default function CloudInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/cloud-support-services2.png"
+                src="/assets/img/services/cloud-support-services2.png"
                 alt="cloud"
                 width={700}
                 height={500}
@@ -235,7 +235,7 @@ export default function CloudInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/cloud-support-services3.png"
+                src="/assets/img/services/cloud-support-services3.png"
                 alt="cloud"
                 width={700}
                 height={500}
@@ -255,7 +255,7 @@ export default function CloudInfrastructurePage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/cloud-support-services4.png"
+                src="/assets/img/services/cloud-support-services4.png"
                 alt="cloud"
                 width={700}
                 height={500}
@@ -421,7 +421,7 @@ export default function CloudInfrastructurePage() {
               </p>
 
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/faq-mod.png"
+                src="/assets/img/services/faq-mod.png"
                 alt="faq"
                 width={500}
                 height={400}
@@ -469,7 +469,7 @@ export default function CloudInfrastructurePage() {
 
             <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/best-price.png"
+                src="/assets/img/services/best-price.png"
                 alt="pricing"
                 width={80}
                 height={80}
@@ -487,7 +487,7 @@ export default function CloudInfrastructurePage() {
 
             <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/hourly-eng.png"
+                src="/assets/img/services/hourly-eng.png"
                 alt="hourly"
                 width={80}
                 height={80}
@@ -505,7 +505,7 @@ export default function CloudInfrastructurePage() {
 
             <div className="bg-white rounded-3xl shadow-lg p-8 text-center">
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/direct-requirement.png"
+                src="/assets/img/services/direct-requirement.png"
                 alt="recruitment"
                 width={80}
                 height={80}
