@@ -131,7 +131,7 @@ export default function DataSolutionsPage() {
                         <div className="flex justify-center">
                             <div className="overflow-hidden">
                                 <img
-                                    src="/assets/img/solution-vec1.png"
+                                    src="/assets/img/solutions-upper-image/data-solution.png"
                                     alt="Data Solutions"
                                     className="w-full max-w-[300px] h-full object-cover"
                                 />
@@ -170,7 +170,7 @@ export default function DataSolutionsPage() {
                     </p>
 
                     <a
-                        href="#"
+                        href="/contact-us"
                         className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm"
                     >
                         Start a conversation

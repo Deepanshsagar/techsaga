@@ -133,7 +133,7 @@ export default function ContractConsultingPage() {
                         <div className="flex justify-center">
                             <div className="overflow-hidden">
                                 <img
-                                    src="/assets/img/solution-vec1.png"
+                                    src="/assets/img/solutions-upper-image/consulting.png"
                                     alt="Contract Consulting"
                                     className="w-full max-w-[300px] h-full object-cover"
                                 />
@@ -172,7 +172,7 @@ export default function ContractConsultingPage() {
                     </p>
 
                     <a
-                        href="#"
+                        href="/contact-us"
                         className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm"
                     >
                         Start a conversation

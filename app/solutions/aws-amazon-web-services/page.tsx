@@ -133,7 +133,7 @@ export default function AWSPage() {
                         <div className="flex justify-center">
                             <div className="overflow-hidden">
                                 <img
-                                    src="/assets/img/solution-vec1.png"
+                                    src="/assets/img/solutions-upper-image/AWS.png"
                                     alt="AWS"
                                     className="w-full max-w-[300px] h-full object-cover"
                                 />
