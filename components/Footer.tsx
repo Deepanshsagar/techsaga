@@ -8,43 +8,37 @@ const Footer = () => {
     const [showAllServices, setShowAllServices] = useState(false);
 
     const whatWeDoItems = [
-        "Software Development",
-        "Custom Software Development",
-        "Enterprise Software Development",
-        "Product Development",
-        "Web Application Development",
-        "Mobile Application Development",
-        "Cloud Application Development",
+        { label: "Custom Software Development", url: "/services/custom-software-development" },
+        { label: "Enterprise Software Development", url: "/services/enterprise-software-development" },
+        { label: "Product Development", url: "/services/product-development" },
+        { label: "Web Application Development", url: "/services/web-application-development" },
+        { label: "Mobile Application Development", url: "/services/mobile-application-development" },
+        { label: "Cloud Application Development", url: "/services/cloud-application-development" },
 
-        "Maintenance and Support",
-        "Application Support",
-        "Infrastructure Support",
-        "Customer Support",
+        { label: "Application Support", url: "/services/application-support" },
+        { label: "Infrastructure Support", url: "/services/infrastructure-support" },
+        { label: "Customer Support", url: "/services/customer-support" },
 
-        "Infrastructure",
-        "Cloud Infrastructure",
-        "Hybrid Infrastructure",
-        "On-Premises Infrastructure",
-        "Integration",
-        "Migration",
-        "DevOps",
+        { label: "Cloud Infrastructure", url: "/services/cloud-infrastructure" },
+        { label: "Hybrid Infrastructure", url: "/services/hybrid-infrastructure" },
+        { label: "On-Premises Infrastructure", url: "/services/on-premises-infrastructure" },
+        { label: "Integration", url: "/services/integration" },
+        { label: "Migration", url: "/services/migration" },
+        { label: "DevOps", url: "/services/devops" },
 
-        "Testing",
-        "Manual Testing",
-        "Automation Testing",
-        "Continuous Testing",
+        { label: "Manual Testing", url: "/services/manual-testing" },
+        { label: "Automation Testing", url: "/services/automation-testing" },
+        { label: "Continuous Testing", url: "/services/continuous-testing" },
 
-        "Marketing Solutions",
-        "Digital Marketing",
-        "Influential Marketing",
-        "Online Reputation Management",
-        "Digital Consultation",
-        "Improved ROI",
+        { label: "Digital Marketing", url: "/services/marketing/digital-marketing" },
+        { label: "Influential Marketing", url: "/services/marketing/influential-marketing" },
+        { label: "Online Reputation Management", url: "/services/marketing/online-reputation-management" },
+        { label: "Digital Consultation", url: "/services/marketing/digital-consultation" },
+        { label: "Improved ROI", url: "/services/marketing/improved-roi" },
 
-        "Advisory",
-        "Digital Transformation",
-        "Business Technology Consulting",
-        "Cloud Strategy Consulting"
+        { label: "Digital Transformation", url: "/services/digital-transformation" },
+        { label: "Business Technology Consulting", url: "/services/business-technology-consulting" },
+        { label: "Cloud Strategy Consulting", url: "/services/cloud-strategy-consulting" }
     ];
 
     return (
@@ -87,12 +81,12 @@ const Footer = () => {
                                         : whatWeDoItems.slice(0, 10)
                                     ).map((item, i) => (
                                         <li key={i}>
-                                            <a
-                                                href="#"
+                                            <Link
+                                                href={item?.url}
                                                 className="hover:text-black/60 text-black/80 transition-colors leading-snug block"
                                             >
-                                                {item}
-                                            </a>
+                                                {item?.label}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -113,20 +107,20 @@ const Footer = () => {
 
                                 <ul className="space-y-1.5 text-[13px]">
                                     {[
-                                        "Workday Solutions",
-                                        "Salesforce Solutions",
-                                        "ZOHO Solutions",
-                                        "SAP Solutions",
-                                        "ERPNext Solutions",
-                                        "ServiceNOW Solutions",
-                                        "AWS Solutions",
-                                        "Contract Consulting",
-                                        "Data Solutions"
+                                        { label: "Workday Solutions", url: "/solutions/workday" },
+                                        { label: "Salesforce Solutions", url: "/solutions/salesforce" },
+                                        { label: "ZOHO Solutions", url: "/solutions/zoho" },
+                                        { label: "SAP Solutions", url: "/solutions/sap" },
+                                        { label: "ERPNext Solutions", url: "/solutions/erpnext" },
+                                        { label: "ServiceNOW Solutions", url: "/solutions/servicenow" },
+                                        { label: "AWS Solutions", url: "/solutions/aws-amazon-web-services" },
+                                        { label: "Contract Consulting", url: "/solutions/contract-consulting" },
+                                        { label: "Data Solutions", url: "/solutions/data-solutions" }
                                     ].map((item, i) => (
                                         <li key={i}>
-                                            <a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
-                                                {item}
-                                            </a>
+                                            <Link href={item?.url} className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
+                                                {item?.label}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -142,7 +136,7 @@ const Footer = () => {
                                     {[
                                         {
                                             label: "About Techsaga",
-                                            link: "/about",
+                                            link: "/about-us",
                                         },
                                         {
                                             label: "Careers at Techsaga",
@@ -154,7 +148,7 @@ const Footer = () => {
                                         },
                                         {
                                             label: "Our Team",
-                                            link: "/team",
+                                            link: "/management-team",
                                         },
                                         {
                                             label: "Terms & Conditions",
@@ -164,10 +158,10 @@ const Footer = () => {
                                             label: "Privacy Policy",
                                             link: "/privacy-policy",
                                         },
-                                        {
-                                            label: "Cancellation & Refund Policy",
-                                            link: "/cancellation-refund-policy",
-                                        },
+                                        // {
+                                        //     label: "Cancellation & Refund Policy",
+                                        //     link: "/cancellation-refund-policy",
+                                        // },
                                     ].map((item) => (
                                         <li key={item?.label}>
                                             <Link href={item?.link} className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
@@ -185,14 +179,13 @@ const Footer = () => {
                                 </h4>
 
                                 <ul className="space-y-1.5 text-[13px]">
-                                    {[
-                                        "Case Studies",
-                                        "Blog & Insights",
+                                    {[{ label: "Case Studies", url: "https://resources.techsaga.co.in/case-study/" },
+                                    { label: "Blog & Insights", url: "https://resources.techsaga.co.in/blog/" },
                                     ].map((item) => (
-                                        <li key={item}>
-                                            <a href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
-                                                {item}
-                                            </a>
+                                        <li key={item?.label}>
+                                            <Link href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
+                                                {item?.label}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
