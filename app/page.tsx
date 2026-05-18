@@ -240,10 +240,10 @@ const industries = [
 ];
 
 const TESTIMONIALS: Testimonial[] = [
-  { name: "Sara Timothy", role: "VP, Digital Transformation", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "TechSaga completely transformed our Salesforce environment. Their deep expertise and commitment to outcomes was unparalleled. We saw a 40% jump in team efficiency." },
-  { name: "Greg Phillips", role: "CTO, ScaleUp Technologies", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
-  { name: "Laura Hoffman", role: "Director, Global Operations", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "Working with TechSaga felt like having an internal team that genuinely cared about outcomes. Their digital marketing campaigns drove a 3x increase in qualified leads." },
-  { name: "Greg Phillipss", role: "CTO, ScaleUp Technologies", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "From cloud migration to analytics, TechSaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
+  { name: "Sara Timothy", role: "VP, Digital Transformation", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "Techsaga completely transformed our Salesforce environment. Their deep expertise and commitment to outcomes was unparalleled. We saw a 40% jump in team efficiency." },
+  { name: "Greg Phillips", role: "CTO, ScaleUp Technologies", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "From cloud migration to analytics, Techsaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
+  { name: "Laura Hoffman", role: "Director, Global Operations", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "Working with Techsaga felt like having an internal team that genuinely cared about outcomes. Their digital marketing campaigns drove a 3x increase in qualified leads." },
+  { name: "Greg Phillipss", role: "CTO, ScaleUp Technologies", avatar: "/assets/img/default-Icon.avif", stars: 5, quote: "From cloud migration to analytics, Techsaga handled every phase with precision. Their project management and communication standards are the best we've experienced." },
 ];
 
 const BLOGS: BlogPost[] = [
@@ -434,7 +434,7 @@ export default function TechSagaHomePage() {
                     <span className="text-[#000]">Enabling</span> Transformation.
                   </h1>
                   <p className="text-black/60 text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
-                    We don't just build software - we engineer momentum. From strategy to deployment, TechSaga partners with forward-thinking businesses to turn complex challenges into scalable digital solutions that actually move the needle.
+                    We don't just build software - we engineer momentum. From strategy to deployment, Techsaga partners with forward-thinking businesses to turn complex challenges into scalable digital solutions that actually move the needle.
                   </p>
                   <div className="flex flex-wrap gap-4 hero-animate-3">
                     <Link href="/contact-us" className="bg-[#4291CE] hover:bg-[#4291CE] text-[#fff] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px">
@@ -464,7 +464,7 @@ export default function TechSagaHomePage() {
 
         </div>
 
-        <section className="bg-white py-16 lg:py-20" aria-label="Why TechSaga">
+        <section className="bg-white py-16 lg:py-20" aria-label="Why Techsaga">
           <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
             <FadeUp>
               <div className="relative w-full h-90 shadow-lg">
@@ -506,7 +506,7 @@ export default function TechSagaHomePage() {
                 A Trusted Partner for Enterprise-Grade Digital Transformation
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                Founded in 2012 and headquartered in Noida, India, TechSaga Corporation is a global digital transformation and enterprise enablement partner. We work with enterprises, governments, and institutions across North America, the Middle East, Europe, Australia, and India, delivering scalable solutions through a team of 750+ professionals and a proven track record of 2,000+ programs delivered.
+                Founded in 2012 and headquartered in Noida, India, Techsaga Corporation is a global digital transformation and enterprise enablement partner. We work with enterprises, governments, and institutions across North America, the Middle East, Europe, Australia, and India, delivering scalable solutions through a team of 750+ professionals and a proven track record of 2,000+ programs delivered.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Product Development", "Data Engineering", "Cloud Solutions", "Application Development", "Managed Services", "Technology Consulting"].map((tag) => (
@@ -1143,7 +1143,7 @@ export default function TechSagaHomePage() {
                 <div className="bg-[#4291CE] text-white p-8 h-full">
                   <SectionTag>Our Mission</SectionTag>
                   <h3 className="font-display text-2xl font-bold mb-3">To Enable Confident Transformation at Global Scale</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">We exist to eliminate the friction between great ideas and their execution. Whether you are a fast-growing startup or a legacy enterprise, TechSaga provides the technical depth and strategic clarity to help you transform — not incrementally, but boldly.</p>
+                  <p className="text-white/60 text-sm leading-relaxed">We exist to eliminate the friction between great ideas and their execution. Whether you are a fast-growing startup or a legacy enterprise, Techsaga provides the technical depth and strategic clarity to help you transform — not incrementally, but boldly.</p>
                 </div>
               </FadeUp>
               <FadeUp delay={100}>
@@ -1174,7 +1174,7 @@ export default function TechSagaHomePage() {
             JOIN TEAM CTA
         ══════════════════════════════════════════════════ */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <section style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} className="border-[#B7D2E8] border lg:max-w-6xl xl:max-w-7xl mx-auto py-15 relative mb-19 rounded-2xl" aria-label="Join the TechSaga Team">
+          <section style={{ background: 'linear-gradient(86.93deg, #D9D9D9 1.32%, #FFFFFF 50.09%, #4291CE 98.86%)' }} className="border-[#B7D2E8] border lg:max-w-6xl xl:max-w-7xl mx-auto py-15 relative mb-19 rounded-2xl" aria-label="Join the Techsaga Team">
             {/* <div className="absolute top-0"><Image src={'/assets/img/element.png'} width={200} height={300} /></div> */}
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <FadeUp>
@@ -1256,7 +1256,7 @@ export default function TechSagaHomePage() {
                 A Global Team of 750+ Professionals
               </h2>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                Our global team of 750+ professionals brings together expertise across technology, strategy, and creativity. Every individual at TechSaga is empowered to think boldly and deliver brilliantly.
+                Our global team of 750+ professionals brings together expertise across technology, strategy, and creativity. Every individual at Techsaga is empowered to think boldly and deliver brilliantly.
               </p>
               <p onClick={() => router.push("/management-team")} className="text-[#4291CE] font-semibold text-sm">Meet Our Leadership →</p>
               <div className="flex gap-8 flex-wrap">
