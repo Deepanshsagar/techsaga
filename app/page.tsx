@@ -1258,7 +1258,7 @@ export default function TechSagaHomePage() {
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
                 Our global team of 750+ professionals brings together expertise across technology, strategy, and creativity. Every individual at TechSaga is empowered to think boldly and deliver brilliantly.
               </p>
-              <p className="text-[#4291CE] font-semibold text-sm">Meet Our Leadership →</p>
+              <p onClick={() => router.push("/management-team")} className="text-[#4291CE] font-semibold text-sm">Meet Our Leadership →</p>
               <div className="flex gap-8 flex-wrap">
                 {/* {[["750+", "Team Members"], ["30+", "Countries"], ["12+", "Years of Excellence"]].map(([num, label]) => (
                   <div key={label}>
