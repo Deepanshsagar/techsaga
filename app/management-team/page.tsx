@@ -236,7 +236,7 @@ export default function MeetOurTeam() {
       </section>
     
         <section className="bg-[#f5f5f5] py-20 px-4">
-        <div className="max-w-[1600px] mx-auto">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
             {/* HEADER */}
             <div className="text-center mb-16">
             <span className="inline-block px-5 py-2 rounded-full bg-[#eaf4ff] text-[#4291CE] text-xs font-bold tracking-[2px] uppercase">

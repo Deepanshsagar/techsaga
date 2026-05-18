@@ -413,7 +413,7 @@ export default function TechSagaHomePage() {
             HERO
         ══════════════════════════════════════════════════ */}
             <section
-              className="relative overflow-hidden min-h-[550px] flex items-center"
+              className="relative overflow-hidden min-h-[550px] flex items-center lg:mx-[40px]"
 
               aria-labelledby="hero-heading"
             >
@@ -622,7 +622,7 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             PRODUCT ENGINEERING
         ══════════════════════════════════════════════════ */}
-
+        
         <section
           className="py-16 lg:py-20"
           id="my-custom-trigger"

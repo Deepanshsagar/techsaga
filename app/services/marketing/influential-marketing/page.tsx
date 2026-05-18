@@ -171,7 +171,7 @@ export default function InfluentialMarketingPage() {
 
       {/* Intro */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <span className="text-[#4291CE] font-semibold uppercase tracking-wider">
               Powerful Brand Influence
@@ -238,7 +238,7 @@ export default function InfluentialMarketingPage() {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <Image
@@ -281,7 +281,7 @@ export default function InfluentialMarketingPage() {
 
       {/* Benefits */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">
@@ -322,7 +322,7 @@ export default function InfluentialMarketingPage() {
 
       {/* Industries */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div>
               <Image
@@ -368,7 +368,7 @@ export default function InfluentialMarketingPage() {
 
       {/* Blue Section */}
       <section className="py-20 bg-[#4291CE] text-white">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="max-w-3xl mx-auto text-center mb-14">
             <h2 className="text-4xl font-bold mb-4">
               Amplify Your Business Success with Influential Marketing!
@@ -404,7 +404,7 @@ export default function InfluentialMarketingPage() {
 
       {/* Features */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">
               Unleash Your Business Potential with Influential Marketing
@@ -448,7 +448,7 @@ export default function InfluentialMarketingPage() {
 
       {/* FAQ */}
       <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="max-w-3xl mx-auto text-center mb-14">
             <h2 className="text-4xl font-bold">
               Our Influential Marketing Expertise
@@ -477,7 +477,7 @@ export default function InfluentialMarketingPage() {
 
       {/* Collaboration */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-5">
               Let's Get Started: Collaborating on Your Project

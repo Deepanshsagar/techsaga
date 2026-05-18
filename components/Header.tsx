@@ -248,7 +248,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-5 left-0 right-0 z-50 mx-2 md:mx-auto max-w-6xl  xl:max-w-7xl rounded-2xl transition-all duration-300
+    // fixed top-5 left-0 right-0 z-50 mx-5 md:mx-auto max-w-6xl  xl:max-w-7xl rounded-2xl transition-all duration-300
+      className={`fixed top-5 left-[5px] right-[5px] lg:left-5 lg:right-5 z-50 mx-auto max-w-6xl xl:max-w-7xl rounded-2xl transition-all duration-300 bg-white/90 backdrop-blur-md shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-white/10
       ${scrolled
           ? "bg-white/70 backdrop-blur-sm shadow-[0_8px_20px_rgba(0,0,0,0.1)] border border-white/20"
           : "bg-white/90 backdrop-blur-md shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-white/10"

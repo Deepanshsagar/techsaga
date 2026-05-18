@@ -8,7 +8,7 @@ export default function TermsConditionsPage() {
         
       {/* Header Section */}
       <section className="py-16 !mt-[100px]">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="flex justify-center">
             <div className="w-full max-w-3xl text-center">
               <h3 className="text-3xl font-bold text-gray-900">
@@ -28,7 +28,7 @@ export default function TermsConditionsPage() {
 
       {/* Content Section */}
       <section className="pb-16">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="grid grid-cols-1">
             <div>
               <p className="mb-6 text-gray-700 text-base leading-7">
