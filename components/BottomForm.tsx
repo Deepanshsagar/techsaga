@@ -12,6 +12,7 @@ const BottomForm = () => {
             answer: num1 + num2,
         };
     };
+    const [showThankYouPopup, setShowThankYouPopup] = useState(false);
 
     const [captcha, setCaptcha] = useState(generateCaptcha());
 
@@ -73,7 +74,8 @@ const BottomForm = () => {
                 throw new Error(data.message || "Something went wrong");
             }
 
-            setSuccess("Form submitted successfully!");
+            // setSuccess("Form submitted successfully!");
+            setShowThankYouPopup(true)
 
             setFormData({
                 firstName: "",
@@ -93,103 +95,139 @@ const BottomForm = () => {
     };
 
     return (
-        <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="flex gap-3">
-                <div className="flex-1">
+        <>
+
+            <form className="space-y-4" onSubmit={handleSubmit}>
+                <div className="flex gap-3">
+                    <div className="flex-1">
+                        <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
+                            placeholder="First Name"
+                            required
+                            className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
+                        />
+                    </div>
+
+                    <div className="flex-1">
+                        <input
+                            type="text"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
+                            placeholder="Last Name"
+                            required
+                            className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
+                        />
+                    </div>
+                </div>
+
+                <div className="flex gap-3">
+                    <div className="flex-1">
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="Email Address"
+                            required
+                            className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
+                        />
+                    </div>
+
+                    <div className="flex-1">
+                        <input
+                            type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="Phone Number"
+                            required
+                            className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <textarea
+                        rows={3}
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Your project needs"
+                        required
+                        className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50 resize-none"
+                    />
+                </div>
+
+                <div className="flex items-center gap-4">
+                    <label className="block text-sm font-medium mb-2 text-gray-700">
+                        Solve: {captcha.question} = ?
+                    </label>
+
                     <input
                         type="text"
-                        name="firstName"
-                        value={formData.firstName}
+                        name="captchaInput"
+                        value={formData.captchaInput}
                         onChange={handleChange}
-                        placeholder="First Name"
+                        placeholder="0"
                         required
-                        className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
+                        className="form-input w-[50px] border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
                     />
                 </div>
 
-                <div className="flex-1">
-                    <input
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        placeholder="Last Name"
-                        required
-                        className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
-                    />
+                {success && (
+                    <p className="text-green-600 text-sm">{success}</p>
+                )}
+
+                {error && (
+                    <p className="text-red-600 text-sm">{error}</p>
+                )}
+
+                <button
+                    type="submit"
+                    disabled={loading}
+                    className="btn-primary w-full text-white font-semibold py-3 rounded-lg text-sm shadow-md disabled:opacity-50"
+                >
+                    {loading ? "Submitting..." : "Get a Proposal →"}
+                </button>
+            </form>
+            {showThankYouPopup && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+                    <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center relative animate-[fadeIn_.3s_ease]">
+
+                        <button
+                            onClick={() => setShowThankYouPopup(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-black text-xl"
+                        >
+                            ×
+                        </button>
+
+                        <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-green-100 flex items-center justify-center">
+                            <span className="text-3xl text-green-600">✓</span>
+                        </div>
+
+                        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                            Thank You!
+                        </h3>
+
+                        <p className="text-gray-600 leading-7 mb-6">
+                            Your message has been submitted successfully.
+                            Our team will contact you within 24 hours.
+                        </p>
+
+                        <button
+                            onClick={() => setShowThankYouPopup(false)}
+                            className="bg-[#4291CE] hover:bg-[#327ab3] text-white px-6 py-3 cursor-pointer rounded-lg font-medium transition-all"
+                        >
+                            Close
+                        </button>
+                    </div>
                 </div>
-            </div>
-
-            <div className="flex gap-3">
-                <div className="flex-1">
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="Email Address"
-                        required
-                        className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
-                    />
-                </div>
-
-                <div className="flex-1">
-                    <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="Phone Number"
-                        required
-                        className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
-                    />
-                </div>
-            </div>
-
-            <div>
-                <textarea
-                    rows={3}
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your project needs"
-                    required
-                    className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50 resize-none"
-                />
-            </div>
-
-            <div className="flex items-center gap-4">
-                <label className="block text-sm font-medium mb-2 text-gray-700">
-                    Solve: {captcha.question} = ?
-                </label>
-
-                <input
-                    type="text"
-                    name="captchaInput"
-                    value={formData.captchaInput}
-                    onChange={handleChange}
-                    placeholder="0"
-                    required
-                    className="form-input w-[50px] border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50"
-                />
-            </div>
-
-            {success && (
-                <p className="text-green-600 text-sm">{success}</p>
             )}
-
-            {error && (
-                <p className="text-red-600 text-sm">{error}</p>
-            )}
-
-            <button
-                type="submit"
-                disabled={loading}
-                className="btn-primary w-full text-white font-semibold py-3 rounded-lg text-sm shadow-md disabled:opacity-50"
-            >
-                {loading ? "Submitting..." : "Get a Proposal →"}
-            </button>
-        </form>
+        </>
     );
 };
 
