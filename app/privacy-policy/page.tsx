@@ -7,7 +7,7 @@ export default function PrivacyPolicyPage() {
          <Header />
       {/* Heading Section */}
       <section className="py-16 !mt-[100px]">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="flex justify-center">
             <div className="w-full max-w-3xl text-center">
               <h1 className="text-4xl font-bold text-gray-900">
@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
 
       {/* Content Section */}
       <section className="pb-16">
-        <div className="container mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 w-full">
           <div className="grid grid-cols-1">
             <div>
               <ul className="space-y-5">

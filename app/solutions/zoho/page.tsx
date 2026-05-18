@@ -107,7 +107,7 @@ export default function ZohoPage() {
                     backgroundImage: "url('/assets/img/solutions-page/Zoho.png')",
                 }}
             >
-                <div className="relative max-w-7xl mx-auto px-4 w-full">
+                <div className="relative max-w-7xl mx-auto px-4 w-full ">
                     <div className="grid lg:grid-cols-2 items-center gap-12">
 
                         <div >
