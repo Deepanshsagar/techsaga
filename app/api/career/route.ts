@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
 
       // Multiple emails
       to: [
-        "deepanshsagar.techsaga@gmail.com",
+        "hr@techsaga.in",
         // "careers@techsaga.co.in",
       ],
 

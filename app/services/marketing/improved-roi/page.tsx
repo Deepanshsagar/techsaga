@@ -174,7 +174,7 @@ export default function ImprovedROIPage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/improved-roi1.png"
+                src="/assets/img/improved-roi1.png"
                 alt="ROI Services"
                 width={600}
                 height={500}
@@ -191,7 +191,7 @@ export default function ImprovedROIPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/improved-roi-img2.png"
+                src="/assets/img/improved-roi-img2.png"
                 alt="Why Choose Us"
                 width={600}
                 height={500}
@@ -252,7 +252,7 @@ export default function ImprovedROIPage() {
 
             <div>
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/services/improved-roi-img3.png"
+                src="/assets/img/improved-roi-img3.png"
                 alt="Business Benefits"
                 width={600}
                 height={500}

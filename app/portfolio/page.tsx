@@ -68,7 +68,7 @@ const webProjects: Project[] = [
     // hoverDescription:
     //   "Powerful online beauty brand store with smooth shopping and customer experience.",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/casestudy/dailylifeforever52_one.in.jpg",
+      "/assets/img/portfolio-img/dailylifeforever52_one.in.jpg",
     url: "https://www.dailylifeforever52.in/home",
     tagColor: "bg-teal-500",
     overlay: "bg-teal-600/95",
@@ -81,7 +81,7 @@ const webProjects: Project[] = [
     // hoverDescription:
     //   "Online learning platform allowing creators to launch and manage courses easily.",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/doxrix1.png",
+      "/assets/img/portfolio-img/doxrix1.png",
     url: "https://www.doxrix.com/",
     tagColor: "bg-teal-500",
     overlay: "bg-teal-600/95",
@@ -94,7 +94,7 @@ const webProjects: Project[] = [
     // hoverDescription:
     //   "Advanced online learning system for corporations and individual learners.",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/edtia.png",
+      "/assets/img/portfolio-img/edtia.png",
     url: "https://www.edtia.org/",
     tagColor: "bg-teal-500",
     overlay: "bg-teal-600/95",
@@ -104,7 +104,7 @@ const webProjects: Project[] = [
     title: "ZUHD",
     desc: "Modern fabric and fashion e-commerce platform.",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/zuhd-store1.png",
+      "/assets/img/portfolio-img/zuhd-store1.png",
     tagColor: "bg-teal-500",
     url: "https://zuhd.store/",
     overlay: "bg-teal-600/95",
@@ -115,7 +115,7 @@ const appProjects: Project[] = [
   {
     title: "Gymwise",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/gymwise.webp",
+      "/assets/img/portfolio-img/gymwise.webp",
     desc: "Marketplace of gyms and fitness venues.",
     url: "#",
     overlay: "bg-orange-600/95",
@@ -123,7 +123,7 @@ const appProjects: Project[] = [
   {
     title: "FormDox",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/FORMDOX.webp",
+      "/assets/img/portfolio-img/FORMDOX.webp",
     desc: "SAAS platform for employee charting management.",
     url: "#",
     overlay: "bg-cyan-600/95",
@@ -131,7 +131,7 @@ const appProjects: Project[] = [
   {
     title: "IPSA",
     image:
-      "https://www.techsaga.co.in/public/assets/images/my-img/ipsa.webp",
+      "/assets/img/portfolio-img/ipsa.webp",
     desc: "Rewards and loyalty mobile application.",
     url: "#",
     overlay: "bg-blue-600/95",
@@ -185,7 +185,7 @@ export default function PortfolioSection() {
 
             <div className="flex justify-center mb-5">
               <img
-                src="https://www.techsaga.co.in/public/assets/images/my-img/line1.png"
+                src="/assets/img/line1.png"
                 alt="line"
                 width={180}
                 height={20}

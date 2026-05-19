@@ -141,7 +141,7 @@ const Contact_Us = () => {
         className="relative pt-20 bg-cover bg-center overflow-clip mb-20"
         style={{
           backgroundImage:
-            "url('https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/map-pattern.png')",
+            "url('/assets/img/map-pattern.png')",
         }}
       >
         <div className="max-w-7xl mx-auto px-4">
@@ -173,7 +173,7 @@ const Contact_Us = () => {
                 className="relative z-10"
               /> */}
                 <img className="h-[352px]"
-                  src="https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/callback-men.png"
+                  src="/assets/img/callback-men.png"
                   alt="callback"
                 />
               </div>

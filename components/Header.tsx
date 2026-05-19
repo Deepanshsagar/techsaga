@@ -178,7 +178,7 @@ const NAV_LINKS = [
 
   {
     label: "Industries",
-    url: "/industries",
+    url: "#",
     children: [
       { label: "E-Commerce", url: "/industries/e-commerce-solution" },
       { label: "Healthcare", url: "/industries/healthcare" },
@@ -199,7 +199,6 @@ const NAV_LINKS = [
     children: [
       { label: "Blogs", url: "https://resources.techsaga.co.in/blog/" },
       { label: "Case Studies", url: "https://resources.techsaga.co.in/case-study/" },
-      { label: "Success Stories", url: "#" },
       { label: "Web Stories", url: "https://resources.techsaga.co.in/web-stories/" },
     ],
   },
@@ -258,13 +257,13 @@ export default function Header() {
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="max-w-[180px]" aria-label="TechSaga Home">
+          <Link href="/" className="max-w-[180px]" aria-label="TechSaga Home">
             <img
               src="/assets/img/logo.webp"
               alt="TechSaga"
               className="w-full h-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav
@@ -527,7 +526,7 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center">
-            <a
+            <Link
               href="/contact-us"
               className="
               bg-[#4291CE]
@@ -539,7 +538,7 @@ export default function Header() {
             "
             >
               Get Consultation
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Toggle */}

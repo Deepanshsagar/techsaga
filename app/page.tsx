@@ -3,8 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
-import SplitTextReveal from "@/components/SplitTextReveal"
-import AutoSplitText from "@/components/AutoSplitText"
 import SplitContainer from "@/components/SplitContainer"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -50,22 +48,22 @@ interface ValueItem {
 
 
 
-function StarRating({ count }: { count: number }) {
-  return (
-    <div className="flex gap-0.5 mb-3">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <svg
-          key={i}
-          className={`w-3.5 h-3.5 ${i < count ? "text-amber-400" : "text-gray-200"}`}
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </div>
-  );
-}
+// function StarRating({ count }: { count: number }) {
+//   return (
+//     <div className="flex gap-0.5 mb-3">
+//       {Array.from({ length: 5 }).map((_, i) => (
+//         <svg
+//           key={i}
+//           className={`w-3.5 h-3.5 ${i < count ? "text-amber-400" : "text-gray-200"}`}
+//           fill="currentColor"
+//           viewBox="0 0 20 20"
+//         >
+//           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+//         </svg>
+//       ))}
+//     </div>
+//   );
+// }
 
 function useInView(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null);
@@ -310,12 +308,12 @@ const CLIENTS = [
   { name: "zuhd", logo: "/assets/img/logo/zuhd.png" },
 ];
 
-const TEAM_IMAGES = [
-  "/assets/img/RAHUL_MISHRA.jpg",
-  "/assets/img/SATYPAL_SINGH.jpg",
-  "/assets/img/SHIVESH_SINHA.jpg",
-  "/assets/img/VIKAS_PANDEY.jpg",
-];
+// const TEAM_IMAGES = [
+//   "/assets/img/RAHUL_MISHRA.jpg",
+//   "/assets/img/SATYPAL_SINGH.jpg",
+//   "/assets/img/SHIVESH_SINHA.jpg",
+//   "/assets/img/VIKAS_PANDEY.jpg",
+// ];
 
 const TEAM_MEMBERS = [
   {
@@ -344,8 +342,8 @@ const TEAM_MEMBERS = [
 // ─── Main Component ──────────────────────────────────────────────────────────
 
 export default function TechSagaHomePage() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
 
   const router = useRouter();
 
@@ -356,11 +354,11 @@ export default function TechSagaHomePage() {
 
   const triggerRef = useRef(null);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  // useEffect(() => {
+  //   const onScroll = () => setScrolled(window.scrollY > 12);
+  //   window.addEventListener("scroll", onScroll);
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
 
   const [emblaRef1, emblaApi1] = useEmblaCarousel({ loop: true, align: "start" });
   const [emblaRef2, emblaApi2] = useEmblaCarousel({ loop: true, align: "start" });

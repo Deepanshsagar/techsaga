@@ -14,6 +14,8 @@ const CareerPage = () => {
         message: "",
     });
 
+     const [showThankYouPopup, setShowThankYouPopup] = useState(false);
+
     const [resume, setResume] = useState<File | null>(null);
     const [loading, setLoading] = useState(false);
 
@@ -60,7 +62,9 @@ const CareerPage = () => {
             const result = await response.json();
 
             if (response.ok) {
-                alert("Application submitted successfully");
+                // alert("Application submitted successfully");
+
+                 setShowThankYouPopup(true)
 
                 setFormData({
                     firstName: "",
@@ -72,7 +76,7 @@ const CareerPage = () => {
 
                 setResume(null);
             } else {
-                alert(result.message || "Something went wrong");
+                // alert(result.message || "Something went wrong");
             }
         } catch (error) {
             console.error(error);
@@ -540,7 +544,39 @@ const CareerPage = () => {
                     </div>
                 </div>
             </section>
+             {showThankYouPopup && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+                    <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center relative animate-[fadeIn_.3s_ease]">
 
+                        <button
+                            onClick={() => setShowThankYouPopup(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-black text-xl"
+                        >
+                            ×
+                        </button>
+
+                        <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-green-100 flex items-center justify-center">
+                            <span className="text-3xl text-green-600">✓</span>
+                        </div>
+
+                        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                            Thank You!
+                        </h3>
+
+                        <p className="text-gray-600 leading-7 mb-6">
+                            Your message has been submitted successfully.
+                            Our team will contact you within 24 hours.
+                        </p>
+
+                        <button
+                            onClick={() => setShowThankYouPopup(false)}
+                            className="bg-[#4291CE] hover:bg-[#327ab3] text-white px-6 py-3 cursor-pointer rounded-lg font-medium transition-all"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
             <Footer />
         </>
     )

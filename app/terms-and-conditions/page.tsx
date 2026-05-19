@@ -17,7 +17,7 @@ export default function TermsConditionsPage() {
 
               <img
                 loading="lazy"
-                src="https://www.techsaga.co.in/public/assets/images/my-img/line1.png"
+                src="/assets/img/line1.png"
                 alt="line"
                 className="mx-auto mt-4"
               />
