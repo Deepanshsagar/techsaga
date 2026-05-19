@@ -68,10 +68,10 @@ const partners = [
     image: "/assets/img/klaviyo-images.png",
     alt: "klaviyo-images",
   },
-  {
-    image: "/assets/img/google-cloud-partner.png",
-    alt: "google-cloud-partner-images",
-  },
+  // {
+  //   image: "/assets/img/google-cloud-partner.png",
+  //   alt: "google-cloud-partner-images",
+  // },
 ];
 
 export default function PartnerSection() {
