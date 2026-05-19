@@ -178,7 +178,7 @@ const NAV_LINKS = [
 
   {
     label: "Industries",
-    url: "/industries",
+    url: "#",
     children: [
       { label: "E-Commerce", url: "/industries/e-commerce-solution" },
       { label: "Healthcare", url: "/industries/healthcare" },
