@@ -216,6 +216,26 @@ const Footer = () => {
                     </div>
                 </div>
 
+                {/* Partner network bar */}
+                <div className="border-t border-white/10">
+                    <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4">
+                        <div className="flex flex-wrap gap-x-6 gap-y-1.5 text-[10px] uppercase tracking-widest text-gray-500">
+                            {[
+                                "Google Partner",
+                                "Microsoft Partner",
+                                "ZOHO Partner",
+                                "WORKDAY Partner",
+                                "SAP Partner",
+                                "AWS Partner"
+                            ].map((p) => (
+                                <span key={p} className="flex items-center gap-1">
+                                    <span className="text-[#4291CE]">•</span> {p}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
                 {/* Copyright bar */}
                 <div className="border-t border-white/10">
                     <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-gray-600">
