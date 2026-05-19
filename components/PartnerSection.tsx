@@ -52,17 +52,21 @@ const partners = [
     image: "/assets/img/zoho-images.png",
     alt: "zoho-images",
   },
-  {
-    image: "/assets/img/workday-images.png",
-    alt: "workday-images",
-  },
-  {
-    image: "/assets/img/sap-images.png",
-    alt: "sap-images",
-  },
+  // {
+  //   image: "/assets/img/workday-images.png",
+  //   alt: "workday-images",
+  // },
+  // {
+  //   image: "/assets/img/sap-images.png",
+  //   alt: "sap-images",
+  // },
   {
     image: "/assets/img/microsoft-images.png",
     alt: "microsoft-images",
+  },
+  {
+    image: "/assets/img/klaviyo-images.png",
+    alt: "klaviyo-images",
   },
 ];
 
