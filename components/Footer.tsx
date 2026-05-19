@@ -179,7 +179,7 @@ const Footer = () => {
                                     {[
                                         {
                                             label: "About Techsaga",
-                                            link: "/about-us",
+                                            link: "/about",
                                         },
                                         {
                                             label: "Careers at Techsaga",
