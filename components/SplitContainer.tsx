@@ -114,12 +114,12 @@ export default function SplitContainer({
       </style>
 
       <div ref={containerRef} className="overflow-hidden">
-        <h2
+        <div
           ref={textRef}
           className={`${className}`}
         >
           {children}
-        </h2>
+        </div>
       </div>
     </>
   );
