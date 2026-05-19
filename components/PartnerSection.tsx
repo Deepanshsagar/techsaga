@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const partners = [
   {
-    image: "/assets/img/google-partner.webp",
+    image: "/assets/img/google-partner.png",
     alt: "google",
     link: "https://www.google.com/partners/agency?id=2890612283",
   },
@@ -68,6 +68,10 @@ const partners = [
     image: "/assets/img/klaviyo-images.png",
     alt: "klaviyo-images",
   },
+  {
+    image: "/assets/img/google-cloud-partner.png",
+    alt: "google-cloud-partner-images",
+  },
 ];
 
 export default function PartnerSection() {
@@ -94,7 +98,7 @@ export default function PartnerSection() {
                   href={partner.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="opacity-80 hover:opacity-100 transition"
+                  className="opacity-80 hover:opacity-100 transition p-2"
                 >
                   {content}
                 </a>
