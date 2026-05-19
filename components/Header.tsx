@@ -207,7 +207,7 @@ const NAV_LINKS = [
     label: "Company",
     url: "#",
     children: [
-      { label: "About Us", url: "/about" },
+      { label: "About Us", url: "/about-us" },
       { label: "Management Team", url: "/management-team" },
       { label: "Clients & Portfolio", url: "/portfolio" },
       { label: "Careers", url: "/careers" },
