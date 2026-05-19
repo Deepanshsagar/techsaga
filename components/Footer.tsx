@@ -183,7 +183,7 @@ const Footer = () => {
                                     { label: "Blog & Insights", url: "https://resources.techsaga.co.in/blog/" },
                                     ].map((item) => (
                                         <li key={item?.label}>
-                                            <Link href="#" className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
+                                            <Link href={item?.url} className="hover:text-black/60 text-black/80 transition-colors leading-snug block">
                                                 {item?.label}
                                             </Link>
                                         </li>
