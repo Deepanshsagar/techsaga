@@ -48,6 +48,22 @@ const partners = [
     alt: "rmcertified",
     link: "https://www.designrush.com/agency/profile/techsaga-corporations",
   },
+  {
+    image: "/assets/img/zoho-images.png",
+    alt: "zoho-images",
+  },
+  {
+    image: "/assets/img/workday-images.png",
+    alt: "workday-images",
+  },
+  {
+    image: "/assets/img/sap-images.png",
+    alt: "sap-images",
+  },
+  {
+    image: "/assets/img/microsoft-images.png",
+    alt: "microsoft-images",
+  },
 ];
 
 export default function PartnerSection() {
@@ -57,7 +73,7 @@ export default function PartnerSection() {
     <>
       {/* Partner network bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-[1400px]  px-6 lg:px-10 py-4">
+        <div className="max-w-[1400px]  px-6 lg:px-10 py-4 mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
             {partners.map((partner) => {
               const content = (
