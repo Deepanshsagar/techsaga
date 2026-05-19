@@ -14,12 +14,12 @@ export default function PrivacyPolicyPage() {
                 Privacy Policy
               </h1>
 
-              <img
+              {/* <img
                 loading="lazy"
                 src="https://www.techsaga.co.in/public/assets/images/my-img/line1.png"
                 alt="line"
                 className="mx-auto mt-4"
-              />
+              /> */}
             </div>
           </div>
         </div>
