@@ -5,6 +5,12 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/services/enterprise-software-development");
+}
+
 export default function Enterprises() {
 
   const teamPoints = [

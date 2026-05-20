@@ -35,6 +35,11 @@ const SIDEBAR_LINKS = [
     icon: BriefcaseBusiness,
   },
   {
+    label: "Meta Data",
+    href: "/admin/meta",
+    icon: BriefcaseBusiness,
+  },
+  {
     label: "Settings",
     href: "/admin/settings",
     icon: Settings,

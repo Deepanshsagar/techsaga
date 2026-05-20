@@ -5,6 +5,14 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 
+
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/services/manual-testing");
+}
+
+
 export default function ManualTestingPage() {
   const manualTestingBenefits = [
     "Thorough evaluation of software functionalities and features",
