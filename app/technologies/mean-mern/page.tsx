@@ -3,6 +3,14 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 
+
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/technologies/mean-mern");
+}
+
+
 export default function MeanMernPage() {
   const meanMernFeatures = [
     "Full-Stack Capability: Mean MERN Stack allows developers to handle both client-side and server-side development within a single technology stack.",
