@@ -2,7 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-
+import { getMeta } from "@/app/lib/getMeta";
+export async function generateMetadata() {
+  return getMeta("/technologies/sharepoint");
+}
 export default function SharePointPage() {
     const sharepointFeatures = [
         "Enhanced productivity and efficiency through streamlined collaboration and communication.",
