@@ -2,7 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-
+import { getMeta } from "@/app/lib/getMeta";
+export async function generateMetadata() {
+  return getMeta("/technologies/react-native");
+}
 export default function ReactNativePage() {
   const reactNativeFeatures = [
     "Cross-platform compatibility for both iOS and Android using a single codebase.",

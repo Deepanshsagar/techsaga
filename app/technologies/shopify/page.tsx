@@ -2,7 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-
+import { getMeta } from "@/app/lib/getMeta";
+export async function generateMetadata() {
+  return getMeta("/technologies/shopify");
+}
 export default function ShopifyPage() {
   const shopifyFeatures = [
     "Offers a comprehensive platform that includes hosting, website design, payment processing, and marketing tools.",
