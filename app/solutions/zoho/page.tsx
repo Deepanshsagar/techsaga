@@ -101,7 +101,7 @@ export default function ZohoPage() {
                             </div>
                         <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                            Zoho
-                           <div className="text-3xl lg:text-4xl mt-2">The Definitive Operating System for Modern Enterprise. </div>
+                           <div className="lg:text-3xl text-3xl mt-2">The Definitive Operating System for Modern Enterprise. </div>
                         </h1>
                         <p className="text-white/60 text-base leading-relaxed mb-8">
                             Beyond standard deployment, Techsaga engineers secure, fully integrated Zoho private cloud ecosystems that consolidate your entire operational landscape into a single, high-performance architecture.

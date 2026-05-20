@@ -69,7 +69,7 @@ export default function ERPNextPage() {
                             </div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                                ERPNext
-                               <div className="text-3xl lg:text-4xl mt-2">Establish Absolute Governance Over Your Operations.</div>
+                               <div className="lg:text-3xl text-3xl mt-2">Establish Absolute Governance Over Your Operations.</div>
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">

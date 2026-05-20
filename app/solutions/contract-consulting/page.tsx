@@ -69,7 +69,7 @@ export default function ContractConsultingPage() {
                             </div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                                Contract Consulting
-                               <div className="text-3xl lg:text-4xl mt-2"> Expert Guidance for Every Stage of Your Business Growth.</div>
+                               <div className="lg:text-3xl text-3xl mt-2"> Expert Guidance for Every Stage of Your Business Growth.</div>
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">
