@@ -74,10 +74,7 @@ export default function ServiceNowPage() {
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">
-                                Techsaga, an official ServiceNow partner, helps
-                                businesses eliminate silos and create seamless
-                                cross-functional operations with intelligent
-                                workflow automation.
+                                Disconnected operations slow your business down. Techsaga leverages the power of ServiceNow to orchestrate your entire enterprise, transforming manual cross-functional tasks into an intelligent, unified workflow engine.
                             </p>
 
                        
@@ -176,14 +173,11 @@ export default function ServiceNowPage() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-1">
                         <h2 className="text-3xl font-bold leading-snug mb-5">
-                            One Source of Truth for Your Entire Service Ecosystem
+                            The Orchestration Layer for Your Enterprise
                         </h2>
 
                         <p className="text-white/60 text-sm leading-relaxed">
-                            ServiceNow is the orchestration layer of your organization.
-                            It’s a single, secure cloud space where disparate legacy
-                            systems finally talk to each other through a unified,
-                            consumer-grade employee experience.
+                            Connect disparate legacy systems under a single, secure cloud space. Techsaga leverages ServiceNow to deliver a unified, consumer-grade employee experience across your entire service ecosystem.
                         </p>
                     </div>
 
@@ -231,8 +225,8 @@ export default function ServiceNowPage() {
 
             {/* CONTACT FORM */}
             <section className="mt-10 px-4">
-                <div className="text-3xl font-bold text-gray-900 text-center mb-14">
-                    Is Your Work Getting Lost in Email? Take Back Control.
+                <div className="text-3xl font-bold text-gray-900 text-center mb-10">
+                    Ready To Talk? Get in Touch
                 </div>
 
                 <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
