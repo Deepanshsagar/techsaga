@@ -14,7 +14,7 @@ const CareerPage = () => {
         message: "",
     });
 
-     const [showThankYouPopup, setShowThankYouPopup] = useState(false);
+    const [showThankYouPopup, setShowThankYouPopup] = useState(false);
 
     const [resume, setResume] = useState<File | null>(null);
     const [loading, setLoading] = useState(false);
@@ -64,7 +64,7 @@ const CareerPage = () => {
             if (response.ok) {
                 // alert("Application submitted successfully");
 
-                 setShowThankYouPopup(true)
+                setShowThankYouPopup(true)
 
                 setFormData({
                     firstName: "",
@@ -89,7 +89,7 @@ const CareerPage = () => {
         <>
             <Header />
 
-             <section
+            <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
                     backgroundImage: "url('/assets/img/career-banner.png')",
@@ -99,35 +99,27 @@ const CareerPage = () => {
                     <div className="">
                         <div className="w-full lg:w-1/2  lg:text-left">
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                                Techsaga <br />
-                                Unlock the Power of <br />
-                                <span className="text-[#fff]">
-                                    Dedicated Developers
-                                </span>
+                                Pioneer Next-Generation Software Solutions with TechSaga
                             </h1>
 
                             <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-8">
-                                At Techsaga we offer top-tier dedicated developers
-                                who are committed to bringing your ideas to life and
-                                delivering exceptional results. By hiring dedicated
-                                developers, you gain access to a specialized team that
-                                is solely focused on your project.
+                                Architect robust platforms, optimize cloud infrastructure, and drive global digital transformations. Grow your career in an environment built on technical excellence, integrity, and deep engineering.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                 <Link
-                                    href="/contact-us"
+                                <Link
+                                    href="#"
                                     className="inline-flex items-center justify-center gap-2 bg-[#fff] text-[#4291CE] px-6 py-3 rounded font-semibold hover:bg-[#347eb8] hover:text-[#fff] transition-colors text-sm"
                                 >
-                                    Connect with expert →
+                                    Apply Now →
                                 </Link>
 
-                                <Link
+                                {/* <Link
                                     href="https://resources.techsaga.co.in/case-study/"
                                     className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-6 py-3 rounded font-semibold hover:bg-white hover:text-[#4291CE] transition-colors text-sm"
                                 >
                                     View Case Studies
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </div>
@@ -139,14 +131,15 @@ const CareerPage = () => {
                     <div className="lg:w-1/2">
 
                         <h2 className="text-3xl font-extrabold text-[#0b1535] mb-5 leading-tight">
-                            Tapping Best IT Solutions by Dedicated Developers
+                            Engineered for Growth. Cultivated for Excellence.
 
                         </h2>
                         <p className="text-gray-500 leading-relaxed mb-5 text-sm sm:text-base">
-                            Our developers have a deep understanding of various technologies and frameworks, ensuring that they can tackle any challenge with expertise and precision. Whether you need web development, mobile app development, or custom software solutions, our dedicated developers have got you covered.
+                            At TechSaga, we bridge complex business challenges with scalable, high-performance technology. As a global digital transformation partner, our success is driven by domain experts focused on algorithmic precision, clean code, and strategic market growth.
                         </p>
                         <p className="text-gray-500 leading-relaxed text-sm sm:text-base">
-                            When you hire dedicated developers from Techsaga, you not only gain access to their technical proficiency but also benefit from their commitment and seamless collaboration. Our developers become an extension of your in-house team, working closely with you to understand your vision, goals, and requirements. They become invested in your success and strive to exceed your expectations.</p>
+                            We foster a culture of continuous learning, clear technical ownership, and operational transparency. Joining our teams offers direct exposure to cross-functional methodologies and international client consultation. We equip you with the modern tools, frameworks, and autonomy needed to solve high-velocity challenges and scale global systems.
+                        </p>
 
                     </div>
 
@@ -210,7 +203,7 @@ const CareerPage = () => {
                                     <textarea
                                         rows={4}
                                         name="message"
-                                        placeholder="Tell us about yourself"
+                                        placeholder="Executive Cover Note"
                                         value={formData.message}
                                         onChange={handleChange}
                                         className="form-input w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 bg-gray-50 resize-none"
@@ -267,25 +260,15 @@ const CareerPage = () => {
                         <div className="w-full lg:w-1/2">
                             <div className="sticky top-25">
                                 <h1 className="font-bold text-3xl sm:text-4xl leading-tight">
-                                    Delivering Reliable IT Solutions Through Dedicated
-                                    Expertise
+                                    Delivering Reliable IT Solutions Through Dedicated Expertise
                                 </h1>
 
                                 <p className="mt-6 text-gray-700 leading-relaxed">
-                                    Our developers have a deep understanding of various
-                                    technologies and frameworks, ensuring that they can
-                                    tackle any challenge with expertise and precision.
-                                    Whether you need web development, mobile app
-                                    development, or custom software solutions, our
-                                    dedicated developers have got you covered.
+                                    Our developers have a deep understanding of various technologies and frameworks, ensuring that they can tackle any challenge with expertise and precision. Whether you need web development, mobile app development, or custom software solutions, our dedicated developers have got you covered.
                                 </p>
 
                                 <p className="mt-4 text-gray-700 leading-relaxed">
-                                    When you hire dedicated developers from Techsaga,
-                                    you not only gain access to their technical
-                                    proficiency but also benefit from their commitment
-                                    and seamless collaboration. Our developers become
-                                    an extension of your in-house team.
+                                    When you hire dedicated developers from Techsaga, you not only gain access to their technical proficiency but also benefit from their commitment and seamless collaboration. Our developers become an extension of your in-house team, working closely with you to understand your vision, goals, and requirements. They become invested in your success and strive to exceed your expectations.
                                 </p>
                             </div>
                         </div>
@@ -296,208 +279,204 @@ const CareerPage = () => {
                             {/* Card 1 */}
                             <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
                                 <h1 className="font-bold text-xl sm:text-2xl">
-                                    Techsaga: Empowering Success with Dedicated Developers
+                                    Our Foundational Principles
                                 </h1>
 
-                                <p className="my-4 text-gray-600">
-                                    Techsaga provides dedicated developers for web,
-                                    mobile, and custom software development.
+                                <p className="mb-4 mt-2 text-gray-600">
+                                    The operational frameworks that govern our delivery and define our workplace expectations.
                                 </p>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div className="gap-6">
                                     <div className="space-y-3">
-                                        <p className="flex gap-2 text-gray-600">
+                                        <p className="flex gap-2 text-sm text-gray-600">
                                             <img
                                                 src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
+                                                className="w-4 h-4"
                                                 alt=""
                                             />
-                                            Web and mobile app development
+                                            Perceptive Learning: Mastering new tech to optimize delivery.
                                         </p>
 
-                                        <p className="flex gap-2 text-gray-600">
+                                        <p className="flex gap-2  text-sm text-gray-600">
                                             <img
                                                 src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
+                                                className="w-4 h-4"
                                                 alt=""
                                             />
-                                            Smooth team collaboration
+                                            Uncompromising Quality: Strict adherence to clean coding standards.
                                         </p>
 
-                                        <p className="flex gap-2 text-gray-600">
+                                        <p className="flex gap-2  text-sm text-gray-600">
                                             <img
                                                 src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
+                                                className="w-4 h-4"
                                                 alt=""
                                             />
-                                            Tailored development services
+                                            Absolute Integrity: Total transparency, privacy, and accountability.
+                                        </p>
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            Synergistic Teamwork: Seamless cross-functional and client collaboration.
                                         </p>
                                     </div>
 
-                                    <div className="space-y-3">
-                                        <p className="flex gap-2 text-gray-600">
-                                            <img
-                                                src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
-                                                alt=""
-                                            />
-                                            Custom software solutions
-                                        </p>
-
-                                        <p className="flex gap-2 text-gray-600">
-                                            <img
-                                                src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
-                                                alt=""
-                                            />
-                                            Laravel and PHP experts
-                                        </p>
-
-                                        <p className="flex gap-2 text-gray-600">
-                                            <img
-                                                src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
-                                                alt=""
-                                            />
-                                            Industry-standard coding practices
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
 
                             {/* Card 2 */}
-                            <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
+                             <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
                                 <h1 className="font-bold text-xl sm:text-2xl">
-                                    Driving Business Growth with Expert Developers
+                                    Empowering Global Innovators
                                 </h1>
 
-                                <p className="my-4 text-gray-600">
-                                    Techsaga offers dedicated developers with flexible
-                                    hiring models and transparent support.
+                                <p className="mb-4 mt-2 text-gray-600">
+                                    Powering digital transformation across Asia, Europe, and the GCC region with international engineering standards and cross-border project delivery.
                                 </p>
 
-                                <div className="space-y-3">
-                                    <p className="flex gap-2 text-gray-600">
-                                        <img
-                                            src="/assets/img/checkedicon.png"
-                                            className="w-5 h-5"
-                                            alt=""
-                                        />
-                                        Flexible engagement for projects
-                                    </p>
+                                <div className="gap-6">
+                                    <div className="space-y-3">
+                                        <p className="flex gap-2 text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            Global Exposure
+                                        </p>
 
-                                    <p className="flex gap-2 text-gray-600">
-                                        <img
-                                            src="/assets/img/checkedicon.png"
-                                            className="w-5 h-5"
-                                            alt=""
-                                        />
-                                        High-quality development services
-                                    </p>
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            Continuous Upskilling
+                                        </p>
 
-                                    <p className="flex gap-2 text-gray-600">
-                                        <img
-                                            src="/assets/img/checkedicon.png"
-                                            className="w-5 h-5"
-                                            alt=""
-                                        />
-                                        Daily, weekly, or monthly reporting
-                                    </p>
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            Performance-Driven Progression
+                                        </p>
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            Collaborative Ecosystem
+                                        </p>
+                                    </div>
+
                                 </div>
                             </div>
 
                             {/* Card 3 */}
-                            <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
+                             <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
                                 <h1 className="font-bold text-xl sm:text-2xl">
-                                    Boost Development Capacity with Expert Developers
+                                    Connect with Our Executive Talent Pool
                                 </h1>
 
-                                <p className="my-4 text-gray-600">
-                                    Dedicated developers specializing in Full Stack,
-                                    Laravel, PHP, iOS, Android, WooCommerce, and Shopify.
+                                <p className="mb-4 mt-2 text-gray-600">
+                                    Our talent acquisition team routinely reviews all speculative profiles against emerging project requirements.
                                 </p>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div className="gap-6">
                                     <div className="space-y-3">
-                                        <p className="flex gap-2 text-gray-600">
+                                        <p className="flex gap-2 text-sm text-gray-600">
                                             <img
                                                 src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
+                                                className="w-4 h-4"
                                                 alt=""
                                             />
-                                            Full Stack Developers
+                                            You send: Your professional credentials.
                                         </p>
 
-                                        <p className="flex gap-2 text-gray-600">
+                                        <p className="flex gap-2  text-sm text-gray-600">
                                             <img
                                                 src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
+                                                className="w-4 h-4"
                                                 alt=""
                                             />
-                                            PHP Developers
+                                            We review: Your skills and experience.
+                                        </p>
+
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            We match: You with emerging workstreams.
+                                        </p>
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            We connect: To discuss future opportunities.
                                         </p>
                                     </div>
 
-                                    <div className="space-y-3">
-                                        <p className="flex gap-2 text-gray-600">
-                                            <img
-                                                src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
-                                                alt=""
-                                            />
-                                            Laravel Developers
-                                        </p>
-
-                                        <p className="flex gap-2 text-gray-600">
-                                            <img
-                                                src="/assets/img/checkedicon.png"
-                                                className="w-5 h-5"
-                                                alt=""
-                                            />
-                                            Mobile App Developers
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
 
                             {/* Card 4 */}
-                            <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
+                               <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
                                 <h1 className="font-bold text-xl sm:text-2xl">
-                                    Get Reliable Tech Expertise with a Dedicated Team
+                                   Initiate Your Profile Submission
                                 </h1>
 
-                                <p className="my-4 text-gray-600">
-                                    Expertise in MongoDB, ExpressJS, AngularJS, and NodeJS
-                                    with flexible hiring options.
+                                <p className="mb-4 mt-2 text-gray-600">
+                                    Ensure all submitted technical documentation, portfolio links, and employment histories are accurate and current.
                                 </p>
 
-                                <div className="space-y-3">
-                                    <p className="flex gap-2 text-gray-600">
-                                        <img
-                                            src="/assets/img/checkedicon.png"
-                                            className="w-5 h-5"
-                                            alt=""
-                                        />
-                                        Experts in MERN technologies
-                                    </p>
+                                <div className="gap-6">
+                                    <div className="space-y-3">
+                                        <p className="flex gap-2 text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            Primary HR Channels: hr@techsaga.co.in
+                                        </p>
 
-                                    <p className="flex gap-2 text-gray-600">
-                                        <img
-                                            src="/assets/img/checkedicon.png"
-                                            className="w-5 h-5"
-                                            alt=""
-                                        />
-                                        Flexible hiring models
-                                    </p>
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            Talent Acquisition Desk: +91 120 432 9484
+                                        </p>
 
-                                    <p className="flex gap-2 text-gray-600">
-                                        <img
-                                            src="/assets/img/checkedicon.png"
-                                            className="w-5 h-5"
-                                            alt=""
-                                        />
-                                        Front-end and back-end support
-                                    </p>
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                           LinkedIn Careers Page: https://in.linkedin.com/company/techsaga
+                                        </p>
+                                        <p className="flex gap-2  text-sm text-gray-600">
+                                            <img
+                                                src="/assets/img/checkedicon.png"
+                                                className="w-4 h-4"
+                                                alt=""
+                                            />
+                                            Support Hours: Monday to Friday, 10.00 AM – 7.00 PM IST.
+                                        </p>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -544,7 +523,7 @@ const CareerPage = () => {
                     </div>
                 </div>
             </section>
-             {showThankYouPopup && (
+            {showThankYouPopup && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
                     <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 text-center relative animate-[fadeIn_.3s_ease]">
 
