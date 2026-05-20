@@ -9,7 +9,7 @@ export async function getMeta(
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_APP_URL}/api/meta-by-url?url=${pathname}`,
       {
-        cache: "no-store",
+        next: { revalidate: 3600 },
       }
     );
 

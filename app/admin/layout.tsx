@@ -19,21 +19,21 @@ const SIDEBAR_LINKS = [
     href: "/admin/dashboard",
     icon: LayoutDashboard,
   },
-  {
-    label: "Categories",
-    href: "/admin/categories",
-    icon: FolderKanban,
-  },
-  {
-    label: "Sub Categories",
-    href: "/admin/sub-categories",
-    icon: Layers3,
-  },
-  {
-    label: "Services",
-    href: "/admin/services",
-    icon: BriefcaseBusiness,
-  },
+  // {
+  //   label: "Categories",
+  //   href: "/admin/categories",
+  //   icon: FolderKanban,
+  // },
+  // {
+  //   label: "Sub Categories",
+  //   href: "/admin/sub-categories",
+  //   icon: Layers3,
+  // },
+  // {
+  //   label: "Services",
+  //   href: "/admin/services",
+  //   icon: BriefcaseBusiness,
+  // },
   {
     label: "Meta Data",
     href: "/admin/meta",
@@ -162,7 +162,7 @@ export default function AdminLayout({
           </div>
 
           <div className="flex items-center gap-4">
-            <button
+            {/* <button
               className="
                 px-5 py-2.5
                 rounded-xl
@@ -173,7 +173,7 @@ export default function AdminLayout({
               "
             >
               Save Changes
-            </button>
+            </button> */}
           </div>
         </header>
 

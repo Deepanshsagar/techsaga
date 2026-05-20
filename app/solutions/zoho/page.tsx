@@ -101,10 +101,10 @@ export default function ZohoPage() {
                             </div>
                         <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                            Zoho
-                           <div className="text-3xl lg:text-4xl mt-2">One Platform. Your Entire Operating System.</div>
+                           <div className="text-3xl lg:text-4xl mt-2">The Definitive Operating System for Modern Enterprise. </div>
                         </h1>
                         <p className="text-white/60 text-base leading-relaxed mb-8">
-                            As an official partner of Zoho, Techsaga goes beyond app implementation. We unify disconnected systems, streamline operations, and drive business growth through a fully integrated private cloud ecosystem.
+                            Beyond standard deployment, Techsaga engineers secure, fully integrated Zoho private cloud ecosystems that consolidate your entire operational landscape into a single, high-performance architecture.
                         </p>
                         
                     </div>
@@ -183,10 +183,10 @@ export default function ZohoPage() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-3 gap-12 ">
                     <div className="lg:col-span-1">
                         <h2 className="text-3xl font-bold leading-snug mb-5">
-                           One Source of Truth for Your Entire Business
+                           Run Your Entire Business from a Single Screen.
                         </h2>
                         <p className="text-white/60 text-sm leading-relaxed">
-                           Zoho is the "operating system" for your organization. It’s a single, secure ecosystem where your Front Office (Sales/Marketing) and Back Office (Finance/HR) finally speak the same language.
+                           Disconnected legacy systems kill corporate velocity. As an official ServiceNow partner, Techsaga replaces the chaos with fluid, automated workflows, creating an intuitive internal experience your workforce will actually enjoy using. 
                         </p>
                     </div>
 
