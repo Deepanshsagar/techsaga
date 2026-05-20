@@ -156,7 +156,7 @@ const Contact_Us = () => {
                 Let's Talk Business Transformation.
               </h4>
 
-              <h5 className="text-black-300 text-lg leading-8 mb-10">
+              <h5 className="text-black/50 text-lg leading-8 mb-10">
                 We are your compass in the vast realm of technology, guiding and
                 empowering you toward a thriving digital future
               </h5>
@@ -164,7 +164,7 @@ const Contact_Us = () => {
               {/* Image with Circle */}
               <div className="relative inline-block">
                 {/* Blue Circle */}
-                <div className="absolute -left-12 top-5 w-[300px] h-[300px] rounded-full bg-[#4891ce] -z-10"></div>
+                {/* <div className="absolute -left-12 top-5 w-[300px] h-[300px] rounded-full bg-[#4891ce] -z-10"></div> */}
                 {/* <Image
                 src="https://www.techsaga.co.in/public/assets/images/my-img/Inside-Banner-Technology/callback-men.png"
                 alt="callback"
