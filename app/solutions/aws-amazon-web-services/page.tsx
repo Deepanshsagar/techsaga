@@ -75,15 +75,12 @@ export default function AWSPage() {
                             </div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                                AWS
-                               <div className="text-3xl lg:text-4xl mt-2"> One Platform. Your Entire Digital Infrastructure.</div>
+                               <div className="text-3xl lg:text-4xl mt-2"> Architecting Your Future on the Cloud. </div>
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">
-                                Techsaga as an Official AWS Partner, we don't just
-                                install cloud services; we architect your future.
-                                We bridge the gap between legacy hardware and
-                                limitless innovation with the world’s most
-                                comprehensive cloud ecosystem.
+                              Don't just migrate to the cloud—maximize it. As an official AWS Partner, Techsaga builds secure, high-performance digital infrastructure tailored to your business goals, eliminating legacy bottlenecks for good. 
+
                             </p>
 
                            

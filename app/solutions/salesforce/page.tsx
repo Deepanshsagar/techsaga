@@ -102,10 +102,11 @@ export default function SalesforcePage() {
                             </div>
                         <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                            Salesforce
-                           <div className="text-3xl lg:text-4xl mt-2">One Platform. Your Entire Customer Success.</div>
+                           <div className="text-3xl lg:text-4xl mt-2">Unify and Automate Your Entire Business Workflow. 
+</div>
                         </h1>
                         <p className="text-white/60 text-base leading-relaxed mb-8">
-                            Techsaga, an official Salesforce partner, goes beyond deploying Salesforce. We create connected, AI-powered ecosystems that turn customer data into measurable business growth.
+                            Harness the ServiceNow 'Platform of Platforms' with Techsaga, your certified partner. We deliver the custom configurations and strategies required to eliminate complexity and drive intelligent automation across your organization
                         </p>
                         
                     </div>
