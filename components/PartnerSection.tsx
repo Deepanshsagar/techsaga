@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const partners = [
   {
-    image: "/assets/img/google-partner.png",
+    image: "/assets/img/googlebb.png",
     alt: "google",
     link: "https://www.google.com/partners/agency?id=2890612283",
   },
@@ -49,7 +49,7 @@ const partners = [
     link: "https://www.designrush.com/agency/profile/techsaga-corporations",
   },
   {
-    image: "/assets/img/zoho-images.png",
+    image: "/assets/img/zohobb.png",
     alt: "zoho-images",
   },
   // {
@@ -68,10 +68,14 @@ const partners = [
     image: "/assets/img/klaviyo-images.png",
     alt: "klaviyo-images",
   },
-  // {
-  //   image: "/assets/img/google-cloud-partner.png",
-  //   alt: "google-cloud-partner-images",
-  // },
+  {
+    image: "/assets/img/CMMI-3.png",
+    alt: "CMMI-images",
+  },
+  {
+    image: "/assets/img/google-cloud-partner.png",
+    alt: "google-cloud-partner-images",
+  },
 ];
 
 export default function PartnerSection() {
@@ -82,13 +86,13 @@ export default function PartnerSection() {
       {/* Partner network bar */}
       <div className="border-t border-white/10">
         <div className="max-w-[1400px]  px-6 lg:px-10 py-4 mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4  gap-y-4 ">
             {partners.map((partner) => {
               const content = (
                 <img
                   src={partner.image}
                   alt={partner.alt}
-                  className="w-[60px] h-[60px] object-contain transition duration-300 hover:scale-105"
+                  className="w-[60px] h-[60px] bg-white object-contain rounded-md overflow-hidden transition duration-300 hover:scale-105 p-1"
                 />
               );
 
@@ -98,7 +102,7 @@ export default function PartnerSection() {
                   href={partner.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="opacity-80 hover:opacity-100 transition p-2"
+                  className="opacity-80  bg-white hover:opacity-100 transition rounded-md overflow-hidden"
                 >
                   {content}
                 </a>
