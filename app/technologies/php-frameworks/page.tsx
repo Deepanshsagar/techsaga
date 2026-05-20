@@ -2,7 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-
+import { getMeta } from "@/app/lib/getMeta";
+export async function generateMetadata() {
+  return getMeta("/technologies/php-frameworks");
+}
 export default function PHPFrameworksPage() {
   const phpFeatures = [
     "Easy to use syntax for rapid and efficient web development.",
