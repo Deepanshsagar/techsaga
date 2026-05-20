@@ -3,6 +3,13 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/technologies/magento");
+}
+
+
 export default function MagentoPage() {
   const magentoFeatures = [
     "Flexible and scalable e-commerce platform",

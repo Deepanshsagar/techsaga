@@ -1,9 +1,11 @@
-"use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { useState } from "react";
 import BottomFrom from "@/components/BottomForm"
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/solutions/salesforce");
+}
 
 const servicesLeft = [
   {
@@ -76,28 +78,7 @@ const servicesRight = [
 // ];
 
 export default function SalesforcePage() {
-    const [form, setForm] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        description: "",
-        robot: false,
-    });
-
-    const handleChange = (e: any) => {
-        const { name, value, type, checked } = e.target;
-        setForm((prev) => ({
-            ...prev,
-            [name]: type === "checkbox" ? checked : value,
-        }));
-    };
-
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-        alert("Form submitted!");
-    };
-
+    
     return (
         <main className="font-sans text-gray-800 overflow-x-hidden">
             <Header />

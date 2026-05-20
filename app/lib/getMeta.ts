@@ -19,11 +19,11 @@ export async function getMeta(
 
     return {
       title:
-        meta?.title || "Default Title",
+        meta?.title || "Techsaga Corporations - Inspired for Innovation - Since 2012",
 
       description:
         meta?.description ||
-        "Default Description",
+        "Leading businesses through the backend, frontend tech, and digital infrastructure for next-gen transformation services and consulting solutions globally. Inspired for Innovation.",
 
       keywords: meta?.keywords,
 

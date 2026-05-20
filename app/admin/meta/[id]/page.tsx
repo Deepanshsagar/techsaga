@@ -16,7 +16,6 @@ async function getMeta(id: string) {
     }
   );
 
-  // console.log("response", response);
 
   return response.json();
 }

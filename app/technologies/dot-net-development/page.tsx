@@ -3,6 +3,12 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/technologies/dot-net-development");
+}
+
 export default function DotNetPage() {
     const dotNetFeatures = [
         "Language support and versatility with C#, VB.Net, and F#.",
