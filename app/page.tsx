@@ -422,56 +422,71 @@ export default function TechSagaHomePage() {
 
 
           <Header />
-          <div style={{ backgroundImage: "url('/assets/img/home-banner.webp')", }} className="pt-16  min-h-[650px] bg-cover bg-bottom">
+          <div className="relative pt-16 min-h-[650px] overflow-hidden">
+            {/* Background Image */}
+            <Image
+              src="/assets/img/home-banner.webp"
+              alt="Techsaga home banner"
+              fill
+              priority
+              quality={100}
+              className="object-cover object-bottom z-10"
+            />
+
+            {/* Optional overlay */}
+            {/* <div className="absolute inset-0 bg-black/20 -z-10" /> */}
+
             {/* ══════════════════════════════════════════════════
-            HERO
-        ══════════════════════════════════════════════════ */}
+      HERO
+  ══════════════════════════════════════════════════ */}
             <section
               className="relative overflow-hidden min-h-[550px] flex items-center lg:mx-[40px]"
-
               aria-labelledby="hero-heading"
             >
-              {/* Glow blobs */}
-              {/* <div className="absolute top-12 right-16 w-72 h-72 rounded-full bg-[#4291CE] opacity-10 blur-3xl pointer-events-none" /> */}
-              {/* <div className="absolute bottom-0 left-1/3 w-56 h-56 rounded-full bg-amber-400 opacity-10 blur-3xl pointer-events-none" /> */}
-
               <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-6 sm:px-10 lg:px-0 w-full py-20 lg:py-0 grid lg:grid-cols-2 gap-6 items-center z-10">
                 <div>
                   <div className="flex items-center gap-3 pb-4">
                     <span className="w-8 border-t-2 border border-[#000]"></span>
+
                     <p className="text-[#000] text-[14px] uppercase tracking-widest font-medium">
                       Trusted by 500+ companies across 50+ countries
                     </p>
                   </div>
-                  <h1 id="hero-heading" className="font-bold tracking-tight text-5xl sm:text-5xl lg:text-5xl text-black leading-tight mb-5 hero-animate">
-                    Building Trust.<br />
+
+                  <h1
+                    id="hero-heading"
+                    className="font-bold tracking-tight text-5xl sm:text-5xl lg:text-5xl text-black leading-tight mb-5 hero-animate"
+                  >
+                    Building Trust.
+                    <br />
                     <span className="text-[#000]">Enabling</span> Transformation.
                   </h1>
+
                   <p className="text-black/60 text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
-                    We don't just build software - we engineer momentum. From strategy to deployment, Techsaga partners with forward-thinking businesses to turn complex challenges into scalable digital solutions that actually move the needle.
+                    We don't just build software - we engineer momentum. From strategy
+                    to deployment, Techsaga partners with forward-thinking businesses
+                    to turn complex challenges into scalable digital solutions that
+                    actually move the needle.
                   </p>
+
                   <div className="flex flex-wrap gap-4 hero-animate-3">
-                    <Link href="/contact-us" className="bg-[#4291CE] hover:bg-[#4291CE] text-[#fff] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px">
+                    <Link
+                      href="/contact-us"
+                      className="bg-[#4291CE] hover:bg-[#4291CE] text-[#fff] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px"
+                    >
                       Get Started Today
                     </Link>
-                    <Link href="/portfolio" className="border hover:border-black/0 border-black/50 text-black hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200">
+
+                    <Link
+                      href="/portfolio"
+                      className="border hover:border-black/0 border-black/50 text-black hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200"
+                    >
                       Explore Our Work
                     </Link>
                   </div>
                 </div>
-                <div className="relative">
-                  {/* <div className="bg-white p-4 absolute text-center mx-auto -left-3 md:-left-15 rounded-sm sm:-bottom-6 -bottom-6 md:bottom-6">
-                    <img src="assets/img/software-development-icon.png" className="mx-auto mb-2" />
-                    <p className="text-[12px] font-semibold">Software Development</p>
-                  </div>
-                  <div className="h-full">
-                    <img
-                      src="/assets/img/trusted-partner.jpg"
-                      alt="Team collaborating in a modern office"
-                      className="object-cover rounded-sm w-full left-auto h-full"
-                    /> */}
-                  {/* </div> */}
-                </div>
+
+                <div className="relative"></div>
               </div>
             </section>
           </div>
