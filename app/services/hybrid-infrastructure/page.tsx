@@ -1,9 +1,16 @@
-"use client";
 
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import BottomForm from "@/components/BottomForm";
+
+
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/services/hybrid-infrastructure");
+}
+
 export default function HybridInfrastructurePage() {
   const features = [
     {

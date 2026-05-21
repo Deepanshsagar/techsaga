@@ -1,9 +1,11 @@
-"use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { useState } from "react";
 import BottomFrom from "@/components/BottomForm"
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+    return getMeta("/solutions/workday");
+}
 
 const servicesLeft = [
     {
@@ -41,7 +43,7 @@ const servicesLeft = [
 // ];
 
 const servicesRight = [
-     {
+    {
         title: "True Cloud-Native Infrastructure",
         desc: "Leverage a 100% microservices-based cloud environment for superior deployment speed and accessibility.",
         img: "/assets/img/dot-graphic1.png",
@@ -76,32 +78,10 @@ const servicesRight = [
 // ];
 
 export default function WorkdayPage() {
-    const [form, setForm] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        description: "",
-        robot: false,
-    });
-
-    const handleChange = (e: any) => {
-        const { name, value, type, checked } = e.target;
-        setForm((prev) => ({
-            ...prev,
-            [name]: type === "checkbox" ? checked : value,
-        }));
-    };
-
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-        alert("Form submitted!");
-    };
-
     return (
         <main className="font-sans text-gray-800 overflow-x-hidden">
             <Header />
-              <section
+            <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
                     backgroundImage: "url('/assets/img/solutions-page/WORKDAY.png')",
@@ -113,31 +93,31 @@ export default function WorkdayPage() {
                         <div >
                             <div>
                                 <img
-                                src="/assets/img/solutions-icon/Workday.png"
-                                width={70}
-                                height={70}
-                                className="object-contain rounded-[10px]"
+                                    src="/assets/img/solutions-icon/Workday.png"
+                                    width={70}
+                                    height={70}
+                                    className="object-contain rounded-[10px]"
                                 />
                             </div>
-                        <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                         Workday 
-                    
-                     <div className="lg:text-3xl text-3xl mt-2">
-                           One Platform. Your Entire Business.
-                           </div>
-                        </h1>
-                        <p className="text-white/60 text-base leading-relaxed mb-8">
-                            As an Official Workday Partner, we don't just "install" software; we unify your business. We bridge the gap between your people and your profits with the world’s most powerful cloud-native platform.
-                        </p>
-                        
-                    </div>
+                            <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                                Workday
+
+                                <div className="lg:text-3xl text-3xl mt-2">
+                                    One Platform. Your Entire Business.
+                                </div>
+                            </h1>
+                            <p className="text-white/60 text-base leading-relaxed mb-8">
+                                As an enterprise deployment partner, we engineer business unity. We bridge the gap between your workforce and your bottom line by deploying, integrating, and optimizing the world’s most powerful cloud-native platform.
+                            </p>
+
+                        </div>
 
                     </div>
                 </div>
             </section>
 
             {/* ── STRATEGIC STAFFING + FORM ── */}
-         
+
             {/* ── EXCELLING THE EXPERTISE ── */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-16">
@@ -145,7 +125,7 @@ export default function WorkdayPage() {
                         Accelerate Enterprise Agility with Workday’s AI-Native Cloud ERP
                     </h2>
                     <p className="text-center text-gray-500 max-w-3xl mx-auto mb-14 text-sm leading-relaxed">
-                       We’re the specialists who hit the ground running in a user-centric approach.
+                        We’re the specialists who hit the ground running in a user-centric approach.
                     </p>
 
                     <div className="grid lg:grid-cols-3 gap-8 items-center">
@@ -158,10 +138,10 @@ export default function WorkdayPage() {
                         <div className="flex justify-center">
                             <div
                                 className=" overflow-hidden "
-                                // style={{
-                                //     clipPath:
-                                //         "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)",
-                                // }}
+                            // style={{
+                            //     clipPath:
+                            //         "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)",
+                            // }}
                             >
                                 <img
                                     src="/assets/img/solutions-upper-image/Workday.png"
@@ -180,7 +160,7 @@ export default function WorkdayPage() {
                 </div>
             </section>
 
-             <section  className=" mt-10 px-4 mb-20">
+            <section className=" mt-10 px-4 mb-20">
                 <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
 
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Next Great Project Starts With One Conversation </h2>
@@ -204,10 +184,10 @@ export default function WorkdayPage() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-3 gap-12 ">
                     <div className="lg:col-span-1">
                         <h2 className="text-3xl font-bold leading-snug mb-5">
-                           One Source of Truth for Your Entire Business
+                            The Intelligent Hub for Next-Gen Operations
                         </h2>
                         <p className="text-white/60 text-sm leading-relaxed">
-                           Workday is the "central brain" of your organization. It’s a single, secure cloud space where Human Capital Management (HCM), Finance, and Payroll finally live together with one interface for everything.
+                            Automate the routine, predict the future, and align your entire enterprise. With an AI-driven ecosystem connecting your people and your profits, you get more than a database—you get a roadmap for sustainable growth.
                         </p>
                     </div>
 
@@ -288,18 +268,18 @@ export default function WorkdayPage() {
                     </div>
                 </div>
             </section> */}
-            <section  className=" mt-10 px-4">
-                
-            <div className="text-3xl font-bold text-gray-900 text-center mb-14">Is Your System Running You? Take Back Control.</div>
+            <section className=" mt-10 px-4">
+
+                <div className="text-3xl font-bold text-gray-900 text-center mb-10">Ready To Talk? Get in Touch</div>
 
                 <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
-                            {/* <h3 className="text-lg font-bold text-gray-900 mb-6">
+                    {/* <h3 className="text-lg font-bold text-gray-900 mb-6">
                                 Discuss Your Project
                             </h3> */}
-                            <BottomFrom />
+                    <BottomFrom />
                 </div>
             </section>
-           
+
 
             {/* ── TRUST TICKER ── */}
             {/* <div className="bg-[#4291CE] py-3 overflow-hidden">

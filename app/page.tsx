@@ -347,7 +347,7 @@ export default function TechSagaHomePage() {
 
   const router = useRouter();
 
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState(0);
 
   const firstRow = CLIENTS.slice(0, Math.ceil(CLIENTS.length / 2));
   const secondRow = CLIENTS.slice(Math.ceil(CLIENTS.length / 2));
@@ -364,21 +364,37 @@ export default function TechSagaHomePage() {
   const [emblaRef2, emblaApi2] = useEmblaCarousel({ loop: true, align: "start" });
   const [emblaRef3, emblaApi3] = useEmblaCarousel({ loop: true, align: "start" });
   const [emblaRef4, emblaApi4] = useEmblaCarousel({
+    align: "center",
     loop: true,
-    align: "start",
-    // dragFree: true,
-    // containScroll: "trimSnaps",
   });
 
   useEffect(() => {
     if (!emblaApi4) return;
-    const i4 = setInterval(() => emblaApi4.scrollNext(), 4000); // reverse
+
+    const onSelect = () => {
+      const centerIndex = emblaApi4.selectedScrollSnap();
+      setExpandedIndex(centerIndex);
+    };
+
+    onSelect();
+
+    emblaApi4.on("select", onSelect);
+
     return () => {
-      clearInterval(i4);
+      emblaApi4.off("select", onSelect);
     };
   }, [emblaApi4]);
+  useEffect(() => {
+    if (!emblaApi4) return;
 
-  
+    const interval = setInterval(() => {
+      emblaApi4.scrollNext();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [emblaApi4]);
+
+
 
   // useEffect(() => {
   //   if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
@@ -406,7 +422,7 @@ export default function TechSagaHomePage() {
 
 
           <Header />
-          <div style={{ backgroundImage: "url('/assets/img/home-banner.png')", }} className="pt-16  min-h-[650px] bg-cover bg-bottom">
+          <div style={{ backgroundImage: "url('/assets/img/home-banner.webp')", }} className="pt-16  min-h-[650px] bg-cover bg-bottom">
             {/* ══════════════════════════════════════════════════
             HERO
         ══════════════════════════════════════════════════ */}
@@ -469,7 +485,7 @@ export default function TechSagaHomePage() {
 
                 {/* Main Image */}
                 <Image
-                  src="/assets/img/building-trust.png"
+                  src="/assets/img/building-trust.webp"
                   alt="Enterprise digital transformation team"
                   fill
                   className="object-cover rounded-sm"
@@ -558,7 +574,7 @@ export default function TechSagaHomePage() {
       py-1 px-2 w-fit transition-colors duration-200 rounded-sm tracking-widest font-bold
     "
                       >
-                        <img src={svc.icon} className="max-w-5 h-auto object-contain" alt="" />
+                        <Image src={svc.icon} className="max-w-5 h-auto object-contain !relative" fill alt="" />
                         {svc.service}
                       </div>
 
@@ -620,7 +636,7 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             PRODUCT ENGINEERING
         ══════════════════════════════════════════════════ */}
-        
+
         <section
           className="py-16 lg:py-20"
           id="my-custom-trigger"
@@ -791,21 +807,22 @@ export default function TechSagaHomePage() {
                     return (
                       <div
                         key={i}
-                        onClick={() =>
-                          setExpandedIndex(isExpanded ? null : i)
-                        }
+                        onClick={() => emblaApi4?.scrollTo(i)}
                         className={`
-              relative flex-[0_0_85%]
-              px-5
-              sm:flex-[0_0_45%]
-              lg:flex-[0_0_20%]
-              min-h-[250px]
-              max-h-[250px]
-              cursor-pointer
-              ease-[cubic-bezier(0.16,1,0.3,1)]
-              will-change-transform
-              ${isExpanded ? "lg:flex-[0_0_35%]" : ""}
-            `}
+    relative flex-[0_0_85%]
+    px-5
+    sm:flex-[0_0_45%]
+    min-h-[250px]
+    max-h-[250px]
+    cursor-pointer
+    ease-[cubic-bezier(0.16,1,0.3,1)]
+    will-change-transform
+
+    ${isExpanded
+                            ? "lg:flex-[0_0_38%] scale-[1.02] z-20"
+                            : "lg:flex-[0_0_18%] opacity-80"
+                          }
+  `}
                       >
                         <div
                           style={{
@@ -863,9 +880,11 @@ export default function TechSagaHomePage() {
         ${isExpanded ? "scale-110 -translate-y-1" : ""}
       `}
                             >
-                              <img
+                              <Image
                                 src={item.img}
                                 alt={item.label}
+                                width={55}
+                                height={55}
                                 className={`
           w-[55px]
           transition-all duration-700
@@ -1098,10 +1117,10 @@ export default function TechSagaHomePage() {
                       <blockquote className="p-6 border border-gray-300 rounded-xl duration-200 h-full flex flex-col">
                         <div className="flex items-center gap-3 mb-4">
                           <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                            <img
+                            <Image
                               src={t.avatar}
                               alt={t.name}
-                              // fill
+                              fill
                               className="object-cover"
                             // unoptimized
                             />
@@ -1324,10 +1343,11 @@ export default function TechSagaHomePage() {
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
-                    <img
-                      src="assets/img/vec1.png"
+                    <Image
+                      src="/assets/img/vec1.png"
+                      fill
                       alt="consultation"
-                      className="w-full h-auto"
+                      className="w-full h-auto !static"
                     />
                   </div>
 
@@ -1352,10 +1372,11 @@ export default function TechSagaHomePage() {
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
-                    <img
-                      src="assets/img/vec2.png"
+                    <Image
+                      src="/assets/img/vec2.png"
                       alt="consultation"
-                      className="w-full h-auto"
+                      fill
+                      className="w-full h-auto !static"
                     />
                   </div>
 
@@ -1380,10 +1401,11 @@ export default function TechSagaHomePage() {
 
                   {/* Image */}
                   <div className="w-16 flex-shrink-0">
-                    <img
-                      src="assets/img/vec3.png"
+                    <Image
+                      src="/assets/img/vec3.png"
                       alt="consultation"
-                      className="w-full h-auto"
+                      fill
+                      className="w-full h-auto !static"
                     />
                   </div>
 

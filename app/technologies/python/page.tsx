@@ -2,7 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-
+import { getMeta } from "@/app/lib/getMeta";
+export async function generateMetadata() {
+  return getMeta("/technologies/python");
+}
 export default function PythonPage() {
   const pythonFeatures = [
     "Versatility for web development, data analysis, machine learning, automation, and more.",

@@ -1,7 +1,10 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import CommonCta from "@/components/CommonCta";
-
+import { getMeta } from "@/app/lib/getMeta";
+export async function generateMetadata() {
+  return getMeta("/hire/hire-laravel-developers");
+}
 export default function HireLaravelDevelopers() {
   return (
     <main>

@@ -1,8 +1,10 @@
-"use client"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import BottomFrom from "@/components/BottomForm"
-
+import { getMeta } from "@/app/lib/getMeta";
+export async function generateMetadata() {
+  return getMeta("/industries/healthcare");
+}
 const Industries = () => {
     return (
         <>

@@ -1,9 +1,11 @@
-"use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { useState } from "react";
 import BottomFrom from "@/components/BottomForm"
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/solutions/erpnext");
+}
 
 const servicesLeft = [
     {
@@ -42,29 +44,7 @@ const servicesRight = [
 ];
 
 export default function ERPNextPage() {
-    const [form, setForm] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        description: "",
-        robot: false,
-    });
-
-    const handleChange = (e: any) => {
-        const { name, value, type, checked } = e.target;
-
-        setForm((prev) => ({
-            ...prev,
-            [name]: type === "checkbox" ? checked : value,
-        }));
-    };
-
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-        alert("Form submitted!");
-    };
-
+   
     return (
         <main className="font-sans text-gray-800 overflow-x-hidden">
             <Header />
@@ -89,13 +69,11 @@ export default function ERPNextPage() {
                             </div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                                ERPNext
-                               <div className="text-3xl lg:text-4xl mt-2"> One Platform. Your Entire Open-Source Core.</div>
+                               <div className="lg:text-3xl text-3xl mt-2">Establish Absolute Governance Over Your Operations.</div>
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">
-                                Beyond deploying tools, Techsaga leverages ERPNext
-                                to connect operations, simplify workflows, and
-                                deliver greater control over your business processes.
+                                Successful enterprise management requires more than just deploying open-source tools. Techsaga leverages the comprehensive architecture of ERPNext to seamlessly integrate your core functions-unifying supply chain, finance, and operations into a single, highly auditable source of truth.
                             </p>
 
                           
@@ -190,14 +168,11 @@ export default function ERPNextPage() {
                 <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-1">
                         <h2 className="text-3xl font-bold leading-snug mb-5">
-                            One Source of Truth for Your Entire Lean Enterprise
+                            The Centralized Operational Engine for Lean Enterprises. 
                         </h2>
 
                         <p className="text-white/60 text-sm leading-relaxed">
-                            ERPNext is the operational engine of your organization.
-                            It’s a single, secure environment where your shop floor,
-                            sales team, and accounting department finally share a
-                            real-time, transparent database.
+                            Beyond standard open-source deployment, Techsaga engineers secure, fully integrated ERPNext ecosystems that consolidate your manufacturing, sales pipelines, and financial reporting into a single, transparent source of truth.
                         </p>
                     </div>
 
@@ -245,7 +220,7 @@ export default function ERPNextPage() {
 
             {/* CONTACT FORM */}
             <section className="mt-10 px-4">
-                <div className="text-3xl font-bold text-gray-900 text-center mb-14">
+                <div className="text-3xl font-bold text-gray-900 text-center mb-10">
                     Tired of Proprietary Licensing Traps? Take Back Control.
                 </div>
 

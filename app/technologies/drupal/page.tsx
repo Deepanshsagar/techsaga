@@ -3,6 +3,12 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/technologies/drupal");
+}
+
 export default function DrupalPage() {
   const drupalFeatures = [
     "Scalability that allows your website to grow as your business expands.",

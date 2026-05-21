@@ -1,11 +1,19 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
+
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/terms-and-conditions");
+}
+
+
 export default function TermsConditionsPage() {
   return (
     <main>
-                    <Header />
-        
+      <Header />
+
       {/* Header Section */}
       <section className="py-16 !mt-[100px]">
         <div className="relative max-w-7xl mx-auto px-4 w-full">
@@ -97,7 +105,7 @@ export default function TermsConditionsPage() {
           </div>
         </div>
       </section>
-                  <Footer />
+      <Footer />
 
     </main>
   );

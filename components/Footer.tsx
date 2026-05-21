@@ -201,10 +201,10 @@ const Footer = () => {
                                             label: "Privacy Policy",
                                             link: "/privacy-policy",
                                         },
-                                        // {
-                                        //     label: "Cancellation & Refund Policy",
-                                        //     link: "/cancellation-refund-policy",
-                                        // },
+                                        {
+                                            label: "Cancellation & Refund Policy",
+                                            link: "/cancellation-and-refund-policy",
+                                        },
                                     ].map((item) => (
                                         <li key={item?.label}>
                                             <Link href={item?.link} className="hover:text-black/60 text-black/80 transition-colors leading-snug block">

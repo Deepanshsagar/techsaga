@@ -1,9 +1,11 @@
-"use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { useState } from "react";
 import BottomFrom from "@/components/BottomForm"
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/solutions/sap");
+}
 
 const servicesLeft = [
     {
@@ -42,29 +44,7 @@ const servicesRight = [
 ];
 
 export default function SAPPage() {
-    const [form, setForm] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        description: "",
-        robot: false,
-    });
-
-    const handleChange = (e: any) => {
-        const { name, value, type, checked } = e.target;
-
-        setForm((prev) => ({
-            ...prev,
-            [name]: type === "checkbox" ? checked : value,
-        }));
-    };
-
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-        alert("Form submitted!");
-    };
-
+  
     return (
         <main className="font-sans text-gray-800 overflow-x-hidden">
             <Header />
@@ -89,7 +69,7 @@ export default function SAPPage() {
                             </div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                                 SAP
-                                <div className="text-3xl lg:text-4xl mt-2">One Platform. Your Entire Global Enterprise.</div>
+                                <div className="lg:text-3xl text-3xl mt-2">One Platform. Your Entire Global Enterprise.</div>
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">

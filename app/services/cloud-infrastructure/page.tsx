@@ -1,15 +1,22 @@
-"use client";
 
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import BottomForm from "@/components/BottomForm";
+
+
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/services/cloud-infrastructure");
+}
+
 export default function CloudInfrastructurePage() {
   const features = [
     {
       title: "Scalability",
       desc: "Cloud infrastructure allows for easy scalability, enabling businesses to quickly and efficiently adjust their computing resources based on demand.",
-      img: "/assets/img/services/service1.png",
+      img: "/assets/img/services/service1.jpg",
     },
     {
       title: "Cost Efficiency",
@@ -440,7 +447,7 @@ export default function CloudInfrastructurePage() {
                   key={index}
                   className="bg-white rounded-2xl p-6 shadow"
                 >
-                  <summary className="font-semibold text-lg cursor-pointer">
+                  <summary className="font-semibold text-lg cursor-pointer list-none">
                     ✦ {item.q}
                   </summary>
 

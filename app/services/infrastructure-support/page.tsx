@@ -5,6 +5,13 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 
+import { getMeta } from "@/app/lib/getMeta";
+
+export async function generateMetadata() {
+  return getMeta("/services/infrastructure-support");
+}
+
+
 export default function InfrastructureSupportPage() {
   const supportServices = [
     "24/7 Monitoring and Maintenance",
