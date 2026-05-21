@@ -1,17 +1,18 @@
-// auth.ts
+// app/lib/auth.ts
 
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import User from "../models/User";
 import bcrypt from "bcryptjs";
+
+import User from "../models/User";
 import connectDB from "./mongodb";
 
-interface IUser {
-  email: string;
-  password: string;
-}
-
-export const { handlers, signIn, signOut, auth } = NextAuth({
+export const {
+  handlers,
+  signIn,
+  signOut,
+  auth,
+} = NextAuth({
   providers: [
     Credentials({
       name: "Credentials",
@@ -38,9 +39,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             throw new Error("Email and password required");
           }
 
-
           // Find user
-           const user = await User.findOne({ email });
+          const user = await User.findOne({ email }).lean();
 
           if (!user) {
             throw new Error("User not found");
@@ -76,5 +76,24 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   pages: {
     signIn: "/admin",
   },
-  secret: process.env.NEXTAUTH_SECRET,
+
+  secret: process.env.AUTH_SECRET,
+
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+      }
+
+      return token;
+    },
+
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.id = token.id as string;
+      }
+
+      return session;
+    },
+  },
 });

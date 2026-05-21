@@ -224,7 +224,18 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [fetchHeader, setFetchHeader] = useState([]);
-  const [openMobileMenu, setOpenMobileMenu] = useState("");
+
+  const [openMobileMenu, setOpenMobileMenu] = useState<string>("");
+  const [openSubMenu, setOpenSubMenu] = useState<string>("");
+
+  const toggleMainMenu = (label: string) => {
+    setOpenMobileMenu(openMobileMenu === label ? "" : label);
+    setOpenSubMenu("");
+  };
+
+  const toggleSubMenu = (label: string) => {
+    setOpenSubMenu(openSubMenu === label ? "" : label);
+  };
 
   // console.log("fetchHeader",fetchHeader)
 
@@ -247,7 +258,7 @@ export default function Header() {
 
   return (
     <header
-    // fixed top-5 left-0 right-0 z-50 mx-5 md:mx-auto max-w-6xl  xl:max-w-7xl rounded-2xl transition-all duration-300
+      // fixed top-5 left-0 right-0 z-50 mx-5 md:mx-auto max-w-6xl  xl:max-w-7xl rounded-2xl transition-all duration-300
       className={`fixed top-5 left-[5px] right-[5px] lg:left-5 lg:right-5 z-50 mx-auto max-w-6xl xl:max-w-7xl rounded-2xl transition-all duration-300 bg-white/90 backdrop-blur-md shadow-[0_8px_20px_rgba(0,0,0,0.08)] border border-white/10
       ${scrolled
           ? "bg-white/70 backdrop-blur-sm shadow-[0_8px_20px_rgba(0,0,0,0.1)] border border-white/20"
@@ -583,22 +594,25 @@ export default function Header() {
           px-5 py-5
           rounded-b-2xl
           shadow-lg
+          overflow-auto
+          max-h-[85vh]
         "
         >
           <div className="flex flex-col">
             {NAV_LINKS.map((link) => (
               <div key={link.label} className="border-b border-gray-100">
+                {/* LEVEL 1 */}
                 <button
                   onClick={() =>
-                    setOpenMobileMenu(
-                      openMobileMenu === link.label ? "" : link.label
-                    )
+                    link.children
+                      ? toggleMainMenu(link.label)
+                      : null
                   }
                   className="
-                    w-full flex items-center justify-between
-                    py-4 text-left
-                    text-sm font-semibold text-gray-700
-                  "
+          w-full flex items-center justify-between
+          py-4 text-left
+          text-sm font-semibold text-gray-700
+        "
                 >
                   <Link href={link.url}>{link.label}</Link>
 
@@ -620,22 +634,70 @@ export default function Header() {
                   )}
                 </button>
 
+                {/* LEVEL 2 */}
                 {link.children && openMobileMenu === link.label && (
                   <div className="pb-4 pl-3 flex flex-col gap-1">
                     {link.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        href={child.url}
-                        className="
+                      <div key={child.label}>
+                        <button
+                          onClick={() =>
+                            child.children
+                              ? toggleSubMenu(child.label)
+                              : null
+                          }
+                          className="
+                  w-full flex items-center justify-between
+                  py-2 px-3 rounded-lg
+                  text-sm text-gray-600
+                  hover:bg-[#F4F9FD]
+                  hover:text-[#4291CE]
+                  transition-all duration-200
+                "
+                        >
+                          <Link href={child.url}>{child.label}</Link>
+
+                          {child.children && (
+                            <svg
+                              className={`w-4 h-4 transition-transform duration-200 ${openSubMenu === child.label
+                                ? "rotate-180"
+                                : ""
+                                }`}
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          )}
+                        </button>
+
+                        {/* LEVEL 3 */}
+                        {child.children &&
+                          openSubMenu === child.label && (
+                            <div className="ml-4 mt-1 flex flex-col gap-1 border-l border-gray-200 pl-3">
+                              {child.children.map((subChild) => (
+                                <Link
+                                  key={subChild.label}
+                                  href={subChild.url}
+                                  className="
                           py-2 px-3 rounded-lg
-                          text-sm text-gray-600
+                          text-sm text-gray-500
                           hover:bg-[#F4F9FD]
                           hover:text-[#4291CE]
                           transition-all duration-200
                         "
-                      >
-                        {child.label}
-                      </Link>
+                                >
+                                  {subChild.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -645,15 +707,15 @@ export default function Header() {
             <a
               href="/contact-us"
               className="
-                mt-5
-                bg-[#4291CE]
-                text-white
-                text-center
-                font-bold
-                py-3 rounded-xl
-                hover:bg-[#2F7FBC]
-                transition-all duration-200
-              "
+      mt-5
+      bg-[#4291CE]
+      text-white
+      text-center
+      font-bold
+      py-3 rounded-xl
+      hover:bg-[#2F7FBC]
+      transition-all duration-200
+    "
             >
               Get Consultation
             </a>
