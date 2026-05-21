@@ -347,7 +347,7 @@ export default function TechSagaHomePage() {
 
   const router = useRouter();
 
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState(0);
 
   const firstRow = CLIENTS.slice(0, Math.ceil(CLIENTS.length / 2));
   const secondRow = CLIENTS.slice(Math.ceil(CLIENTS.length / 2));
@@ -364,21 +364,37 @@ export default function TechSagaHomePage() {
   const [emblaRef2, emblaApi2] = useEmblaCarousel({ loop: true, align: "start" });
   const [emblaRef3, emblaApi3] = useEmblaCarousel({ loop: true, align: "start" });
   const [emblaRef4, emblaApi4] = useEmblaCarousel({
+    align: "center",
     loop: true,
-    align: "start",
-    // dragFree: true,
-    // containScroll: "trimSnaps",
   });
 
   useEffect(() => {
     if (!emblaApi4) return;
-    const i4 = setInterval(() => emblaApi4.scrollNext(), 4000); // reverse
+
+    const onSelect = () => {
+      const centerIndex = emblaApi4.selectedScrollSnap();
+      setExpandedIndex(centerIndex);
+    };
+
+    onSelect();
+
+    emblaApi4.on("select", onSelect);
+
     return () => {
-      clearInterval(i4);
+      emblaApi4.off("select", onSelect);
     };
   }, [emblaApi4]);
+  useEffect(() => {
+    if (!emblaApi4) return;
 
-  
+    const interval = setInterval(() => {
+      emblaApi4.scrollNext();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [emblaApi4]);
+
+
 
   // useEffect(() => {
   //   if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
@@ -620,7 +636,7 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             PRODUCT ENGINEERING
         ══════════════════════════════════════════════════ */}
-        
+
         <section
           className="py-16 lg:py-20"
           id="my-custom-trigger"
@@ -791,21 +807,22 @@ export default function TechSagaHomePage() {
                     return (
                       <div
                         key={i}
-                        onClick={() =>
-                          setExpandedIndex(isExpanded ? null : i)
-                        }
+                        onClick={() => emblaApi4?.scrollTo(i)}
                         className={`
-              relative flex-[0_0_85%]
-              px-5
-              sm:flex-[0_0_45%]
-              lg:flex-[0_0_20%]
-              min-h-[250px]
-              max-h-[250px]
-              cursor-pointer
-              ease-[cubic-bezier(0.16,1,0.3,1)]
-              will-change-transform
-              ${isExpanded ? "lg:flex-[0_0_35%]" : ""}
-            `}
+    relative flex-[0_0_85%]
+    px-5
+    sm:flex-[0_0_45%]
+    min-h-[250px]
+    max-h-[250px]
+    cursor-pointer
+    ease-[cubic-bezier(0.16,1,0.3,1)]
+    will-change-transform
+
+    ${isExpanded
+                            ? "lg:flex-[0_0_38%] scale-[1.02] z-20"
+                            : "lg:flex-[0_0_18%] opacity-80"
+                          }
+  `}
                       >
                         <div
                           style={{

@@ -64,7 +64,7 @@ export default function AdminLoginPage() {
       </div>
 
       {/* Login Card */}
-      <div className="relative z-10 w-full max-w-md bg-white/80 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl p-7">
+      <div className="relative z-10 w-full max-w-md bg-white/90 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl p-7">
         {/* Logo */}
         <div className="flex justify-center mb-5">
           {/* <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center text-white text-2xl font-bold"> */}

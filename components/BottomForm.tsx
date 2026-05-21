@@ -14,7 +14,14 @@ const BottomForm = () => {
     };
     const [showThankYouPopup, setShowThankYouPopup] = useState(false);
 
-    const [captcha, setCaptcha] = useState(generateCaptcha());
+    const [captcha, setCaptcha] = useState({
+        question: "",
+        answer: 0,
+    });
+
+    useEffect(() => {
+        setCaptcha(generateCaptcha());
+    }, []);
 
     const [formData, setFormData] = useState({
         firstName: "",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { getMeta } from "./lib/getMeta";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,50 +14,54 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Techsaga Corporations - Inspired for Innovation - Since 2012",
-  description: "Leading businesses through the backend, frontend tech, and digital infrastructure for next-gen transformation services and consulting solutions globally. Inspired for Innovation.",
-  alternates: {
-    canonical: "https://www.techsaga.co.in",
-  },
+export async function generateMetadata() {
+  return getMeta("/");
+}
 
-  openGraph: {
-    title: "Techsaga Corporations",
-    description:
-      "Leading businesses through backend, frontend tech and digital infrastructure.",
-    url: "https://www.techsaga.co.in",
-    siteName: "Techsaga Corporations",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "https://www.techsaga.co.in/assets/img/logo.webp",
-        width: 1200,
-        height: 630,
-        alt: "Techsaga Corporations",
-      },
-    ],
-  },
+// export const metadata: Metadata = {
+//   title: "Techsaga Corporations - Inspired for Innovation - Since 2012",
+//   description: "Leading businesses through the backend, frontend tech, and digital infrastructure for next-gen transformation services and consulting solutions globally. Inspired for Innovation.",
+//   alternates: {
+//     canonical: "https://www.techsaga.co.in",
+//   },
 
-  twitter: {
-    card: "summary_large_image",
-    title: "Techsaga Corporations",
-    description:
-      "Leading businesses through backend, frontend tech and digital infrastructure.",
-    images: [
-      "https://www.techsaga.co.in/assets/img/logo.webp",
-    ],
-  },
+//   openGraph: {
+//     title: "Techsaga Corporations",
+//     description:
+//       "Leading businesses through backend, frontend tech and digital infrastructure.",
+//     url: "https://www.techsaga.co.in",
+//     siteName: "Techsaga Corporations",
+//     locale: "en_US",
+//     type: "website",
+//     images: [
+//       {
+//         url: "https://www.techsaga.co.in/assets/img/logo.webp",
+//         width: 1200,
+//         height: 630,
+//         alt: "Techsaga Corporations",
+//       },
+//     ],
+//   },
 
-  verification: {
-    google: "M4Ve19GHQtvgFtIiadKFU_uJn4ADGf3zuUQYKIxtlVA",
-  },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Techsaga Corporations",
+//     description:
+//       "Leading businesses through backend, frontend tech and digital infrastructure.",
+//     images: [
+//       "https://www.techsaga.co.in/assets/img/logo.webp",
+//     ],
+//   },
 
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+//   verification: {
+//     google: "M4Ve19GHQtvgFtIiadKFU_uJn4ADGf3zuUQYKIxtlVA",
+//   },
+
+//   robots: {
+//     index: true,
+//     follow: true,
+//   },
+// };
 
 export default function RootLayout({
   children,
