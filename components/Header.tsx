@@ -641,7 +641,7 @@ export default function Header() {
                       <div key={child.label}>
                         <button
                           onClick={() =>
-                            child.children
+                            "children" in child
                               ? toggleSubMenu(child.label)
                               : null
                           }
@@ -656,7 +656,7 @@ export default function Header() {
                         >
                           <Link href={child.url}>{child.label}</Link>
 
-                          {child.children && (
+                          {"children" in child && child.children && (
                             <svg
                               className={`w-4 h-4 transition-transform duration-200 ${openSubMenu === child.label
                                 ? "rotate-180"
@@ -677,7 +677,8 @@ export default function Header() {
                         </button>
 
                         {/* LEVEL 3 */}
-                        {child.children &&
+                        {"children" in child &&
+                          child.children &&
                           openSubMenu === child.label && (
                             <div className="ml-4 mt-1 flex flex-col gap-1 border-l border-gray-200 pl-3">
                               {child.children.map((subChild) => (
@@ -685,12 +686,12 @@ export default function Header() {
                                   key={subChild.label}
                                   href={subChild.url}
                                   className="
-                          py-2 px-3 rounded-lg
-                          text-sm text-gray-500
-                          hover:bg-[#F4F9FD]
-                          hover:text-[#4291CE]
-                          transition-all duration-200
-                        "
+            py-2 px-3 rounded-lg
+            text-sm text-gray-500
+            hover:bg-[#F4F9FD]
+            hover:text-[#4291CE]
+            transition-all duration-200
+          "
                                 >
                                   {subChild.label}
                                 </Link>
