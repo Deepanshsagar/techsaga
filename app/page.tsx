@@ -419,6 +419,7 @@ export default function TechSagaHomePage() {
   //     clearInterval(i3);
   //   };
   // }, [emblaApi1, emblaApi2, emblaApi3]);
+  
 
   return (
     <div className="font-[Manrope,sans-serif] text-gray-800 bg-white antialiased">
@@ -433,13 +434,36 @@ export default function TechSagaHomePage() {
           <Header />
           <div className="relative pt-16 min-h-[650px] overflow-hidden">
             {/* Background Image */}
-            <Image
+            {/* <Image
               src="/assets/img/home-banner.webp"
               alt="Techsaga home banner"
               fill
               priority
               quality={100}
               className="object-cover object-bottom z-10"
+            /> */}
+            
+            <Image
+              src="/assets/img/home-banner.webp"
+              alt="Techsaga home banner"
+              fill
+              priority
+              fetchPriority="high"
+              quality={70}
+              sizes="(max-width: 768px) 100vw, 100vw"
+              className="hidden md:block object-cover object-bottom z-10"
+            />
+
+            {/* Mobile */}
+            <Image
+              src="/assets/img/home-banner-mobile.webp"
+              alt="Techsaga mobile banner"
+              fill
+              priority
+              fetchPriority="high"
+              quality={60}
+              sizes="100vw"
+              className="block md:hidden object-cover object-center z-10"
             />
 
             {/* Optional overlay */}
@@ -1239,8 +1263,8 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             BLOG
         ══════════════════════════════════════════════════ */}
-       
-       <BlogSection />
+
+        <BlogSection />
 
 
 

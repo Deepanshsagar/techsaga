@@ -61,7 +61,6 @@ export async function POST(req: Request) {
             // Multiple recipients
             to: [
                 process.env.MAIL_TO || "",
-                "hr@techsaga.co.in",
             ],
 
             // User email for direct reply

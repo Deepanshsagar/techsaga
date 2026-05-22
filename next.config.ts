@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
         hostname: "resources.techsaga.co.in",
       },
     ],
+    formats: ["image/avif", "image/webp"],
   },
 };
 
