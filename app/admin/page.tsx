@@ -68,7 +68,7 @@ export default function AdminLoginPage() {
         {/* Logo */}
         <div className="flex justify-center mb-5">
           {/* <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center text-white text-2xl font-bold"> */}
-           <img src="/assets/img/logo.webp" className="w-50" />
+           <img src="/assets/img/logo.webp" alt="logo" className="w-50" />
           {/* </div> */}
         </div>
         <p

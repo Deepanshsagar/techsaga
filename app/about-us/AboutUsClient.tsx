@@ -161,7 +161,7 @@ export default function AboutUs() {
 
                         <div className="group flex flex-col items-center justify-center p-6 border border-[#e2eaf5] rounded-[10px] bg-white transition-all duration-300 gap-3 min-h-[110px] hover:bg-[#1a73c5] hover:border-[#1a73c5] hover:shadow-[0_8px_24px_rgba(26,115,197,0.22)] hover:-translate-y-1">
 
-                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about1.png" alt="" />
+                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about1.png" alt="Learning Opportunity" />
 
                             <span className="text-[13px] font-medium text-gray-700 text-center transition-all duration-300 group-hover:text-white">
                                 Learning Opportunity
@@ -171,7 +171,7 @@ export default function AboutUs() {
 
                         <div className="group flex flex-col items-center justify-center p-6 border border-[#e2eaf5] rounded-[10px] bg-white transition-all duration-300 gap-3 min-h-[110px] hover:bg-[#1a73c5] hover:border-[#1a73c5] hover:shadow-[0_8px_24px_rgba(26,115,197,0.22)] hover:-translate-y-1">
 
-                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about2.png" alt="" />
+                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about2.png" alt="Insightful Guidance" />
 
                             <span className="text-[13px] font-medium text-gray-700 text-center transition-all duration-300 group-hover:text-white">
                                 Insightful Guidance
@@ -181,7 +181,7 @@ export default function AboutUs() {
 
                         <div className="group flex flex-col items-center justify-center p-6 border border-[#e2eaf5] rounded-[10px] bg-white transition-all duration-300 gap-3 min-h-[110px] hover:bg-[#1a73c5] hover:border-[#1a73c5] hover:shadow-[0_8px_24px_rgba(26,115,197,0.22)] hover:-translate-y-1">
 
-                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about3.png" alt="" />
+                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about3.png" alt="Thoughtful Evaluation" />
 
                             <span className="text-[13px] font-medium text-gray-700 text-center transition-all duration-300 group-hover:text-white">
                                 Thoughtful Evaluation
@@ -191,7 +191,7 @@ export default function AboutUs() {
 
                         <div className="group flex flex-col items-center justify-center p-6 border border-[#e2eaf5] rounded-[10px] bg-white transition-all duration-300 gap-3 min-h-[110px] hover:bg-[#1a73c5] hover:border-[#1a73c5] hover:shadow-[0_8px_24px_rgba(26,115,197,0.22)] hover:-translate-y-1">
 
-                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about4.png" alt="" />
+                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about4.png" alt="Culture Diversity" />
 
                             <span className="text-[13px] font-medium text-gray-700 text-center transition-all duration-300 group-hover:text-white">
                                 Culture Diversity
@@ -205,7 +205,7 @@ export default function AboutUs() {
 
                         <div className="group flex flex-col items-center justify-center p-6 border border-[#e2eaf5] rounded-[10px] bg-white transition-all duration-300 gap-3 min-h-[110px] hover:bg-[#1a73c5] hover:border-[#1a73c5] hover:shadow-[0_8px_24px_rgba(26,115,197,0.22)] hover:-translate-y-1">
 
-                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about5.png" alt="" />
+                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about5.png" alt="Innovations" />
 
                             <span className="text-[13px] font-medium text-gray-700 text-center transition-all duration-300 group-hover:text-white">
                                 Innovations
@@ -215,7 +215,7 @@ export default function AboutUs() {
 
                         <div className="group flex flex-col items-center justify-center p-6 border border-[#e2eaf5] rounded-[10px] bg-white transition-all duration-300 gap-3 min-h-[110px] hover:bg-[#1a73c5] hover:border-[#1a73c5] hover:shadow-[0_8px_24px_rgba(26,115,197,0.22)] hover:-translate-y-1">
 
-                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about6.png" alt="" />
+                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about6.png" alt="Leadership" />
 
                             <span className="text-[13px] font-medium text-gray-700 text-center transition-all duration-300 group-hover:text-white">
                                 Leadership
@@ -225,7 +225,7 @@ export default function AboutUs() {
 
                         <div className="group flex flex-col items-center justify-center p-6 border border-[#e2eaf5] rounded-[10px] bg-white transition-all duration-300 gap-3 min-h-[110px] hover:bg-[#1a73c5] hover:border-[#1a73c5] hover:shadow-[0_8px_24px_rgba(26,115,197,0.22)] hover:-translate-y-1">
 
-                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about7.png" alt="" />
+                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about7.png" alt="Worldwide Prospects" />
 
                             <span className="text-[13px] font-medium text-gray-700 text-center transition-all duration-300 group-hover:text-white">
                                 Worldwide Prospects
@@ -235,7 +235,7 @@ export default function AboutUs() {
 
                         <div className="group flex flex-col items-center justify-center p-6 border border-[#e2eaf5] rounded-[10px] bg-white transition-all duration-300 gap-3 min-h-[110px] hover:bg-[#1a73c5] hover:border-[#1a73c5] hover:shadow-[0_8px_24px_rgba(26,115,197,0.22)] hover:-translate-y-1">
 
-                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about8.png" alt="" />
+                            <img className="bg-[gainsboro] w-[50px] h-[50px] rounded-[50%] p-[11px]" src="/assets/img/icon/about8.png" alt="Innovative Tools" />
 
                             <span className="text-[13px] font-medium text-gray-700 text-center transition-all duration-300 group-hover:text-white">
                                 Innovative Tools
@@ -265,7 +265,7 @@ export default function AboutUs() {
 
                                 <img
                                     src="/assets/img/about.jpg"
-                                    alt=""
+                                    alt="about us image"
                                     className="w-[350px] h-[380px] object-cover rounded-[5px]"
                                 />
 
@@ -275,7 +275,7 @@ export default function AboutUs() {
 
                                 <img
                                     src="/assets/img/about2.jpg"
-                                    alt=""
+                                    alt="about us image"
                                     className="w-[350px] h-[380px] object-cover rounded-[5px]"
                                 />
 

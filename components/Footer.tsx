@@ -55,11 +55,11 @@ const Footer = () => {
                         {/* Left: Brand + contact */}
                         <div>
                             {/* className="flex items-center gap-0.5 flex-shrink-0"  */}
-                            <a href="#" aria-label="TechSaga Home">
+                            <Link href="/" aria-label="TechSaga Home">
                                 {/* <span className="text-[#4291CE] font-display font-bold text-xl tracking-tight">TECH</span>
                   <span className="font-display font-bold text-xl tracking-tight text-gray-900">SAGA</span> */}
-                                <img src="/assets/img/logo.webp" className="max-w-[160px] h-auto" />
-                            </a>
+                                <img src="/assets/img/logo.webp" alt="Techsaga logo" className="max-w-[160px] h-auto" />
+                            </Link>
                             {/* <p className="text-[10px] uppercase tracking-[0.2em]  text-black/80 mb-5">Inspired for Innovation</p> */}
                             <p className="text-sm leading-relaxed mb-6  text-black/80 max-w-[260px]">
                                 Global digital transformation and enterprise enablement partner delivering outcome-driven technology, marketing, and managed services since 2012. Serving enterprises, governments, and institutions across 50+ countries.
