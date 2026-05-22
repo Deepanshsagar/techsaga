@@ -9,6 +9,15 @@ import Footer from "@/components/Footer";
 import { SectionTag } from "./utils/utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+import BlogSkeleton from "@/components/BlogSkeleton";
+
+const BlogSection = dynamic(
+  () => import("@/components/BlogSection"),
+  {
+    loading: () => <BlogSkeleton />,
+  }
+);
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 interface ServiceCard {
@@ -1230,49 +1239,8 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             BLOG
         ══════════════════════════════════════════════════ */}
-        <section className="py-16 lg:py-20 bg-[#e3eff8]" aria-label="News Articles and Blogs" >
-          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <FadeUp className="text-center mb-12">
-              <SplitContainer>
-                <SectionTag>Latest trends</SectionTag>
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">
-                  Explore Latest News, Articles, And Blogs
-                </h2>
-              </SplitContainer>
-            </FadeUp>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5 rounded-2xl">
-              {BLOGS.map((b, i) => (
-                <FadeUp key={b.title} delay={i * 80}>
-                  <article className="overflow-hidden rounded hover:-translate-y-1 transition-all duration-200 group flex flex-col">
-                    <div className="relative h-60 overflow-hidden">
-                      <Image
-                        src={b.img}
-                        alt={b.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-400"
-                        unoptimized
-                      />
-                    </div>
-                    <div className="pt-2 flex flex-col flex-1">
-                      {/* <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">{b.tag}</span> */}
-                      <h3 className="font-bold text-gray-900 text-base mt-2 mb-2 leading-snug">{b.title}</h3>
-                      {/* <p className="text-gray-500 text-xs leading-relaxed mb-4 flex-1">{b.excerpt}</p> */}
-                      {/* <a href="#" className="text-blue-600 text-sm font-semibold hover:underline">Read More →</a> */}
-                    </div>
-                  </article>
-                </FadeUp>
-              ))}
-            </div>
-            <FadeUp className="text-center mt-10">
-              <a href="https://resources.techsaga.co.in/blog/" className="inline-flex items-center gap-2 bg-[#4291CE] hover:bg-[#4291CE] text-white px-8 py-3 rounded font-semibold text-sm transition-colors">
-                View All Blogs
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </FadeUp>
-          </div>
-        </section>
+       
+       <BlogSection />
 
 
 
