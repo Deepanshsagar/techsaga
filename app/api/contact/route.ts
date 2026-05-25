@@ -207,7 +207,7 @@ export async function POST(req: Request) {
                     style="display: inline-block;"
                   >
                     <img
-                      src="https://www.techsaga.co.in/assets/img/logo-w.webp"
+                      src="https://www.techsaga.co.in/assets/img/logo-w.png"
                       alt="Techsaga Logo"
                       style="
                         max-width: 180px;
