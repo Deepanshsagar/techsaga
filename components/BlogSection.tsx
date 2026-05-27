@@ -111,6 +111,7 @@ function BlogSection() {
               ))}
             </div>
           </div>
+          <Link className="bg-[#4291CE] text-white w-fit mx-auto block hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 mt-10 rounded transition-all duration-200 whitespace-nowrap flex-shrink-0 rounded-md" href="https://resources.techsaga.co.in/blog/">View All Blogs →</Link>
         </section>
       )}
     </>

@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import BottomFrom from "@/components/BottomForm"
 import { getMeta } from "@/app/lib/getMeta";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return getMeta("/solutions/servicenow");
@@ -183,9 +184,11 @@ export default function ServiceNowPage() {
 
                     <div className="flex justify-center">
                         <div className="rounded-xl overflow-hidden shadow-2xl">
-                            <img
-                                src="/assets/img/solution-m.png"
-                                alt="ServiceNow Enterprise"
+                            <Image
+                                src="/assets/img/servicenow-trust.webp"
+                                alt="AWS Cloud"
+                                width={350}
+                                height={458}
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -226,7 +229,7 @@ export default function ServiceNowPage() {
             {/* CONTACT FORM */}
             <section className="mt-10 px-4">
                 <div className="text-3xl font-bold text-gray-900 text-center mb-10">
-                    Ready To Talk? Get in Touch
+                    READY TO DISCUSS? Get in Touch
                 </div>
 
                 <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">

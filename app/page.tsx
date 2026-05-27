@@ -405,20 +405,20 @@ export default function TechSagaHomePage() {
 
 
 
-  // useEffect(() => {
-  //   if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
+  useEffect(() => {
+    if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
 
-  //   const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
-  //   const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
-  //   const i3 = setInterval(() => emblaApi3.scrollNext(), 2000); // reverse
+    const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
+    const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
+    const i3 = setInterval(() => emblaApi3.scrollNext(), 2000); // reverse
 
 
-  //   return () => {
-  //     clearInterval(i1);
-  //     clearInterval(i2);
-  //     clearInterval(i3);
-  //   };
-  // }, [emblaApi1, emblaApi2, emblaApi3]);
+    return () => {
+      clearInterval(i1);
+      clearInterval(i2);
+      clearInterval(i3);
+    };
+  }, [emblaApi1, emblaApi2, emblaApi3]);
   
 
   return (

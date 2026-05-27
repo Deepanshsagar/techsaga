@@ -2,9 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import BottomFrom from "@/components/BottomForm"
 import { getMeta } from "@/app/lib/getMeta";
+import Image from "next/image";
 
 export async function generateMetadata() {
-  return getMeta("/solutions/contract-consulting");
+    return getMeta("/solutions/contract-consulting");
 }
 
 const servicesLeft = [
@@ -44,7 +45,7 @@ const servicesRight = [
 ];
 
 export default function ContractConsultingPage() {
-    
+
     return (
         <main className="font-sans text-gray-800 overflow-x-hidden">
             <Header />
@@ -61,25 +62,25 @@ export default function ContractConsultingPage() {
                         <div>
                             <div>
                                 <img
-                                src="/assets/img/solutions-icon/Consulting-Now.png"
-                                width={70}
-                                height={70}
-                                className="object-contain rounded-[10px]"
+                                    src="/assets/img/solutions-icon/Consulting-Now.png"
+                                    width={70}
+                                    height={70}
+                                    className="object-contain rounded-[10px]"
                                 />
                             </div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                               Contract Consulting
-                               <div className="lg:text-3xl text-3xl mt-2"> Expert Guidance for Every Stage of Your Business Growth.</div>
+                                Contract Consulting
+                                <div className="lg:text-3xl text-3xl mt-2"> Expert Guidance for Every Stage of Your Business Growth.</div>
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">
-                                Techsaga is a specialized Contract Consulting partner, we synergize your 
+                                Techsaga is a specialized Contract Consulting partner, we synergize your
                                 intellectual capital. We bridge the gap between high-level strategy and operational
-                                 execution, transforming fragmented efforts into a unified, high-velocity engine built
-                                  for the modern project economy.
+                                execution, transforming fragmented efforts into a unified, high-velocity engine built
+                                for the modern project economy.
                             </p>
 
-                           
+
                         </div>
                     </div>
                 </div>
@@ -187,9 +188,11 @@ export default function ContractConsultingPage() {
 
                     <div className="flex justify-center">
                         <div className="rounded-xl overflow-hidden shadow-2xl">
-                            <img
-                                src="/assets/img/solution-m.png"
-                                alt="Contract Consulting"
+                            <Image
+                                src="/assets/img/contract-consulting-trust.webp"
+                                alt="AWS Cloud"
+                                width={350}
+                                height={458}
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -230,7 +233,7 @@ export default function ContractConsultingPage() {
             {/* CONTACT FORM */}
             <section className="mt-10 px-4">
                 <div className="text-3xl font-bold text-gray-900 text-center mb-14">
-                    Are Your Agreements Exposing You to Risk?
+                    READY TO DISCUSS? Get in Touch
                 </div>
 
                 <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">

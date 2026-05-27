@@ -7,6 +7,7 @@ import Link from "next/link";
 
 
 import { getMeta } from "@/app/lib/getMeta";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return getMeta("/solutions/aws-amazon-web-services");
@@ -188,9 +189,11 @@ export default function AWSPage() {
 
                     <div className="flex justify-center">
                         <div className="rounded-xl overflow-hidden shadow-2xl">
-                            <img
-                                src="/assets/img/solution-m.png"
+                            <Image
+                                src="/assets/img/aws-trust.webp"
                                 alt="AWS Cloud"
+                                width={350}
+                                height={458}
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -231,7 +234,7 @@ export default function AWSPage() {
             {/* CONTACT FORM */}
             <section className="mt-10 px-4">
                 <div className="text-3xl font-bold text-gray-900 text-center mb-14">
-                    Are Your Servers Holding You Back? Take Back Control.
+                    READY TO DISCUSS? Get in Touch
                 </div>
 
                 <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
