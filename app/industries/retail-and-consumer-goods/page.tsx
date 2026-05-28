@@ -13,7 +13,7 @@ const Industries = () => {
             <section
                 className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
-                    backgroundImage: "url('/assets/img/industries-page/Retail-Consumer-Goods.png')",
+                    backgroundImage: "url('/assets/img/industries-page/Retail-Consumer-Goods.webp')",
                 }}
             >
                 <div className="relative max-w-7xl mx-auto px-4 w-full">

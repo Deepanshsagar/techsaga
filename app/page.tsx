@@ -9,6 +9,15 @@ import Footer from "@/components/Footer";
 import { SectionTag } from "./utils/utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
+import BlogSkeleton from "@/components/BlogSkeleton";
+
+const BlogSection = dynamic(
+  () => import("@/components/BlogSection"),
+  {
+    loading: () => <BlogSkeleton />,
+  }
+);
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 interface ServiceCard {
@@ -396,20 +405,21 @@ export default function TechSagaHomePage() {
 
 
 
-  // useEffect(() => {
-  //   if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
+  useEffect(() => {
+    if (!emblaApi1 || !emblaApi2 || !emblaApi3) return;
 
-  //   const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
-  //   const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
-  //   const i3 = setInterval(() => emblaApi3.scrollNext(), 2000); // reverse
+    const i1 = setInterval(() => emblaApi1.scrollNext(), 2000);
+    const i2 = setInterval(() => emblaApi2.scrollNext(), 2000); // reverse
+    const i3 = setInterval(() => emblaApi3.scrollNext(), 2000); // reverse
 
 
-  //   return () => {
-  //     clearInterval(i1);
-  //     clearInterval(i2);
-  //     clearInterval(i3);
-  //   };
-  // }, [emblaApi1, emblaApi2, emblaApi3]);
+    return () => {
+      clearInterval(i1);
+      clearInterval(i2);
+      clearInterval(i3);
+    };
+  }, [emblaApi1, emblaApi2, emblaApi3]);
+  
 
   return (
     <div className="font-[Manrope,sans-serif] text-gray-800 bg-white antialiased">
@@ -422,56 +432,94 @@ export default function TechSagaHomePage() {
 
 
           <Header />
-          <div style={{ backgroundImage: "url('/assets/img/home-banner.webp')", }} className="pt-16  min-h-[650px] bg-cover bg-bottom">
+          <div className="relative pt-16 min-h-[650px] overflow-hidden">
+            {/* Background Image */}
+            {/* <Image
+              src="/assets/img/home-banner.webp"
+              alt="Techsaga home banner"
+              fill
+              priority
+              quality={100}
+              className="object-cover object-bottom z-10"
+            /> */}
+            
+            <Image
+              src="/assets/img/home-banner.webp"
+              alt="Techsaga home banner"
+              fill
+              priority
+              fetchPriority="high"
+              quality={70}
+              sizes="(max-width: 768px) 100vw, 100vw"
+              className="hidden md:block object-cover object-bottom z-10"
+            />
+
+            {/* Mobile */}
+            <Image
+              src="/assets/img/home-banner-mobile.webp"
+              alt="Techsaga mobile banner"
+              fill
+              priority
+              fetchPriority="high"
+              quality={60}
+              sizes="100vw"
+              className="block md:hidden object-cover object-center z-10"
+            />
+
+            {/* Optional overlay */}
+            {/* <div className="absolute inset-0 bg-black/20 -z-10" /> */}
+
             {/* ══════════════════════════════════════════════════
-            HERO
-        ══════════════════════════════════════════════════ */}
+      HERO
+  ══════════════════════════════════════════════════ */}
             <section
               className="relative overflow-hidden min-h-[550px] flex items-center lg:mx-[40px]"
-
               aria-labelledby="hero-heading"
             >
-              {/* Glow blobs */}
-              {/* <div className="absolute top-12 right-16 w-72 h-72 rounded-full bg-[#4291CE] opacity-10 blur-3xl pointer-events-none" /> */}
-              {/* <div className="absolute bottom-0 left-1/3 w-56 h-56 rounded-full bg-amber-400 opacity-10 blur-3xl pointer-events-none" /> */}
-
               <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-6 sm:px-10 lg:px-0 w-full py-20 lg:py-0 grid lg:grid-cols-2 gap-6 items-center z-10">
                 <div>
                   <div className="flex items-center gap-3 pb-4">
                     <span className="w-8 border-t-2 border border-[#000]"></span>
+
                     <p className="text-[#000] text-[14px] uppercase tracking-widest font-medium">
                       Trusted by 500+ companies across 50+ countries
                     </p>
                   </div>
-                  <h1 id="hero-heading" className="font-bold tracking-tight text-5xl sm:text-5xl lg:text-5xl text-black leading-tight mb-5 hero-animate">
-                    Building Trust.<br />
+
+                  <h1
+                    id="hero-heading"
+                    className="font-bold tracking-tight text-5xl sm:text-5xl lg:text-5xl text-black leading-tight mb-5 hero-animate"
+                  >
+                    Building Trust.
+                    <br />
                     <span className="text-[#000]">Enabling</span> Transformation.
                   </h1>
+
                   <p className="text-black/60 text-base font-light lg:text-md mb-8 max-w-lg leading-relaxed hero-animate-2">
-                    We don't just build software - we engineer momentum. From strategy to deployment, Techsaga partners with forward-thinking businesses to turn complex challenges into scalable digital solutions that actually move the needle.
+                    We don't just build software - we engineer momentum. From strategy
+                    to deployment, Techsaga partners with forward-thinking businesses
+                    to turn complex challenges into scalable digital solutions that
+                    actually move the needle.
                   </p>
+
                   <div className="flex flex-wrap gap-4 hero-animate-3">
-                    <Link href="/contact-us" className="bg-[#4291CE] hover:bg-[#4291CE] text-[#fff] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px">
+                    <Link
+                      href="/contact-us"
+                      className="bg-[#4291CE] hover:bg-[#4291CE] text-[#fff] text-sm font-bold px-7 py-3 rounded transition-all hover:-translate-y-px"
+                    >
                       Get Started Today
                     </Link>
-                    <Link href="/portfolio" className="border hover:border-black/0 border-black/50 text-black hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200">
+
+                    <Link
+                      href="/portfolio"
+                      className="border hover:border-black/0 border-black/50 text-black hover:bg-white hover:text-[#4291CE] text-sm font-bold px-7 py-3 rounded transition-all duration-200"
+                    >
                       Explore Our Work
                     </Link>
                   </div>
                 </div>
-                <div className="relative">
-                  {/* <div className="bg-white p-4 absolute text-center mx-auto -left-3 md:-left-15 rounded-sm sm:-bottom-6 -bottom-6 md:bottom-6">
-                    <img src="assets/img/software-development-icon.png" className="mx-auto mb-2" />
-                    <p className="text-[12px] font-semibold">Software Development</p>
-                  </div>
-                  <div className="h-full">
-                    <img
-                      src="/assets/img/trusted-partner.jpg"
-                      alt="Team collaborating in a modern office"
-                      className="object-cover rounded-sm w-full left-auto h-full"
-                    /> */}
-                  {/* </div> */}
-                </div>
+
+                <div className="relative"></div>
               </div>
             </section>
           </div>
@@ -1215,49 +1263,8 @@ export default function TechSagaHomePage() {
         {/* ══════════════════════════════════════════════════
             BLOG
         ══════════════════════════════════════════════════ */}
-        <section className="py-16 lg:py-20 bg-[#e3eff8]" aria-label="News Articles and Blogs" >
-          <div className="lg:max-w-6xl xl:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <FadeUp className="text-center mb-12">
-              <SplitContainer>
-                <SectionTag>Latest trends</SectionTag>
-                <h2 className="font-display text-3xl lg:text-4xl font-bold text-gray-900">
-                  Explore Latest News, Articles, And Blogs
-                </h2>
-              </SplitContainer>
-            </FadeUp>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5 rounded-2xl">
-              {BLOGS.map((b, i) => (
-                <FadeUp key={b.title} delay={i * 80}>
-                  <article className="overflow-hidden rounded hover:-translate-y-1 transition-all duration-200 group flex flex-col">
-                    <div className="relative h-60 overflow-hidden">
-                      <Image
-                        src={b.img}
-                        alt={b.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-400"
-                        unoptimized
-                      />
-                    </div>
-                    <div className="pt-2 flex flex-col flex-1">
-                      {/* <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">{b.tag}</span> */}
-                      <h3 className="font-bold text-gray-900 text-base mt-2 mb-2 leading-snug">{b.title}</h3>
-                      {/* <p className="text-gray-500 text-xs leading-relaxed mb-4 flex-1">{b.excerpt}</p> */}
-                      {/* <a href="#" className="text-blue-600 text-sm font-semibold hover:underline">Read More →</a> */}
-                    </div>
-                  </article>
-                </FadeUp>
-              ))}
-            </div>
-            <FadeUp className="text-center mt-10">
-              <a href="https://resources.techsaga.co.in/blog/" className="inline-flex items-center gap-2 bg-[#4291CE] hover:bg-[#4291CE] text-white px-8 py-3 rounded font-semibold text-sm transition-colors">
-                View All Blogs
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </FadeUp>
-          </div>
-        </section>
+
+        <BlogSection />
 
 
 

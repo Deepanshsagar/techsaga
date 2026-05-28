@@ -627,10 +627,10 @@ const ServicePage = () => {
             (service: any, index: number) => (
               <div
                 key={index}
-                className="relative bg-white border-l-[9px] border-l-[#4291CE] border border-[#4291CE] rounded-2xl p-8 pl-20 shadow-md hover:shadow-2xl transition-all duration-300"
+                className="relative bg-white border-l-[9px] border-l-[#4291CE] border border-[#4291CE] rounded-2xl p-8 pl-15 shadow-md hover:shadow-2xl transition-all duration-300"
               >
                 {/* ICON */}
-                <div className="absolute left-[-30px] top-1/2 -translate-y-1/2 w-20 h-20 rounded-full border-2 border-[#4291CE] bg-white flex items-center justify-center">
+                <div className="absolute left-[-40px] top-1/2 -translate-y-1/2 w-20 h-20 rounded-full border-2 border-[#4291CE] bg-white flex items-center justify-center">
                   <img
                     src={service.img}
                     alt={service.title}
@@ -641,14 +641,16 @@ const ServicePage = () => {
                 </div>
 
                 {/* CONTENT */}
-                <div>
-                  <h2 className="text-[22px] font-bold mb-3 text-[#111827]">
-                    {service.title}
-                  </h2>
+                <div className="flex flex-col justify-between min-h-[230px]">
+                  <div>
+                    <h2 className="text-[22px] font-bold mb-3 text-[#111827]">
+                      {service.title}
+                    </h2>
 
-                  <p className="text-[16px] text-gray-600 leading-7 mb-6 text-sm">
-                    {service.desc}
-                  </p>
+                    <p className="text-[16px] text-gray-600 leading-7 mb-6 text-sm">
+                      {service.desc}
+                    </p>
+                  </div>
                   {/* <Link href={service.link}>
                   <button className="bg-[#4291CE] hover:bg-[#2f79b2] transition-all duration-300 text-white px-5 py-3 rounded-md text-sm font-semibold">
                     Learn More →
@@ -657,7 +659,7 @@ const ServicePage = () => {
                   {service.link && (
                     <Link
                       href={service.link}
-                      className="inline-block bg-[#4291CE] hover:bg-[#2f79b2] transition-all duration-300 text-white px-5 py-3 rounded-md text-sm font-semibold"
+                      className="inline-block w-fit bg-[#4291CE] hover:bg-[#2f79b2] transition-all duration-300 text-white px-5 py-3 rounded-md text-sm font-semibold"
                     >
                       Learn More →
                     </Link>

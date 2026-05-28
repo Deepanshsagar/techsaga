@@ -179,16 +179,16 @@ export default function PortfolioSection() {
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 mb-0">
               Works Done by Techsaga
             </h2>
 
-            <div className="flex justify-center mb-5">
+            <div className="flex justify-center mb-0">
               <img
                 src="/assets/img/line1.png"
                 alt="line"
-                width={180}
-                height={20}
+                width={160}
+                height={10}
               />
             </div>
 

@@ -2,8 +2,9 @@ import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import BottomFrom from "@/components/BottomForm"
 import { getMeta } from "@/app/lib/getMeta";
+import Image from "next/image";
 export async function generateMetadata() {
-  return getMeta("/industries/travel-tourism");
+    return getMeta("/industries/travel-tourism");
 }
 const Industries = () => {
     return (
@@ -11,28 +12,38 @@ const Industries = () => {
             <Header />
 
             {/* HERO SECTION */}
-            <section
-                className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
-                style={{
-                    backgroundImage: "url('/assets/img/industries-page/Travel-Tourism.png')",
-                }}
-            >
+            <section className="relative overflow-hidden min-h-[650px] flex items-center">
+                {/* Background Image */}
+                <Image
+                    src="/assets/img/industries-page/Travel-Tourism.webp"
+                    alt="Travel & Hospitality"
+                    fill
+                    priority
+                    quality={75}
+                    className="object-cover object-center -z-10"
+                    sizes="100vw"
+                />
+
+                {/* Optional overlay */}
+                <div className="absolute inset-0 bg-black/40 -z-10" />
+
                 <div className="relative max-w-7xl mx-auto px-4 w-full">
                     <div className="grid lg:grid-cols-2 items-center gap-12">
-
                         <div>
-
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                                 Travel & Hospitality Solutions
-                                <div className="text-3xl lg:text-4xl mt-2">Precision in Personalization</div>
+                                <div className="text-3xl lg:text-4xl mt-2">
+                                    Precision in Personalization
+                                </div>
                             </h1>
 
                             <p className="text-white text-base leading-relaxed mb-8">
-                                In a world where experiences are the ultimate currency, your travel platform must be as inspiring as the destinations you promote. We build high-velocity, guest-centric ecosystems that bridge the gap between booking complexity and seamless, unforgettable journeys.
+                                In a world where experiences are the ultimate currency, your travel
+                                platform must be as inspiring as the destinations you promote. We
+                                build high-velocity, guest-centric ecosystems that bridge the gap
+                                between booking complexity and seamless, unforgettable journeys.
                             </p>
-
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -230,13 +241,13 @@ const Industries = () => {
 
                             <div className="flex items-center relative z-10 gap-4">
                                 <a href="/contact-us">
-                                <span className="text-[18px] font-semibold text-black tracking-[-0.3px]">
-                                    Let's Get Started
-                                </span>
+                                    <span className="text-[18px] font-semibold text-black tracking-[-0.3px]">
+                                        Let's Get Started
+                                    </span>
 
-                                <span className="text-2xl transition-all duration-300 group-hover:translate-x-1">
-                                    →
-                                </span>
+                                    <span className="text-2xl transition-all duration-300 group-hover:translate-x-1">
+                                        →
+                                    </span>
                                 </a>
 
                             </div>

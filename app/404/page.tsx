@@ -16,6 +16,7 @@ export default function NotFoundPage() {
               <div className="mb-10">
               <img 
               src="/assets/img/404.png"
+              alt="404 error"
               />
               </div>
 

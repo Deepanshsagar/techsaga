@@ -55,11 +55,11 @@ const Footer = () => {
                         {/* Left: Brand + contact */}
                         <div>
                             {/* className="flex items-center gap-0.5 flex-shrink-0"  */}
-                            <a href="#" aria-label="TechSaga Home">
+                            <Link href="/" aria-label="TechSaga Home">
                                 {/* <span className="text-[#4291CE] font-display font-bold text-xl tracking-tight">TECH</span>
                   <span className="font-display font-bold text-xl tracking-tight text-gray-900">SAGA</span> */}
-                                <img src="/assets/img/logo.webp" className="max-w-[160px] h-auto" />
-                            </a>
+                                <img src="/assets/img/logo.webp" alt="Techsaga logo" className="max-w-[160px] h-auto" />
+                            </Link>
                             {/* <p className="text-[10px] uppercase tracking-[0.2em]  text-black/80 mb-5">Inspired for Innovation</p> */}
                             <p className="text-sm leading-relaxed mb-6  text-black/80 max-w-[260px]">
                                 Global digital transformation and enterprise enablement partner delivering outcome-driven technology, marketing, and managed services since 2012. Serving enterprises, governments, and institutions across 50+ countries.
@@ -90,10 +90,62 @@ const Footer = () => {
                             {/* Social icons */}
                             <div className="flex gap-2">
                                 {[
-                                    { label: "LinkedIn", url: "https://www.linkedin.com/company/techsaga/", path: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M4 6a2 2 0 100-4 2 2 0 000 4z" },
-                                    { label: "Facebook", url: "https://www.facebook.com/Techsaga.Corporations/", path: "M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" },
-                                    { label: "Instagram", url: "https://www.instagram.com/techsaga/", path: "M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01M6.5 6.5h11a1 1 0 011 1v9a1 1 0 01-1 1h-11a1 1 0 01-1-1v-9a1 1 0 011-1z" },
-                                    { label: "Twitter", url: "https://twitter.com/Techsaga_Corp", path: "M18.9 2H22l-6.77 7.74L23 22h-6.1l-4.78-6.24L6.6 22H3.5l7.24-8.27L1 2h6.15l4.32 5.7L18.9 2zm-1.07 18h1.7L5.08 3.9H3.25L17.83 20z" },
+                                    {
+                                        label: "LinkedIn",
+                                        url: "https://www.linkedin.com/company/techsaga/",
+                                        icon: (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                className="w-4 h-4"
+                                            >
+                                                <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3ZM20.44 12.97c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.1-3.38 1.87V8.5H9.38V20h3.38v-6.38c0-1.68.32-3.31 2.4-3.31 2.05 0 2.08 1.92 2.08 3.42V20h3.38v-7.03Z" />
+                                            </svg>
+                                        ),
+                                    },
+                                    {
+                                        label: "Facebook",
+                                        url: "https://www.facebook.com/Techsaga.Corporations/",
+                                        icon: (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                className="w-4 h-4"
+                                            >
+                                                <path d="M13 22v-8h3l1-4h-4v-2c0-1.16.84-2 2-2h2V2h-3c-3.31 0-5 1.79-5 5v3H6v4h3v8h4Z" />
+                                            </svg>
+                                        ),
+                                    },
+                                    {
+                                        label: "Instagram",
+                                        url: "https://www.instagram.com/techsaga/",
+                                        icon: (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                               className="w-4 h-4"
+                                            >
+                                                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7Zm0 2h10c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3Zm5 2.5A5.5 5.5 0 1 0 17.5 12 5.51 5.51 0 0 0 12 6.5Zm0 2A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5Zm5.75-3a1.25 1.25 0 1 0 1.25 1.25 1.25 1.25 0 0 0-1.25-1.25Z" />
+                                            </svg>
+                                        ),
+                                    },
+                                    {
+                                        label: "Twitter",
+                                        url: "https://twitter.com/Techsaga_Corp",
+                                        icon: (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                className="w-4 h-4"
+                                            >
+                                                <path d="M18.9 2H22l-6.77 7.74L23 22h-6.1l-4.78-6.24L6.6 22H3.5l7.24-8.27L1 2h6.15l4.32 5.7L18.9 2Zm-1.07 18h1.7L5.08 3.9H3.25L17.83 20Z" />
+                                            </svg>
+                                        ),
+                                    },
                                 ].map((s) => (
                                     <a
                                         key={s.label}
@@ -101,9 +153,10 @@ const Footer = () => {
                                         aria-label={s.label}
                                         className="w-8 h-8 border border-black/10 rounded flex items-center justify-center hover:border-[#4291CE] hover:text-[#4291CE] text-black transition-colors"
                                     >
-                                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        {/* <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={s.path} />
-                                        </svg>
+                                        </svg> */}
+                                        {s.icon}
                                     </a>
                                 ))}
                             </div>

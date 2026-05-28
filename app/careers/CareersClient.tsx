@@ -3,9 +3,10 @@
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const CareerPage = () => {
+    const fileInputRef = useRef<HTMLInputElement | null>(null);
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -63,7 +64,9 @@ const CareerPage = () => {
 
             if (response.ok) {
                 // alert("Application submitted successfully");
-
+                if (fileInputRef.current) {
+                    fileInputRef.current.value = "";
+                }
                 setShowThankYouPopup(true)
 
                 setFormData({
@@ -217,6 +220,7 @@ const CareerPage = () => {
 
                                     <input
                                         type="file"
+                                        ref={fileInputRef}
                                         accept=".pdf,.doc,.docx"
                                         onChange={handleFileChange}
                                         required
@@ -328,7 +332,7 @@ const CareerPage = () => {
                             </div>
 
                             {/* Card 2 */}
-                             <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
+                            <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
                                 <h1 className="font-bold text-xl sm:text-2xl">
                                     Empowering Global Innovators
                                 </h1>
@@ -379,7 +383,7 @@ const CareerPage = () => {
                             </div>
 
                             {/* Card 3 */}
-                             <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
+                            <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
                                 <h1 className="font-bold text-xl sm:text-2xl">
                                     Connect with Our Executive Talent Pool
                                 </h1>
@@ -430,9 +434,9 @@ const CareerPage = () => {
                             </div>
 
                             {/* Card 4 */}
-                               <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
+                            <div className="p-6 sm:p-8 shadow-lg bg-white rounded-lg">
                                 <h1 className="font-bold text-xl sm:text-2xl">
-                                   Initiate Your Profile Submission
+                                    Initiate Your Profile Submission
                                 </h1>
 
                                 <p className="mb-4 mt-2 text-gray-600">
@@ -465,7 +469,7 @@ const CareerPage = () => {
                                                 className="w-4 h-4"
                                                 alt=""
                                             />
-                                           LinkedIn Careers Page: https://in.linkedin.com/company/techsaga
+                                            LinkedIn Careers Page: https://in.linkedin.com/company/techsaga
                                         </p>
                                         <p className="flex gap-2  text-sm text-gray-600">
                                             <img

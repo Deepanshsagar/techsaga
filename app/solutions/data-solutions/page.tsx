@@ -2,9 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import BottomFrom from "@/components/BottomForm"
 import { getMeta } from "@/app/lib/getMeta";
+import Image from "next/image";
 
 export async function generateMetadata() {
-  return getMeta("/solutions/data-solutions");
+    return getMeta("/solutions/data-solutions");
 }
 
 const servicesLeft = [
@@ -44,7 +45,7 @@ const servicesRight = [
 ];
 
 export default function DataSolutionsPage() {
-   
+
 
     return (
         <main className="font-sans text-gray-800 overflow-x-hidden">
@@ -62,25 +63,25 @@ export default function DataSolutionsPage() {
                         <div>
                             <div>
                                 <img
-                                src="/assets/img/solutions-icon/Data-Solution.png"
-                                width={70}
-                                height={70}
-                                className="object-contain rounded-[10px]"
+                                    src="/assets/img/solutions-icon/Data-Solution.png"
+                                    width={70}
+                                    height={70}
+                                    className="object-contain rounded-[10px]"
                                 />
                             </div>
                             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                              Data Solutions
-                               <div className="lg:text-3xl text-3xl mt-2"> We’re Building Entire Information Architecture.</div>
+                                Data Solutions
+                                <div className="lg:text-3xl text-3xl mt-2"> We’re Building Entire Information Architecture.</div>
                             </h1>
 
                             <p className="text-white/60 text-base leading-relaxed mb-8">
-                               As a specialized Data Solutions partner, we don't just provide technical implementation; 
-                               we synergize your raw intelligence. We bridge the gap between fragmented data silos and 
-                               actionable business insights, transforming static information into a high-velocity engine 
-                               built for the modern data-driven economy.
+                                As a specialized Data Solutions partner, we don't just provide technical implementation;
+                                we synergize your raw intelligence. We bridge the gap between fragmented data silos and
+                                actionable business insights, transforming static information into a high-velocity engine
+                                built for the modern data-driven economy.
                             </p>
 
-                         
+
                         </div>
                     </div>
                 </div>
@@ -185,9 +186,11 @@ export default function DataSolutionsPage() {
 
                     <div className="flex justify-center">
                         <div className="rounded-xl overflow-hidden shadow-2xl">
-                            <img
-                                src="/assets/img/solution-m.png"
-                                alt="Data Solutions"
+                            <Image
+                                src="/assets/img/data-solutions-trust.webp"
+                                alt="AWS Cloud"
+                                width={350}
+                                height={458}
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -228,7 +231,7 @@ export default function DataSolutionsPage() {
             {/* CONTACT FORM */}
             <section className="mt-10 px-4">
                 <div className="text-3xl font-bold text-gray-900 text-center mb-14">
-                    Is Your Data Working for You, or Against You?
+                    READY TO DISCUSS? Get in Touch
                 </div>
 
                 <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 w-full md:w-1/2 mx-auto">
