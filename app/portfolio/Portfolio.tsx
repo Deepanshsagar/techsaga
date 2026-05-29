@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Link from "next/link";
 interface Project {
   title: string;
   image: string;
@@ -82,7 +83,8 @@ const webProjects: Project[] = [
     //   "Online learning platform allowing creators to launch and manage courses easily.",
     image:
       "/assets/img/portfolio-img/doxrix1.png",
-    url: "https://www.doxrix.com/",
+    // url: "https://www.doxrix.com/",
+    url: "#",
     tagColor: "bg-teal-500",
     overlay: "bg-teal-600/95",
   },
@@ -109,32 +111,281 @@ const webProjects: Project[] = [
     url: "https://zuhd.store/",
     overlay: "bg-teal-600/95",
   },
+  {
+    title: "LOGISTICLE",
+    desc:
+      "Innovative and dynamic logistics service provider platform in India.",
+    image: "/assets/img/portfolio-img/logisticle1.png",
+    url: "https://www.logisticle.in/story.php",
+    tag: "Logistics",
+    tagColor: "bg-orange-500",
+    overlay: "bg-orange-600/95",
+  },
+  {
+    title: "APICES",
+    desc:
+      "Architecture and design studio focused on impactful environments.",
+    image: "/assets/img/portfolio-img/apices.in.png",
+    url: "https://www.apices.in/",
+    tag: "Architecture",
+    tagColor: "bg-gray-700",
+    overlay: "bg-gray-800/95",
+  },
+  {
+    title: "DANCE AND DAZZLE",
+    desc:
+      "Professional dance classes platform offering authentic learning experiences.",
+    image: "/assets/img/portfolio-img/dance-and-dazzel.png",
+    url: "https://www.danceanddazzledubai.ae/",
+    tag: "Dance Classes",
+    tagColor: "bg-rose-500",
+    overlay: "bg-rose-600/95",
+  },
+  {
+    title: "DSM",
+    desc: "Digital marketplace platform for software solutions.",
+    image: "/assets/img/portfolio-img/Digital-Software-Market.png",
+    url: "https://www.digitalsoftwaremarket.com/",
+    tag: "Software Market",
+    tagColor: "bg-cyan-500",
+    overlay: "bg-cyan-600/95",
+  },
+  {
+    title: "KIDZ VILLE LEARNING",
+    desc:
+      "Innovative learning environment platform for children's development.",
+    image: "/assets/img/portfolio-img/kidzvillelearning.png",
+    url: "https://www.kidzvillelearningcenters.com/",
+    tag: "Education",
+    tagColor: "bg-green-500",
+    overlay: "bg-green-600/95",
+  },
+  {
+    title: "ecadema",
+    desc:
+      "Interactive online training platform connecting trainees and trainers globally.",
+    image: "/assets/img/portfolio-img/eca.png",
+    // url: "https://www.ecadema.com/",
+    url: "#",
+    tag: "Training Platform",
+    tagColor: "bg-indigo-500",
+    overlay: "bg-indigo-600/95",
+  },
+  {
+    title: "Characterindia Shop",
+    desc:
+      "Cosmetics and beauty e-commerce platform for premium makeup products.",
+    image: "/assets/img/portfolio-img/characterindia.png",
+    // url: "https://characterindia.shop/",
+    url: "#",
+    tag: "E-commerce",
+    tagColor: "bg-pink-600",
+    overlay: "bg-pink-700/95",
+  },
+  {
+    title: "IEIA",
+    desc:
+      "Official platform for the Indian Exhibition Industry Association.",
+    image: "/assets/img/portfolio-img/ieia.jpeg",
+    url: "https://ieia.in/",
+    tag: "Association",
+    tagColor: "bg-yellow-500",
+    overlay: "bg-yellow-600/95",
+  },
+  {
+    title: "MAIT",
+    desc:
+      "Platform representing India's electronics and hardware sector.",
+    image: "/assets/img/portfolio-img/mait.png",
+    url: "https://www.mait.com/",
+    tag: "Technology",
+    tagColor: "bg-slate-500",
+    overlay: "bg-slate-600/95",
+  },
+  {
+    title: "Ginoprotraining",
+    desc:
+      "Athlete training and sports performance improvement platform.",
+    image: "/assets/img/portfolio-img/ginoprotraining.png",
+    url: "#",
+    // url: "https://www.ginoprotraining.com/",
+    tag: "Training",
+    tagColor: "bg-lime-500",
+    overlay: "bg-lime-600/95",
+  },
+  {
+    title: "OUR ESHOP",
+    desc:
+      "Online stationery and office supplies e-commerce platform.",
+    image: "/assets/img/portfolio-img/our-eshop.png",
+    // url: "https://www.our-eshop.com/",
+    url: "#",
+    tag: "E-commerce",
+    tagColor: "bg-emerald-500",
+    overlay: "bg-emerald-600/95",
+  },
+  {
+    title: "WALTERSCALZONE",
+    desc:
+      "Official website of international percussionist Walter Scalzone.",
+    image: "/assets/img/portfolio-img/Music-Production.png",
+    url: "https://www.walterscalzone.com/",
+    tag: "Music",
+    tagColor: "bg-fuchsia-500",
+    overlay: "bg-fuchsia-600/95",
+  },
+  {
+    title: "ADES",
+    desc:
+      "Non-profit organization platform for diabetes educators in Singapore.",
+    image: "/assets/img/portfolio-img/ades.png",
+    url: "http://ades.org.sg/",
+    tag: "Healthcare",
+    tagColor: "bg-red-400",
+    overlay: "bg-red-500/95",
+  },
+  {
+    title: "Your Preferred Tours",
+    desc:
+      "Travel and tours platform delivering memorable travel experiences.",
+    image: "/assets/img/portfolio-img/yourpreferredtours.png",
+    url: "https://yourpreferredtours.com/",
+    tag: "Tours",
+    tagColor: "bg-sky-500",
+    overlay: "bg-sky-600/95",
+  },
+  {
+    title: "Career Abroad",
+    desc:
+      "Immigration and education consultancy platform based in Toronto.",
+    image: "/assets/img/portfolio-img/careerabroad.png",
+    url: "https://www.careerabroad.ca/",
+    tag: "Education",
+    tagColor: "bg-violet-500",
+    overlay: "bg-violet-600/95",
+  },
+  {
+    title: "Bakery Hill Dental",
+    desc:
+      "Professional dental clinic website based in Ballarat, Australia.",
+    image: "/assets/img/portfolio-img/bakeryhilldental.png",
+    url: "https://bakeryhilldental.com.au/",
+    tag: "Dental",
+    tagColor: "bg-teal-400",
+    overlay: "bg-teal-500/95",
+  },
+  {
+    title: "CleanCo",
+    desc:
+      "Integrated waste treatment plant and environmental solutions platform.",
+    image: "/assets/img/portfolio-img/cwtme.png",
+    url: "https://www.cwtme.ae/",
+    tag: "Waste Management",
+    tagColor: "bg-amber-500",
+    overlay: "bg-amber-600/95",
+  },
+  {
+    title: "CLLAK",
+    desc:
+      "Modern e-commerce platform offering seamless online shopping experiences.",
+    image: "/assets/img/portfolio-img/cllak.png",
+    url: "https://www.cwtme.ae/",
+    tag: "E-commerce",
+    tagColor: "bg-neutral-500",
+    overlay: "bg-neutral-600/95",
+  },
+  {
+    title: "GYMWISE",
+    desc:
+      "Marketplace for gyms, pools, spas and fitness venues.",
+    image: "/assets/img/portfolio-img/gymwise.webp",
+    url: "https://gymwise.in/",
+    tag: "Fitness",
+    tagColor: "bg-orange-500",
+    overlay: "bg-orange-600/95",
+  },
 ];
 
 const appProjects: Project[] = [
   {
-    title: "Gymwise",
-    image:
-      "/assets/img/portfolio-img/gymwise.webp",
-    desc: "Marketplace of gyms and fitness venues.",
+    title: "Mwashina",
+    image: "/assets/img/portfolio-img/mawa.jpg",
+    desc:
+      "Mobile application that helps users discover the best restaurants and order sheep dishes easily.",
     url: "#",
-    overlay: "bg-orange-600/95",
-  },
-  {
-    title: "FormDox",
-    image:
-      "/assets/img/portfolio-img/FORMDOX.webp",
-    desc: "SAAS platform for employee charting management.",
-    url: "#",
-    overlay: "bg-cyan-600/95",
+    tag: "Food Delivery",
+    tagColor: "bg-red-500",
+    overlay: "bg-red-600/95",
   },
   {
     title: "IPSA",
-    image:
-      "/assets/img/portfolio-img/ipsa.webp",
-    desc: "Rewards and loyalty mobile application.",
+    image: "/assets/img/portfolio-img/ipsa.webp",
+    desc:
+      "Rewards and loyalty application for buyers and sellers of IPSA brand products.",
     url: "#",
+    tag: "Rewards App",
+    tagColor: "bg-blue-500",
     overlay: "bg-blue-600/95",
+  },
+  {
+    title: "FormDox",
+    image: "/assets/img/portfolio-img/FORMDOX.webp",
+    desc:
+      "Powerful SAAS platform for electronic employee charting management.",
+    url: "#",
+    tag: "SAAS Platform",
+    tagColor: "bg-cyan-500",
+    overlay: "bg-cyan-600/95",
+  },
+  {
+    title: "Gymwise",
+    image: "/assets/img/portfolio-img/gymwise.webp",
+    desc:
+      "Marketplace for gyms, pools, spas and fitness venues with flexible schedules.",
+    url: "#",
+    tag: "Fitness",
+    tagColor: "bg-orange-500",
+    overlay: "bg-orange-600/95",
+  },
+  {
+    title: "Farm Source",
+    image: "/assets/img/portfolio-img/farsource.webp",
+    desc:
+      "Fresh vegetable delivery platform focused on healthy and safe shopping.",
+    url: "#",
+    tag: "E-commerce",
+    tagColor: "bg-green-500",
+    overlay: "bg-green-600/95",
+  },
+  {
+    title: "ecadema",
+    image: "/assets/img/portfolio-img/ecadma.webp",
+    desc:
+      "Interactive e-learning platform connecting trainees with certified trainers worldwide.",
+    url: "#",
+    tag: "E-Learning",
+    tagColor: "bg-indigo-500",
+    overlay: "bg-indigo-600/95",
+  },
+  {
+    title: "Oyedeals",
+    image: "/assets/img/portfolio-img/oyed.webp",
+    desc:
+      "Free classified ads application for cars, jobs, real estate and more.",
+    url: "#",
+    tag: "Classified App",
+    tagColor: "bg-pink-500",
+    overlay: "bg-pink-600/95",
+  },
+  {
+    title: "Gogeo",
+    image: "/assets/img/portfolio-img/gego.webp",
+    desc:
+      "Large marketplace platform for building and managing classified businesses.",
+    url: "#",
+    tag: "Marketplace",
+    tagColor: "bg-purple-500",
+    overlay: "bg-purple-600/95",
   },
 ];
 
@@ -201,7 +452,7 @@ export default function PortfolioSection() {
           <div className="flex justify-center gap-4 mb-12 flex-wrap">
             <button
               onClick={() => setActiveTab("web")}
-              className={`px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${activeTab === "web"
+              className={`px-8 py-3 rounded-full font-semibold text-sm cursor-pointer transition-all duration-300 ${activeTab === "web"
                   ? "bg-[#4291CE] text-white shadow-md"
                   : "bg-white text-gray-700"
                 }`}
@@ -211,7 +462,7 @@ export default function PortfolioSection() {
 
             <button
               onClick={() => setActiveTab("app")}
-              className={`px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${activeTab === "app"
+              className={`px-8 py-3 rounded-full font-semibold text-sm cursor-pointer transition-all duration-300 ${activeTab === "app"
                   ? "bg-[#4291CE] text-white shadow-md"
                   : "bg-white text-gray-700"
                 }`}
@@ -269,14 +520,14 @@ export default function PortfolioSection() {
                       {item.desc}
                     </p>
 
-                    <a
+                    <Link
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white text-black px-7 py-3 rounded-full font-semibold inline-block hover:scale-105 transition-all duration-300"
                     >
                       View Project
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

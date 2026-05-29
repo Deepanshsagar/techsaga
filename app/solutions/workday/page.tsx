@@ -175,12 +175,12 @@ export default function WorkdayPage() {
             {/* ── OPTIMIZING IT STAFF AUGMENTATION ── */}
             <section className="text-white py-20 relative overflow-hidden">
                 <div
-                    className="absolute inset-0 "
-                    style={{
-                        backgroundImage:
-                            "url('/assets/img/bg-sol-3.png')",
-                        backgroundSize: "cover"
-                    }}
+                    className="absolute inset-0 solution-bg"
+                    // style={{
+                    //     backgroundImage:
+                    //         "url('/assets/img/bg-sol-3.png')",
+                    //     backgroundSize: "cover"
+                    // }}
                 />
                 <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 grid lg:grid-cols-3 gap-12 ">
                     <div className="lg:col-span-1">

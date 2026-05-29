@@ -113,6 +113,10 @@ body {
   letter-spacing: 1px;
 }
 
+.solution-bg{
+  background: linear-gradient(90deg, rgba(66, 145, 206, 1) 0%, rgba(40, 119, 189, 1) 28%, rgba(72, 154, 217, 1) 57%, rgba(118, 178, 230, 1) 80%, rgba(66, 145, 206, 1) 100%);
+}
+
 /* .hero-gradient {
   position: relative;
   width: 100%;
