@@ -26,7 +26,7 @@ export default function DevOpsDevelopmentPage() {
     "DevOps S/W Development & Consulting",
     "DevOps Assessment Solution: Infrastructure Automation",
     "Continuous Integration and Continuous Delivery (CI/CD)",
-    "max-w-7xlization and Orchestration",
+    "Containerization and Orchestration",
     "DevOps Configuration Management",
     "Monitoring and DevOps Analytics",
   ];
@@ -57,7 +57,7 @@ export default function DevOpsDevelopmentPage() {
 
   const tailoredRight = [
     "Reduce manual errors and enhance software quality with continuous integration and deployment pipelines.",
-    "Simplify application deployment and enhance scalability with max-w-7xlization technologies like Docker.",
+    "Simplify application deployment and enhance scalability with Containerization technologies like Docker.",
     "Optimize resource utilization and improve scalability with orchestration tools like Kubernetes.",
     "Benefit from our extensive expertise in migrating applications and infrastructure to the cloud.",
     "Gain real-time insights into performance and health with robust monitoring and analytics solutions.",

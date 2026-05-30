@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Link from "next/link";
 interface Project {
   title: string;
   image: string;
@@ -82,7 +83,8 @@ const webProjects: Project[] = [
     //   "Online learning platform allowing creators to launch and manage courses easily.",
     image:
       "/assets/img/portfolio-img/doxrix1.png",
-    url: "https://www.doxrix.com/",
+    // url: "https://www.doxrix.com/",
+    url: "#",
     tagColor: "bg-teal-500",
     overlay: "bg-teal-600/95",
   },
@@ -109,9 +111,7 @@ const webProjects: Project[] = [
     url: "https://zuhd.store/",
     overlay: "bg-teal-600/95",
   },
-
-
-    {
+  {
     title: "LOGISTICLE",
     desc:
       "Innovative and dynamic logistics service provider platform in India.",
@@ -165,7 +165,8 @@ const webProjects: Project[] = [
     desc:
       "Interactive online training platform connecting trainees and trainers globally.",
     image: "/assets/img/portfolio-img/eca.png",
-    url: "https://www.ecadema.com/",
+    // url: "https://www.ecadema.com/",
+    url: "#",
     tag: "Training Platform",
     tagColor: "bg-indigo-500",
     overlay: "bg-indigo-600/95",
@@ -175,7 +176,8 @@ const webProjects: Project[] = [
     desc:
       "Cosmetics and beauty e-commerce platform for premium makeup products.",
     image: "/assets/img/portfolio-img/characterindia.png",
-    url: "https://characterindia.shop/",
+    // url: "https://characterindia.shop/",
+    url: "#",
     tag: "E-commerce",
     tagColor: "bg-pink-600",
     overlay: "bg-pink-700/95",
@@ -205,7 +207,8 @@ const webProjects: Project[] = [
     desc:
       "Athlete training and sports performance improvement platform.",
     image: "/assets/img/portfolio-img/ginoprotraining.png",
-    url: "https://www.ginoprotraining.com/",
+    url: "#",
+    // url: "https://www.ginoprotraining.com/",
     tag: "Training",
     tagColor: "bg-lime-500",
     overlay: "bg-lime-600/95",
@@ -215,7 +218,8 @@ const webProjects: Project[] = [
     desc:
       "Online stationery and office supplies e-commerce platform.",
     image: "/assets/img/portfolio-img/our-eshop.png",
-    url: "https://www.our-eshop.com/",
+    // url: "https://www.our-eshop.com/",
+    url: "#",
     tag: "E-commerce",
     tagColor: "bg-emerald-500",
     overlay: "bg-emerald-600/95",
@@ -300,9 +304,6 @@ const webProjects: Project[] = [
     tagColor: "bg-orange-500",
     overlay: "bg-orange-600/95",
   },
-
-
-
 ];
 
 const appProjects: Project[] = [
@@ -451,7 +452,7 @@ export default function PortfolioSection() {
           <div className="flex justify-center gap-4 mb-12 flex-wrap">
             <button
               onClick={() => setActiveTab("web")}
-              className={`px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${activeTab === "web"
+              className={`px-8 py-3 rounded-full font-semibold text-sm cursor-pointer transition-all duration-300 ${activeTab === "web"
                   ? "bg-[#4291CE] text-white shadow-md"
                   : "bg-white text-gray-700"
                 }`}
@@ -461,7 +462,7 @@ export default function PortfolioSection() {
 
             <button
               onClick={() => setActiveTab("app")}
-              className={`px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${activeTab === "app"
+              className={`px-8 py-3 rounded-full font-semibold text-sm cursor-pointer transition-all duration-300 ${activeTab === "app"
                   ? "bg-[#4291CE] text-white shadow-md"
                   : "bg-white text-gray-700"
                 }`}
@@ -519,14 +520,14 @@ export default function PortfolioSection() {
                       {item.desc}
                     </p>
 
-                    <a
+                    <Link
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-white text-black px-7 py-3 rounded-full font-semibold inline-block hover:scale-105 transition-all duration-300"
                     >
                       View Project
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
