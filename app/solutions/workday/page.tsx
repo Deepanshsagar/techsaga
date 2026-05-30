@@ -60,6 +60,56 @@ const servicesRight = [
         img: "/assets/img/dot-graphic3.png",
     },
 ];
+
+const services = [
+  {
+    id: 1,
+    badge: "Techsaga Spark",
+    title: "Fast-Track Your Workday Transformation",
+    description:
+      "Launch your core Human Capital and Finance transformation with zero friction. We deliver high-impact, fast-track deployments in as little as 6 weeks, letting you realize value immediately without disrupting daily operations.",
+    highlights: [
+      "Rapid deployment model",
+      "Faster go-live timelines",
+      "Simplified implementation process",
+      "Ideal for growing organizations",
+    ],
+        bgImage: "/assets/img/workday-3.png",
+
+  },
+
+  {
+    id: 2,
+    badge: "Techsaga Nexus",
+    title: "Seamlessly Expand Your Workday Footprint Globally",
+    description:
+      "Take your Workday ecosystem further. Whether you are launching into new global markets or rolling out advanced modules, Orbit provides a structured, predictable 6-to-40-week roadmap for frictionless expansion.",
+    highlights: [
+      "Multi-country deployment",
+      "Module expansion strategy",
+      "Scalable implementation framework",
+      "Enterprise-grade support",
+    ],
+        bgImage: "/assets/img/workday-2.png",
+
+  },
+
+  {
+    id: 3,
+    badge: "Techsaga Apex",
+    title: "Maximize Your Workday ROI Through Continuous Evolution",
+    description:
+      'Implementation is just Day 1. Elevate puts your daily Workday management on "auto pilot," constantly optimizing your HCM and Finance suites so your internal teams can focus on core business strategy.',
+    highlights: [
+      "End-to-end management",
+      "Continuous optimization",
+      "HCM & Finance support",
+      "Reduced operational burden",
+    ],
+        bgImage: "/assets/img/workday-1.png",
+
+  },
+];
 // const BillableRight = [
 //     {
 //         title: "Find a Compatible Consultant",
@@ -157,6 +207,67 @@ export default function WorkdayPage() {
                                 <ServiceCard key={i} title={s.title} desc={s.desc} img={s.img} />
                             ))}
                         </div>
+                    </div>
+                </div>
+            </section>
+
+             <section className="py-20 pt-0 bg-white">
+                <div className="max-w-7xl mx-auto px-6 lg:px-16">
+                    <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
+                        Techsaga Velocity Suite for Workday
+                    </h2>
+                    <p className="text-center text-gray-500 max-w-3xl mx-auto mb-14 text-sm leading-relaxed">
+                        We’re the specialists who hit the ground running in a user-centric approach.
+                    </p>
+
+                    <div className="grid lg:grid-cols-3 gap-8 items-center">
+                       {/* bjvevfdb */}
+                       {services.map((service) => (
+                            <div
+                            key={service.id}
+                            className="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                            // style={{
+                            //         backgroundImage: "url('/assets/img/workday-3.png')",
+                            //     }}
+                            style={{
+                                    backgroundImage: `url(${service.bgImage})`,
+                                }}
+                            >
+                            {/* Badge */}
+                            <div className="mb-5">
+                                <span className="inline-block px-4 py-1.5 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full">
+                                {service.badge}
+                                </span>
+                            </div>
+
+                            {/* Title */}
+                            <h3 className="text-2xl font-bold text-white leading-snug mb-4">
+                                {service.title}
+                            </h3>
+
+                            {/* Description */}
+                            <p className="text-white/90 leading-relaxed mb-6">
+                                {service.description}
+                            </p>
+
+                            {/* Highlights */}
+                            <div className="space-y-3 mb-8">
+                                {service.highlights.map((item, index) => (
+                                <div key={index} className="flex items-start gap-3">
+                                    <div className="w-2.5 h-2.5 rounded-full bg-white mt-2"></div>
+
+                                    <p className="text-white/90">{item}</p>
+                                </div>
+                                ))}
+                            </div>
+
+                            {/* Button */}
+                            <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 rounded-xl transition duration-300">
+                                Learn More
+                            </button>
+                            </div>
+                        ))}
+                       {/* efiuvbgbef */}
                     </div>
                 </div>
             </section>
