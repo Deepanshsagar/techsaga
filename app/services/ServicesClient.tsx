@@ -467,7 +467,7 @@ export default function ServicePage() {
           </h2>
 
           <p className="text-sm text-gray-500 mb-10 max-w-xl mx-auto">
-            Thousands of businesses. 50+ countries. 13+ years of
+            Thousands of businesses. 50+ countries. 14+ years of
             experience.
           </p>
 
