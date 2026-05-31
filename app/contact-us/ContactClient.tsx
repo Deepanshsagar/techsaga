@@ -313,7 +313,7 @@ const Contact_Us = () => {
           </h2>
 
           <p className="text-xs text-gray-500 mb-10 max-w-xl mx-auto">
-            Thousands of businesses. 50+ countries 13+ years . we know how to
+            Thousands of businesses. 50+ countries 14+ years . we know how to
             deliver
           </p>
 

@@ -132,31 +132,8 @@ export default function SparkPage() {
             </div>
 
             {/* Carousel Style Cards */}
-            <div className="overflow-hidden">
-              <div className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
-
-                {services.map((service, index) => (
-                  <div
-                    key={index}
-                    className="min-w-[320px] bg-white border border-gray-200 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition duration-300"
-                  >
-                    <div className="h-14 w-14 rounded-2xl bg-blue-100 flex items-center justify-center mb-6">
-                      <span className="text-blue-700 font-bold text-xl">
-                        {index + 1}
-                      </span>
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-4">
-                      {service.title}
-                    </h3>
-
-                    <p className="text-gray-600 text-lg leading-relaxed">
-                      {service.subtitle}
-                    </p>
-                  </div>
-                ))}
-
-              </div>
+            <div>
+              <img src="./assets/img/" alt="" />
             </div>
 
           </div>

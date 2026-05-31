@@ -211,7 +211,7 @@ export default function WorkdayPage() {
                 </div>
             </section>
 
-             <section className="py-20 pt-0 bg-white">
+             {/* <section className="py-20 pt-0 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-16">
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
                         Techsaga Velocity Suite for Workday
@@ -221,36 +221,29 @@ export default function WorkdayPage() {
                     </p>
 
                     <div className="grid lg:grid-cols-3 gap-8 items-center">
-                       {/* bjvevfdb */}
                        {services.map((service) => (
                             <div
                             key={service.id}
                             className="bg-white rounded-3xl shadow-lg border border-gray-100 p-7 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-                            // style={{
-                            //         backgroundImage: "url('/assets/img/workday-3.png')",
-                            //     }}
+                           
                             style={{
                                     backgroundImage: `url(${service.bgImage})`,
                                 }}
                             >
-                            {/* Badge */}
                             <div className="mb-5">
                                 <span className="inline-block px-4 py-1.5 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full">
                                 {service.badge}
                                 </span>
                             </div>
 
-                            {/* Title */}
                             <h3 className="text-2xl font-bold text-white leading-snug mb-4">
                                 {service.title}
                             </h3>
 
-                            {/* Description */}
                             <p className="text-white/90 leading-relaxed mb-6">
                                 {service.description}
                             </p>
 
-                            {/* Highlights */}
                             <div className="space-y-3 mb-8">
                                 {service.highlights.map((item, index) => (
                                 <div key={index} className="flex items-start gap-3">
@@ -261,16 +254,14 @@ export default function WorkdayPage() {
                                 ))}
                             </div>
 
-                            {/* Button */}
                             <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 rounded-xl transition duration-300">
                                 Learn More
                             </button>
                             </div>
                         ))}
-                       {/* efiuvbgbef */}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className=" mt-10 px-4 mb-20">
                 <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
