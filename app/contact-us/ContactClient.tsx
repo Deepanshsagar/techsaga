@@ -39,11 +39,72 @@ const Contact_Us = () => {
     captchaInput: "",
   });
 
+  interface FormErrors {
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    phone?: string;
+    subject?: string;
+    message?: string;
+    captchaInput?: string;
+  }
+
   const [loading, setLoading] = useState(false);
 
   const [success, setSuccess] = useState("");
 
   const [error, setError] = useState("");
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  console.log("errors", errors)
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = "First name is required";
+    }
+
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = "Last name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
+    ) {
+      newErrors.email = "Invalid email address";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit phone number";
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Description is required";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Description must be at least 10 characters";
+    }
+
+    if (!formData.captchaInput.trim()) {
+      newErrors.captchaInput = "Captcha is required";
+    } else if (
+      Number(formData.captchaInput) !== captcha.answer
+    ) {
+      newErrors.captchaInput = "Incorrect captcha";
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -52,10 +113,16 @@ const Contact_Us = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    setErrors((prev) => ({
+      ...prev,
+      [e.target.name]: "",
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
 
     setSuccess("");
     setError("");
@@ -184,7 +251,6 @@ const Contact_Us = () => {
               <h3 className="text-3xl font-bold text-gray-800">
                 {/* Ready to get started? */}
               </h3>
-
               <form className="mt-8 space-y-5" onSubmit={handleSubmit}>
                 <div>
                   <input
@@ -193,9 +259,17 @@ const Contact_Us = () => {
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="First Name"
-                    required
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
+                    className={`w-full rounded-lg px-4 py-3 outline-none transition-all duration-200
+        ${errors.firstName
+                        ? "border border-red-500 bg-red-50 focus:ring-2 focus:ring-red-200"
+                        : "border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                      }`}
                   />
+                  {errors.firstName && (
+                    <div className="flex items-center gap-2 mt-0 text-red-600 text-sm">
+                      <span>{errors.firstName}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div>
@@ -205,21 +279,37 @@ const Contact_Us = () => {
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Last Name"
-                    required
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
+                    className={`w-full rounded-lg px-4 py-3 outline-none transition-all duration-200
+        ${errors.lastName
+                        ? "border border-red-500 bg-red-50 focus:ring-2 focus:ring-red-200"
+                        : "border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                      }`}
                   />
+                  {errors.lastName && (
+                    <div className="flex items-center gap-2 mt-0 text-red-600 text-sm">
+                      <span>{errors.lastName}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div>
                   <input
-                    type="email"
+                    type="text"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Email Address"
-                    required
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
+                    className={`w-full rounded-lg px-4 py-3 outline-none transition-all duration-200
+        ${errors.email
+                        ? "border border-red-500 bg-red-50 focus:ring-2 focus:ring-red-200"
+                        : "border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                      }`}
                   />
+                  {errors.email && (
+                    <div className="flex items-center gap-2 mt-0 text-red-600 text-sm">
+                      <span>{errors.email}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div>
@@ -229,9 +319,17 @@ const Contact_Us = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Phone Number"
-                    required
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
+                    className={`w-full rounded-lg px-4 py-3 outline-none transition-all duration-200
+        ${errors.phone
+                        ? "border border-red-500 bg-red-50 focus:ring-2 focus:ring-red-200"
+                        : "border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                      }`}
                   />
+                  {errors.phone && (
+                    <div className="flex items-center gap-2 mt-0 text-red-600 text-sm">
+                      <span>{errors.phone}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div>
@@ -241,9 +339,17 @@ const Contact_Us = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Subject"
-                    required
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
+                    className={`w-full rounded-lg px-4 py-3 outline-none transition-all duration-200
+        ${errors.subject
+                        ? "border border-red-500 bg-red-50 focus:ring-2 focus:ring-red-200"
+                        : "border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                      }`}
                   />
+                  {errors.subject && (
+                    <div className="flex items-center gap-2 mt-2 text-red-600 text-sm">
+                      <span>{errors.subject}</span>
+                    </div>
+                  )}
                 </div>
 
                 <div>
@@ -253,14 +359,22 @@ const Contact_Us = () => {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Description"
-                    required
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
-                  ></textarea>
+                    className={`w-full rounded-lg px-4 py-3 outline-none transition-all duration-200
+        ${errors.message
+                        ? "border border-red-500 bg-red-50 focus:ring-2 focus:ring-red-200"
+                        : "border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                      }`}
+                  />
+                  {errors.message && (
+                    <div className="flex items-center gap-2 mt-0 text-red-600 text-sm">
+                      <span>{errors.message}</span>
+                    </div>
+                  )}
                 </div>
 
-                <div className="flex items-center gap-3 rounded-md ">
-                  <label className="block text-sm font-medium text-gray-700 mb-0">
-                    Solve: {captcha.question} = ?
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Solve: <span className="font-semibold">{captcha.question}</span> = ?
                   </label>
 
                   <input
@@ -268,27 +382,61 @@ const Contact_Us = () => {
                     name="captchaInput"
                     value={formData.captchaInput}
                     onChange={handleChange}
-                    placeholder="0"
-                    required
-                    className="w-[100px] border border-gray-300 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
+                    placeholder="Answer"
+                    className={`w-[120px] rounded-lg px-4 py-3 outline-none transition-all duration-200
+        ${error?.toLowerCase().includes("captcha")
+                        ? "border border-red-500 bg-red-50 focus:ring-2 focus:ring-red-200"
+                        : "border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                      }`}
                   />
                 </div>
 
                 {success && (
-                  <p className="text-green-600 text-sm">{success}</p>
+                  <div className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700">
+                    ✓ {success}
+                  </div>
                 )}
 
                 {error && (
-                  <p className="text-red-600 text-sm">{error}</p>
+                  <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                    ✕ {error}
+                  </div>
                 )}
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className=" bg-[#4291CE] hover: bg-[#4291CE] transition-all cursor-pointer text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-3 disabled:opacity-50"
+                  className="bg-[#4291CE] hover:bg-[#357ab8] transition-all duration-300 cursor-pointer text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {loading ? "Sending..." : "Send Message"}
-                  <span>→</span>
+                  {loading ? (
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v8H4z"
+                        />
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <span>→</span>
+                    </>
+                  )}
                 </button>
               </form>
             </div>

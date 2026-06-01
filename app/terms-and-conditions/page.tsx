@@ -22,7 +22,6 @@ export default function TermsConditionsPage() {
               <h3 className="text-3xl font-bold text-gray-900">
                 TERMS & CONDITIONS
               </h3>
-
               <img
                 loading="lazy"
                 src="/assets/img/line1.png"
