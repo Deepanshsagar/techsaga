@@ -447,7 +447,7 @@ export default async function ServicePage({
 
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">Your Next Great Project Starts With One Conversation </h2>
                     <p className="text-xs text-gray-500 mb-10 max-w-xl mx-auto">
-                        Thousands of businesses. 50+ countries 13+ years . we know how to deliver
+                        Thousands of businesses. 50+ countries 14+ years . we know how to deliver
                     </p>
                     <a href="#" className="btn-primary text-white font-semibold px-7 py-3 rounded-md text-sm">Start a conversation</a>
                 </div>
