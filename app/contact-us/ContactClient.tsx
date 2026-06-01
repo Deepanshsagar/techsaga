@@ -79,8 +79,8 @@ const Contact_Us = () => {
 
     if (!formData.phone.trim()) {
       newErrors.phone = "Phone number is required";
-    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
-      newErrors.phone = "Enter a valid 10-digit phone number";
+    } else if (!/^\+?[1-9]\d{6,14}$/.test(formData.phone.replace(/\s+/g, ""))) {
+      newErrors.phone = "Enter a valid phone number";
     }
 
     if (!formData.subject.trim()) {
