@@ -71,6 +71,12 @@ const teamMembers = [
       "/assets/img/teams-member/shivam_techsaga.png",
   },
   {
+    name: "Divya Krishna",
+    role: "Head of AI Center of Excellence",
+    image:
+      "/assets/img/teams-member/divya_krishna.png",
+  },
+  {
     name: "PREETI RAGHAV",
     role: "Human Resource Manager",
     image:
@@ -80,7 +86,7 @@ const teamMembers = [
     name: "VAISHNAVI SOMANI",
     role: "Human Resource Manager",
     image:
-      "/assets/img/teams-member/hr_ts2-2.png",
+      "/assets/img/teams-member/vaishnavi.jfif",
   },
   {
     name: "VIMAL KUMAR",
@@ -263,7 +269,7 @@ export default function MeetOurTeam() {
                 className="group rounded-md overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:bg-white hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)]"
                 >
                 {/* IMAGE */}
-                <div className="relative overflow-hidden bg-[#f5f5f5]">
+                <div className="relative overflow-hidden bg-[#f5f5f5] h-[230px]">
                     <Image
                     src={member.image}
                     alt={member.name}
