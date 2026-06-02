@@ -83,7 +83,7 @@ export default async function ServicePage({
         <>
             <Header />
             <section
-                className="relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
+                className="bg-[radial-gradient(#4291ce00,#4291ce5e)] relative overflow-hidden bg-cover bg-center min-h-[650px] flex items-center"
                 style={{
                     backgroundImage: "url('/assets/img/service-banner.png')",
                 }}

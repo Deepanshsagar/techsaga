@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import BottomFrom from "@/components/BottomForm"
 import { getMeta } from "@/app/lib/getMeta";
 import Image from "next/image";
+import { Link } from "lucide-react";
 
 export async function generateMetadata() {
     return getMeta("/solutions/workday");
@@ -67,7 +68,7 @@ const services = [
     badge: "Techsaga Spark",
     title: "Fast-Track Your Workday Transformation",
     description:
-      "Launch your core Human Capital and Finance transformation with zero friction. We deliver high-impact, fast-track deployments in as little as 6 weeks, letting you realize value immediately without disrupting daily operations.",
+      "Launch your core Human Capital Management and Finance transformation with zero friction. We deliver high-impact, fast-track deployments in as little as 6 weeks, letting you realize value immediately without disrupting daily operations.",
     highlights: [
       "Rapid deployment model",
       "Faster go-live timelines",
@@ -75,7 +76,7 @@ const services = [
       "Ideal for growing organizations",
     ],
         bgImage: "/assets/img/workday-3.png",
-
+link: "./workday/spark",
   },
 
   {
@@ -91,7 +92,7 @@ const services = [
       "Enterprise-grade support",
     ],
         bgImage: "/assets/img/workday-2.png",
-
+            link: "./workday/nexus",
   },
 
   {
@@ -107,7 +108,7 @@ const services = [
       "Reduced operational burden",
     ],
         bgImage: "/assets/img/workday-1.png",
-
+            link: "./workday/apex",
   },
 ];
 // const BillableRight = [
@@ -211,7 +212,7 @@ export default function WorkdayPage() {
                 </div>
             </section>
 
-             {/* <section className="py-20 pt-0 bg-white">
+             <section className="py-20 pt-0 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-16">
                     <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
                         Techsaga Velocity Suite for Workday
@@ -254,14 +255,20 @@ export default function WorkdayPage() {
                                 ))}
                             </div>
 
+                            {/* <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 rounded-xl transition duration-300">
+                                Learn More
+                            </button> */}
+                           <a
+                                href={service.link}>
                             <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 rounded-xl transition duration-300">
                                 Learn More
                             </button>
+                            </a>
                             </div>
                         ))}
                     </div>
                 </div>
-            </section> */}
+            </section>
 
             <section className=" mt-10 px-4 mb-20">
                 <div style={{ background: 'linear-gradient(94.86deg, #F8F8F8 0.48%, #E3EFF8 100%)' }} className="max-w-4xl rounded-xl py-14 mx-auto text-center">
